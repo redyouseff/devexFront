@@ -1,5 +1,6 @@
 
 import logo from "/images/commingSoon/Logo_Devext-removebg-preview 2.svg";
+import x from "/images/commingSoon/Untitled design (11) 1.svg";
 
 function App() {
   return (
@@ -18,25 +19,8 @@ function App() {
         </div>
       </div>
       
-      <div className="caution-tapes">
-        <div className="tape tape-1">
-          <span>UNDER CONSTRUCTION</span>
-        </div>
-        <div className="tape tape-2">
-          <span>UNDER CONSTRUCTION</span>
-        </div>
-        <div className="tape tape-3">
-          <span>UNDER CONSTRUCTION</span>
-        </div>
-        <div className="tape tape-4">
-          <span>UNDER CONSTRUCTION</span>
-        </div>
-        <div className="tape tape-5">
-          <span>UNDER CONSTRUCTION</span>
-        </div>
-        <div className="tape tape-6">
-          <span>UNDER CONSTRUCTION</span>
-        </div>
+      <div className="image-section">
+        <img src={x} alt="Design Element" className="design-image" />
       </div>
     </div>
   )
