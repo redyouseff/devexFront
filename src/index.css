@@ -96,54 +96,136 @@ body {
 
 .image-section {
   position: absolute;
-  top: 20%;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 80%;
+  height: 60%;
   z-index: 10;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 
 .design-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   filter: brightness(1.1) contrast(1.1);
 }
 
 /* Responsive design */
+@media (max-width: 1200px) {
+  .coming-soon-text h1 {
+    font-size: 56px;
+  }
+  
+  .logo {
+    height: 70px;
+  }
+  
+  .image-section {
+    top: 15%;
+    height: 85%;
+  }
+}
+
 @media (max-width: 768px) {
   .coming-soon-text h1 {
-    font-size: 2.5rem;
+    font-size: 42px;
   }
   
   .logo {
     height: 60px;
   }
   
-  .tape {
-    font-size: 1rem;
-    padding: 10px 0;
+  .content {
+    padding-top: 5%;
   }
   
-  .tape span {
-    padding: 3px 10px;
+  .image-section {
+    top: 25%;
+    height: 75%;
+  }
+  
+  .dot {
+    font-size: 36px;
   }
 }
 
 @media (max-width: 480px) {
   .coming-soon-text h1 {
-    font-size: 2rem;
+    font-size: 32px;
   }
   
   .logo {
     height: 50px;
   }
   
-  .tape {
-    font-size: 0.8rem;
-    padding: 8px 0;
+  .content {
+    padding-top: 8%;
+  }
+  
+  .image-section {
+    top: 30%;
+    height: 70%;
+  }
+  
+  .dot {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 360px) {
+  .coming-soon-text h1 {
+    font-size: 28px;
+  }
+  
+  .logo {
+    height: 45px;
+  }
+  
+  .content {
+    padding-top: 10%;
+  }
+  
+  .image-section {
+    top: 35%;
+    height: 65%;
+  }
+  
+  .dot {
+    font-size: 24px;
+  }
+}
+
+/* Landscape orientation fixes */
+@media (max-height: 500px) and (orientation: landscape) {
+  .coming-soon-text h1 {
+    font-size: 36px;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  .content {
+    padding-top: 2%;
+  }
+  
+  .image-section {
+    top: 40%;
+    height: 60%;
+  }
+  
+  .dot {
+    font-size: 30px;
+  }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .design-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
   }
 }

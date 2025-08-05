@@ -1,6 +1,6 @@
 
 import logo from "/images/commingSoon/Logo_Devext-removebg-preview 2.svg";
-import x from "/images/commingSoon/Untitled design (11) 1.svg";
+import x from "/images/commingSoon/Untitled design (12) 1.svg";
 
 function App() {
   return (
