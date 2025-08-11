@@ -1,80 +1,70 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body {
-  font-family: 'Arial', sans-serif;
-  overflow: hidden;
-}
+@layer components {
+  .coming-soon-container {
+    @apply w-screen h-screen relative flex flex-col justify-between overflow-hidden;
+    background: #2F5B44;
+  }
 
-.coming-soon-container {
-  width: 100vw;
-  height: 100vh;
-  background: #2F5B44;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-}
+  .content {
+    @apply flex-1 flex flex-col justify-start items-center relative;
+    z-index: 30;
+    padding-top: 3%;
+  }
 
-.content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  z-index: 30;
-  position: relative;
-  padding-top: 3%;
-}
+  .logo-section {
+    @apply mb-8;
+  }
 
-.logo-section {
-  margin-bottom: 2rem;
-}
+  .logo {
+    @apply h-20 w-auto;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(1.2) contrast(0.8);
+  }
 
-.logo {
-  height: 80px;
-  width: auto;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(1.2) contrast(0.8);
-}
+  .coming-soon-text h1 {
+    @apply text-6xl font-bold text-center uppercase leading-none tracking-normal;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #FEF9D0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: pulse 2s ease-in-out infinite;
+  }
 
-.coming-soon-text h1 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-style: bold;
-  font-size: 64px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FEF9D0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  animation: pulse 2s ease-in-out infinite;
-}
+  .dots {
+    @apply inline-block;
+  }
 
-.dots {
-  display: inline-block;
-}
+  .dot {
+    @apply text-5xl opacity-0;
+    animation: dotAnimation 1.5s infinite;
+  }
 
-.dot {
-  font-size: 48px;
-  opacity: 0;
-  animation: dotAnimation 1.5s infinite;
-}
+  .dot:nth-child(1) {
+    animation-delay: 0s;
+  }
 
-.dot:nth-child(1) {
-  animation-delay: 0s;
-}
+  .dot:nth-child(2) {
+    animation-delay: 0.5s;
+  }
 
-.dot:nth-child(2) {
-  animation-delay: 0.5s;
-}
+  .dot:nth-child(3) {
+    animation-delay: 1s;
+  }
 
-.dot:nth-child(3) {
-  animation-delay: 1s;
+  .image-section {
+    @apply absolute bottom-0 left-0 w-full flex items-end justify-center;
+    height: 60%;
+    z-index: 10;
+  }
+
+  .design-image {
+    @apply w-full h-full object-contain;
+    filter: brightness(1.1) contrast(1.1);
+  }
 }
 
 @keyframes dotAnimation {
@@ -94,138 +84,113 @@ body {
   50% { opacity: 0.8; }
 }
 
-.image-section {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 60%;
-  z-index: 10;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
+/* Responsive design with Tailwind utilities */
+@layer utilities {
+  @media (max-width: 1200px) {
+    .coming-soon-text h1 {
+      @apply text-5xl;
+    }
+    
+    .logo {
+      @apply h-16;
+    }
+    
+    .image-section {
+      top: 15%;
+      height: 85%;
+    }
+  }
 
-.design-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: brightness(1.1) contrast(1.1);
-}
+  @media (max-width: 768px) {
+    .coming-soon-text h1 {
+      @apply text-4xl;
+    }
+    
+    .logo {
+      @apply h-14;
+    }
+    
+    .content {
+      padding-top: 5%;
+    }
+    
+    .image-section {
+      top: 25%;
+      height: 75%;
+    }
+    
+    .dot {
+      @apply text-4xl;
+    }
+  }
 
-/* Responsive design */
-@media (max-width: 1200px) {
-  .coming-soon-text h1 {
-    font-size: 56px;
+  @media (max-width: 480px) {
+    .coming-soon-text h1 {
+      @apply text-3xl;
+    }
+    
+    .logo {
+      @apply h-12;
+    }
+    
+    .content {
+      padding-top: 8%;
+    }
+    
+    .image-section {
+      top: 30%;
+      height: 70%;
+    }
+    
+    .dot {
+      @apply text-3xl;
+    }
   }
-  
-  .logo {
-    height: 70px;
-  }
-  
-  .image-section {
-    top: 15%;
-    height: 85%;
-  }
-}
 
-@media (max-width: 768px) {
-  .coming-soon-text h1 {
-    font-size: 42px;
+  @media (max-width: 360px) {
+    .coming-soon-text h1 {
+      @apply text-2xl;
+    }
+    
+    .logo {
+      @apply h-10;
+    }
+    
+    .content {
+      padding-top: 10%;
+    }
+    
+    .image-section {
+      top: 35%;
+      height: 65%;
+    }
+    
+    .dot {
+      @apply text-2xl;
+    }
   }
-  
-  .logo {
-    height: 60px;
-  }
-  
-  .content {
-    padding-top: 5%;
-  }
-  
-  .image-section {
-    top: 25%;
-    height: 75%;
-  }
-  
-  .dot {
-    font-size: 36px;
-  }
-}
 
-@media (max-width: 480px) {
-  .coming-soon-text h1 {
-    font-size: 32px;
-  }
-  
-  .logo {
-    height: 50px;
-  }
-  
-  .content {
-    padding-top: 8%;
-  }
-  
-  .image-section {
-    top: 30%;
-    height: 70%;
-  }
-  
-  .dot {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 360px) {
-  .coming-soon-text h1 {
-    font-size: 28px;
-  }
-  
-  .logo {
-    height: 45px;
-  }
-  
-  .content {
-    padding-top: 10%;
-  }
-  
-  .image-section {
-    top: 35%;
-    height: 65%;
-  }
-  
-  .dot {
-    font-size: 24px;
-  }
-}
-
-/* Landscape orientation fixes */
-@media (max-height: 500px) and (orientation: landscape) {
-  .coming-soon-text h1 {
-    font-size: 36px;
-  }
-  
-  .logo {
-    height: 40px;
-  }
-  
-  .content {
-    padding-top: 2%;
-  }
-  
-  .image-section {
-    top: 40%;
-    height: 60%;
-  }
-  
-  .dot {
-    font-size: 30px;
-  }
-}
-
-/* High DPI screens */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .design-image {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
+  /* Landscape orientation fixes */
+  @media (max-height: 500px) and (orientation: landscape) {
+    .coming-soon-text h1 {
+      @apply text-3xl;
+    }
+    
+    .logo {
+      @apply h-10;
+    }
+    
+    .content {
+      padding-top: 2%;
+    }
+    
+    .image-section {
+      top: 40%;
+      height: 60%;
+    }
+    
+    .dot {
+      @apply text-3xl;
+    }
   }
 }

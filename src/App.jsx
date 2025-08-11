@@ -1,29 +1,29 @@
 
-import logo from "/images/commingSoon/Logo_Devext-removebg-preview 2.svg";
-import x from "/images/commingSoon/Untitled design (12) 1.svg";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Calculator from './pages/Calculator';
+import Contact from './pages/Contact';
+import Profile from './pages/Profile';
 
 function App() {
   return (
-    <div className="coming-soon-container">
-      <div className="content">
-        <div className="logo-section">
-          <img src={logo} alt="DEVEXT Logo" className="logo" />
-        </div>
-        
-        <div className="coming-soon-text">
-          <h1>COMING SOON<span className="dots">
-            <span className="dot">.</span>
-            <span className="dot">.</span>
-            <span className="dot">.</span>
-          </span></h1>
-        </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/calculator" element={<Calculator />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
       </div>
-      
-      <div className="image-section">
-        <img src={x} alt="Design Element" className="design-image" />
-      </div>
-    </div>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
