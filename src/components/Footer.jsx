@@ -4,26 +4,26 @@ import logo from "/images/home/Logo_Devext-removebg-preview 2.svg"
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2F5B44] text-[#FEF9D0] py-16 px-6 border-t-2 border-[#FEF9D0]">
+    <footer className="bg-[#2F5B44] text-[#FEF9D0] py-8 sm:py-12 px-4 sm:px-6 border-t-2 border-[#FEF9D0]">
       <div className="container mx-auto max-w-6xl">
         {/* Main Footer Content */}
-        <div className="mb-12">
+        <div className="mb-8 sm:mb-12">
           {/* Logo centered */}
-          <div className="text-center mb-8">
-            <img src={logo} alt="DEVEXT Logo" className="mx-auto h-16" />
+          <div className="text-center mb-6 sm:mb-8">
+            <img src={logo} alt="DEVEXT Logo" className="mx-auto h-12 sm:h-16" />
           </div>
           
           {/* Tagline at top left */}
-          <div className="mb-12">
-            <h2 className="text-[24px] font-medium text-left">LET'S GROW YOUR BRAND</h2>
+          <div className="mb-8 sm:mb-12 text-center md:text-left">
+            <h2 className="text-[20px] sm:text-[24px] font-medium">LET'S GROW YOUR BRAND</h2>
           </div>
 
           {/* Footer Links Grid */}
-          <div className="grid md:grid-cols-3 gap-0">
+          <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-0">
             
             {/* Main Services Column */}
-            <div className="text-center px-8 border-r border-[#FEF9D0] border-opacity-50">
-              <h3 className="text-[18px] font-bold mb-6 uppercase">MAIN SERVICES</h3>
+            <div className="text-left px-4 sm:px-8">
+              <h3 className="text-[16px] sm:text-[18px] font-bold mb-4 sm:mb-6 uppercase">MAIN SERVICES</h3>
               <ul className="space-y-4">
                 <li>
                   <Link to="/services" className="text-[14px] hover:text-[#E9F2CD] transition-colors">
@@ -53,9 +53,12 @@ const Footer = () => {
               </ul>
             </div>
 
+            {/* Vertical Line 1 - Between Col 1 and 2 */}
+            <div className="hidden lg:block absolute left-[25%]  top-0 bottom-0 w-px bg-[#FEF9D0] opacity-50"></div>
+
             {/* Apps & Development Column */}
-            <div className="text-center px-8 border-r border-[#FEF9D0] border-opacity-50">
-              <h3 className="text-[18px] font-bold mb-6 uppercase">APPS & DEVELOPMENT</h3>
+            <div className="text-left px-4 sm:px-8">
+              <h3 className="text-[16px] sm:text-[18px] font-bold mb-4 sm:mb-6 uppercase">APPS & DEVELOPMENT</h3>
               <ul className="space-y-4">
                 <li>
                   <Link to="/calculator" className="text-[14px] hover:text-[#E9F2CD] transition-colors">
@@ -85,9 +88,12 @@ const Footer = () => {
               </ul>
             </div>
 
+            {/* Vertical Line 2 - Between Col 2 and 3 */}
+            <div className="hidden lg:block absolute left-[60%] top-0 bottom-0 w-px bg-[#FEF9D0]  opacity-50"></div>
+
             {/* Company Column */}
-            <div className="text-center px-8">
-              <h3 className="text-[18px] font-bold mb-6 uppercase">COMPANY</h3>
+            <div className="text-left px-4 sm:px-8">
+              <h3 className="text-[16px] sm:text-[18px] font-bold mb-4 sm:mb-6 uppercase">COMPANY</h3>
               <ul className="space-y-4">
                 <li>
                   <Link to="/about" className="text-[14px] hover:text-[#E9F2CD] transition-colors">
@@ -110,12 +116,12 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="border-t border-[#FEF9D0] border-opacity-30 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-[12px]">
+        <div className="border-t border-[#FEF9D0] border-opacity-30 pt-3 sm:pt-4 pb-2">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+            <div className="text-[11px] sm:text-[12px] order-2 sm:order-1">
               ©2025 DEVEXT. ALL RIGHTS RESERVED
             </div>
-            <div className="flex gap-8 text-[12px]">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-[11px] sm:text-[12px] order-1 sm:order-2">
               <Link to="/privacy" className="hover:text-[#E9F2CD] transition-colors">
                 PRIVACY POLICY
               </Link>
@@ -123,7 +129,7 @@ const Footer = () => {
                 ACCESSIBILITY
               </Link>
             </div>
-            <div className="text-[12px]">
+            <div className="text-[11px] sm:text-[12px] order-3">
               CALL US : 01200064762
             </div>
           </div>

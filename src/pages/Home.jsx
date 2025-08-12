@@ -31,6 +31,7 @@ import whatsapp from "/images/home/WhatsApp.svg"
 import instagram from "/images/home/Instagram.svg"
 import linkedin from "/images/home/Linkedin.svg"
 import line from "/images/home/Line 1.svg"
+import backgroundsectionseven from "/images/home/Devext Pattern 1 7.png"
 
 function Home() {
   return (
@@ -59,16 +60,16 @@ function Home() {
               </div>
 
           {/* Content */}
-          <div className="container mx-auto max-w-6xl relative z-20 px-6 pt-40">
+        <div className="container mx-auto max-w-6xl relative z-20 px-4 sm:px-6 pt-20 sm:pt-40">
             <div className="max-w-2xl">
-            <h1 className="text-[80px] font-bold mb-0 text-[#E9F2CD]">
+            <h1 className="text-[40px] sm:text-[60px] lg:text-[80px] font-bold mb-0 text-[#E9F2CD]">
               DEVEXT
             </h1>
-            <h2 className="text-[32px] leading-none mb-6 text-[#E9F2CD] -mt-4">
+            <h2 className="text-[20px] sm:text-[26px] lg:text-[32px] leading-none mb-6 text-[#E9F2CD] -mt-2 sm:-mt-4">
               Is Your Best Solution<br />
               For A Better Tomorrow
             </h2>
-            <p className="text-lg mb-8 leading-relaxed text-[#E9F2CD] opacity-80 max-w-md">
+            <p className="text-base sm:text-lg mb-8 leading-relaxed text-[#E9F2CD] opacity-80 max-w-md">
               Lorem ipsum is simply dummy text of the printing and 
               typesetting industry. Lorem Ipsum has been the 
               industry's standard dummy text ever since the 
@@ -76,32 +77,32 @@ function Home() {
               of type and scrambled it to make a type 
               specimen book.
             </p>
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-8">
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
                 <div className="flex flex-col gap-1">
-                  <img src={icons} alt="User Reviews" className="h-10" />
+                  <img src={icons} alt="User Reviews" className="h-8 sm:h-10" />
                   <div className="flex">
                     {[1,2,3,4,5].map((star, index) => (
-                      <svg key={index} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <svg key={index} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                   </div>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
                   <Link 
                     to="/community"
-                    className="bg-[#2F5B44] border border-[#E9F2CD] text-[#E9F2CD] px-6 py-2 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center text-sm"
+                    className="bg-[#2F5B44] border border-[#E9F2CD] text-[#E9F2CD] px-4 sm:px-6 py-2 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-sm"
                   >
                     Join The Community
-                    <img src={uparrow} alt="arrow" className="w-4 h-4 ml-2" />
+                    <img src={uparrow} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
                   </Link>
                   <Link 
                     to="/about"
-                    className="bg-[#2F5B44] border border-[#E9F2CD] text-[#E9F2CD] px-6 py-2 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center text-sm"
+                    className="bg-[#2F5B44] border border-[#E9F2CD] text-[#E9F2CD] px-4 sm:px-6 py-2 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-sm"
                   >
                     Learn More
-                    <img src={downarrow} alt="arrow" className="w-4 h-4 ml-2" />
+                    <img src={downarrow} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
                   </Link>
                 </div>
               </div>
@@ -111,8 +112,8 @@ function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="relative h-[80vh]">
-        <div className="absolute inset-0">
+      <section className="relative min-h-[80vh]">
+        <div className="absolute inset-0 hidden md:block">
           <div className="flex h-full">
             <div className="w-1/2 bg-[#E9F2CD]"></div>
             <div className="w-1/2 bg-[#2F5B44]"></div>
@@ -120,10 +121,10 @@ function Home() {
         </div>
         
         <div className="relative h-full">
-          <div className="grid md:grid-cols-2 h-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
             
             {/* Left Content */}
-            <div className="relative flex items-center justify-center p-12 font-['Inter'] overflow-hidden">
+            <div className="relative flex items-center justify-center p-6 sm:p-8 lg:p-12 font-['Inter'] overflow-hidden bg-[#E9F2CD]">
               {/* Background Pattern */}
               <div className="absolute inset-1 w-[calc(100%-0.5rem)] h-[calc(100%-0.5rem)] opacity-50 z-0">
                 <img 
@@ -133,40 +134,40 @@ function Home() {
                 />
               </div>
               
-              <div className="relative z-10 max-w-lg">
-                <h3 className="text-[30px] font-medium text-[#2F5B44] mb-6 leading-tight uppercase text-left">
+              <div className="relative z-10 max-w-lg text-center md:text-left">
+                <h3 className="text-[20px] sm:text-[24px] lg:text-[30px] font-medium text-[#2F5B44] mb-4 sm:mb-6 leading-tight uppercase">
                   CREATIVE<br />
                   SOFTWARE AGENCY DELIVERING<br />
                   CUSTOM SOLUTIONS
                 </h3>
-                <p className="text-[16px] font-normal text-[#2F5B44] mb-6 leading-relaxed">
+                <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-[#2F5B44] mb-4 sm:mb-6 leading-relaxed">
                   Lorem ipsum is simply dummy text of the printing and typesetting 
                   industry. Lorem ipsum has been the industry's standard dummy 
                   text ever since the 1500s, when an unknown printer took a galley 
                   of type and scrambled it to make a type specimen book.
                 </p>
-                <p className="text-[16px] font-normal text-[#2F5B44] mb-8 leading-relaxed">
+                <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-[#2F5B44] mb-6 sm:mb-8 leading-relaxed">
                   Lorem ipsum is simply dummy text of the printing and typesetting 
                   industry. Lorem ipsum has been the industry's standard dummy 
                   text ever since the 1500s.
                 </p>
-                <div className="flex justify-end bottom-2">           
+                <div className="flex justify-center md:justify-end">           
                   <Link 
                     to="/services"
-                    className="inline-flex items-center border-2 border-[#2F5B44] text-[#2F5B44] px-6 py-3 rounded-full hover:bg-[#2F5B44] hover:text-white transition-colors font-medium"
+                    className="inline-flex items-center border-2 border-[#2F5B44] text-[#2F5B44] px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-[#2F5B44] hover:text-white transition-colors font-medium text-sm sm:text-base"
                   >
                     Discover More
-                    <img src={icon2} alt="arrow" className="w-4 h-4 ml-2" />
+                    <img src={icon2} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
                   </Link>
                 </div>
               </div>
             </div>
 
             {/* Right Image */}
-            <div className="relative flex items-center justify-center p-8">
+            <div className="relative flex items-center justify-center p-6 sm:p-8 bg-[#2F5B44] md:bg-transparent">
               <div className="relative w-full max-w-md">
                 {/* Background Pattern */}
-                <div className="absolute -top-4 -right-4 w-24 h-24 opacity-20 z-0">
+                <div className="absolute -top-4 -right-4 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 opacity-20 z-0">
                   <img 
                     src={icon3} 
                     alt="Decorative Pattern" 
@@ -186,8 +187,8 @@ function Home() {
 
 
          {/* third Section */}
-         <section className="relative h-[80vh]">
-        <div className="absolute inset-0">
+      <section className="relative min-h-[80vh]">
+        <div className="absolute inset-0 hidden md:block">
           <div className="flex h-full">
             <div className="w-1/2 bg-[#2F5B44]"></div>
             <div className="w-1/2 bg-[#FEF9D0]"></div>
@@ -195,28 +196,28 @@ function Home() {
         </div>
         
         <div className="relative h-full">
-          <div className="grid md:grid-cols-2 h-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
             
             {/* Left Side - Dark Green */}
-            <div className="relative flex items-center justify-center p-12 font-['Inter'] overflow-hidden bg-[#2F5B44]">
+            <div className="relative flex items-center justify-center p-6 sm:p-8 lg:p-12 font-['Inter'] overflow-hidden bg-[#2F5B44]">
               {/* Arrows - Vertically Centered on Right */}
-              <div className="absolute right-8 top-1/2 transform -translate-y-1/2 flex flex-col gap-8">
+              <div className="absolute right-4 sm:right-6 lg:right-8 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 sm:gap-6 lg:gap-8 hidden md:flex">
                 {/* Up Arrow */}
-                <img src={upthird} alt="up arrow" />
+                <img src={upthird} alt="up arrow" className="w-6 h-6 sm:w-8 sm:h-8" />
                 
                 {/* Down Arrow */}
-                <img src={downthird} alt="down arrow" />
+                <img src={downthird} alt="down arrow" className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
 
-              <div className="relative z-10 max-w-lg">
-                <h3 className="text-[18px] font-medium text-[#FEF9D0] mb-6 leading-tight uppercase text-left">
+              <div className="relative z-10 max-w-lg text-center md:text-left">
+                <h3 className="text-[16px] sm:text-[17px] lg:text-[18px] font-medium text-[#FEF9D0] mb-4 sm:mb-6 leading-tight uppercase">
                   WHY DEVEXT?
                 </h3>
-                <h2 className="text-[30px] font-medium  text-[#FEF9D0] mb-6 leading-tight uppercase text-left">
+                <h2 className="text-[22px] sm:text-[26px] lg:text-[30px] font-medium text-[#FEF9D0] mb-4 sm:mb-6 leading-tight uppercase">
                   DISCOVER OUR EXPERTISE AS<br />
                   A WEB DESIGN COMPANY
                 </h2>
-                <p className="text-[16px] font-normal text-[#FEF9D0] mb-8 leading-relaxed">
+                <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-[#FEF9D0] mb-6 sm:mb-8 leading-relaxed">
                   As a full-service web design agency, we handle all your 
                   digital needs under one roof. Our custom web design 
                   services include thorough research and planning, 
@@ -227,16 +228,16 @@ function Home() {
             </div>
 
             {/* Right Side - Light Cream */}
-            <div className="relative flex items-center justify-center p-12 font-['Inter'] overflow-hidden">
-              <div className="relative z-10 max-w-lg">
-                <div className="flex items-center gap-3 mb-6">
-                  <img src={rectangle} alt="Rectangle Icon" className="w-auto h-auto" />
-                  <h3 className="text-[30px] font-medium text-[#2F5B44]  leading-tight uppercase text-left">
+            <div className="relative flex items-center justify-center p-6 sm:p-8 lg:p-12 font-['Inter'] overflow-hidden bg-[#FEF9D0]">
+              <div className="relative z-10 max-w-lg text-center md:text-left">
+                <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-2 sm:gap-3 mb-4 sm:mb-6">
+                  <img src={rectangle} alt="Rectangle Icon" className="w-6 h-6 sm:w-8 sm:h-8" />
+                  <h3 className="text-[22px] sm:text-[26px] lg:text-[30px] font-medium text-[#2F5B44] leading-tight uppercase">
                     CUSTOM WEB DESIGN
                   </h3>
                 </div>
               
-                <p className="text-[16px] font-normal text-[#2F5B44] mb-8 leading-relaxed">
+                <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-[#2F5B44] mb-6 sm:mb-8 leading-relaxed">
                   Each website we create is meticulously crafted to deliver a 
                   100% unique experience tailored to your brand. Our 
                   expert designers transform your vision into a dynamic, 
@@ -245,14 +246,14 @@ function Home() {
                   will not only stand out but also connect deeply with your 
                   audience.
                 </p>
-                <div className="flex justify-end">
+                <div className="flex justify-center md:justify-end">
                   <Link 
                     to="/services"
-                    className="inline-flex items-center text-[#2F5B44] px-6 py-3 rounded-full hover:bg-[#2F5B44] hover:text-white transition-colors font-medium"
+                    className="inline-flex items-center text-[#2F5B44] px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-[#2F5B44] hover:text-white transition-colors font-medium text-sm sm:text-base"
                     style={{ border: '3px solid #2F5B44' }}
                   >
                     Learn More
-                    <img src={downarrow} alt="arrow" className="w-4 h-4 ml-2" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+                    <img src={downarrow} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
                   </Link>
                 </div>
               </div>
@@ -386,21 +387,21 @@ function Home() {
               </div>
 
               {/* Testimonial Cards */}
-              <div className="grid md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 {/* Card 1 */}
-                <div className="bg-[#2F5B44] rounded-3xl p-6 text-[#FEF9D0]">
-                  <div className="mb-6">
-                    <img src={image1} alt="Project 1" className="w-full h-32 object-cover rounded-lg" />
+                <div className="bg-[#2F5B44] rounded-3xl p-4 sm:p-6 text-[#FEF9D0]">
+                  <div className="mb-4 sm:mb-6">
+                    <img src={image1} alt="Project 1" className="w-full h-24 sm:h-32 object-cover rounded-lg" />
                   </div>
-                  <p className="text-[14px] leading-relaxed mb-6">
+                  <p className="text-[13px] sm:text-[14px] leading-relaxed mb-4 sm:mb-6">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
                     Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
                     unknown printer took a galley of type and scrambled it to make a type specimen book.
                   </p>
                   <div className="flex items-center gap-3">
-                    <img src={circle1} alt="Client Icon" className="w-8 h-8" />
+                    <img src={circle1} alt="Client Icon" className="w-6 h-6 sm:w-8 sm:h-8" />
                     <div>
-                      <p className="text-[#FEF9D0] text-sm font-medium">joyaproperties.com</p>
+                      <p className="text-[#FEF9D0] text-xs sm:text-sm font-medium">joyaproperties.com</p>
                       <div className="flex items-center gap-1 mt-1">
                         <svg className="w-3 h-3 text-[#FEF9D0]" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
@@ -412,19 +413,19 @@ function Home() {
                 </div>
 
                 {/* Card 2 */}
-                <div className="bg-[#2F5B44] rounded-3xl p-6 text-[#FEF9D0]">
-                  <div className="mb-6">
-                    <img src={image2} alt="Project 2" className="w-full h-32 object-cover rounded-lg" />
+                <div className="bg-[#2F5B44] rounded-3xl p-4 sm:p-6 text-[#FEF9D0]">
+                  <div className="mb-4 sm:mb-6">
+                    <img src={image2} alt="Project 2" className="w-full h-24 sm:h-32 object-cover rounded-lg" />
                   </div>
-                  <p className="text-[14px] leading-relaxed mb-6">
+                  <p className="text-[13px] sm:text-[14px] leading-relaxed mb-4 sm:mb-6">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
                     Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
                     unknown printer took a galley of type and scrambled it to make a type specimen book.
                   </p>
                   <div className="flex items-center gap-3">
-                    <img src={circle2} alt="Client Icon" className="w-8 h-8" />
+                    <img src={circle2} alt="Client Icon" className="w-6 h-6 sm:w-8 sm:h-8" />
                     <div>
-                      <p className="text-[#FEF9D0] text-sm font-medium">ldc-investment.sa</p>
+                      <p className="text-[#FEF9D0] text-xs sm:text-sm font-medium">ldc-investment.sa</p>
                       <div className="flex items-center gap-1 mt-1">
                         <svg className="w-3 h-3 text-[#FEF9D0]" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
@@ -436,19 +437,19 @@ function Home() {
                 </div>
 
                 {/* Card 3 */}
-                <div className="bg-[#2F5B44] rounded-3xl p-6 text-[#FEF9D0]">
-                  <div className="mb-6">
-                    <img src={image3} alt="Project 3" className="w-full h-32 object-cover rounded-lg" />
+                <div className="bg-[#2F5B44] rounded-3xl p-4 sm:p-6 text-[#FEF9D0] sm:col-span-2 lg:col-span-1">
+                  <div className="mb-4 sm:mb-6">
+                    <img src={image3} alt="Project 3" className="w-full h-24 sm:h-32 object-cover rounded-lg" />
                   </div>
-                  <p className="text-[14px] leading-relaxed mb-6">
+                  <p className="text-[13px] sm:text-[14px] leading-relaxed mb-4 sm:mb-6">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
                     Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
                     unknown printer took a galley of type and scrambled it to make a type specimen book.
                   </p>
                   <div className="flex items-center gap-3">
-                    <img src={circle3} alt="Client Icon" className="w-8 h-8" />
+                    <img src={circle3} alt="Client Icon" className="w-6 h-6 sm:w-8 sm:h-8" />
                     <div>
-                      <p className="text-[#FEF9D0] text-sm font-medium">sada-almawal.sa</p>
+                      <p className="text-[#FEF9D0] text-xs sm:text-sm font-medium">sada-almawal.sa</p>
                       <div className="flex items-center gap-1 mt-1">
                         <svg className="w-3 h-3 text-[#FEF9D0]" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
@@ -464,7 +465,7 @@ function Home() {
           
           {/* sixth Section - FAQ */}
           <section className="relative py-20 px-6" style={{ background: '#2F5B44' }}>
-            <div className="container mx-auto max-w-full px-8">
+            <div className="container mx-auto max-w-full px-20">
               {/* Header */}
               <div className="text-center mb-12">
                 <h2 className="text-[36px] font-bold text-[#FEF9D0] mb-8 leading-tight" style={{ fontFamily: 'Inter' }}>
@@ -473,7 +474,7 @@ function Home() {
               </div>
 
               {/* FAQ Accordion */}
-              <div className="space-y-4">
+              <div className="space-y-4 max-w-6xl mx-auto">
                 {/* FAQ Item 1 */}
                 <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer">
                   <div className="flex items-center justify-between">
@@ -521,7 +522,7 @@ function Home() {
                     </svg>
                   </div>
                 </div>
-
+                   
                 {/* FAQ Item 5 */}
                 <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer">
                   <div className="flex items-center justify-between">
@@ -589,16 +590,19 @@ function Home() {
           {/* seventh Section */}
           <section className="relative py-20 px-6 overflow-hidden" style={{ background: '#FEF9D0' }}>
             {/* Background Pattern */}
-            <div className="absolute inset-0">
-              <div className="absolute inset-0 flex items-center justify-center opacity-15">
+            <div className="absolute inset-0 w-full h-full">
+              <div className="absolute inset-0 flex items-center justify-end opacity-30">
                 <img 
-                  src={fifthsectionbackgroundIcon} 
+                  src={backgroundsectionseven} 
                   alt="Background Pattern" 
-                  className="w-full h-full object-contain object-center"
+                  className="w-full h-full object-cover"
                   style={{ 
-                    transform: 'scale(1.4)',
+                    width: '50%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    transform: 'scale(1.0001) translateX(25%)',
                     filter: 'brightness(1.2) contrast(1.3) saturate(1.1)',
-                    mixBlendMode: 'multiply'
+                    mixBlendMode: 'multiply',
                   }}
                 />
               </div>
@@ -631,30 +635,30 @@ function Home() {
               </div>
 
               {/* 3 Cards Layout with Rotated Side Cards */}
-              <div className="flex items-center justify-center gap-10 min-h-[550px] relative">
-                {/* Left Card - Rotated -30 degrees and moved down more */}
-                <div className="bg-[#FEF9D0] rounded-3xl p-8 text-[#2F5B44] max-w-sm shadow-2xl min-h-[380px] flex flex-col justify-center transform -rotate-[30deg] translate-y-12 z-10">
-                  <p className="text-[15px] leading-relaxed mb-8 text-center">
+              <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-10 min-h-[550px] relative">
+                {/* Left Card - Rotated on desktop only */}
+                <div className="bg-[#FEF9D0] rounded-3xl p-6 sm:p-8 text-[#2F5B44] w-full max-w-sm shadow-2xl min-h-[300px] sm:min-h-[380px] flex flex-col justify-center lg:transform lg:-rotate-[30deg] lg:translate-y-12 z-10">
+                  <p className="text-[13px] sm:text-[15px] leading-relaxed mb-6 sm:mb-8 text-center">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                     when an unknown printer took a galley of type and scrambled it to make a type 
                     specimen book.
                   </p>
                   <div className="flex items-center gap-3 justify-center">
-                    <img src={circle1} alt="Client Icon" className="w-10 h-10" />
+                    <img src={circle1} alt="Client Icon" className="w-8 h-8 sm:w-10 sm:h-10" />
                     <div className="text-center">
-                      <p className="text-[#2F5B44] text-base font-medium">Altal Alkabeer</p>
+                      <p className="text-[#2F5B44] text-sm sm:text-base font-medium">Altal Alkabeer</p>
                       <div className="flex items-center gap-1 mt-1 justify-center">
-                        <img src={location} alt="Location" className="w-4 h-4" />
-                        <p className="text-[#2F5B44] text-sm">Riyadh</p>
+                        <img src={location} alt="Location" className="w-3 h-3 sm:w-4 sm:h-4" />
+                        <p className="text-[#2F5B44] text-xs sm:text-sm">Riyadh</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Center Card - Highest Priority */}
-                <div className="bg-[#2F5B44] rounded-3xl p-8 text-[#FEF9D0] max-w-sm shadow-2xl min-h-[380px] flex flex-col justify-center z-50">
-                  <p className="text-[15px] leading-relaxed mb-8 text-center">
+                <div className="bg-[#2F5B44] rounded-3xl p-6 sm:p-8 text-[#FEF9D0] w-full max-w-sm shadow-2xl min-h-[300px] sm:min-h-[380px] flex flex-col justify-center z-50">
+                  <p className="text-[13px] sm:text-[15px] leading-relaxed mb-6 sm:mb-8 text-center">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                     when an unknown printer took a galley of type and scrambled it to make a type 
@@ -662,32 +666,32 @@ function Home() {
                     industry.
                   </p>
                   <div className="flex items-center gap-3 justify-center">
-                    <img src={circle2} alt="Client Icon" className="w-10 h-10" />
+                    <img src={circle2} alt="Client Icon" className="w-8 h-8 sm:w-10 sm:h-10" />
                     <div className="text-center">
-                      <p className="text-[#FEF9D0] text-base font-medium">Joud&Karam</p>
+                      <p className="text-[#FEF9D0] text-sm sm:text-base font-medium">Joud&Karam</p>
                       <div className="flex items-center gap-1 mt-1 justify-center">
-                        <img src={location} alt="Location" className="w-4 h-4" />
-                        <p className="text-[#FEF9D0] text-sm">Dubai</p>
+                        <img src={location} alt="Location" className="w-3 h-3 sm:w-4 sm:h-4" />
+                        <p className="text-[#FEF9D0] text-xs sm:text-sm">Dubai</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Right Card - Rotated 30 degrees and moved down more */}
-                <div className="bg-[#FEF9D0] rounded-3xl p-8 text-[#2F5B44] max-w-sm shadow-2xl min-h-[380px] flex flex-col justify-center transform rotate-[30deg] translate-y-12 z-10">
-                  <p className="text-[15px] leading-relaxed mb-8 text-center">
+                {/* Right Card - Rotated on desktop only */}
+                <div className="bg-[#FEF9D0] rounded-3xl p-6 sm:p-8 text-[#2F5B44] w-full max-w-sm shadow-2xl min-h-[300px] sm:min-h-[380px] flex flex-col justify-center lg:transform lg:rotate-[30deg] lg:translate-y-12 z-10">
+                  <p className="text-[13px] sm:text-[15px] leading-relaxed mb-6 sm:mb-8 text-center">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                     when an unknown printer took a galley of type and scrambled it to make a type 
                     specimen book.
                   </p>
                   <div className="flex items-center gap-3 justify-center">
-                    <img src={circle3} alt="Client Icon" className="w-10 h-10" />
+                    <img src={circle3} alt="Client Icon" className="w-8 h-8 sm:w-10 sm:h-10" />
                     <div className="text-center">
-                      <p className="text-[#2F5B44] text-base font-medium">Bedayat Meshwar</p>
+                      <p className="text-[#2F5B44] text-sm sm:text-base font-medium">Bedayat Meshwar</p>
                       <div className="flex items-center gap-1 mt-1 justify-center">
-                        <img src={location} alt="Location" className="w-4 h-4" />
-                        <p className="text-[#2F5B44] text-sm">Dubai</p>
+                        <img src={location} alt="Location" className="w-3 h-3 sm:w-4 sm:h-4" />
+                        <p className="text-[#2F5B44] text-xs sm:text-sm">Dubai</p>
                       </div>
                     </div>
                   </div>
@@ -697,30 +701,30 @@ function Home() {
           </section>
 
           {/* eighth Section - Contact Form */}
-          <section className="relative py-20 px-6 overflow-hidden" style={{ background: '#2F5B44' }}>
+          <section className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden" style={{ background: '#2F5B44' }}>
 
             <div className="container mx-auto max-w-6xl relative z-10">
-              <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                 
                 {/* Left Side - Text Content */}
-                <div className="space-y-8 pb-4">
+                <div className="space-y-6 lg:space-y-8 pb-4 text-center lg:text-left">
                   <div>
-                    <h2 className="text-[30px] font-bold text-5xl text-[#FEF9D0] mb-6 leading-tight" style={{ fontFamily: 'Inter' }}>
+                    <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] xl:text-5xl font-bold text-[#FEF9D0] mb-4 sm:mb-6 leading-tight" style={{ fontFamily: 'Inter' }}>
                       DIGITIZING YOUR BUSINESS<br />
                       GROWTH
                     </h2>
-                    <div className="flex items-center justify-between mb-8 mt-10">
-                      <img src={line} alt="line" className="w-32" />
-                      <span className="text-[#FEF9D0] text-lg font-medium">FOLLOW US</span>
-                      <div className="flex gap-6">
+                    <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-between mb-6 sm:mb-8 mt-6 sm:mt-10 gap-4 sm:gap-0">
+                      <img src={line} alt="line" className="w-24 sm:w-32 order-1 sm:order-none" />
+                      <span className="text-[#FEF9D0] text-base sm:text-lg font-medium order-2 sm:order-none">FOLLOW US</span>
+                      <div className="flex gap-4 sm:gap-6 order-3 sm:order-none">
                         <a href="#" className="hover:opacity-70 transition-opacity">
-                          <img src={whatsapp} alt="WhatsApp" className="w-6 h-6" />
+                          <img src={whatsapp} alt="WhatsApp" className="w-5 h-5 sm:w-6 sm:h-6" />
                         </a>
                         <a href="#" className="hover:opacity-70 transition-opacity">
-                          <img src={instagram} alt="Instagram" className="w-6 h-6" />
+                          <img src={instagram} alt="Instagram" className="w-5 h-5 sm:w-6 sm:h-6" />
                         </a>
                         <a href="#" className="hover:opacity-70 transition-opacity">
-                          <img src={linkedin} alt="LinkedIn" className="w-6 h-6" />
+                          <img src={linkedin} alt="LinkedIn" className="w-5 h-5 sm:w-6 sm:h-6" />
                         </a>
                       </div>
                     </div>
@@ -729,14 +733,14 @@ function Home() {
 
                 {/* Right Side - Contact Form */}
                 <div className="bg-transparent">
-                  <div className="mb-8">
-                    <h3 className="text-[32px] font-bold text-[#FEF9D0] mb-2 leading-tight">
+                  <div className="mb-6 sm:mb-8 text-center lg:text-left">
+                    <h3 className="text-[24px] sm:text-[28px] lg:text-[32px] font-bold text-[#FEF9D0] mb-2 leading-tight">
                       START A CONVERSATION<br />
                       WITH US
                     </h3>
                   </div>
 
-                  <form className="space-y-6">
+                  <form className="space-y-4 sm:space-y-6">
                     {/* Name Field */}
                     <div className="relative">
                       <div className="flex items-center gap-3 mb-2">
