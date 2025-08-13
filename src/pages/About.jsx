@@ -17,6 +17,9 @@ import instagram from "/images/home/Instagram.svg"
 import linkedin from "/images/home/Linkedin.svg"
 import line from "/images/home/Line 1.svg"
 
+import thirdsection from "/images/about/mobile app mockup 1 1.svg"
+import secondsection from "/images/about/website mockup 1 1.svg"
+
 
 function About() {
   return (
@@ -120,25 +123,29 @@ function About() {
                </div>
              </div>
 
-            {/* Right  */}
+                        {/* Right  */}
             <div className="relative flex items-center justify-center p-6 sm:p-8 bg-[#FEF9D0] overflow-hidden">
-            
-             
-              
+              <div className="relative z-10 w-full h-full flex items-center justify-center">
+                <img 
+                  src={secondsection} 
+                  alt="Website Mockup" 
+                  className="w-full h-auto max-w-lg object-contain -mb-14 "
+                />
+              </div>
                              
-               <div className="absolute -right-10  top-0 w-full h-full flex items-center justify-end opacity-15">
-                   <img 
-                     src={logo} 
-                     alt="Background Pattern" 
-                     className="w-auto h-full object-contain object-right"
-                     style={{ 
-                       transform: 'scale(1.2) translateX(-10%)',
-                       filter: 'brightness(1.5) contrast(1.5) saturate(1.3)',
-                       mixBlendMode: 'multiply'
-                     }}
-                   />
-              
-               </div>
+              <div className="absolute -right-10  top-0 w-full h-full flex items-center justify-end opacity-30">
+                  <img 
+                    src={logo} 
+                    alt="Background Pattern" 
+                    className="w-auto h-full object-contain object-right"
+                    style={{ 
+                      transform: 'scale(1.2) translateX(-10%)',
+                      filter: 'brightness(1.5) contrast(1.5) saturate(1.3)',
+                      mixBlendMode: 'multiply'
+                    }}
+                  />
+             
+              </div>
             </div>
            
           </div>
@@ -160,7 +167,14 @@ function About() {
             
             {/* Left Content */}
             <div className="relative flex items-center justify-center p-6 sm:p-8 bg-[#E9F2CD] overflow-hidden">
-              <div className="absolute -left-90 top-0 w-full h-full flex items-center justify-start opacity-15">
+              <div className="relative z-10 w-full h-full flex items-center justify-center">
+                <img 
+                  src={thirdsection} 
+                  alt="Mobile App Mockup" 
+                  className="w-full h-auto max-w-lg object-contain"
+                />
+              </div>
+              <div className="absolute -left-90 top-0 w-full h-full flex items-center justify-start opacity-25">
                 <img 
                   src={logo2} 
                   alt="Background Pattern" 

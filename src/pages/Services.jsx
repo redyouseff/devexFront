@@ -29,6 +29,52 @@ const swiperStyles = `
       width: 100% !important;
     }
   }
+
+  /* Smooth and slower page scroll */
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+  }
+  
+  body {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    scroll-behavior: smooth;
+  }
+  
+  /* Make scroll even smoother and slower */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  
+  /* Add momentum scrolling for iOS */
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Custom scrollbar styling for smoother experience */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #2F5B44;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1e3d2a;
+  }
 `;
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
