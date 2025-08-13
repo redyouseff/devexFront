@@ -709,7 +709,7 @@ function Home() {
                 {/* Left Side - Text Content */}
                 <div className="space-y-6 lg:space-y-8 pb-4 text-center lg:text-left">
                   <div>
-                    <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] xl:text-5xl font-bold text-[#FEF9D0] mb-4 sm:mb-6 leading-tight" style={{ fontFamily: 'Inter' }}>
+                    <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] xl:text-[36px] font-bold text-[#FEF9D0] mb-4 sm:mb-6 leading-tight whitespace-nowrap  " style={{ fontFamily: 'Inter' }}>
                       DIGITIZING YOUR BUSINESS<br />
                       GROWTH
                     </h2>

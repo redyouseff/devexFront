@@ -17,12 +17,14 @@ import instagram from "/images/home/Instagram.svg"
 import linkedin from "/images/home/Linkedin.svg"
 import line from "/images/home/Line 1.svg"
 
+
 function About() {
   return (
     <div className="min-h-screen bg-gray-100">   
       <Navbar />
 
-        {/* Hero Section */}         <section className="relative min-h-[95vh] flex items-center overflow-hidden">
+        {/* Hero Section */}
+                <section className="relative min-h-[95vh] flex items-center overflow-hidden">
              {/* Video Background */}
              <div className="absolute inset-0 w-full h-full overflow-hidden">
                 <div className="absolute inset-0 bg-[linear-gradient(257.99deg,rgba(254,249,208,0.1)_0%,rgba(47,91,68,0.1)_1%,#2F5B44_95%)] z-10"></div>
@@ -60,7 +62,7 @@ function About() {
               Lorem Ipsum has been the industry's standard dummy text ever since the 
               1500s, when an unknown printer took a galley of type and scrambled it to 
               make a type specimen book.
-            </p>
+            </p>  
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-5">
               <Link 
                 to="/team"
@@ -264,7 +266,7 @@ function About() {
     {/* Left Side - Text Content */}
     <div className="space-y-6 lg:space-y-8 pb-4 text-center lg:text-left">
              <div>
-         <h2 className="text-[20px] sm:text-[30px] lg:text-[36px] xl:text-5xl font-bold text-[#2F5B44] mb-4 sm:mb-6 leading-tight" style={{ fontFamily: 'Inter' }}>
+         <h2 className="text-[20px] sm:text-[30px] lg:text-[10px] xl:text-[36px] font-bold text-[#2F5B44] mb-4 sm:mb-6 leading-tight  whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
            DIGITIZING YOUR BUSINESS<br />
            GROWTH
          </h2>
