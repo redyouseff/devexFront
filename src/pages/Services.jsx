@@ -234,7 +234,7 @@ function Services() {
                 </p>
                 
                 {/* Services List */}
-                <ul className="space-y-3 mb-8">
+                <ul className=" mb-8">
                   <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[20px] text-[#2F5B44]">
                     <span className="w-2 h-2 bg-[#2F5B44] rounded-full mr-3"></span>
                     Custom Web Design & Development
@@ -313,7 +313,7 @@ function Services() {
                 </p>
                 
                 {/* Services List */}
-                <ul className="space-y-3 mb-8">
+                <ul className=" mb-8">
                   <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[20px] text-[#FEF9D0]">
                     <span className="w-2 h-2 bg-[#FEF9D0] rounded-full mr-3"></span>
                     Custom Web Design & Development

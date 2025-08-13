@@ -1,5 +1,54 @@
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+
+// Smooth scroll styles
+const smoothScrollStyles = `
+  /* Smooth and slower page scroll */
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+  }
+  
+  body {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    scroll-behavior: smooth;
+  }
+  
+  /* Make scroll even smoother and slower */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  
+  /* Add momentum scrolling for iOS */
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Custom scrollbar styling for smoother experience */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #2F5B44;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1e3d2a;
+  }
+`;
 import uparrow from "/images/home/Vector.svg"
 import downarrow from "/images/home/Vector1.svg"
 import Footer from '../components/Footer';
@@ -23,8 +72,10 @@ import secondsection from "/images/about/website mockup 1 1.svg"
 
 function About() {
   return (
-    <div className="min-h-screen bg-gray-100">   
-      <Navbar />
+    <>
+      <style>{smoothScrollStyles}</style>
+      <div className="min-h-screen bg-gray-100">   
+        <Navbar />
 
         {/* Hero Section */}
                 <section className="relative min-h-[95vh] flex items-center overflow-hidden">
@@ -408,7 +459,8 @@ function About() {
 
 
       <Footer />
-    </div>
+      </div>
+    </>
   );
 }
 
