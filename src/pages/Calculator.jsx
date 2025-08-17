@@ -74,6 +74,9 @@ function Calculator() {
   const [showWebsiteTypeDropdown, setShowWebsiteTypeDropdown] = useState(false);
   const [showPlatformDropdown, setShowPlatformDropdown] = useState(false);
   const [showPagesDropdown, setShowPagesDropdown] = useState(false);
+  const [showCopywritingDropdown, setShowCopywritingDropdown] = useState(false);
+  const [showMultiLanguageDropdown, setShowMultiLanguageDropdown] = useState(false);
+  const [showMotionGraphicsDropdown, setShowMotionGraphicsDropdown] = useState(false);
 
   // State for calculator features
   const [features, setFeatures] = useState({
@@ -91,7 +94,13 @@ function Calculator() {
 
   // Base pricing based on number of pages and platform
   const getBasePricing = () => {
-    if (platform === 'Custom Code') {
+    if (platform === 'Wordpress') {
+      return {
+        '5': { hours: 20, price: 160 },
+        '10': { hours: 25, price: 200 },
+        '10 Or More': { hours: 30, price: 240 }
+      };
+    } else if (platform === 'Custom Code') {
       return {
         '5': { hours: 20, price: 1200 },
         '10': { hours: 25, price: 1600 },
@@ -468,16 +477,31 @@ function Calculator() {
                   <span className="ml-4 text-[#FEF9D0] text-lg whitespace-nowrap" style={{ fontFamily: 'Inter' }}>Copywriting Page Count</span>
                   {features.copywriting.enabled && (
                     <div className="relative">
-                      <select
-                        value={features.copywriting.count}
-                        onChange={(e) => updateFeatureCount('copywriting', e.target.value)}
-                        className="ml-4 bg-transparent border border-[#FEF9D0] rounded-3xl px-3 py-2 text-[#FEF9D0] text-sm w-20 text-left ml-[25rem] appearance-none pr-8"
-                      >
-                        {[1,2,3,4,5,6,7,8,9,10].map(num => (
-                          <option key={num} value={num} className="bg-[#2F5B44] text-[#FEF9D0] ">{num}</option>
-                        ))}
-                      </select>
-                      <img src={dropdown} alt="dropdown" className="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 pointer-events-none" />
+                      <div className="ml-[35rem] bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm w-20 text-center cursor-pointer" onClick={() => setShowCopywritingDropdown(!showCopywritingDropdown)}>
+                        <div className="flex items-center justify-between">
+                          <span>{features.copywriting.count}</span>
+                          <img src={dropdown} alt="dropdown" className="w-4 h-4" />
+                        </div>
+                      </div>
+                      
+                      {showCopywritingDropdown && (
+                        <div className="-ml-4 absolute mt-2 w-full bg-[#2F5B44] border border-[#FEF9D0] rounded-3xl py-2 z-50">
+                          {[1,2,3,4,5,6,7,8,9,10].map((num, index) => (
+                            <div 
+                              key={num}
+                              className={`rounded-xl px-4 py-2 hover:bg-[#FEF9D0] hover:text-[#2F5B44] cursor-pointer ${
+                                index < 9 ? 'border-b border-dashed border-[#FEF9D0] border-opacity-30' : ''
+                              }`}
+                              onClick={() => {
+                                updateFeatureCount('copywriting', num);
+                                setShowCopywritingDropdown(false);
+                              }}
+                            >
+                              {num}
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
@@ -510,16 +534,31 @@ function Calculator() {
                   <span className="ml-4 text-[#FEF9D0] text-lg whitespace-nowrap" style={{ fontFamily: 'Inter' }}>Multi-Language Feature (Per Language)</span>
                   {features.multiLanguage.enabled && (
                     <div className="relative">
-                      <select
-                        value={features.multiLanguage.count}
-                        onChange={(e) => updateFeatureCount('multiLanguage', e.target.value)}
-                        className="ml-4 bg-transparent border border-[#FEF9D0] rounded-3xl px-3 py-2 text-[#FEF9D0] text-sm w-20 text-left ml-[18.6rem] appearance-none pr-8"
-                      >
-                        {[1,2,3,4,5].map(num => (
-                          <option key={num} value={num} className="bg-[#2F5B44] text-[#FEF9D0]">{num}</option>
-                        ))}
-                      </select>
-                      <img src={dropdown} alt="dropdown" className="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 pointer-events-none" />
+                      <div className="ml-[26.7rem] bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm w-20 text-center cursor-pointer" onClick={() => setShowMultiLanguageDropdown(!showMultiLanguageDropdown)}>
+                        <div className="flex items-center justify-between">
+                          <span>{features.multiLanguage.count}</span>
+                          <img src={dropdown} alt="dropdown" className="w-4 h-4" />
+                        </div>
+                      </div>
+                      
+                      {showMultiLanguageDropdown && (
+                        <div className="-ml-4 absolute mt-2 w-full bg-[#2F5B44] border border-[#FEF9D0] rounded-3xl py-2 z-50">
+                          {[1,2,3,4,5].map((num, index) => (
+                            <div 
+                              key={num}
+                              className={`rounded-xl px-4 py-2 hover:bg-[#FEF9D0] hover:text-[#2F5B44] cursor-pointer ${
+                                index < 4 ? 'border-b border-dashed border-[#FEF9D0] border-opacity-30' : ''
+                              }`}
+                              onClick={() => {
+                                updateFeatureCount('multiLanguage', num);
+                                setShowMultiLanguageDropdown(false);
+                              }}
+                            >
+                              {num}
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
@@ -580,16 +619,31 @@ function Calculator() {
                   <span className="ml-4 text-[#FEF9D0] text-lg mr-14" style={{ fontFamily: 'Inter' }}>Motion Graphics</span>
                   {features.motionGraphics.enabled && (
                     <div className="relative">
-                      <select
-                        value={features.motionGraphics.count}
-                        onChange={(e) => updateFeatureCount('motionGraphics', e.target.value)}
-                        className="ml-4 bg-transparent border border-[#FEF9D0] rounded-3xl px-3 py-2 text-[#FEF9D0] text-sm w-20 text-left ml-[24.9rem] appearance-none pr-8"
-                      >
-                        {[1,2,3,4,5].map(num => (
-                          <option key={num} value={num} className="bg-[#2F5B44] text-[#FEF9D0]">{num}</option>
-                        ))}
-                      </select>
-                      <img src={dropdown} alt="dropdown" className="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 pointer-events-none" />
+                      <div className="ml-[35.6rem] bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm w-20 text-center cursor-pointer" onClick={() => setShowMotionGraphicsDropdown(!showMotionGraphicsDropdown)}>
+                        <div className="flex items-center justify-between">
+                          <span>{features.motionGraphics.count}</span>
+                          <img src={dropdown} alt="dropdown" className="w-4 h-4" />
+                        </div>
+                      </div>
+                      
+                      {showMotionGraphicsDropdown && (
+                        <div className="-ml-4 absolute mt-2 w-full bg-[#2F5B44] border border-[#FEF9D0] rounded-3xl py-2 z-50">
+                          {[1,2,3,4,5].map((num, index) => (
+                            <div 
+                              key={num}
+                              className={`rounded-xl px-4 py-2 hover:bg-[#FEF9D0] hover:text-[#2F5B44] cursor-pointer ${
+                                index < 4 ? 'border-b border-dashed border-[#FEF9D0] border-opacity-30' : ''
+                              }`}
+                              onClick={() => {
+                                updateFeatureCount('motionGraphics', num);
+                                setShowMotionGraphicsDropdown(false);
+                              }}
+                            >
+                              {num}
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
