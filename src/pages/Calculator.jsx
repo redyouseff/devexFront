@@ -63,31 +63,59 @@ function Calculator() {
   const [websiteType, setWebsiteType] = useState('Informational');
   const [platform, setPlatform] = useState('Wordpress');
   const [pages, setPages] = useState('5');
-  const [hourlyRate] = useState(10);
+  // Get hourly rate based on platform
+  const getHourlyRate = () => {
+    if (platform === 'Custom Code') {
+      return 20;
+    } else {
+      return 15; // Shopify
+    }
+  };
+  const [showWebsiteTypeDropdown, setShowWebsiteTypeDropdown] = useState(false);
+  const [showPlatformDropdown, setShowPlatformDropdown] = useState(false);
+  const [showPagesDropdown, setShowPagesDropdown] = useState(false);
 
   // State for calculator features
   const [features, setFeatures] = useState({
-    uniqueDesign: true,
-    onsiteOptimization: true,
-    copywriting: { enabled: true, count: 1 },
-    multiLanguage: { enabled: true, count: 1 },
-    contentMigration: true,
-    motionGraphics: { enabled: true, count: 1 },
-    basicSearch: true,
-    interactiveMap: true,
-    eventsCalendar: true,
-    chatFeature: true
+    uniqueDesign: false,
+    onsiteOptimization: false,
+    copywriting: { enabled: false, count: 1 },
+    multiLanguage: { enabled: false, count: 1 },
+    contentMigration: false,
+    motionGraphics: { enabled: false, count: 1 },
+    basicSearch: false,
+    interactiveMap: false,
+    eventsCalendar: false,
+    chatFeature: false
   });
 
-  // Feature pricing
+  // Base pricing based on number of pages and platform
+  const getBasePricing = () => {
+    if (platform === 'Custom Code') {
+      return {
+        '5': { hours: 20, price: 1200 },
+        '10': { hours: 25, price: 1600 },
+        '10 Or More': { hours: 30, price: 1900 }
+      };
+    } else {
+      // Shopify pricing
+      return {
+        '5': { hours: 20, price: 300 },
+        '10': { hours: 25, price: 500 },
+        '10 Or More': { hours: 30, price: 700 }
+      };
+    }
+  };
+
+  // Feature pricing (additional costs)
   const featurePricing = {
-    uniqueDesign: { hours: 15, price: 75 },
+    uniqueDesign: { hours: 15, price: 300 },
     onsiteOptimization: { hours: 10, price: 100 },
-    copywriting: { hours: 10, pricePerUnit: 50 },
-    multiLanguage: { hours: 12, pricePerUnit: 50 },
-    contentMigration: { hours: 8, price: 40 },
+    copywriting: { hours: 10, pricePerUnit: 100 },
+    multiLanguage: { hours: 12, pricePerUnit: 120 },
+    contentMigration: { hours: 8, price: 80 },
     motionGraphics: { hours: 40, pricePerUnit: 400 },
-    basicSearch: { hours: 5, price: 25 },
+    basicSearch: { hours: 5, price: 50 },
     interactiveMap: { hours: 40, price: 400 },
     eventsCalendar: { hours: 10, price: 100 },
     chatFeature: { hours: 5, price: 50 }
@@ -95,9 +123,13 @@ function Calculator() {
 
   // Calculate total price
   const calculateTotal = () => {
-    let totalHours = 0;
-    let totalPrice = 0;
+    // Base price from number of pages and platform
+    const basePricing = getBasePricing();
+    const basePrice = basePricing[pages];
+    let totalHours = basePrice.hours;
+    let totalPrice = basePrice.price;
 
+    // Add additional feature costs
     Object.keys(features).forEach(key => {
       const feature = features[key];
       const pricing = featurePricing[key];
@@ -209,52 +241,137 @@ function Calculator() {
                               {/* Website Type */}
                 <div>
                   <label className="block text-[#FEF9D0]  text-[25px] font-medium mb-2 ">Website Type</label>
-                  <select 
-                    value={websiteType}
-                    onChange={(e) => setWebsiteType(e.target.value)}
-                    className="w-full bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm focus:outline-none focus:border-[#E9F2CD] focus:ring-0 focus:ring-offset-0"
-                    style={{ borderRadius: '9999px' }}
-                  >
-                    <option value="Informational" className="bg-[#2F5B44] bg-opacity-80 text-[#FEF9D0] rounded-full">Informational</option>
-                    <option value="E-commerce" className="bg-[#2F5B44] bg-opacity-80 text-[#FEF9D0] rounded-full">E-commerce</option>
-                    <option value="Portfolio" className="bg-[#2F5B44] bg-opacity-80 text-[#FEF9D0] rounded-full">Portfolio</option>
-                  </select>
+                  <div className=" relative w-full bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm">
+                    <div className="flex items-center justify-between cursor-pointer" onClick={() => setShowWebsiteTypeDropdown(!showWebsiteTypeDropdown)}>
+                      <span>{websiteType}</span>
+                      <img src={dropdown} alt="dropdown" className="w-4 h-4" />
+                    </div>
+                    
+                    {showWebsiteTypeDropdown && (
+                      <div className="-ml-4  absolute mt-2 w-full bg-[#2F5B44] border border-[#FEF9D0] rounded-3xl py-2 z-50">
+                        <div 
+                          className="rounded-xl px-4 py-2 hover:bg-[#FEF9D0] hover:text-[#2F5B44] cursor-pointer border-b border-dashed border-[#FEF9D0] border-opacity-30"
+                          onClick={() => {
+                            setWebsiteType('Informational');
+                            setShowWebsiteTypeDropdown(false);
+                          }}
+                        >
+                          Informational
+                        </div>
+                        <div 
+                          className="rounded-xl px-4 py-2 hover:bg-[#FEF9D0] hover:text-[#2F5B44] cursor-pointer border-b border-dashed border-[#FEF9D0] border-opacity-30"
+                          onClick={() => {
+                            setWebsiteType('E-commerce');
+                            setShowWebsiteTypeDropdown(false);
+                          }}
+                        >
+                          E-commerce
+                        </div>
+                        <div 
+                          className="rounded-xl px-4 py-2 hover:bg-[#FEF9D0] hover:text-[#2F5B44] cursor-pointer"
+                          onClick={() => {
+                            setWebsiteType('Portfolio');
+                            setShowWebsiteTypeDropdown(false);
+                          }}
+                        >
+                          Portfolio
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
 
               {/* Platform */}
               <div>
-                <label className="block text-[#FEF9D0]  font-medium mb-2  text-[25px] ">Platform</label>
-                <select 
-                  value={platform}
-                  onChange={(e) => setPlatform(e.target.value)}
-                  className="w-full bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm focus:outline-none focus:border-[#E9F2CD]"
-                >
-                  <option value="Wordpress" className="bg-[#2F5B44] text-[#FEF9D0]">Wordpress</option>
-                  <option value="React" className="bg-[#2F5B44] text-[#FEF9D0]">React</option>
-                  <option value="Custom" className="bg-[#2F5B44] text-[#FEF9D0]">Custom</option>
-                </select>
+                <label className="block text-[#FEF9D0]  font-medium mb-2  text-[25px] ">Platform</label>  
+                <div className="relative w-full bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm">
+                  <div className="flex items-center justify-between cursor-pointer" onClick={() => setShowPlatformDropdown(!showPlatformDropdown)}>
+                    <span>{platform}</span>
+                    <img src={dropdown} alt="dropdown" className="w-4 h-4" />
+                  </div>
+                  
+                  {showPlatformDropdown && (
+                    <div className="-ml-4 absolute mt-2 w-full bg-[#2F5B44] border border-[#FEF9D0] rounded-3xl py-2 z-50">
+                      <div 
+                        className="rounded-xl px-4 py-2 hover:bg-[#FEF9D0] hover:text-[#2F5B44] cursor-pointer border-b border-dashed border-[#FEF9D0] border-opacity-30"
+                        onClick={() => {
+                          setPlatform('Wordpress');
+                          setShowPlatformDropdown(false);
+                        }}
+                      >
+                        Wordpress
+                      </div>
+                      <div 
+                        className="rounded-xl px-4 py-2 hover:bg-[#FEF9D0] hover:text-[#2F5B44] cursor-pointer border-b border-dashed border-[#FEF9D0] border-opacity-30"
+                        onClick={() => {
+                          setPlatform('Shopify');
+                          setShowPlatformDropdown(false);
+                        }}
+                      >
+                        Shopify
+                      </div>
+                      <div 
+                        className="rounded-xl px-4 py-2 hover:bg-[#FEF9D0] hover:text-[#2F5B44] cursor-pointer"
+                        onClick={() => {
+                          setPlatform('Custom Code');
+                          setShowPlatformDropdown(false);
+                        }}
+                      >
+                        Custom Code
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
 
               {/* No. Of Pages */}
               <div>
                 <label className="block text-[#FEF9D0] text-[25px] font-medium mb-2">No. Of Pages</label>
-                <select 
-                  value={pages}
-                  onChange={(e) => setPages(e.target.value)}
-                  className="w-full bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm focus:outline-none focus:border-[#E9F2CD]"
-                >
-                  <option value="5" className="bg-[#2F5B44] text-[#FEF9D0]">5</option>
-                  <option value="10" className="bg-[#2F5B44] text-[#FEF9D0]">10</option>
-                  <option value="15" className="bg-[#2F5B44] text-[#FEF9D0]">15</option>
-                  <option value="20" className="bg-[#2F5B44] text-[#FEF9D0]">20+</option>
-                </select>
+                <div className="relative w-full bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm">
+                  <div className="flex items-center justify-between cursor-pointer" onClick={() => setShowPagesDropdown(!showPagesDropdown)}>
+                    <span>{pages}</span>
+                    <img src={dropdown} alt="dropdown" className="w-4 h-4" />
+                  </div>
+                  
+                  {showPagesDropdown && (
+                    <div className="-ml-4 absolute mt-2 w-full bg-[#2F5B44] border border-[#FEF9D0] rounded-3xl py-2 z-50">
+                      <div 
+                        className="rounded-xl px-4 py-2 hover:bg-[#FEF9D0] hover:text-[#2F5B44] cursor-pointer border-b border-dashed border-[#FEF9D0] border-opacity-30"
+                        onClick={() => {
+                          setPages('5');
+                          setShowPagesDropdown(false);
+                        }}
+                      >
+                        5
+                      </div>
+                      <div 
+                        className="rounded-xl px-4 py-2 hover:bg-[#FEF9D0] hover:text-[#2F5B44] cursor-pointer border-b border-dashed border-[#FEF9D0] border-opacity-30"
+                        onClick={() => {
+                          setPages('10');
+                          setShowPagesDropdown(false);
+                        }}
+                      >
+                        10
+                      </div>
+                      <div 
+                        className="rounded-xl px-4 py-2 hover:bg-[#FEF9D0] hover:text-[#2F5B44] cursor-pointer"
+                        onClick={() => {
+                          setPages('10 Or More');
+                          setShowPagesDropdown(false);
+                        }}
+                      >
+                        10 Or More
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
 
               {/* Hourly Rate */}
               <div>
                 <label className="block text-[#FEF9D0]  text-[25px] font-medium mb-2">Hourly Rate</label>
                 <div className="w-full bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm text-center">
-                  ${hourlyRate}
+                  ${getHourlyRate()}
                 </div>
               </div>
             </div>
@@ -292,13 +409,13 @@ function Calculator() {
                       features.uniqueDesign ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-sm" style={{ fontFamily: 'Inter' }}>Unique Design & Development</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg" style={{ fontFamily: 'Inter' }}>Unique Design & Development</span>
                 </div>
-                <div className="text-[#FEF9D0] text-center w-20 text-[20px]">
-                  {features.uniqueDesign ? featurePricing.uniqueDesign.hours : 0}
+                <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
+                  {featurePricing.uniqueDesign.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-sm text-right w-20 ml-6 mr-10 ml-20">
-                  ${features.uniqueDesign ? featurePricing.uniqueDesign.price : 0}
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                  ${featurePricing.uniqueDesign.price}
                 </div>
               </div>
 
@@ -320,13 +437,13 @@ function Calculator() {
                       features.onsiteOptimization ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-sm" style={{ fontFamily: 'Inter' }}>Onsite Optimization</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg" style={{ fontFamily: 'Inter' }}>Onsite Optimization</span>
                 </div>
-                <div className="text-[#FEF9D0]  text-center w-20 text-[20px]">
-                  {features.onsiteOptimization ? featurePricing.onsiteOptimization.hours : 0}
+                <div className="text-[#FEF9D0]  text-center w-20 text-[15px]">
+                  {featurePricing.onsiteOptimization.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-sm text-right w-20 ml-6 mr-10 ml-20">
-                  ${features.onsiteOptimization ? featurePricing.onsiteOptimization.price : 0}
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                  ${featurePricing.onsiteOptimization.price}
                 </div>
               </div>
 
@@ -348,7 +465,7 @@ function Calculator() {
                       features.copywriting.enabled ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-sm whitespace-nowrap" style={{ fontFamily: 'Inter' }}>Copywriting Page Count</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg whitespace-nowrap" style={{ fontFamily: 'Inter' }}>Copywriting Page Count</span>
                   {features.copywriting.enabled && (
                     <div className="relative">
                       <select
@@ -364,11 +481,11 @@ function Calculator() {
                     </div>
                   )}
                 </div>
-                <div className="text-[#FEF9D0] text-center w-20 text-[20px]">
-                  {features.copywriting.enabled ? featurePricing.copywriting.hours : 0}
+                <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
+                  {featurePricing.copywriting.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-sm text-right w-20 ml-6 mr-10 ml-20">
-                  ${features.copywriting.enabled ? featurePricing.copywriting.pricePerUnit * features.copywriting.count : 0}
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                  ${featurePricing.copywriting.pricePerUnit * features.copywriting.count}
                 </div>  
               </div>
 
@@ -390,7 +507,7 @@ function Calculator() {
                       features.multiLanguage.enabled ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-sm whitespace-nowrap" style={{ fontFamily: 'Inter' }}>Multi-Language Feature (Per Language)</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg whitespace-nowrap" style={{ fontFamily: 'Inter' }}>Multi-Language Feature (Per Language)</span>
                   {features.multiLanguage.enabled && (
                     <div className="relative">
                       <select
@@ -406,11 +523,11 @@ function Calculator() {
                     </div>
                   )}
                 </div>
-                <div className="text-[#FEF9D0] text-center w-20 text-[20px]">
-                  {features.multiLanguage.enabled ? featurePricing.multiLanguage.hours : 0}
+                <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
+                  {featurePricing.multiLanguage.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-sm text-right w-20 ml-6 mr-10 ml-20">
-                  ${features.multiLanguage.enabled ? featurePricing.multiLanguage.pricePerUnit * features.multiLanguage.count : 0}
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                  ${featurePricing.multiLanguage.pricePerUnit * features.multiLanguage.count}
                 </div>
               </div>
 
@@ -432,13 +549,13 @@ function Calculator() {
                       features.contentMigration ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-sm" style={{ fontFamily: 'Inter' }}>Content Migration</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg" style={{ fontFamily: 'Inter' }}>Content Migration</span>
                 </div>
-                <div className="text-[#FEF9D0] text-center w-20 text-[20px]">
-                  {features.contentMigration ? featurePricing.contentMigration.hours : 0}
+                <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
+                  {featurePricing.contentMigration.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-sm text-right w-20 ml-6 mr-10 ml-20">
-                  ${features.contentMigration ? featurePricing.contentMigration.price : 0}
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                  ${featurePricing.contentMigration.price}
                 </div>
               </div>
 
@@ -460,7 +577,7 @@ function Calculator() {
                       features.motionGraphics.enabled ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-sm mr-14" style={{ fontFamily: 'Inter' }}>Motion Graphics</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg mr-14" style={{ fontFamily: 'Inter' }}>Motion Graphics</span>
                   {features.motionGraphics.enabled && (
                     <div className="relative">
                       <select
@@ -476,11 +593,11 @@ function Calculator() {
                     </div>
                   )}
                 </div>
-                <div className="text-[#FEF9D0] text-center w-20 text-[20px]">
-                  {features.motionGraphics.enabled ? featurePricing.motionGraphics.hours : 0}
+                <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
+                  {featurePricing.motionGraphics.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-sm text-right w-20 ml-6 mr-10 ml-20">
-                  ${features.motionGraphics.enabled ? featurePricing.motionGraphics.pricePerUnit * features.motionGraphics.count : 0}
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                  ${featurePricing.motionGraphics.pricePerUnit * features.motionGraphics.count}
                 </div>
               </div>
 
@@ -502,13 +619,13 @@ function Calculator() {
                       features.basicSearch ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-sm" style={{ fontFamily: 'Inter' }}>Basic Search</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg" style={{ fontFamily: 'Inter' }}>Basic Search</span>
                 </div>
-                <div className="text-[#FEF9D0] text-center w-20 text-[20px]">
-                  {features.basicSearch ? featurePricing.basicSearch.hours : 0}
+                <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
+                  {featurePricing.basicSearch.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-sm text-right w-20 ml-6 mr-10 ml-20">
-                  ${features.basicSearch ? featurePricing.basicSearch.price : 0}
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                  ${featurePricing.basicSearch.price}
                 </div>
               </div>
 
@@ -530,13 +647,13 @@ function Calculator() {
                       features.interactiveMap ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-sm" style={{ fontFamily: 'Inter' }}>Interactive Map</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg" style={{ fontFamily: 'Inter' }}>Interactive Map</span>
                 </div>
-                <div className="text-[#FEF9D0] text-center w-20 text-[20px]">
-                  {features.interactiveMap ? featurePricing.interactiveMap.hours : 0}
+                <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
+                  {featurePricing.interactiveMap.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-sm text-right w-20 ml-6 mr-10 ml-20">
-                  ${features.interactiveMap ? featurePricing.interactiveMap.price : 0}
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                  ${featurePricing.interactiveMap.price}
                 </div>
               </div>
 
@@ -558,23 +675,23 @@ function Calculator() {
                       features.eventsCalendar ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-sm" style={{ fontFamily: 'Inter' }}>Events Calendar</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg" style={{ fontFamily: 'Inter' }}>Events Calendar</span>
                 </div>
-                <div className="text-[#FEF9D0] text-center w-20 text-[20px]">
-                  {features.eventsCalendar ? featurePricing.eventsCalendar.hours : 0}
+                <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
+                  {featurePricing.eventsCalendar.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-sm text-right w-20 ml-6 mr-10 ml-20">
-                  ${features.eventsCalendar ? featurePricing.eventsCalendar.price : 0}
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                  ${featurePricing.eventsCalendar.price}
                 </div>
               </div>
 
-            {/* Line Separator */}
-            <div className="flex justify-center my-4">
+            {/* Line Separator */}  
+            <div className="flex justify-center my-4">    
                 <img src={line} alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
-              </div>
+              </div> 
 
               {/* Chat Feature */}
-              <div className="flex items-center justify-between pb-4">
+              <div className="flex items-center justify-between pb-4">   
                 <div className="flex items-center flex-1">
                   <button
                     onClick={() => toggleFeature('chatFeature')}
@@ -586,13 +703,13 @@ function Calculator() {
                       features.chatFeature ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-sm" style={{ fontFamily: 'Inter' }}>Chat Feature</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg" style={{ fontFamily: 'Inter' }}>Chat Feature</span>
                 </div>
-                <div className="text-[#FEF9D0] text-center w-20 text-[20px]">
-                  {features.chatFeature ? featurePricing.chatFeature.hours : 0}
+                <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
+                  {featurePricing.chatFeature.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-sm text-right w-20 ml-6 mr-10 ml-20">
-                  ${features.chatFeature ? featurePricing.chatFeature.price : 0}  
+                <div className="text-[#FEF9D0]  text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                  ${featurePricing.chatFeature.price}  
                 </div>
               </div>
             </div>
@@ -601,17 +718,17 @@ function Calculator() {
 
             {/* Total Section */}
             <div className="mt-8 pt-12 pb-8 border-t-2 border-[#FEF9D0] border-opacity-30 ">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between">      
                 <div className="text-[#FEF9D0] text-lg font-medium m " style={{ fontFamily: 'Inter' }}>Estimated Price:</div>
                 <div className="flex items-center space-x-6">
-                                       <div className="text-[#FEF9D0] text-lg font-medium mr-36">{totalHours}</div>
-                  <div className="text-[#FEF9D0] text-2xl font-bold">${totalPrice}</div>
+                   {/* <div className="text-[#FEF9D0] text-lg font-medium mr-[6rem]">{totalHours}</div> */}
+                  <div className="text-[#FEF9D0] text-2xl font-bold mr-[2rem]">${totalPrice}</div>
                 </div>
               </div>
             </div>
             
           </div>   
-           {/* Line Separator */}
+           {/* Line Separator */}   
            <div className="flex justify-center -mt-[1rem]">
               <img src={lineList2} alt="Separator" className="max-w-[80] h-auto opacity-100" />
             </div>

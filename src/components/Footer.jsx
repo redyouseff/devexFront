@@ -54,10 +54,10 @@ const Footer = () => {
             </div>
 
             {/* Vertical Line 1 - Between Col 1 and 2 */}
-            <div className="hidden lg:block absolute left-[30%]  top-0 bottom-0 w-px bg-[#FEF9D0] opacity-50"></div>
+            <div className="hidden lg:block absolute left-[32%]  top-0 bottom-0 w-px bg-[#FEF9D0] opacity-50"></div>
 
             {/* Apps & Development Column */}
-            <div className="text-center px-4 sm:px-8">
+            <div className="text-end px-4 sm:px-8 mr-7">
               <h3 className="text-[16px] sm:text-[18px] font-bold mb-4 sm:mb-6 uppercase">APPS & DEVELOPMENT</h3>
               <ul className="space-y-4">
                 <li>
@@ -89,10 +89,10 @@ const Footer = () => {
             </div>
 
             {/* Vertical Line 2 - Between Col 2 and 3 */}
-            <div className="hidden lg:block absolute left-[70%] top-0 bottom-0 w-px bg-[#FEF9D0]  opacity-50"></div>
+            <div className="hidden lg:block absolute left-[75%] top-0 bottom-0 w-px bg-[#FEF9D0]  opacity-50"></div>
 
             {/* Company Column */}
-            <div className="text-center px-4 sm:px-8">
+            <div className="text-end px-4 sm:px-8">
               <h3 className="text-[32px] sm:text-[18px] font-bold mb-4 sm:mb-6 uppercase">COMPANY</h3>
               <ul className="space-y-4">
                 <li>
@@ -115,8 +115,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Footer Bottom */}
-        <div className="border-t border-[#FEF9D0] border-opacity-30 pt-3 sm:pt-4 ">
+        {/* Footer Bottom */}   
+        <div className="border-t border-[#FEF9D0] border-opacity-30 pt-3 sm:pt-4 -mb-[2rem]  ">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
             <div className="text-[11px] sm:text-[12px] order-2 sm:order-1">
               ©2025 DEVEXT. ALL RIGHTS RESERVED
@@ -129,7 +129,7 @@ const Footer = () => {
                 ACCESSIBILITY
               </Link>
             </div>
-            <div className="text-[11px] sm:text-[12px] order-3">
+            <div className="text-[11px] sm:text-[12px] order-3">     
               CALL US : 01200064762
             </div>
           </div>

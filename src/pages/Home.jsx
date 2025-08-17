@@ -1,4 +1,10 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -49,6 +55,24 @@ const smoothScrollStyles = `
   ::-webkit-scrollbar-thumb:hover {
     background: #1e3d2a;
   }
+  
+  /* Swiper custom styles */
+  .swiper-slide {
+    width: calc((100% - 64px) / 3) !important;
+    max-width: 400px !important;
+  }
+  
+  @media (max-width: 1023px) {
+    .swiper-slide {
+      width: calc((100% - 24px) / 2) !important;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .swiper-slide {
+      width: 100% !important;
+    }
+  }
 `;
 import icons from "/images/home/Frame 7.png"
 import uparrow from "/images/home/Vector.svg"
@@ -66,9 +90,15 @@ import fiftharrowleft from "/images/home/Frame 18.svg"
 import image1 from "/images/home/screencapture-alwidadtaxation-2025-07-11-16_12_43 1.svg"
 import image2 from "/images/home/screencapture-alwidadtaxation-2025-07-11-16_12_43 2.svg"
 import image3 from "/images/home/screencapture-alwidadtaxation-2025-07-11-16_12_43 3.svg"
+import image4 from "/images/home/screencapture-alwidadtaxation-2025-07-11-16_12_43 4.svg"
+import image5 from "/images/home/screencapture-alwidadtaxation-2025-07-11-16_12_43 5.svg"
+import image6 from "/images/home/screencapture-alwidadtaxation-2025-07-11-16_12_43 6.svg"
 import circle1 from "/images/home/Ellipse 7.svg"
 import circle2 from "/images/home/Ellipse 8.svg"
 import circle3 from "/images/home/Ellipse 9.svg"
+import circle4 from "/images/home/Ellipse 10.svg"
+import circle5 from "/images/home/Ellipse 11.svg"
+import circle6 from "/images/home/Ellipse 12.svg"       
 import location from "/images/home/Group.svg"
 
 import name from "/images/home/name.svg"
@@ -83,6 +113,66 @@ import line from "/images/home/Line 1.svg"
 import backgroundsectionseven from "/images/home/Devext Pattern 1 7.png"
 
 function Home() {
+  const [swiperInstance, setSwiperInstance] = useState(null);
+
+  // Cards data for testimonials
+  const cardsData = [
+    {
+      id: 1,
+      type: 'testimonial',
+      title: 'Joya Properties is a boutique Dubai real estate agency that delivers personalized, transparent service—tailored for buyers, sellers, and investors. The agency blends market expertise with trusted partnerships across top developers.',
+      image: image1,
+      circle: circle1,
+      name: "joyaproperties.com",
+      location: "Dubai"
+    },
+    {
+      id: 2,
+      type: 'testimonial',
+      title: 'LDC Investment is a dynamic Saudi-based investment firm dedicated to crafting tailored financial strategies that elevate businesses and individual investors. With a sharp focus on sustainable growth and proactive market insight.',
+      image: image2,
+      circle: circle2,
+      name: "ldc-investment.sa",
+      location: "Riyadh"
+    },
+    {
+      id: 3,
+      type: 'testimonial',
+      title: 'Sada Al Awael is a Saudi-based provider of top-quality medical equipment and supplies dedicated to supporting the healthcare sector. Driven by excellence and integrated services, they ensure client satisfaction with flexible payment options & fast Delivery.',
+      image: image3,
+      circle: circle3,
+      name: "sada-alawael.sa",
+      location: "Dubai",
+    },
+    {
+      id: 4,
+      type: 'testimonial',
+      title: 'Joud & Karam delivers authentic Jordanian-Palestinian hospitality in the heart of Dubai. Specializing in desert safaris,  parties, corporate buffets and furniture rentals, they blend cultural tradition with modern flair to craft unforgettable experiences.',
+      image: image4,
+      circle: circle4,
+      name: "joudandkaram.com",
+      location: "Dubai"
+    },
+    {
+      id: 5,
+      type: 'testimonial',
+      title: 'Al-Tal Al-Kabir is a leading provider of heavy and light construction equipment, offering cutting-edge machinery and reliable solutions for industrial and infrastructure projects across Saudi Arabia. With a commitment to quality and efficiency.',
+      image: image5,
+      circle: circle5,
+      name: "Alwidadtaxation.com",
+      location: "Dubai"
+    },
+    {
+      id: 6,
+      type: 'testimonial',
+      title: 'Al-Widad Taxation & Procedures Follow Up brings over a decade of expert experience in UAE corporate tax and procedural compliance. Built on integrity, client-focused solutions, and innovation, they offer tailored guidance for businesses and individuals. ',
+      image: image6,
+      circle: circle6,
+      name: "Alwidadtaxation.com",
+      location: "Dubai"
+    }
+  ];
+
   return (
     <>
       <style>{smoothScrollStyles}</style>
@@ -294,7 +384,7 @@ function Home() {
                   expert designers transform your vision into a dynamic, 
                   custom design that enhances your brand's visibility, boosts 
                   engagement, and drives conversions. With us, your website 
-                  will not only stand out but also connect deeply with your 
+                  will not only stand out but also connect deeply with your   
                   audience.
                 </p>
                 <div className="flex justify-center md:justify-end">
@@ -368,8 +458,8 @@ function Home() {
         </div>
         
         <div className="container mx-auto max-w-4xl relative z-10">
-          <h2 className="text-[40px] text-sm  mb-6 text-[#FEF9D0] leading-tight tracking-wide">
-            CUSTOM <span className="text-[#FEF9D0] text-5xl font-bold">WEB DESIGN</span> PRICING FOR EACH<br />
+          <h2 className="text-2xl   mb-6 text-[#FEF9D0] leading-tight tracking-wide">
+            CUSTOM <span className="text-[#FEF9D0] text-3xl font-bold">WEB DESIGN</span> PRICING FOR EACH<br />
             CLIENT'S OBJECTIVES
           </h2>
           <p className="text-[#FEF9D0] mb-6 text-[18px] leading-relaxed max-w-3xl mx-auto">
@@ -428,88 +518,88 @@ function Home() {
               {/* Navigation Arrows */}
               <div className="flex justify-start mb-8 mt-16">
                 <div className="flex gap-4">
-                  <button className="hover:opacity-70 transition-opacity">
+                  <button 
+                    onClick={() => swiperInstance?.slidePrev()}
+                    className="hover:opacity-70 transition-opacity"
+                  >
                     <img src={fiftharrowleft} alt="Previous" className="w-10 h-10" />
                   </button>
-                  <button className="hover:opacity-70 transition-opacity">
+                  <button 
+                    onClick={() => swiperInstance?.slideNext()}
+                    className="hover:opacity-70 transition-opacity"
+                  >
                     <img src={fiftharrowright} alt="Next" className="w-10 h-10" />
                   </button>
                 </div>
               </div>
 
-              {/* Testimonial Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                {/* Card 1 */}
-                <div className="bg-[#2F5B44] rounded-3xl p-4 sm:p-6 text-[#FEF9D0]">
-                  <div className="mb-4 sm:mb-6">
-                    <img src={image1} alt="Project 1" className="w-full h-24 sm:h-32 object-cover rounded-lg" />
-                  </div>
-                  <p className="text-[13px] sm:text-[14px] leading-relaxed mb-4 sm:mb-6">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <img src={circle1} alt="Client Icon" className="w-6 h-6 sm:w-8 sm:h-8" />
-                    <div>
-                      <p className="text-[#FEF9D0] text-xs sm:text-sm font-medium">joyaproperties.com</p>
-                      <div className="flex items-center gap-1 mt-1">
-                        <svg className="w-3 h-3 text-[#FEF9D0]" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                        </svg>
-                        <p className="text-[#FEF9D0] text-xs">Dubai</p>
+              {/* Swiper Carousel */}
+              <div className="max-w-7xl mx-auto px-6">
+                <Swiper
+                  modules={[Navigation, Pagination]}
+                  spaceBetween={32}
+                  slidesPerView={3}
+                  slidesPerGroup={1}
+                  loop={true}
+                  speed={700}
+                  onSwiper={setSwiperInstance}
+                  centeredSlides={false}
+                  watchOverflow={true}
+                  freeMode={false}
+                  allowTouchMove={true}
+                  breakpoints={{
+                    320: {
+                      slidesPerView: 1,
+                      spaceBetween: 20,
+                    },
+                    768: {
+                      slidesPerView: 2,
+                      spaceBetween: 24,
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                      spaceBetween: 32,
+                    },
+                  }}
+                  className="!overflow-hidden !pb-4"
+                  style={{ paddingLeft: '0px', paddingRight: '0px' }}
+                >
+                  {cardsData.map((card) => (
+                    <SwiperSlide key={card.id}>
+                      <div className="bg-[#2F5B44] rounded-3xl overflow-hidden p-4 sm:p-6 text-[#FEF9D0] flex flex-col w-full" style={{ height: '400px' }}>
+                        {/* Image Section */}
+                        <div className="h-32 sm:h-40 relative overflow-hidden rounded-lg mb-4 sm:mb-6">
+                          <img 
+                            src={card.image} 
+                            alt={card.title}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        
+                        {/* Text Content */}
+                        <div className="flex-1 flex flex-col">
+                          <p className="text-[13px] sm:text-[14px] leading-relaxed mb-4 sm:mb-6 flex-1">
+                            {card.title}
+                          </p>
+                          
+                          {/* Client Info */}
+                          <div className="flex items-center gap-3 mt-auto">
+                            <img src={card.circle} alt="Client Icon" className="w-6 h-6 sm:w-8 sm:h-8" />
+                            <div>
+                              <p className="text-[#FEF9D0] text-xs sm:text-sm font-medium">{card.name}</p>
+                              <div className="flex items-center gap-1 mt-1">
+                                <svg className="w-3 h-3 text-[#FEF9D0]" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                                </svg>
+                                <p className="text-[#FEF9D0] text-xs">{card.location}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Card 2 */}
-                <div className="bg-[#2F5B44] rounded-3xl p-4 sm:p-6 text-[#FEF9D0]">
-                  <div className="mb-4 sm:mb-6">
-                    <img src={image2} alt="Project 2" className="w-full h-24 sm:h-32 object-cover rounded-lg" />
-                  </div>
-                  <p className="text-[13px] sm:text-[14px] leading-relaxed mb-4 sm:mb-6">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <img src={circle2} alt="Client Icon" className="w-6 h-6 sm:w-8 sm:h-8" />
-                    <div>
-                      <p className="text-[#FEF9D0] text-xs sm:text-sm font-medium">ldc-investment.sa</p>
-                      <div className="flex items-center gap-1 mt-1">
-                        <svg className="w-3 h-3 text-[#FEF9D0]" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                        </svg>
-                        <p className="text-[#FEF9D0] text-xs">Riyadh</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Card 3 */}
-                <div className="bg-[#2F5B44] rounded-3xl p-4 sm:p-6 text-[#FEF9D0] sm:col-span-2 lg:col-span-1">
-                  <div className="mb-4 sm:mb-6">
-                    <img src={image3} alt="Project 3" className="w-full h-24 sm:h-32 object-cover rounded-lg" />
-                  </div>
-                  <p className="text-[13px] sm:text-[14px] leading-relaxed mb-4 sm:mb-6">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <img src={circle3} alt="Client Icon" className="w-6 h-6 sm:w-8 sm:h-8" />
-                    <div>
-                      <p className="text-[#FEF9D0] text-xs sm:text-sm font-medium">sada-almawal.sa</p>
-                      <div className="flex items-center gap-1 mt-1">
-                        <svg className="w-3 h-3 text-[#FEF9D0]" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                        </svg>
-                        <p className="text-[#FEF9D0] text-xs">Dubai</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
               </div>
             </div>
           </section>  
