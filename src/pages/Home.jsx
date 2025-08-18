@@ -114,6 +114,11 @@ import backgroundsectionseven from "/images/home/Devext Pattern 1 7.png"
 
 function Home() {
   const [swiperInstance, setSwiperInstance] = useState(null);
+  
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+  const [submitError, setSubmitError] = useState('');
 
   // Cards data for testimonials
   const cardsData = [
@@ -172,6 +177,8 @@ function Home() {
       location: "Dubai"
     }
   ];
+
+  
 
   return (
     <>
@@ -617,7 +624,7 @@ function Home() {
               {/* FAQ Accordion */}
               <div className="space-y-4 max-w-6xl mx-auto">
                 {/* FAQ Item 1 */}
-                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer">
+                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 0 ? null : 0)}>
                   <div className="flex items-center justify-between">
                     <h3 className="text-[18px] font-medium text-[#FEF9D0]">
                       What does a web design agency do?
@@ -627,9 +634,14 @@ function Home() {
                     </svg>
                   </div>
                 </div>
+                {openFaqIndex === 0 && (
+                  <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
+                    A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
+                  </div>
+                )}
 
                 {/* FAQ Item 2 */}
-                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer">
+                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 1 ? null : 1)}>
                   <div className="flex items-center justify-between">
                     <h3 className="text-[18px] font-medium text-[#FEF9D0]">
                       What's The Difference Between Web Design & Web Development?
@@ -639,9 +651,14 @@ function Home() {
                     </svg>
                   </div>
                 </div>
+                {openFaqIndex === 1 && (
+                  <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
+                    A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
+                  </div>
+                )}
 
                 {/* FAQ Item 3 */}
-                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer">
+                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 2 ? null : 2)}>
                   <div className="flex items-center justify-between">
                     <h3 className="text-[18px] font-medium text-[#FEF9D0]">
                       Why is responsive web design important?
@@ -651,9 +668,14 @@ function Home() {
                     </svg>
                   </div>
                 </div>
+                {openFaqIndex === 2 && (
+                  <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
+                    A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
+                  </div>
+                )}
 
                 {/* FAQ Item 4 */}
-                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer">
+                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 3 ? null : 3)}>
                   <div className="flex items-center justify-between">
                     <h3 className="text-[18px] font-medium text-[#FEF9D0]">
                       How long does it take to design a website?
@@ -663,9 +685,14 @@ function Home() {
                     </svg>
                   </div>
                 </div>
+                {openFaqIndex === 3 && (
+                  <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
+                    A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
+                  </div>
+                )}
                    
                 {/* FAQ Item 5 */}
-                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer">
+                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 4 ? null : 4)}>
                   <div className="flex items-center justify-between">
                     <h3 className="text-[18px] font-medium text-[#FEF9D0]">
                       How much should I expect to pay for web design?
@@ -675,9 +702,14 @@ function Home() {
                     </svg>
                   </div>
                 </div>
+                {openFaqIndex === 4 && (
+                  <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
+                    A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
+                  </div>
+                )}
 
                 {/* FAQ Item 6 */}
-                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer">
+                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 5 ? null : 5)}>
                   <div className="flex items-center justify-between">
                     <h3 className="text-[18px] font-medium text-[#FEF9D0]">
                       How can you help me generate leads after my website is launched?
@@ -687,9 +719,14 @@ function Home() {
                     </svg>
                   </div>
                 </div>
+                {openFaqIndex === 5 && (
+                  <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
+                    A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
+                  </div>
+                )}
 
                 {/* FAQ Item 7 */}
-                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer">
+                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 6 ? null : 6)}>
                   <div className="flex items-center justify-between">
                     <h3 className="text-[18px] font-medium text-[#FEF9D0]">
                       Do you offer website redesign services?
@@ -699,9 +736,14 @@ function Home() {
                     </svg>
                   </div>
                 </div>
+                {openFaqIndex === 6 && (
+                  <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
+                    A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
+                  </div>
+                )}
 
                 {/* FAQ Item 8 */}
-                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer">
+                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 7 ? null : 7)}>
                   <div className="flex items-center justify-between">
                     <h3 className="text-[18px] font-medium text-[#FEF9D0]">
                       Will my website be mobile-friendly?
@@ -711,18 +753,13 @@ function Home() {
                     </svg>
                   </div>
                 </div>
-
-                {/* FAQ Item 9 */}
-                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-[18px] font-medium text-[#FEF9D0]">
-                      Can you create a logo for my brand?
-                    </h3>
-                    <svg className="w-6 h-6 text-[#FEF9D0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
+                {openFaqIndex === 7 && (
+                  <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
+                    A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
                   </div>
-                </div>
+                )}
+
+              
               </div>
             </div>
           </section>
@@ -881,7 +918,61 @@ function Home() {
                     </h3>
                   </div>
 
-                  <form className="space-y-4 sm:space-y-6">
+                  <form className="space-y-4 sm:space-y-6" onSubmit={async (e) => {
+                    e.preventDefault();
+                    setIsSubmitting(true);
+                    setSubmitMessage('');
+                    setSubmitError('');
+                    try {
+                      const formEl = e.currentTarget;
+                      const formData = new FormData(formEl);
+                      // Simple validation similar to provided hook
+                      const name = (formData.get('name') || '').toString().trim();
+                      const email = (formData.get('email') || '').toString().trim();
+                      const messageVal = (formData.get('message') || '').toString().trim();
+                      if (!name) {
+                        setSubmitError('Please enter your name.');
+                        setIsSubmitting(false);
+                        return;
+                      }
+                      if (!email || !email.includes('@') || email.length < 5) {
+                        setSubmitError('Please enter a valid email.');
+                        setIsSubmitting(false);
+                        return;
+                      }
+                      if (!messageVal) {
+                        setSubmitError('Please enter your message.');
+                        setIsSubmitting(false);
+                        return;
+                      }
+                      formData.append('access_key', 'a17daa5b-725c-4354-913d-e7cd75d01bc2');
+                      formData.append('subject', 'New Contact Form Submission');
+                      formData.append('from_name', 'DEVEXT Website');
+                      formData.append('botcheck', '');
+                      formData.append('to', 'devextdeveloping@gmail.com');
+                      formData.append('replyto', email);
+
+                      // (debug logs removed per request)
+                      const res = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData,
+                        headers: { Accept: 'application/json' }
+                      });
+                      const data = await res.json().catch(() => ({ success: false, message: 'Invalid response from server' }));
+                      // (response debug logs removed per request)
+                      if (res.ok && data.success) {
+                        setSubmitMessage('Thanks! Your message has been sent.');
+                        formEl.reset();
+                      } else {
+                        setSubmitError(data?.message || 'Submission failed. Please try again.');
+                      }
+                    } catch (err) {
+                      setSubmitError('Submission failed. Please try again.');
+                      console.log(err);
+                    } finally {
+                      setIsSubmitting(false);
+                    }
+                  }}>
                     {/* Name Field */}
                     <div className="relative">
                       <div className="flex items-center gap-3 mb-2">
@@ -891,6 +982,7 @@ function Home() {
                       <input
                         type="text"
                         required
+                        name="name"
                         className="w-full bg-transparent border-b-2 border-[#FEF9D0] text-[#FEF9D0] pb-2 focus:outline-none focus:border-[#E9F2CD] placeholder-[#FEF9D0] placeholder-opacity-60"
                         placeholder=""
                       />
@@ -905,6 +997,7 @@ function Home() {
                       <input
                         type="text"
                         required
+                        name="company"
                         className="w-full bg-transparent border-b-2 border-[#FEF9D0] text-[#FEF9D0] pb-2 focus:outline-none focus:border-[#E9F2CD] placeholder-[#FEF9D0] placeholder-opacity-60"
                         placeholder=""
                       />
@@ -919,6 +1012,7 @@ function Home() {
                       <input
                         type="email"
                         required
+                        name="email"
                         className="w-full bg-transparent border-b-2 border-[#FEF9D0] text-[#FEF9D0] pb-2 focus:outline-none focus:border-[#E9F2CD] placeholder-[#FEF9D0] placeholder-opacity-60"
                         placeholder=""
                       />
@@ -933,6 +1027,7 @@ function Home() {
                       <input
                         type="tel"
                         required
+                        name="phone"
                         className="w-full bg-transparent border-b-2 border-[#FEF9D0] text-[#FEF9D0] pb-2 focus:outline-none focus:border-[#E9F2CD] placeholder-[#FEF9D0] placeholder-opacity-60"
                         placeholder=""
                       />
@@ -947,6 +1042,7 @@ function Home() {
                       <textarea
                         required
                         rows={4}
+                        name="message"
                         className="w-full bg-transparent border-b-2 border-[#FEF9D0] text-[#FEF9D0] pb-2 focus:outline-none focus:border-[#E9F2CD] placeholder-[#FEF9D0] placeholder-opacity-60 resize-none"
                         placeholder=""
                       />
@@ -956,13 +1052,19 @@ function Home() {
                     <div className="flex justify-end pt-6">
                       <button
                         type="submit"
-                        className="inline-flex items-center bg-transparent text-[#FEF9D0] px-8 py-3 rounded-full font-medium text-[16px] hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-all duration-300 transform hover:scale-105"
+                        disabled={isSubmitting}
+                        className="inline-flex items-center bg-transparent text-[#FEF9D0] px-8 py-3 rounded-full font-medium text-[16px] hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-all duration-300 transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed"
                         style={{ border: '2px solid #FEF9D0' }}
                       >
-                        Submit
+                        {isSubmitting ? 'Sending...' : 'Submit'}
                         <img src={downarrow} alt="arrow" className="w-4 h-4 ml-2" />
                       </button>
                     </div>
+                    {(submitMessage || submitError) && (
+                      <div className={`mt-4 text-sm ${submitError ? 'text-red-300' : 'text-[#FEF9D0]'}`}>
+                        {submitError || submitMessage}
+                      </div>
+                    )}
                   </form>
                 </div>
               </div>

@@ -69,7 +69,7 @@ function Calculator() {
       return 20;
     }
     if (platform === 'Wordpress') {
-      return 10;
+      return 4;
     }
     return 15; // Shopify
   };
@@ -162,7 +162,7 @@ function Calculator() {
     return { totalHours, totalPrice };
   };
 
-  const { totalHours, totalPrice } = calculateTotal();
+  const { totalPrice } = calculateTotal();
 
   const toggleFeature = (featureName) => {
     setFeatures(prev => ({

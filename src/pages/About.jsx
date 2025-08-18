@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import Navbar from '../components/Navbar';
 
 // Smooth scroll styles
@@ -71,6 +72,9 @@ import secondsection from "/images/about/website mockup 1 1.svg"
 
 
 function About() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+  const [submitError, setSubmitError] = useState('');
   return (
     <>
       <style>{smoothScrollStyles}</style>
@@ -362,7 +366,57 @@ function About() {
         </h3>
       </div>
 
-      <form className="space-y-4 sm:space-y-6">
+      <form className="space-y-4 sm:space-y-6" onSubmit={async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitMessage('');
+        setSubmitError('');
+        try {
+          const formEl = e.currentTarget;
+          const formData = new FormData(formEl);
+          const name = (formData.get('name') || '').toString().trim();
+          const email = (formData.get('email') || '').toString().trim();
+          const messageVal = (formData.get('message') || '').toString().trim();
+          if (!name) {
+            setSubmitError('Please enter your name.');
+            setIsSubmitting(false);
+            return;
+          }
+          if (!email || !email.includes('@') || email.length < 5) {
+            setSubmitError('Please enter a valid email.');
+            setIsSubmitting(false);
+            return;
+          }
+          if (!messageVal) {
+            setSubmitError('Please enter your message.');
+            setIsSubmitting(false);
+            return;
+          }
+          formData.append('access_key', 'a17daa5b-725c-4354-913d-e7cd75d01bc2');
+          formData.append('subject', 'New Contact Form Submission');
+          formData.append('from_name', 'DEVEXT Website');
+          formData.append('botcheck', '');
+          formData.append('to', 'devextdeveloping@gmail.com');
+          formData.append('replyto', email);
+          const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData,
+            headers: { Accept: 'application/json' }
+          });
+          const data = await res.json().catch(() => ({ success: false, message: 'Invalid response from server' }));
+          if (res.ok && data.success) {
+            setSubmitMessage('Thanks! Your message has been sent.');
+            formEl.reset();
+          } else {
+            setSubmitError(data?.message || 'Submission failed. Please try again.');
+          }
+        } catch (err) {
+          setSubmitError('Submission failed. Please try again.');
+          console.log(err);
+        } finally {
+          setIsSubmitting(false);
+        }
+      }}>
         {/* Name Field */}
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
@@ -372,6 +426,7 @@ function About() {
           <input
             type="text"
             required
+            name="name"
             className="w-full bg-transparent border-b-2 border-[#2F5B44] text-[#2F5B44] pb-2 focus:outline-none focus:border-[#2F5B44] placeholder-[#2F5B44] placeholder-opacity-60"
             placeholder=""
           />
@@ -386,6 +441,7 @@ function About() {
           <input
             type="text"
             required
+            name="company"
             className="w-full bg-transparent border-b-2 border-[#2F5B44] text-[#2F5B44] pb-2 focus:outline-none focus:border-[#2F5B44] placeholder-[#2F5B44] placeholder-opacity-60"
             placeholder=""
           />
@@ -400,6 +456,7 @@ function About() {
           <input
             type="email"
             required
+            name="email"
             className="w-full bg-transparent border-b-2 border-[#2F5B44] text-[#2F5B44] pb-2 focus:outline-none focus:border-[#2F5B44] placeholder-[#2F5B44] placeholder-opacity-60"
             placeholder=""
           />
@@ -414,6 +471,7 @@ function About() {
           <input
             type="tel"
             required
+            name="phone"
             className="w-full bg-transparent border-b-2 border-[#2F5B44] text-[#2F5B44] pb-2 focus:outline-none focus:border-[#2F5B44] placeholder-[#2F5B44] placeholder-opacity-60"
             placeholder=""
           />
@@ -428,6 +486,7 @@ function About() {
           <textarea
             required
             rows={4}
+            name="message"
             className="w-full bg-transparent border-b-2 border-[#2F5B44] text-[#2F5B44] pb-2 focus:outline-none focus:border-[#2F5B44] placeholder-[#2F5B44] placeholder-opacity-60 resize-none"
             placeholder=""
           />
@@ -437,13 +496,19 @@ function About() {
         <div className="flex justify-end pt-6">
           <button
             type="submit"
-            className="inline-flex items-center bg-transparent text-[#2F5B44] px-8 py-3 rounded-full font-medium text-[16px] hover:bg-[#2F5B44] hover:text-[#FEF9D0] transition-all duration-300 transform hover:scale-105"
+            disabled={isSubmitting}
+            className="inline-flex items-center bg-transparent text-[#2F5B44] px-8 py-3 rounded-full font-medium text-[16px] hover:bg-[#2F5B44] hover:text-[#FEF9D0] transition-all duration-300 transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed"
             style={{ border: '2px solid #2F5B44' }}
           >
-            Submit
+            {isSubmitting ? 'Sending...' : 'Submit'}
             <img src={downarrow} alt="arrow" className="w-4 h-4 ml-2" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
           </button>
         </div>
+        {(submitMessage || submitError) && (
+          <div className={`mt-4 text-sm ${submitError ? 'text-red-600' : 'text-[#2F5B44]'}`}>
+            {submitError || submitMessage}
+          </div>
+        )}
       </form>
     </div>
   </div>
