@@ -67,9 +67,11 @@ function Calculator() {
   const getHourlyRate = () => {
     if (platform === 'Custom Code') {
       return 20;
-    } else {
-      return 15; // Shopify
     }
+    if (platform === 'Wordpress') {
+      return 10;
+    }
+    return 15; // Shopify
   };
   const [showWebsiteTypeDropdown, setShowWebsiteTypeDropdown] = useState(false);
   const [showPlatformDropdown, setShowPlatformDropdown] = useState(false);
