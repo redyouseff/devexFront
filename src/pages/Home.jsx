@@ -617,150 +617,150 @@ function Home() {
           </section>  
           
           {/* sixth Section - FAQ */}
-          <section className="relative py-20 px-6" style={{ background: '#2F5B44' }}>
-            <div className="container mx-auto max-w-full px-20">
+          <section className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 xl:px-20" style={{ background: '#2F5B44' }}>
+            <div className="container mx-auto max-w-full">
               {/* Header */}
-              <div className="text-center mb-12">
-                <h2 className="text-[36px] font-bold text-[#FEF9D0] mb-8 leading-tight" style={{ fontFamily: 'Inter' }}>
+              <div className="text-center mb-8 sm:mb-12">
+                <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[36px] font-bold text-[#FEF9D0] mb-4 sm:mb-6 lg:mb-8 leading-tight" style={{ fontFamily: 'Inter' }}>
                   FREQUENTLY ASKED QUESTIONS
                 </h2>
               </div>
 
               {/* FAQ Accordion */}
-              <div className="space-y-4 max-w-6xl mx-auto">
+              <div className="space-y-3 sm:space-y-4 max-w-6xl mx-auto">
                 {/* FAQ Item 1 */}
-                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 0 ? null : 0)}>
+                <div className="border-2 border-[#FEF9D0] rounded-full px-4 sm:px-6 lg:px-8 py-3 sm:py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 0 ? null : 0)}>
                   <div className="flex items-center justify-between">
-                    <h3 className="text-[18px] font-medium text-[#FEF9D0]">
+                    <h3 className="text-[14px] sm:text-[16px] lg:text-[18px] font-medium text-[#FEF9D0] pr-2 sm:pr-4">
                       What does a web design agency do?
                     </h3>
-                    <svg className="w-6 h-6 text-[#FEF9D0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#FEF9D0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </div>
                 </div>
                 {openFaqIndex === 0 && (
-                  <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
+                  <div className="mt-3 text-[#FEF9D0] text-xs sm:text-sm lg:text-base leading-relaxed px-3 sm:px-6 lg:px-8 py-3 sm:py-4 border-2 border-[#FEF9D0] rounded-3xl">
                    A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
                   </div>
                 )}
 
                 {/* FAQ Item 2 */}
-                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 1 ? null : 1)}>
+                <div className="border-2 border-[#FEF9D0] rounded-full px-4 sm:px-6 lg:px-8 py-3 sm:py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 1 ? null : 1)}>
                   <div className="flex items-center justify-between">
-                    <h3 className="text-[18px] font-medium text-[#FEF9D0]">
+                    <h3 className="text-[14px] sm:text-[16px] lg:text-[18px] font-medium text-[#FEF9D0] pr-2 sm:pr-4">
                       What's The Difference Between Web Design & Web Development?
                     </h3>
-                    <svg className="w-6 h-6 text-[#FEF9D0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#FEF9D0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </div>
                 </div>
                 {openFaqIndex === 1 && (
-                  <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
+                  <div className="mt-3 text-[#FEF9D0] text-xs sm:text-sm lg:text-base leading-relaxed px-3 sm:px-6 lg:px-8 py-3 sm:py-4 border-2 border-[#FEF9D0] rounded-3xl">
                     Web design focuses on the user experience and user flow, as well as the aesthetic appearance of the site. Web development, on the other hand, involves the technical side that makes the website function, including coding and performance across devices. Both are essential for creating a successful, user-friendly website.
                   </div>
                 )}
 
                 {/* FAQ Item 3 */}
-                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 2 ? null : 2)}>
+                <div className="border-2 border-[#FEF9D0] rounded-full px-4 sm:px-6 lg:px-8 py-3 sm:py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 2 ? null : 2)}>
                   <div className="flex items-center justify-between">
-                    <h3 className="text-[18px] font-medium text-[#FEF9D0]">
+                    <h3 className="text-[14px] sm:text-[16px] lg:text-[18px] font-medium text-[#FEF9D0] pr-2 sm:pr-4">
                       Why is responsive web design important?
                     </h3>
-                    <svg className="w-6 h-6 text-[#FEF9D0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#FEF9D0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </div>
                 </div>
                 {openFaqIndex === 2 && (
-                  <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
-                 A great user experience is crucial across all devices — mobile, desktop, and tablets. Mobile devices, in particular, are highly popular, with research indicating that up to 80% of your website’s visitors may access it first on a phone. First impressions are key, so it’s vital that your site looks professional and is easy to navigate on mobile. Additionally, search engines prioritize mobile-friendly design and may lower your ranking if your site isn’t optimized for mobile access.
+                  <div className="mt-3 text-[#FEF9D0] text-xs sm:text-sm lg:text-base leading-relaxed px-3 sm:px-6 lg:px-8 py-3 sm:py-4 border-2 border-[#FEF9D0] rounded-3xl">
+                 A great user experience is crucial across all devices — mobile, desktop, and tablets. Mobile devices, in particular, are highly popular, with research indicating that up to 80% of your website's visitors may access it first on a phone. First impressions are key, so it's vital that your site looks professional and is easy to navigate on mobile. Additionally, search engines prioritize mobile-friendly design and may lower your ranking if your site isn't optimized for mobile access.
                   </div>
                 )}
 
                 {/* FAQ Item 4 */}
-                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 3 ? null : 3)}>
+                <div className="border-2 border-[#FEF9D0] rounded-full px-4 sm:px-6 lg:px-8 py-3 sm:py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 3 ? null : 3)}>
                   <div className="flex items-center justify-between">
-                    <h3 className="text-[18px] font-medium text-[#FEF9D0]">
+                    <h3 className="text-[14px] sm:text-[16px] lg:text-[18px] font-medium text-[#FEF9D0] pr-2 sm:pr-4">
                       How long does it take to design a website?
                     </h3>
-                    <svg className="w-6 h-6 text-[#FEF9D0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#FEF9D0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </div>
                 </div>
                 {openFaqIndex === 3 && (
-                  <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
+                  <div className="mt-3 text-[#FEF9D0] text-xs sm:text-sm lg:text-base leading-relaxed px-3 sm:px-6 lg:px-8 py-3 sm:py-4 border-2 border-[#FEF9D0] rounded-3xl">
                    Designing a custom website involves several phases: strategy, planning, design, development, quality assurance, and launch. For an informational website, the process typically takes up to 3 months, allowing time for detailed design and client feedback. Larger, more complex sites with advanced features may require more than 3 months. This timeline includes thorough design of key pages and a user testing phase to ensure optimal performance.
                   </div>
                 )}
                    
                 {/* FAQ Item 5 */}
-                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 4 ? null : 4)}>
+                <div className="border-2 border-[#FEF9D0] rounded-full px-4 sm:px-6 lg:px-8 py-3 sm:py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 4 ? null : 4)}>
                   <div className="flex items-center justify-between">
-                    <h3 className="text-[18px] font-medium text-[#FEF9D0]">
+                    <h3 className="text-[14px] sm:text-[16px] lg:text-[18px] font-medium text-[#FEF9D0] pr-2 sm:pr-4">
                       How much should I expect to pay for web design?
                     </h3>
-                    <svg className="w-6 h-6 text-[#FEF9D0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#FEF9D0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </div>
                 </div>
                 {openFaqIndex === 4 && (
-                  <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
+                  <div className="mt-3 text-[#FEF9D0] text-xs sm:text-sm lg:text-base leading-relaxed px-3 sm:px-6 lg:px-8 py-3 sm:py-4 border-2 border-[#FEF9D0] rounded-3xl">
                    The cost of a custom website depends on three main factors: the number of unique landing pages, backend features, and integrations. Informational websites with a few landing pages are less expensive and quicker to develop than complex sites with custom backend features, such as job portals or marketplaces.
                   </div>
                 )}
 
-                {/* FAQ Item 6 */}
-                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 5 ? null : 5)}>
+                                {/* FAQ Item 6 */}
+                <div className="border-2 border-[#FEF9D0] rounded-full px-4 sm:px-6 lg:px-8 py-3 sm:py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 5 ? null : 5)}>
                   <div className="flex items-center justify-between">
-                    <h3 className="text-[18px] font-medium text-[#FEF9D0]">
+                    <h3 className="text-[14px] sm:text-[16px] lg:text-[18px] font-medium text-[#FEF9D0] pr-2 sm:pr-4">
                       How can you help me generate leads after my website is launched?
                     </h3>
-                    <svg className="w-6 h-6 text-[#FEF9D0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#FEF9D0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </div>
                 </div>
                 {openFaqIndex === 5 && (
-                  <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
-                    As a full-service web design agency, we offer comprehensive marketing support to help generate qualified leads for your brand. Our marketing team provides tailored recommendations based on your goals, industry, and budget. We can design a custom monthly marketing plan to deliver effective results efficiently. Alternatively, we can develop a marketing strategy that you can implement internally, working seamlessly with your internal teams or other agencies to drive growth. 
+                  <div className="mt-3 text-[#FEF9D0] text-xs sm:text-sm lg:text-base leading-relaxed px-3 sm:px-6 lg:px-8 py-3 sm:py-4 border-2 border-[#FEF9D0] rounded-3xl">
+                    As a full-service web design agency, we offer comprehensive marketing support to help generate qualified leads for your brand. Our marketing team provides tailored recommendations based on your goals, industry, and budget. We can design a custom monthly marketing plan to deliver effective results efficiently. Alternatively, we can develop a marketing strategy that you can implement internally, working seamlessly with your internal teams or other agencies to drive growth. 
                   </div>
                 )}
 
                 {/* FAQ Item 7 */}
-                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 6 ? null : 6)}>
+                <div className="border-2 border-[#FEF9D0] rounded-full px-4 sm:px-6 lg:px-8 py-3 sm:py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 6 ? null : 6)}>
                   <div className="flex items-center justify-between">
-                    <h3 className="text-[18px] font-medium text-[#FEF9D0]">
+                    <h3 className="text-[14px] sm:text-[16px] lg:text-[18px] font-medium text-[#FEF9D0] pr-2 sm:pr-4">
                       Do you offer website redesign services?
                     </h3>
-                    <svg className="w-6 h-6 text-[#FEF9D0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#FEF9D0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </div>
                 </div>
                 {openFaqIndex === 6 && (
-                  <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
-                    Yes, we offer comprehensive website redesign services. Whether you want to refresh your site’s appearance, optimize user experience, or enhance overall performance, we can create a redesign that aligns perfectly with your brand and business objectives. Our focus is on crafting an engaging, effective online presence that delivers measurable results.
+                  <div className="mt-3 text-[#FEF9D0] text-xs sm:text-sm lg:text-base leading-relaxed px-3 sm:px-6 lg:px-8 py-3 sm:py-4 border-2 border-[#FEF9D0] rounded-3xl">
+                    Yes, we offer comprehensive website redesign services. Whether you want to refresh your site's appearance, optimize user experience, or enhance overall performance, we can create a redesign that aligns perfectly with your brand and business objectives. Our focus is on crafting an engaging, effective online presence that delivers measurable results.
                   </div>
                 )}
 
                 {/* FAQ Item 8 */}
-                <div className="border-2 border-[#FEF9D0] rounded-full px-8 py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 7 ? null : 7)}>
+                <div className="border-2 border-[#FEF9D0] rounded-full px-4 sm:px-6 lg:px-8 py-3 sm:py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 7 ? null : 7)}>
                   <div className="flex items-center justify-between">
-                    <h3 className="text-[18px] font-medium text-[#FEF9D0]">
+                    <h3 className="text-[14px] sm:text-[16px] lg:text-[18px] font-medium text-[#FEF9D0] pr-2 sm:pr-4">
                       Will my website be mobile-friendly?
                     </h3>
-                    <svg className="w-6 h-6 text-[#FEF9D0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#FEF9D0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </div>
                 </div>
                 {openFaqIndex === 7 && (
-                  <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
-                    Absolutely. We prioritize mobile-friendliness because research shows that up to 80% of users may leave your site if it isn’t optimized for mobile. We don’t simply stretch desktop designs to fit mobile screens; instead, we tailor the messaging, layout, and design specifically for mobile users. We use tools like Figma to ensure your site performs well on both desktop and mobile devices. 
+                  <div className="mt-3 text-[#FEF9D0] text-xs sm:text-sm lg:text-base leading-relaxed px-3 sm:px-6 lg:px-8 py-3 sm:py-4 border-2 border-[#FEF9D0] rounded-3xl">
+                    Absolutely. We prioritize mobile-friendliness because research shows that up to 80% of users may leave your site if it isn't optimized for mobile. We don't simply stretch desktop designs to fit mobile screens; instead, we tailor the messaging, layout, and design specifically for mobile users. We use tools like Figma to ensure your site performs well on both desktop and mobile devices. 
                   </div>
                 )}
 
@@ -827,7 +827,7 @@ function Home() {
                     when an unknown printer took a galley of type and scrambled it to make a type 
                     specimen book.
                   </p>
-                  <div className="flex items-center gap-3 justify-center">
+                  <div className="flex items-center gap-3 justify-center ">
                     <img src={circle1} alt="Client Icon" className="w-8 h-8 sm:w-10 sm:h-10" />
                     <div className="text-center">
                       <p className="text-[#2F5B44] text-sm sm:text-base font-medium">Altal Alkabeer</p>
@@ -860,7 +860,7 @@ function Home() {
                   </div>
                 </div>
 
-                {/* Right Card - Rotated on desktop only */}
+                {/* Right Card - Rotated on desktop only */}   
                 <div className="bg-[#FEF9D0] rounded-3xl p-6 sm:p-8 text-[#2F5B44] w-full max-w-sm shadow-2xl min-h-[300px] sm:min-h-[380px] flex flex-col justify-center lg:transform lg:rotate-[30deg] lg:translate-y-12 z-10">
                   <p className="text-[13px] sm:text-[15px] leading-relaxed mb-6 sm:mb-8 text-center">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
