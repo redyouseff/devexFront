@@ -170,19 +170,19 @@ function Services() {
 
          {/* Content */}
           
-         <div className="container mx-auto max-w-6xl relative z-20 px-4 sm:px-6 pt-10 sm:pt-20 flex justify-center -mt-20">
+         <div className="container mx-auto max-w-6xl relative z-20 px-4 sm:px-6 pt-10 sm:pt-20 flex justify-center -mt-8 sm:-mt-12 lg:-mt-20">
             <div className="max-w-4xl text-center">
-            <p className="text-[48px] sm:text-[56px] lg:text-[24px]  text-[#FFFFFF] mb-5">
+            <p className="text-[28px] sm:text-[40px] lg:text-[56px] text-[#FFFFFF] mb-5">
             From Concept To Reality
             </p>
             
            
-            <h4 className="text-[18px] sm:text-[20px] lg:text-[40px] mb-8 leading-relaxed text-[#E9F2CD] opacity-90 max-w-3xl mx-auto">
+            <h4 className="text-[18px] sm:text-[22px] lg:text-[40px] mb-8 leading-relaxed text-[#E9F2CD] opacity-90 max-w-3xl mx-auto">
             Fusing Creativity With Marketing &<br/>
              Technology To Drive Business Growth
             </h4>
             <div className="flex  sm:flex-row gap-4 justify-center items-center pt-1">
-            
+             
               <Link 
                 to="/services"
                 className="bg-transparent border-2 border-[#E9F2CD] text-[#E9F2CD] px-6 py-3 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-base"
@@ -226,7 +226,7 @@ function Services() {
               
               {/* Content */}
               <div className="relative z-10 max-w-lg text-left">
-                <h2 className="text-[36px] font-medium text-[#2F5B44] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
+                <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-[#2F5B44] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
                   WEB DESIGN & DEVELOPMENT
                 </h2>
                 <p className="text-[16px] sm:text-[17px] lg:text-[20px] font-normal text-[#2F5B44] mb-8 leading-relaxed">
@@ -303,7 +303,7 @@ function Services() {
             {/* Right Content */}
             <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 font-['Inter'] overflow-hidden bg-[#2F5B44]">
               <div className="relative z-10 max-w-lg text-left">
-                <h2 className="text-[36px] font-medium text-[#FEF9D0] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
+                <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-[#FEF9D0] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
                   APP DESIGN & DEVELOPMENT
                 </h2>
                 <p className="text-[16px] sm:text-[17px] lg:text-[18px] font-normal text-[#FEF9D0] mb-8 leading-relaxed">
@@ -380,7 +380,7 @@ function Services() {
                
                {/* Content */}
                <div className="relative z-10 max-w-lg text-left">
-                 <h2 className="text-[36px] font-medium text-[#2F5B44] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
+                 <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-[#2F5B44] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
                    ECOMMERCE DEVELOPMENT
                  </h2>
                  <p className="text-[16px] sm:text-[17px] lg:text-[18px] font-normal text-[#2F5B44] mb-8 leading-relaxed">
@@ -435,7 +435,7 @@ function Services() {
 
 
 
-        {/* fourth Section */}
+       {/* fourth Section */}
         <section className="relative min-h-[80vh]">
         <div className="absolute inset-0 hidden md:block">
           <div className="flex h-full">
@@ -459,7 +459,7 @@ function Services() {
             {/* Right Content */}
             <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 font-['Inter'] overflow-hidden bg-[#2F5B44]">
               <div className="relative z-10 max-w-lg text-left">
-                <h2 className="text-[36px] font-medium text-[#FEF9D0] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
+                <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-[#FEF9D0] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
                   SHOPIFY WEBSITES
                 </h2>
                 <p className="text-[16px] sm:text-[17px] lg:text-[18px] font-normal text-[#FEF9D0] mb-8 leading-relaxed">
@@ -505,7 +505,7 @@ function Services() {
       </section>
 
 
-              {/* fifth Section */}
+             {/* fifth Section */}
               <section className="relative min-h-[70vh]">
          <div className="absolute inset-0 hidden md:block">
            <div className="flex h-full">
@@ -535,7 +535,7 @@ function Services() {
                
                {/* Content */}
                <div className="relative z-10 max-w-lg text-left">
-                 <h2 className="text-[36px] font-medium text-[#2F5B44] mb-6 leading-none tracking-normal uppercase" style={{ fontFamily: 'Inter' }}>
+                 <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-[#2F5B44] mb-6 leading-none tracking-normal uppercase" style={{ fontFamily: 'Inter' }}>
                    DIGITAL STRATEGIES &<br/>BRANDING
                  </h2>
                  <p className="text-[16px] sm:text-[17px] lg:text-[18px] font-normal text-[#2F5B44] mb-8 leading-relaxed">
@@ -588,12 +588,12 @@ function Services() {
          </div>
        </section>
 
-               {/* sixth Section */}
+              {/* sixth Section */}
         <section className="relative py-20 px-6 bg-[#2F5B44]">
           <div className="container mx-auto max-w-6xl">
             {/* Header */}
             <div className="text-center mb-16">
-              <h2 className="text-[42px] font-medium text-[#FEF9D0] mb-4 leading-none tracking-normal text-center uppercase" style={{ fontFamily: 'Inter' }}>
+              <h2 className="text-[24px] sm:text-[30px] lg:text-[42px] font-medium text-[#FEF9D0] mb-4 leading-none tracking-normal text-center uppercase" style={{ fontFamily: 'Inter' }}>
                 DIGITAL TRENDS
               </h2>
               <p className="text-[16px] sm:text-[18px] text-[#FEF9D0] opacity-90 max-w-2xl mx-auto">

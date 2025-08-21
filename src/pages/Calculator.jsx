@@ -220,7 +220,7 @@ function Calculator() {
             </h1>
             
            
-            <p className="text-base lg:text-[24px] sm:text-lg mb-8 leading-relaxed text-[#E9F2CD] opacity-80 max-w-2xl mx-auto whitespace-nowrap">
+            <p className="text-base lg:text-[24px] sm:text-lg mb-8 leading-relaxed text-[#E9F2CD] opacity-80 max-w-2xl mx-auto whitespace-normal">
             Fill in the features below and calculate custom web design price <br /> 
             with our Free website cost calculator.
             </p>  
@@ -240,18 +240,18 @@ function Calculator() {
 
       {/* Calculator Section */}
         <section className="py-16 bg-[#FEF9D0]">
-          <div className="container mx-auto max-w-7xl px-6">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6">
             {/* Line Separator */}
             <div className="flex justify-center my-8 -mb-4">
-              <img src={lineList} alt="Separator" className=" max-w-[80] h-auto opacity-100" />
+              <img src={lineList} alt="Separator" className=" max-w-[80px] h-auto opacity-100" />
             </div>
 
             {/* Top Form Section */}
-          <div className="bg-[#2F5B44] rounded-t-3xl p-24">
+          <div className="bg-[#2F5B44] rounded-t-3xl p-6 sm:p-12 lg:p-24">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                               {/* Website Type */}
                 <div>
-                  <label className="block text-[#FEF9D0]  text-[25px] font-medium mb-2 ">Website Type</label>
+                  <label className="block text-[#FEF9D0]  text-[18px] sm:text-[22px] lg:text-[25px] font-medium mb-2 ">Website Type</label>
                   <div className=" relative w-full bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm">
                     <div className="flex items-center justify-between cursor-pointer" onClick={() => setShowWebsiteTypeDropdown(!showWebsiteTypeDropdown)}>
                       <span>{websiteType}</span>
@@ -294,7 +294,7 @@ function Calculator() {
 
               {/* Platform */}
               <div>
-                <label className="block text-[#FEF9D0]  font-medium mb-2  text-[25px] ">Platform</label>  
+                <label className="block text-[#FEF9D0]  font-medium mb-2  text-[18px] sm:text-[22px] lg:text-[25px] ">Platform</label>  
                 <div className="relative w-full bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm">
                   <div className="flex items-center justify-between cursor-pointer" onClick={() => setShowPlatformDropdown(!showPlatformDropdown)}>
                     <span>{platform}</span>
@@ -337,7 +337,7 @@ function Calculator() {
 
               {/* No. Of Pages */}
               <div>
-                <label className="block text-[#FEF9D0] text-[25px] font-medium mb-2">No. Of Pages</label>
+                <label className="block text-[#FEF9D0] text-[18px] sm:text-[22px] lg:text-[25px] font-medium mb-2">No. Of Pages</label>
                 <div className="relative w-full bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm">
                   <div className="flex items-center justify-between cursor-pointer" onClick={() => setShowPagesDropdown(!showPagesDropdown)}>
                     <span>{pages}</span>
@@ -380,7 +380,7 @@ function Calculator() {
 
               {/* Hourly Rate */}
               <div>
-                <label className="block text-[#FEF9D0]  text-[25px] font-medium mb-2">Hourly Rate</label>
+                <label className="block text-[#FEF9D0]  text-[18px] sm:text-[22px] lg:text-[25px] font-medium mb-2">Hourly Rate</label>
                 <div className="w-full bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm text-center">
                   ${getHourlyRate()}
                 </div>
@@ -394,14 +394,14 @@ function Calculator() {
           </div>
 
           {/* Calculator Features Section - Part 1 */}
-          <div className="bg-[#2F5B44] rounded-b-3xl p-8 ">
+          <div className="bg-[#2F5B44] rounded-b-3xl p-6 sm:p-8 ">
             {/* Header */}
-            <div className="bg-[#FEF9D0] p-8 mb-8 -mx-8 -mt-[6rem] ">
+            <div className="bg-[#FEF9D0] p-6 sm:p-8 mb-8 -mx-6 sm:-mx-8 -mt-[6rem] ">
               <h2 className="text-[#2F5B44] text-2xl font-medium mb-4 text-start text-[23px] -mt-4" style={{ fontFamily: 'Inter' }}>Informational Website Quote Calculator</h2>
               <div className="flex text-[#2F5B44] text-sm font-medium -mb-3 mt-1" style={{ fontFamily: 'Inter' }}>
                 <div className="flex-1 text-[20px]">Select:</div>
                 <div className="w-20 text-center text-[20px]">Hours</div>
-                <div className="w-20 text-right text-[20px] ml-6 mr-10 ml-20">Price</div>
+                <div className="w-20 text-right text-[20px] ml-4 sm:ml-6">Price</div>
               </div>
             </div>
 
@@ -425,7 +425,7 @@ function Calculator() {
                 <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
                   {featurePricing.uniqueDesign.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-4 sm:ml-6">
                   ${featurePricing.uniqueDesign.price}
                 </div>
               </div>
@@ -453,7 +453,7 @@ function Calculator() {
                 <div className="text-[#FEF9D0]  text-center w-20 text-[15px]">
                   {featurePricing.onsiteOptimization.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-4 sm:ml-6">
                   ${featurePricing.onsiteOptimization.price}
                 </div>
               </div>
@@ -476,10 +476,10 @@ function Calculator() {
                       features.copywriting.enabled ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-lg whitespace-nowrap" style={{ fontFamily: 'Inter' }}>Copywriting Page Count</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg whitespace-normal sm:whitespace-nowrap break-words" style={{ fontFamily: 'Inter' }}>Copywriting Page Count</span>
                   {features.copywriting.enabled && (
-                    <div className="relative">
-                      <div className="ml-[35rem] bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm w-20 text-center cursor-pointer" onClick={() => setShowCopywritingDropdown(!showCopywritingDropdown)}>
+                    <div className="relative ml-auto w-fit mt-2 sm:mt-0">
+                      <div className="bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm w-20 text-center cursor-pointer ml-auto" onClick={() => setShowCopywritingDropdown(!showCopywritingDropdown)}>
                         <div className="flex items-center justify-between">
                           <span>{features.copywriting.count}</span>
                           <img src={dropdown} alt="dropdown" className="w-4 h-4" />
@@ -510,7 +510,7 @@ function Calculator() {
                 <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
                   {featurePricing.copywriting.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-4 sm:ml-6">
                   ${featurePricing.copywriting.pricePerUnit * features.copywriting.count}
                 </div>  
               </div>
@@ -533,10 +533,10 @@ function Calculator() {
                       features.multiLanguage.enabled ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-lg whitespace-nowrap" style={{ fontFamily: 'Inter' }}>Multi-Language Feature (Per Language)</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg whitespace-normal sm:whitespace-nowrap break-words" style={{ fontFamily: 'Inter' }}>Multi-Language Feature (Per Language)</span>
                   {features.multiLanguage.enabled && (
-                    <div className="relative">
-                      <div className="ml-[26.7rem] bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm w-20 text-center cursor-pointer" onClick={() => setShowMultiLanguageDropdown(!showMultiLanguageDropdown)}>
+                    <div className="relative ml-auto w-fit mt-2 sm:mt-0">
+                      <div className="bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm w-20 text-center cursor-pointer ml-auto" onClick={() => setShowMultiLanguageDropdown(!showMultiLanguageDropdown)}>
                         <div className="flex items-center justify-between">
                           <span>{features.multiLanguage.count}</span>
                           <img src={dropdown} alt="dropdown" className="w-4 h-4" />
@@ -567,7 +567,7 @@ function Calculator() {
                 <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
                   {featurePricing.multiLanguage.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-4 sm:ml-6">
                   ${featurePricing.multiLanguage.pricePerUnit * features.multiLanguage.count}
                 </div>
               </div>
@@ -590,12 +590,12 @@ function Calculator() {
                       features.contentMigration ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-lg" style={{ fontFamily: 'Inter' }}>Content Migration</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg whitespace-normal sm:whitespace-nowrap" style={{ fontFamily: 'Inter' }}>Content Migration</span>
                 </div>
                 <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
                   {featurePricing.contentMigration.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-4 sm:ml-6">
                   ${featurePricing.contentMigration.price}
                 </div>
               </div>
@@ -618,10 +618,10 @@ function Calculator() {
                       features.motionGraphics.enabled ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-lg mr-14" style={{ fontFamily: 'Inter' }}>Motion Graphics</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg whitespace-normal sm:whitespace-nowrap" style={{ fontFamily: 'Inter' }}>Motion Graphics</span>
                   {features.motionGraphics.enabled && (
-                    <div className="relative">
-                      <div className="ml-[35.6rem] bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm w-20 text-center cursor-pointer" onClick={() => setShowMotionGraphicsDropdown(!showMotionGraphicsDropdown)}>
+                    <div className="relative ml-auto w-fit mt-2 sm:mt-0">
+                      <div className="bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm w-20 text-center cursor-pointer ml-auto" onClick={() => setShowMotionGraphicsDropdown(!showMotionGraphicsDropdown)}>
                         <div className="flex items-center justify-between">
                           <span>{features.motionGraphics.count}</span>
                           <img src={dropdown} alt="dropdown" className="w-4 h-4" />
@@ -652,14 +652,14 @@ function Calculator() {
                 <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
                   {featurePricing.motionGraphics.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-4 sm:ml-6">
                   ${featurePricing.motionGraphics.pricePerUnit * features.motionGraphics.count}
                 </div>
               </div>
 
               {/* Line Separator */}
               <div className="flex justify-center my-4">
-                <img src={line} alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
+                <img src={line} alt="Separator" className="w-full max-w-[100px] h-auto opacity-60" />
               </div>
 
               {/* Basic Search */}
@@ -675,12 +675,12 @@ function Calculator() {
                       features.basicSearch ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-lg" style={{ fontFamily: 'Inter' }}>Basic Search</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg whitespace-normal sm:whitespace-nowrap" style={{ fontFamily: 'Inter' }}>Basic Search</span>
                 </div>
                 <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
                   {featurePricing.basicSearch.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-4 sm:ml-6">
                   ${featurePricing.basicSearch.price}
                 </div>
               </div>
@@ -703,12 +703,12 @@ function Calculator() {
                       features.interactiveMap ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-lg" style={{ fontFamily: 'Inter' }}>Interactive Map</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg whitespace-normal sm:whitespace-nowrap" style={{ fontFamily: 'Inter' }}>Interactive Map</span>
                 </div>
                 <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
                   {featurePricing.interactiveMap.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-4 sm:ml-6">
                   ${featurePricing.interactiveMap.price}
                 </div>
               </div>
@@ -731,19 +731,19 @@ function Calculator() {
                       features.eventsCalendar ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-lg" style={{ fontFamily: 'Inter' }}>Events Calendar</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg whitespace-normal sm:whitespace-nowrap" style={{ fontFamily: 'Inter' }}>Events Calendar</span>
                 </div>
                 <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
                   {featurePricing.eventsCalendar.hours}
                 </div>
-                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-4 sm:ml-6">
                   ${featurePricing.eventsCalendar.price}
                 </div>
               </div>
 
             {/* Line Separator */}  
             <div className="flex justify-center my-4">    
-                <img src={line} alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
+                <img src={line} alt="Separator" className="w-full max-w-[100px] h-auto opacity-60" />
               </div> 
 
               {/* Chat Feature */}
@@ -759,12 +759,12 @@ function Calculator() {
                       features.chatFeature ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-lg" style={{ fontFamily: 'Inter' }}>Chat Feature</span>
+                  <span className="ml-4 text-[#FEF9D0] text-lg whitespace-normal sm:whitespace-nowrap" style={{ fontFamily: 'Inter' }}>Chat Feature</span>
                 </div>
                 <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
                   {featurePricing.chatFeature.hours}
                 </div>
-                <div className="text-[#FEF9D0]  text-[20px] text-right w-20 ml-6 mr-10 ml-20">
+                <div className="text-[#FEF9D0]  text-[20px] text-right w-20 ml-4 sm:ml-6">
                   ${featurePricing.chatFeature.price}  
                 </div>
               </div>
@@ -786,7 +786,7 @@ function Calculator() {
           </div>   
            {/* Line Separator */}   
            <div className="flex justify-center -mt-[1rem]">
-              <img src={lineList2} alt="Separator" className="max-w-[80] h-auto opacity-100" />
+              <img src={lineList2} alt="Separator" className="max-w-[80px] h-auto opacity-100" />
             </div>
         </div>
       </section>

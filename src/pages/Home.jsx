@@ -7,6 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import cardsShape from "/images/home/Frame 416.svg"
 
 // Smooth scroll styles
 const smoothScrollStyles = `
@@ -99,7 +100,7 @@ import circle3 from "/images/home/Ellipse 9.svg"
 import circle4 from "/images/home/Ellipse 10.svg"
 import circle5 from "/images/home/Ellipse 11.svg"
 import circle6 from "/images/home/Ellipse 12.svg"       
-import location from "/images/home/Group.svg"
+// import location from "/images/home/Group.svg"
 
 import name from "/images/home/name.svg"
 import email from "/images/home/email.svg"
@@ -513,7 +514,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="container mx-auto max-w-6xl relative z-10">
+            <div className="w-full relative z-10">
               {/* Header */}
               <div className="text-center mb-16">
                 <h2 className="text-[36px] font-bold text-[#2F5B44] mb-4 leading-tight">
@@ -806,7 +807,7 @@ function Home() {
               </div>
 
               {/* Navigation Arrows */}
-              <div className="flex justify-start mb-8">
+              {/* <div className="flex justify-start mb-8">
                 <div className="flex gap-4">
                   <button className="hover:opacity-70 transition-opacity">
                     <img src={fiftharrowleft} alt="Previous" className="w-10 h-10" />
@@ -815,70 +816,11 @@ function Home() {
                     <img src={fiftharrowright} alt="Next" className="w-10 h-10" />
                   </button>
                 </div>
-              </div>
+              </div> */}
 
-              {/* 3 Cards Layout with Rotated Side Cards */}
-              <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-10 min-h-[550px] relative">
-                {/* Left Card - Rotated on desktop only */}
-                <div className="bg-[#FEF9D0] rounded-3xl p-6 sm:p-8 text-[#2F5B44] w-full max-w-sm shadow-2xl min-h-[300px] sm:min-h-[380px] flex flex-col justify-center lg:transform lg:-rotate-[30deg] lg:translate-y-12 z-10">
-                  <p className="text-[13px] sm:text-[15px] leading-relaxed mb-6 sm:mb-8 text-center">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                    when an unknown printer took a galley of type and scrambled it to make a type 
-                    specimen book.
-                  </p>
-                  <div className="flex items-center gap-3 justify-center ">
-                    <img src={circle1} alt="Client Icon" className="w-8 h-8 sm:w-10 sm:h-10" />
-                    <div className="text-center">
-                      <p className="text-[#2F5B44] text-sm sm:text-base font-medium">Altal Alkabeer</p>
-                      <div className="flex items-center gap-1 mt-1 justify-center">
-                        <img src={location} alt="Location" className="w-3 h-3 sm:w-4 sm:h-4" />
-                        <p className="text-[#2F5B44] text-xs sm:text-sm">Riyadh</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Center Card - Highest Priority */}
-                <div className="bg-[#2F5B44] rounded-3xl p-6 sm:p-8 text-[#FEF9D0] w-full max-w-sm shadow-2xl min-h-[300px] sm:min-h-[380px] flex flex-col justify-center z-50">
-                  <p className="text-[13px] sm:text-[15px] leading-relaxed mb-6 sm:mb-8 text-center">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                    when an unknown printer took a galley of type and scrambled it to make a type 
-                    specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting 
-                    industry.
-                  </p>
-                  <div className="flex items-center gap-3 justify-center">
-                    <img src={circle2} alt="Client Icon" className="w-8 h-8 sm:w-10 sm:h-10" />
-                    <div className="text-center">
-                      <p className="text-[#FEF9D0] text-sm sm:text-base font-medium">Joud&Karam</p>
-                      <div className="flex items-center gap-1 mt-1 justify-center">
-                        <img src={location} alt="Location" className="w-3 h-3 sm:w-4 sm:h-4" />
-                        <p className="text-[#FEF9D0] text-xs sm:text-sm">Dubai</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right Card - Rotated on desktop only */}   
-                <div className="bg-[#FEF9D0] rounded-3xl p-6 sm:p-8 text-[#2F5B44] w-full max-w-sm shadow-2xl min-h-[300px] sm:min-h-[380px] flex flex-col justify-center lg:transform lg:rotate-[30deg] lg:translate-y-12 z-10">
-                  <p className="text-[13px] sm:text-[15px] leading-relaxed mb-6 sm:mb-8 text-center">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                    when an unknown printer took a galley of type and scrambled it to make a type 
-                    specimen book.
-                  </p>
-                  <div className="flex items-center gap-3 justify-center">
-                    <img src={circle3} alt="Client Icon" className="w-8 h-8 sm:w-10 sm:h-10" />
-                    <div className="text-center">
-                      <p className="text-[#2F5B44] text-sm sm:text-base font-medium">Bedayat Meshwar</p>
-                      <div className="flex items-center gap-1 mt-1 justify-center">
-                        <img src={location} alt="Location" className="w-3 h-3 sm:w-4 sm:h-4" />
-                        <p className="text-[#2F5B44] text-xs sm:text-sm">Dubai</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              {/* Cards fan replaced by a single image shape (full-bleed) */}
+              <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mt-10 -mb-[5rem]">
+                <img src={cardsShape} alt="Cards Shape" className="w-screen h-auto" />
               </div>
             </div>
           </section>
