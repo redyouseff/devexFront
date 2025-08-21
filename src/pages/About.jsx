@@ -184,7 +184,7 @@ function About() {
                 <img 
                   src={secondsection} 
                   alt="Website Mockup" 
-                  className="w-full h-auto max-w-lg object-contain -mb-14 "
+                  className="w-full h-auto max-w-lg object-contain -mb-8 md:-mb-14 "
                 />
               </div>
                              
@@ -335,13 +335,13 @@ function About() {
     {/* Left Side - Text Content */}
     <div className="space-y-6 lg:space-y-8 pb-4 text-center lg:text-left">
              <div>
-         <h2 className="text-[20px] sm:text-[30px] lg:text-[10px] xl:text-[36px] font-bold text-[#2F5B44] mb-4 sm:mb-6 leading-tight  whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
+         <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] xl:text-[36px] font-bold text-[#2F5B44] mb-4 sm:mb-6 leading-tight  whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
            DIGITIZING YOUR BUSINESS<br />
            GROWTH
          </h2>
          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-between mb-6 sm:mb-8 mt-6 sm:mt-10 gap-4 sm:gap-0">
            <img src={line} alt="line"  className=" w-24 sm:w-32 order-1 sm:order-none" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
-           <span className="text-[#2F5B44] text-base sm:text-lg font-medium order-2 sm:order-none mr-10 ">FOLLOW US</span>
+           <span className="text-[#2F5B44] text-base sm:text-lg font-medium order-2 sm:order-none mr-0 lg:mr-10 ">FOLLOW US</span>
            <div className="flex gap-4 sm:gap-6 order-3 sm:order-none">
              <a href="#" className="hover:opacity-70 transition-opacity">
                <img src={whatsapp} alt="WhatsApp" className="w-5 h-5 sm:w-6 sm:h-6" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />

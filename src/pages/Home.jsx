@@ -189,22 +189,27 @@ function Home() {
       {/* Hero Section */}
             <section className="relative min-h-screen flex items-center overflow-hidden">
           {/* Video Background */}
-                                             <div className="absolute inset-0 w-full h-full overflow-hidden">
-                <div className="absolute inset-0 bg-[linear-gradient(257.99deg,rgba(254,249,208,0.1)_0%,rgba(47,91,68,0.5)_32.67%,#2F5B44_55.52%)] z-10"></div>
-                <iframe
-                  src="https://player.cloudinary.com/embed/?cloud_name=dp5bcywc7&public_id=1440X879_Final_tuvtdq&profile=cld-default&autoplay=true&loop=true&muted=true&controls=false"
-                  className="absolute w-full h-full"
-                  allow="autoplay; fullscreen"
+              <div className="absolute inset-0 w-full h-full overflow-hidden">
+                <div className="absolute inset-0 bg-[linear-gradient(257.99deg,rgba(254,249,208,0.1)_0%,rgba(47,91,68,0.1)_1%,#2F5B44_95%)] z-10"></div>
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="absolute w-full h-full object-cover"
                   style={{ 
-                    border: 'none',
-                    width: '150%',
-                    height: '150%',
-                    left: '-25%',
-                    top: '-25%',
+                    width: '100vw',
+                    height: '100vh',
+                    left: '0',
+                    top: '0',
                     objectFit: 'cover',
                     position: 'absolute'
                   }}
-                ></iframe>
+                >
+                  <source src="https://res.cloudinary.com/dp5bcywc7/video/upload/v1754822729/1440X879_Final_tuvtdq.mp4" type="video/mp4" />
+           
+                  Your browser does not support the video tag.
+                </video>
               </div>
 
           {/* Content */}
@@ -218,7 +223,7 @@ function Home() {
               For A Better Tomorrow
             </h2>
             <p className="text-base sm:text-lg mb-8 leading-relaxed text-[#E9F2CD] opacity-80 max-w-md">
-              Lorem ipsum is simply dummy text of the printing and 
+              Lorem ipsum is simply dummy text of the printing and    
               typesetting industry. Lorem Ipsum has been the 
               industry's standard dummy text ever since the 
               1500s, when an unknown printer took a galley 
@@ -299,7 +304,7 @@ function Home() {
                   industry. Lorem ipsum has been the industry's standard dummy 
                   text ever since the 1500s.
                 </p>
-                <div className="flex justify-center md:justify-end">           
+                <div className="flex justify-center md:justify-end">             
                   <Link 
                     to="/services"
                     className="inline-flex items-center border-2 border-[#2F5B44] text-[#2F5B44] px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-[#2F5B44] hover:text-white transition-colors font-medium text-sm sm:text-base"
@@ -636,7 +641,7 @@ function Home() {
                 </div>
                 {openFaqIndex === 0 && (
                   <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
-                    A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
+                   A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
                   </div>
                 )}
 
@@ -653,7 +658,7 @@ function Home() {
                 </div>
                 {openFaqIndex === 1 && (
                   <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
-                    A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
+                    Web design focuses on the user experience and user flow, as well as the aesthetic appearance of the site. Web development, on the other hand, involves the technical side that makes the website function, including coding and performance across devices. Both are essential for creating a successful, user-friendly website.
                   </div>
                 )}
 
@@ -670,7 +675,7 @@ function Home() {
                 </div>
                 {openFaqIndex === 2 && (
                   <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
-                    A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
+                 A great user experience is crucial across all devices — mobile, desktop, and tablets. Mobile devices, in particular, are highly popular, with research indicating that up to 80% of your website’s visitors may access it first on a phone. First impressions are key, so it’s vital that your site looks professional and is easy to navigate on mobile. Additionally, search engines prioritize mobile-friendly design and may lower your ranking if your site isn’t optimized for mobile access.
                   </div>
                 )}
 
@@ -687,7 +692,7 @@ function Home() {
                 </div>
                 {openFaqIndex === 3 && (
                   <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
-                    A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
+                   Designing a custom website involves several phases: strategy, planning, design, development, quality assurance, and launch. For an informational website, the process typically takes up to 3 months, allowing time for detailed design and client feedback. Larger, more complex sites with advanced features may require more than 3 months. This timeline includes thorough design of key pages and a user testing phase to ensure optimal performance.
                   </div>
                 )}
                    
@@ -704,7 +709,7 @@ function Home() {
                 </div>
                 {openFaqIndex === 4 && (
                   <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
-                    A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
+                   The cost of a custom website depends on three main factors: the number of unique landing pages, backend features, and integrations. Informational websites with a few landing pages are less expensive and quicker to develop than complex sites with custom backend features, such as job portals or marketplaces.
                   </div>
                 )}
 
@@ -721,7 +726,7 @@ function Home() {
                 </div>
                 {openFaqIndex === 5 && (
                   <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
-                    A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
+                    As a full-service web design agency, we offer comprehensive marketing support to help generate qualified leads for your brand. Our marketing team provides tailored recommendations based on your goals, industry, and budget. We can design a custom monthly marketing plan to deliver effective results efficiently. Alternatively, we can develop a marketing strategy that you can implement internally, working seamlessly with your internal teams or other agencies to drive growth. 
                   </div>
                 )}
 
@@ -738,7 +743,7 @@ function Home() {
                 </div>
                 {openFaqIndex === 6 && (
                   <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
-                    A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
+                    Yes, we offer comprehensive website redesign services. Whether you want to refresh your site’s appearance, optimize user experience, or enhance overall performance, we can create a redesign that aligns perfectly with your brand and business objectives. Our focus is on crafting an engaging, effective online presence that delivers measurable results.
                   </div>
                 )}
 
@@ -755,7 +760,7 @@ function Home() {
                 </div>
                 {openFaqIndex === 7 && (
                   <div className="mt-3 text-[#FEF9D0] text-sm sm:text-base leading-relaxed px-6 sm:px-8 py-4 border-2 border-[#FEF9D0] rounded-3xl">
-                    A web design agency grows your brand online by bringing a team of experts together to create a custom site that is optimized for SEO and drives higher conversions for more leads and increased sales. A custom website starts with a strategy and planning before going into design and development. The designs need to be responsive to ensure a good user experience on both mobile and desktop devices.
+                    Absolutely. We prioritize mobile-friendliness because research shows that up to 80% of users may leave your site if it isn’t optimized for mobile. We don’t simply stretch desktop designs to fit mobile screens; instead, we tailor the messaging, layout, and design specifically for mobile users. We use tools like Figma to ensure your site performs well on both desktop and mobile devices. 
                   </div>
                 )}
 
@@ -882,7 +887,7 @@ function Home() {
           <section className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden" style={{ background: '#2F5B44' }}>
 
             <div className="container mx-auto max-w-6xl relative z-10">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">    
                 
                 {/* Left Side - Text Content */}
                 <div className="space-y-6 lg:space-y-8 pb-4 text-center lg:text-left">
@@ -968,7 +973,7 @@ function Home() {
                       }
                     } catch (err) {
                       setSubmitError('Submission failed. Please try again.');
-                      console.log(err);
+                      console.log(err)
                     } finally {
                       setIsSubmitting(false);
                     }
