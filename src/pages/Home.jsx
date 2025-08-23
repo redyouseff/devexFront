@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Thirdseciont from '../components/Thirdseciont';
 import cardsShape from "/images/home/Frame 416.svg"
 
 // Smooth scroll styles
@@ -74,6 +75,45 @@ const smoothScrollStyles = `
       width: 100% !important;
     }
   }
+  
+  /* Third section Swiper styles */
+  .third-section-swiper {
+    height: 100% !important;
+    min-height: 100% !important;
+  }
+  
+  .third-section-swiper .swiper-slide {
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100% !important;
+  }
+  
+  .third-section-swiper .swiper-slide-active {
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+  }
+  
+  .third-section-swiper .swiper-slide-prev,
+  .third-section-swiper .swiper-slide-next {
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+  
+  /* Vertical Swiper specific styles */
+  .third-section-swiper.swiper-vertical {
+    height: 100% !important;
+    min-height: 100% !important;
+  }
+  
+  .third-section-swiper.swiper-vertical .swiper-wrapper {
+    flex-direction: column;
+    height: 100% !important;
+  }
+  
+  .third-section-swiper .swiper-wrapper {
+    height: 100% !important;
+  }
 `;
 import icons from "/images/home/Frame 7.png"
 import uparrow from "/images/home/Vector.svg"
@@ -81,9 +121,7 @@ import downarrow from "/images/home/Vector1.svg"
 import icon1 from "/images/home/website mockup image 1.svg"
 import icon2 from "/images/home/Vector2.png"
 import icon3 from "/images/home/Devext Pattern 1 1.svg"
-import downthird from "/images/home/Frame 16.svg"
-import upthird from "/images/home/Frame 15.svg"
-import rectangle from "/images/home/Rectangle 3.svg"
+
 import logoFourthsection from "/images/home/Devext Pattern 2 1.svg"
 import fifthsectionbackgroundIcon from "/images/home/Devext Pattern 2 2.svg"
 import fiftharrowright from "/images/home/Frame 17.svg"
@@ -99,7 +137,14 @@ import circle2 from "/images/home/Ellipse 8.svg"
 import circle3 from "/images/home/Ellipse 9.svg"
 import circle4 from "/images/home/Ellipse 10.svg"
 import circle5 from "/images/home/Ellipse 11.svg"
-import circle6 from "/images/home/Ellipse 12.svg"       
+import circle6 from "/images/home/Ellipse 12.svg" 
+
+
+
+
+
+
+
 // import location from "/images/home/Group.svg"
 
 import name from "/images/home/name.svg"
@@ -179,18 +224,19 @@ function Home() {
     }
   ];
 
-  
+
+ 
 
   return (
     <>
       <style>{smoothScrollStyles}</style>
-      <div className="min-h-screen bg-gray-100">
-        <Navbar />
+    <div className="min-h-screen bg-gray-100">
+      <Navbar />
       
       {/* Hero Section */}
             <section className="relative min-h-screen flex items-center overflow-hidden">
           {/* Video Background */}
-              <div className="absolute inset-0 w-full h-full overflow-hidden">
+                                             <div className="absolute inset-0 w-full h-full overflow-hidden">
                 <div className="absolute inset-0 bg-[linear-gradient(257.99deg,rgba(254,249,208,0.1)_0%,rgba(47,91,68,0.1)_1%,#2F5B44_95%)] z-10"></div>
                 <video
                   autoPlay
@@ -224,7 +270,7 @@ function Home() {
               For A Better Tomorrow
             </h2>
             <p className="text-base sm:text-lg mb-8 leading-relaxed text-[#E9F2CD] opacity-80 max-w-md">
-              Lorem ipsum is simply dummy text of the printing and    
+              Lorem ipsum is simply dummy text of the printing and 
               typesetting industry. Lorem Ipsum has been the 
               industry's standard dummy text ever since the 
               1500s, when an unknown printer took a galley 
@@ -305,7 +351,7 @@ function Home() {
                   industry. Lorem ipsum has been the industry's standard dummy 
                   text ever since the 1500s.
                 </p>
-                <div className="flex justify-center md:justify-end">             
+                <div className="flex justify-center md:justify-end">           
                   <Link 
                     to="/services"
                     className="inline-flex items-center border-2 border-[#2F5B44] text-[#2F5B44] px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-[#2F5B44] hover:text-white transition-colors font-medium text-sm sm:text-base"
@@ -339,83 +385,8 @@ function Home() {
         </div>
       </section>
 
-
-         {/* third Section */}
-      <section className="relative min-h-[80vh]">
-        <div className="absolute inset-0 hidden md:block">
-          <div className="flex h-full">
-            <div className="w-1/2 bg-[#2F5B44]"></div>
-            <div className="w-1/2 bg-[#FEF9D0]"></div>
-          </div>
-        </div>
-        
-        <div className="relative h-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
-            
-            {/* Left Side - Dark Green */}
-            <div className="relative flex items-center justify-center p-6 sm:p-8 lg:p-12 font-['Inter'] overflow-hidden bg-[#2F5B44]">
-              {/* Arrows - Vertically Centered on Right */}
-              <div className="absolute right-4 sm:right-6 lg:right-8 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 sm:gap-6 lg:gap-8 hidden md:flex">
-                {/* Up Arrow */}
-                <img src={upthird} alt="up arrow" className="w-6 h-6 sm:w-8 sm:h-8" />
-                
-                {/* Down Arrow */}
-                <img src={downthird} alt="down arrow" className="w-6 h-6 sm:w-8 sm:h-8" />
-              </div>
-
-              <div className="relative z-10 max-w-lg text-center md:text-left">
-                <h3 className="text-[16px] sm:text-[17px] lg:text-[18px] font-medium text-[#FEF9D0] mb-4 sm:mb-6 leading-tight uppercase">
-                  WHY DEVEXT?
-                </h3>
-                <h2 className="text-[22px] sm:text-[26px] lg:text-[30px] font-medium text-[#FEF9D0] mb-4 sm:mb-6 leading-tight uppercase">
-                  DISCOVER OUR EXPERTISE AS<br />
-                  A WEB DESIGN COMPANY
-                </h2>
-                <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-[#FEF9D0] mb-6 sm:mb-8 leading-relaxed">
-                  As a full-service web design agency, we handle all your 
-                  digital needs under one roof. Our custom web design 
-                  services include thorough research and planning, 
-                  bespoke designs and digital strategies tailored to grow 
-                  your reach, drive traffic and encourage engagement.
-                </p>
-              </div>
-            </div>
-
-            {/* Right Side - Light Cream */}
-            <div className="relative flex items-center justify-center p-6 sm:p-8 lg:p-12 font-['Inter'] overflow-hidden bg-[#FEF9D0]">
-              <div className="relative z-10 max-w-lg text-center md:text-left">
-                <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-2 sm:gap-3 mb-4 sm:mb-6">
-                  <img src={rectangle} alt="Rectangle Icon" className="w-6 h-6 sm:w-8 sm:h-8" />
-                  <h3 className="text-[22px] sm:text-[26px] lg:text-[30px] font-medium text-[#2F5B44] leading-tight uppercase">
-                    CUSTOM WEB DESIGN
-                  </h3>
-                </div>
-              
-                <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-[#2F5B44] mb-6 sm:mb-8 leading-relaxed">
-                  Each website we create is meticulously crafted to deliver a 
-                  100% unique experience tailored to your brand. Our 
-                  expert designers transform your vision into a dynamic, 
-                  custom design that enhances your brand's visibility, boosts 
-                  engagement, and drives conversions. With us, your website 
-                  will not only stand out but also connect deeply with your   
-                  audience.
-                </p>
-                <div className="flex justify-center md:justify-end">
-                  <Link 
-                    to="/services"
-                    className="inline-flex items-center text-[#2F5B44] px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-[#2F5B44] hover:text-white transition-colors font-medium text-sm sm:text-base"
-                    style={{ border: '3px solid #2F5B44' }}
-                  >
-                    Learn More
-                    <img src={downarrow} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+     {/* Third Section */}
+     <Thirdseciont />
     
 
       {/* fourth Section */}
@@ -495,6 +466,7 @@ function Home() {
         </div>
       </section>
 
+ 
 
                    {/* fifth Section - Customer Testimonials */}
           <section className="relative py-20 px-6 overflow-hidden" style={{ background: '#FEF9D0' }}>
@@ -587,8 +559,8 @@ function Home() {
                             alt={card.title}
                             className="w-full h-full object-cover"
                           />
-                        </div>
-                        
+                </div>
+
                         {/* Text Content */}
                         <div className="flex-1 flex flex-col">
                           <p className="text-[13px] sm:text-[14px] leading-relaxed mb-4 sm:mb-6 flex-1">
@@ -598,17 +570,17 @@ function Home() {
                           {/* Client Info */}
                           <div className="flex items-center gap-3 mt-auto">
                             <img src={card.circle} alt="Client Icon" className="w-6 h-6 sm:w-8 sm:h-8" />
-                            <div>
+                    <div>
                               <p className="text-[#FEF9D0] text-xs sm:text-sm font-medium">{card.name}</p>
-                              <div className="flex items-center gap-1 mt-1">
-                                <svg className="w-3 h-3 text-[#FEF9D0]" fill="currentColor" viewBox="0 0 20 20">
-                                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                                </svg>
+                      <div className="flex items-center gap-1 mt-1">
+                        <svg className="w-3 h-3 text-[#FEF9D0]" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                        </svg>
                                 <p className="text-[#FEF9D0] text-xs">{card.location}</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                       </div>
                     </SwiperSlide>
                   ))}
@@ -714,7 +686,7 @@ function Home() {
                   </div>
                 )}
 
-                                {/* FAQ Item 6 */}
+                {/* FAQ Item 6 */}
                 <div className="border-2 border-[#FEF9D0] rounded-full px-4 sm:px-6 lg:px-8 py-3 sm:py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 5 ? null : 5)}>
                   <div className="flex items-center justify-between">
                     <h3 className="text-[14px] sm:text-[16px] lg:text-[18px] font-medium text-[#FEF9D0] pr-2 sm:pr-4">
@@ -820,7 +792,7 @@ function Home() {
 
               {/* Cards fan replaced by a single image shape (full-bleed) */}
               <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mt-10 -mb-[5rem]">
-                <img src={cardsShape} alt="Cards Shape" className="w-screen h-auto" />
+                <img src={cardsShape} alt="Cards Shape" className="w-screen h-auto sm:h-auto min-h-[300px] sm:min-h-[400px] lg:min-h-[500px]" />
               </div>
             </div>
           </section>
@@ -829,7 +801,7 @@ function Home() {
           <section className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden" style={{ background: '#2F5B44' }}>
 
             <div className="container mx-auto max-w-6xl relative z-10">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">    
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                 
                 {/* Left Side - Text Content */}
                 <div className="space-y-6 lg:space-y-8 pb-4 text-center lg:text-left">
@@ -1018,8 +990,8 @@ function Home() {
             </div>
           </section>
 
-                <Footer />
-      </div>
+          <Footer />
+              </div>
     </>
   );
 }
