@@ -22,7 +22,7 @@ const Footer = () => {
           <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-0">
             
             {/* Main Services Column */}
-            <div className="text-start px-4 sm:px-8">
+            <div className="text-start px-4 sm:px-8">  
               <h3 className="text-[16px] sm:text-[18px] font-bold mb-4 sm:mb-6 uppercase">MAIN SERVICES</h3>
               <ul className="space-y-4">
                 <li>

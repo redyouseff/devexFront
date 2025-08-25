@@ -16,10 +16,11 @@ import upthird from "/images/home/Frame 15.svg"
 import rectangle from "/images/home/Rectangle 3.svg"
 import downarrow from "/images/home/Vector1.svg"
 import { Navigation, Pagination } from 'swiper/modules';
-// import downarrow2green from "/images/home/arrow Down.svg"
+import downarrow2green from "/images/home/arrow Down.svg"
 
 const Thirdseciont = () => {
     const [swiperInstance, setSwiperInstance] = useState(null);
+    const [hoveredCard, setHoveredCard] = useState(null);
     
     const cardone =[{
         id:1,
@@ -178,16 +179,20 @@ return(
                             : 'text-[#2F5B44] hover:bg-[#2F5B44] hover:text-white border-[#2F5B44]'
                         }`}
                         style={{ border: '2px solid' }}
+                        onMouseEnter={() => setHoveredCard(card.id)}
+                        onMouseLeave={() => setHoveredCard(null)}
                       >
                         Learn More
                         <img 
-                          src={downarrow} 
+                          src={hoveredCard === card.id && card.id % 2 === 0 ? downarrow2green : downarrow} 
                           alt="arrow" 
                           className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 ml-1.5 sm:ml-2" 
                           style={{ 
-                            filter: card.id % 2 === 0 
-                              ? 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)'
-                              : 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)'
+                            filter: hoveredCard === card.id 
+                              ? (card.id % 2 === 0 ? 'none' : 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)')
+                              : card.id % 2 === 0 
+                                ? 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)'
+                                : 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)'
                           }} 
                         />
                       </Link>

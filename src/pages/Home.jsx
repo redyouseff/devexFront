@@ -152,6 +152,7 @@ import name from "/images/home/name.svg"
 import email from "/images/home/email.svg"
 import phone from "/images/home/phone.svg"
 import message from "/images/home/message.svg"
+import companyname from "/images/home/Company Name.svg"
 
 import whatsapp from "/images/home/WhatsApp.svg"
 import instagram from "/images/home/Instagram.svg"
@@ -915,7 +916,7 @@ function Home() {
                     {/* Company Name Field */}
                     <div className="relative">
                       <div className="flex items-center gap-3 mb-2">
-                        <img src={name} alt="company icon" className="w-5 h-5" />
+                        <img src={companyname} alt="company icon" className="w-5 h-5" />
                         <label className="text-[#FEF9D0] text-sm font-medium">COMPANY NAME *</label>
                       </div>
                       <input
