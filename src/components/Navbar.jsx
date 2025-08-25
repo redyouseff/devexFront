@@ -4,22 +4,40 @@ import down from "/images/navbar/Vector.png";
 import { useState, useEffect } from 'react';
 
 function Navbar() {
-  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
+    // Get initial scroll position with iOS compatibility
+    const getScrollPosition = () => {
+      return window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    };
+
     const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      const scrollThreshold = 200;
+      const currentScrollPos = getScrollPosition();
+      const scrollThreshold = 100; // Reduced threshold for better iOS experience
       const isNearTop = currentScrollPos <= scrollThreshold;
       const isScrollingUp = currentScrollPos < prevScrollPos;
       
-      setVisible(isNearTop && isScrollingUp);
+      // More responsive logic for iOS
+      if (isNearTop) {
+        setVisible(true);
+      } else if (isScrollingUp) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+      
       setPrevScrollPos(currentScrollPos);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Add passive listener for better iOS performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Initial call to set correct initial state
+    handleScroll();
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos]);
 
@@ -28,7 +46,7 @@ function Navbar() {
   };
 
   return (
-         <header className={`w-full py-4 px-6 fixed left-0 z-50 transition-all ${visible ? 'duration-[800ms] ease-out' : 'duration-[2000ms] ease-in'} ${visible ? 'top-8 opacity-100' : '-top-full opacity-0'}`}>
+         <header className={`w-full py-4 px-6 fixed left-0 z-50 transition-all transform ${visible ? 'duration-500 ease-out translate-y-0' : 'duration-300 ease-in -translate-y-full'} ${visible ? 'top-8 opacity-100' : 'top-0 opacity-0'}`}>
       {/* Glassmorphism effect */}
       <div className="absolute inset-0 backdrop-blur-[1px]"></div>
       
