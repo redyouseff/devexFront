@@ -55,7 +55,6 @@ import downarrow from "/images/home/Vector1.svg"
 import Footer from '../components/Footer';
 import logo  from "/images/about/Devext Pattern 1 1.svg"
 import logo2  from "/images/about/Devext Pattern 1 2.svg"
-import card from "/images/about/Team Card.svg"
 import name from "/images/about/Vector.svg"
 import email from "/images/about/Vector3.svg"
 import phone from "/images/about/Vector4.svg"
@@ -66,7 +65,11 @@ import whatsapp from "/images/home/WhatsApp.svg"
 import instagram from "/images/home/Instagram.svg"
 import linkedin from "/images/home/Linkedin.svg"
 import line from "/images/home/Line 1.svg"
-
+import basm from "/images/about/Frame 432.svg"
+import yousef from "/images/about/Frame 433.svg"
+import pansee from "/images/about/Frame 434.svg"
+import mohamed from "/images/about/Frame 435.svg"
+import abdelrahman from "/images/about/Frame 436.svg"
 import thirdsection from "/images/about/mobile app mockup 1 1.svg"
 import secondsection from "/images/about/website mockup 1 1.svg"
 
@@ -288,39 +291,59 @@ function About() {
 
           {/* Team Members */}
           <div className="flex flex-col items-center gap-2 -mt-4">
-            {/* Top Leader */}
-            <div className="relative flex flex-col items-center">
-              <div className="relative w-48 h-56 rounded-3xl mb-4 flex flex-col items-center justify-center overflow-hidden">
-                {/* Background Pattern */}
-                <div className="absolute inset-0 ">
-                  <img 
-                    src={card}
-                    alt="Background Pattern" 
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-               
-              </div>
-            </div>
-
-            {/* Bottom Row */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-10 ">
-              {[1, 2, 3, 4].map((member) => (
-                                  <div key={member} className="relative flex flex-col items-center">
-                    <div className="relative w-44 h-48  rounded-3xl mb-3 flex flex-col items-center justify-center overflow-hidden">
-                    {/* Background Pattern */}
-                    <div className="absolute inset-0 ">
-                      <img 
-                        src={card} 
-                        alt="Background Pattern" 
-                        className="w-full h-full object-contain"
-                      />
+            {/* Inline TeamCard component (supports avatar images) */}
+            {(() => {
+              const TeamCard = ({ name = 'First & Last Name', role = 'Position & Role', img, w = 'w-56', h = 'h-72' }) => (
+                <div className={`relative ${w} ${h} rounded-3xl overflow-hidden`}>
+                  {/* Card background */}
+                  <div className="absolute inset-0 bg-[#2F5B44]" />
+                  {/* Inner radius mask */}
+                  <div className="absolute inset-1 rounded-3xl" />
+                  {/* Avatar image or fallback silhouette */}
+                  {img ? (
+                    <img src={img} alt={name} className="absolute inset-0 w-full h-full object-cover " />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center pt-4">
+                      <svg viewBox="0 0 128 160" className="w-[70%] h-[70%]" aria-hidden="true">
+                        <g fill="#E9F2CD">
+                          <circle cx="64" cy="44" r="24" />
+                          <path d="M24,116 C24,92 44,78 64,78 C84,78 104,92 104,116 L24,116 Z" />
+                        </g>
+                      </svg>
                     </div>
-                   
+                  )}
+                  {/* Bottom label */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#214C38] px-3 py-2 text-center">
+                    <div className="text-[#FEF9D0] text-[12px] sm:text-[13px] font-medium leading-tight mb-2">{name}</div>
+                    <div className="text-[#FEF9D0] text-[10px] opacity-80 leading-tight">{role}</div>
                   </div>
                 </div>
-              ))}
-            </div>
+              );
+
+              return (
+                <>
+                  {/* Top Leader */}
+                  <div className="relative flex flex-col items-center mb-4">
+                    <TeamCard name="Basma Omran" role="Founder/UX UI Designer" img={basm} />
+                  </div>
+                  {/* Bottom Row */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+                    <div className="relative flex flex-col items-center">
+                      <TeamCard w="w-52" h="h-64" name="Yousef Magdy" role="Lead Developer" img={yousef} />
+                    </div>
+                    <div className="relative flex flex-col items-center">
+                      <TeamCard w="w-52" h="h-64" name="Pansee Omran" role="Graphic Designer" img={pansee} />
+                    </div>
+                    <div className="relative flex flex-col items-center">
+                      <TeamCard w="w-52" h="h-64" name="Mohaned Altokhy" role="Sales Manager" img={mohamed} />
+                    </div>
+                    <div className="relative flex flex-col items-center">
+                      <TeamCard w="w-52" h="h-64" name="Adbelrahman Ibrahim" role="SEO Specialist" img={abdelrahman} />
+                    </div>
+                  </div>
+                </>
+              );
+            })()}
           </div>
         </div>
       </section>
