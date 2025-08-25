@@ -57,7 +57,7 @@ const Footer = () => {
             <div className="hidden lg:block absolute left-[32%]  top-0 bottom-0 w-px bg-[#FEF9D0] opacity-50"></div>
 
             {/* Apps & Development Column */}  
-            <div className=" lg:text-start px-4 sm:px-8 lg:ml-[7rem] sm:-ml-[14rem]">   
+            <div className=" lg:text-start px-4 sm:px-8 lg:ml-[4.4rem] sm:-ml-[14rem]">   
               <h3 className="text-[16px] sm:text-[18px] font-bold mb-4 sm:mb-6 uppercase ">APPS & DEVELOPMENT</h3>
               <ul className="space-y-4">
                 <li>
@@ -89,10 +89,10 @@ const Footer = () => {
             </div>
 
             {/* Vertical Line 2 - Between Col 2 and 3 */}
-            <div className="hidden lg:block absolute left-[75%] top-0 bottom-0 w-px bg-[#FEF9D0]  opacity-50"></div>
+            <div className="hidden lg:block absolute left-[72%] top-0 bottom-0 w-px bg-[#FEF9D0]  opacity-50"></div>
 
             {/* Company Column */}
-            <div className="lg:text-end px-4 sm:px-8  lg:ml-[7rem] sm:-ml-[14rem] ">
+            <div className="lg:text-start   px-4 sm:px-8  lg:ml-[12rem] sm:-ml-[14rem]  whitespace-nowrap ">
               <h3 className="text-[32px] sm:text-[18px] font-bold mb-4 sm:mb-6 uppercase">COMPANY</h3>
               <ul className="space-y-4">
                 <li>
