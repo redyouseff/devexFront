@@ -16,6 +16,7 @@ import upthird from "/images/home/Frame 15.svg"
 import rectangle from "/images/home/Rectangle 3.svg"
 import downarrow from "/images/home/Vector1.svg"
 import { Navigation, Pagination } from 'swiper/modules';
+// import downarrow2green from "/images/home/arrow Down.svg"
 
 const Thirdseciont = () => {
     const [swiperInstance, setSwiperInstance] = useState(null);
@@ -83,7 +84,7 @@ return(
             onClick={() => swiperInstance && swiperInstance.slideNext()}
             className="hover:opacity-70 transition-opacity cursor-pointer"
           >
-            <img src={upthird} alt="previous arrow" className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
+            <img src={upthird} alt="previous arrow" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
           </button>
           
           {/* Next Arrow */}
@@ -91,7 +92,7 @@ return(
             onClick={() => swiperInstance && swiperInstance.slidePrev()}
             className="hover:opacity-70 transition-opacity cursor-pointer"
           >
-            <img src={downthird} alt="next arrow" className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
+            <img src={downthird} alt="next arrow" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
           </button>
         </div>
 
@@ -121,13 +122,13 @@ return(
             onClick={() => swiperInstance && swiperInstance.slideNext()}
             className="hover:opacity-70 transition-opacity cursor-pointer"
           >
-            <img src={upthird} alt="previous arrow" className="w-6 h-6" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+            <img src={upthird} alt="previous arrow" className="w-12 h-12" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
           </button>
           <button 
             onClick={() => swiperInstance && swiperInstance.slidePrev()}
             className="hover:opacity-70 transition-opacity cursor-pointer"
           >
-            <img src={downthird} alt="next arrow" className="w-6 h-6" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+            <img src={downthird} alt="next arrow" className="w-12 h-12" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
           </button>
         </div>
 
@@ -159,7 +160,7 @@ return(
                 <div className={`relative flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-12 font-['Inter'] overflow-hidden h-full w-full min-h-[80vh] sm:min-h-[85vh] md:min-h-[90vh] ${card.id % 2 === 0 ? 'bg-[#2F5B44]' : 'bg-[#FEF9D0]'}`}>
                   <div className="relative z-10 max-w-sm sm:max-w-md md:max-w-lg text-center md:text-left mx-auto px-2 sm:px-4">
                     <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-2 sm:gap-3 mb-3 sm:mb-4 md:mb-6">
-                      <img src={card.icon} alt="Card Icon" className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
+                      <img src={card.icon} alt="Card Icon" className="w-10 h-10 sm:w-6 sm:h-6 md:w-10 md:h-12" />
                       <h3 className={`text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-medium leading-tight uppercase ${card.id % 2 === 0 ? 'text-[#FEF9D0]' : 'text-[#2F5B44]'}`}>
                         {card.title}
                       </h3>

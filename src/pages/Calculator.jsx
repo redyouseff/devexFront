@@ -821,7 +821,7 @@ function Calculator() {
         </h2>
         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-between mb-6 sm:mb-8 mt-6 sm:mt-10 gap-4 sm:gap-0">
           <img src={line2} alt="line" className="w-24 sm:w-32 order-1 sm:order-none" />
-          <span className="text-[#FEF9D0] text-base sm:text-lg font-medium order-2 sm:order-none mr-[2rem]">FOLLOW US</span>
+          <span className="text-[#FEF9D0] text-base sm:text-lg font-medium order-2 sm:order-none mr-[4rem]">FOLLOW US</span>
           <div className="flex gap-4 sm:gap-6 order-3 sm:order-none mr-[3rem]">
             <a href="#" className="hover:opacity-70 transition-opacity">
               <img src={whatsapp} alt="WhatsApp" className="w-5 h-5 sm:w-6 sm:h-6" />

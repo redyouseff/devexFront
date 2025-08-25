@@ -138,6 +138,7 @@ import circle3 from "/images/home/Ellipse 9.svg"
 import circle4 from "/images/home/Ellipse 10.svg"
 import circle5 from "/images/home/Ellipse 11.svg"
 import circle6 from "/images/home/Ellipse 12.svg" 
+import downarrow2green from "/images/home/arrow Down.svg"
 
 
 
@@ -289,20 +290,22 @@ function Home() {
                     ))}
                   </div>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto ">
                   <Link 
                     to="/community"
-                    className="bg-[#2F5B44] border border-[#E9F2CD] text-[#E9F2CD] px-4 sm:px-6 py-2 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-sm"
+                    className=" bg-opacity-50 bg-[#2F5B44] border border-[#E9F2CD] text-[#E9F2CD] px-4 sm:px-6 py-2 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-sm group"
                   >
                     Join The Community
-                    <img src={uparrow} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
+                    <img src={uparrow} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 group-hover:hidden" />
+                    <img src={icon2} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 hidden group-hover:block" />
                   </Link>
                   <Link 
                     to="/about"
-                    className="bg-[#2F5B44] border border-[#E9F2CD] text-[#E9F2CD] px-4 sm:px-6 py-2 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-sm"
+                    className= " bg-opacity-50 bg-[#2F5B44] border border-[#E9F2CD] text-[#E9F2CD] px-4 sm:px-6 py-2 rounded-full font-medium hover:bg-[#E9F2CD]  hover:text-[#2F5B44] transition-colors flex items-center justify-center text-sm  group"
                   >
                     Learn More
-                    <img src={downarrow} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
+                    <img src={downarrow} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 group-hover:hidden" />
+                    <img src={downarrow2green} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 hidden group-hover:block" />
                   </Link>
                 </div>
               </div>
@@ -354,10 +357,11 @@ function Home() {
                 <div className="flex justify-center md:justify-end">           
                   <Link 
                     to="/services"
-                    className="inline-flex items-center border-2 border-[#2F5B44] text-[#2F5B44] px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-[#2F5B44] hover:text-white transition-colors font-medium text-sm sm:text-base"
+                    className="inline-flex items-center border-2 border-[#2F5B44] text-[#2F5B44] px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-[#2F5B44] hover:text-white transition-colors font-medium text-sm sm:text-base group"
                   >
                     Discover More
-                    <img src={icon2} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
+                    <img src={icon2} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 group-hover:hidden" />
+                    <img src={uparrow} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 hidden group-hover:block" />
                   </Link>
                 </div>
               </div>
@@ -457,11 +461,12 @@ function Home() {
           </p>
           <Link 
             to="/calculator"
-            className="inline-flex items-center bg-transparent text-[#FEF9D0] px-8 py-3 rounded-full font-medium text-[16px] hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center bg-transparent text-[#FEF9D0] px-8 py-3 rounded-full font-medium text-[14px] sm:text-[16px] hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-all duration-300 transform hover:scale-105 group"
             style={{ border: '2px solid #FEF9D0' }}
           >
             Calculate Your Website Cost
-            <img src={downarrow} alt="arrow" className="w-5 h-5 ml-3" />
+            <img src={downarrow} alt="arrow" className="w-5 h-5 ml-3 transition-all duration-300 group-hover:hidden" />
+            <img src={downarrow2green} alt="arrow" className="w-5 h-5 ml-3 transition-all duration-300 hidden group-hover:block" />
           </Link>
         </div>
       </section>
@@ -553,7 +558,7 @@ function Home() {
                     <SwiperSlide key={card.id}>
                       <div className="bg-[#2F5B44] rounded-3xl overflow-hidden p-4 sm:p-6 text-[#FEF9D0] flex flex-col w-full" style={{ height: '400px' }}>
                         {/* Image Section */}
-                        <div className="h-32 sm:h-40 relative overflow-hidden rounded-lg mb-4 sm:mb-6">
+                        <div className="h-90 sm:h-40 relative overflow-hidden rounded-lg mb-4 sm:mb-6">
                           <img 
                             src={card.image} 
                             alt={card.title}
@@ -812,8 +817,8 @@ function Home() {
                     </h2>
                     <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-between mb-6 sm:mb-8 mt-6 sm:mt-10 gap-4 sm:gap-0">
                       <img src={line} alt="line" className="w-24 sm:w-32 order-1 sm:order-none" />
-                      <span className="text-[#FEF9D0] text-base sm:text-lg font-medium order-2 sm:order-none">FOLLOW US</span>
-                      <div className="flex gap-4 sm:gap-6 order-3 sm:order-none">
+                      <span className="text-[#FEF9D0] text-base sm:text-lg font-medium order-2 sm:order-none lg:mr-[4rem]">FOLLOW US</span>
+                      <div className="flex gap-4 sm:gap-6 order-3 sm:order-none lg:mr-[3rem]">
                         <a href="#" className="hover:opacity-70 transition-opacity">
                           <img src={whatsapp} alt="WhatsApp" className="w-5 h-5 sm:w-6 sm:h-6" />
                         </a>
@@ -972,11 +977,12 @@ function Home() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="inline-flex items-center bg-transparent text-[#FEF9D0] px-8 py-3 rounded-full font-medium text-[16px] hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-all duration-300 transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed"
+                        className="inline-flex items-center bg-transparent text-[#FEF9D0] px-8 py-3 rounded-full font-medium text-[16px] hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-all duration-300 transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed group"
                         style={{ border: '2px solid #FEF9D0' }}
                       >
                         {isSubmitting ? 'Sending...' : 'Submit'}
-                        <img src={downarrow} alt="arrow" className="w-4 h-4 ml-2" />
+                        <img src={downarrow} alt="arrow" className="w-4 h-4 ml-2 transition-all duration-300 group-hover:hidden" />
+                        <img src={downarrow2green} alt="arrow" className="w-4 h-4 ml-2 transition-all duration-300 hidden group-hover:block" />
                       </button>
                     </div>
                     {(submitMessage || submitError) && (

@@ -118,7 +118,7 @@ const Footer = () => {
         {/* Footer Bottom */}   
         <div className="border-t border-[#FEF9D0] border-opacity-30 pt-3 sm:pt-4 -mb-[2rem]  ">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
-            <div className="text-[11px] sm:text-[12px] order-2 sm:order-1">
+            <div className="text-[11px] sm:text-[12px] order-3 sm:order-1">
               ©2025 DEVEXT. ALL RIGHTS RESERVED
             </div>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-[11px] sm:text-[12px] order-1 sm:order-2">
@@ -129,7 +129,7 @@ const Footer = () => {
                 ACCESSIBILITY
               </Link>
             </div>
-            <div className="text-[11px] sm:text-[12px] order-3">     
+            <div className="text-[11px] sm:text-[12px] order-2 sm:order-3">     
               CALL US : 01200064762
             </div>
           </div>
