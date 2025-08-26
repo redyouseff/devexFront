@@ -287,16 +287,18 @@ function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto ">
-                  <Link 
-                    to="/community"
+                  <a 
+                    href="https://wa.me/201200064762"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className=" bg-opacity-50 bg-[#2F5B44] border border-[#E9F2CD] text-[#E9F2CD] px-4 sm:px-6 py-2 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-sm group"
                   >
                     Join The Community
                     <img src={uparrow} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 group-hover:hidden" />
                     <img src={icon2} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 hidden group-hover:block" />
-                  </Link>
+                  </a>
                   <Link 
-                    to="/about"
+                    to="/contact"
                     className= " bg-opacity-50 bg-[#2F5B44] border border-[#E9F2CD] text-[#E9F2CD] px-4 sm:px-6 py-2 rounded-full font-medium hover:bg-[#E9F2CD]  hover:text-[#2F5B44] transition-colors flex items-center justify-center text-sm  group"
                   >
                     Learn More
@@ -347,7 +349,7 @@ function Home() {
                 </p>
                 <div className="flex justify-center md:justify-end">           
                   <Link 
-                    to="/services"
+                    to="/about"
                     className="inline-flex items-center border-2 border-[#2F5B44] text-[#2F5B44] px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-[#2F5B44] hover:text-white transition-colors font-medium text-sm sm:text-base group"
                   >
                     Discover More

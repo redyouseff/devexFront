@@ -126,8 +126,8 @@ function About() {
             At DEVEXT, we are a team of innovators, designers, and developers dedicated to turning ideas into impactful solutions. With years of experience and a passion for excellence, we partner with businesses of all sizes to deliver web, app, and digital services that inspire growth and success.
             </p>  
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-5">
-              <Link 
-                to="/team"
+              <a 
+                href="#team-section"
                 className="bg-transparent border-2 border-[#E9F2CD] text-[#E9F2CD] px-6 py-3 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-base group"
               >
                 Our Team
@@ -135,9 +135,9 @@ function About() {
                   <img src={downarrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
                   <img src={downarrow2green} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
                 </span>
-              </Link>
+              </a>
               <Link 
-                to="/services"
+                to="/contact"
                 className="bg-transparent border-2 border-[#E9F2CD] text-[#E9F2CD] px-6 py-3 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-base group"
               >
                 Learn More
@@ -267,7 +267,7 @@ function About() {
 
 
             {/* fourth Section */}
-      <section className="relative py-20 px-6 bg-[#2F5B44]">
+      <section id="team-section" className="relative py-20 px-6 bg-[#2F5B44]">
         <div className="container mx-auto max-w-6xl relative z-10">
           {/* Header */}
           <div className="text-center mb-16">
