@@ -66,12 +66,16 @@ import instagram from "/images/home/Instagram.svg"
 import linkedin from "/images/home/Linkedin.svg"
 import line from "/images/home/Line 1.svg"
 import basm from "/images/about/Frame 432.svg"
+
 import yousef from "/images/about/Frame 433.svg"
+
 import pansee from "/images/about/Frame 434.svg"
 import mohamed from "/images/about/Frame 435.svg"
 import abdelrahman from "/images/about/Frame 436.svg"
 import thirdsection from "/images/about/mobile app mockup 1 1.svg"
 import secondsection from "/images/about/website mockup 1 1.svg"
+import downarrow2green from "/images/home/arrow Down.svg"
+import icon2 from "/images/home/Vector2.png"
 
 
 function About() {
@@ -127,17 +131,23 @@ function About() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-5">
               <Link 
                 to="/team"
-                className="bg-transparent border-2 border-[#E9F2CD] text-[#E9F2CD] px-6 py-3 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-base"
+                className="bg-transparent border-2 border-[#E9F2CD] text-[#E9F2CD] px-6 py-3 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-base group"
               >
                 Our Team
-                <img src={downarrow} alt="arrow" className="w-4 h-4 ml-2" />
+                <span className="relative w-4 h-4 ml-2 inline-block">
+                  <img src={downarrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                  <img src={downarrow2green} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                </span>
               </Link>
               <Link 
                 to="/services"
-                className="bg-transparent border-2 border-[#E9F2CD] text-[#E9F2CD] px-6 py-3 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-base"
+                className="bg-transparent border-2 border-[#E9F2CD] text-[#E9F2CD] px-6 py-3 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-base group"
               >
                 Learn More
-                <img src={uparrow} alt="arrow" className="w-4 h-4 ml-2" />
+                <span className="relative w-4 h-4 ml-2 inline-block">
+                  <img src={uparrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                  <img src={icon2} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                </span>
               </Link>
             </div>
           </div>
@@ -290,18 +300,18 @@ function About() {
           </div>
 
           {/* Team Members */}
-          <div className="flex flex-col items-center gap-2 -mt-4">
+          <div className="flex flex-col items-center gap-4 sm:gap-6 -mt-4">
             {/* Inline TeamCard component (supports avatar images) */}
             {(() => {
-              const TeamCard = ({ name = 'First & Last Name', role = 'Position & Role', img, w = 'w-56', h = 'h-72' }) => (
-                <div className={`relative ${w} ${h} rounded-3xl overflow-hidden`}>
+              const TeamCard = ({ name = 'First & Last Name', role = 'Position & Role', img, w = 'w-40 sm:w-48 md:w-52 lg:w-56', h = 'h-52 sm:h-56 md:h-60 lg:h-64 xl:h-72' }) => (
+                <div className={`relative ${w} ${h} rounded-2xl sm:rounded-3xl overflow-hidden`}>
                   {/* Card background */}
                   <div className="absolute inset-0 bg-[#2F5B44]" />
                   {/* Inner radius mask */}
-                  <div className="absolute inset-1 rounded-3xl" />
+                  <div className="absolute inset-1 rounded-2xl sm:rounded-3xl" />
                   {/* Avatar image or fallback silhouette */}
                   {img ? (
-                    <img src={img} alt={name} className="absolute inset-0 w-full h-full object-cover " />
+                    <img src={img} alt={name} className="absolute inset-0 w-full h-full object-contain object-center" />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center pt-4">
                       <svg viewBox="0 0 128 160" className="w-[70%] h-[70%]" aria-hidden="true">
@@ -313,9 +323,9 @@ function About() {
                     </div>
                   )}
                   {/* Bottom label */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#214C38] px-3 py-2 text-center">
-                    <div className="text-[#FEF9D0] text-[12px] sm:text-[13px] font-medium leading-tight mb-2">{name}</div>
-                    <div className="text-[#FEF9D0] text-[10px] opacity-80 leading-tight">{role}</div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#214C38] px-2 sm:px-3 py-2 text-center">
+                    <div className="text-[#FEF9D0] text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] font-medium leading-tight mb-1 sm:mb-2">{name}</div>
+                    <div className="text-[#FEF9D0] text-[8px] sm:text-[9px] md:text-[10px] opacity-80 leading-tight">{role}</div>
                   </div>
                 </div>
               );
@@ -323,22 +333,28 @@ function About() {
               return (
                 <>
                   {/* Top Leader */}
-                  <div className="relative flex flex-col items-center mb-4">
-                    <TeamCard name="Basma Omran" role="Founder/UX UI Designer" img={basm} />
+                  <div className="relative flex flex-col items-center mb-4 sm:mb-6 lg:mb-8">
+                    <TeamCard 
+                      w="w-48 sm:w-56 md:w-64 lg:w-72" 
+                      h="h-60 sm:h-64 md:h-68 lg:h-72 xl:h-80" 
+                      name="Basma Omran" 
+                      role="Founder/UX UI Designer" 
+                      img={basm} 
+                    />
                   </div>
                   {/* Bottom Row */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
                     <div className="relative flex flex-col items-center">
-                      <TeamCard w="w-52" h="h-64" name="Yousef Magdy" role="Lead Developer" img={yousef} />
+                      <TeamCard name="Yousef Magdy" role="Lead Developer" img={yousef} />
                     </div>
                     <div className="relative flex flex-col items-center">
-                      <TeamCard w="w-52" h="h-64" name="Pansee Omran" role="Graphic Designer" img={pansee} />
+                      <TeamCard name="Pansee Omran" role="Graphic Designer" img={pansee} />
                     </div>
                     <div className="relative flex flex-col items-center">
-                      <TeamCard w="w-52" h="h-64" name="Mohaned Altokhy" role="Sales Manager" img={mohamed} />
+                      <TeamCard name="Mohaned Altokhy" role="Sales Manager" img={mohamed} />
                     </div>
                     <div className="relative flex flex-col items-center">
-                      <TeamCard w="w-52" h="h-64" name="Adbelrahman Ibrahim" role="SEO Specialist" img={abdelrahman} />
+                      <TeamCard name="Adbelrahman Ibrahim" role="SEO Specialist" img={abdelrahman} />
                     </div>
                   </div>
                 </>
@@ -520,11 +536,14 @@ function About() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="inline-flex items-center bg-transparent text-[#2F5B44] px-8 py-3 rounded-full font-medium text-[16px] hover:bg-[#2F5B44] hover:text-[#FEF9D0] transition-all duration-300 transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed"
+            className="inline-flex items-center bg-transparent text-[#2F5B44] px-8 py-3 rounded-full font-medium text-[16px] hover:bg-[#2F5B44] hover:text-[#FEF9D0] transition-all duration-300 transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed group"
             style={{ border: '2px solid #2F5B44' }}
           >
             {isSubmitting ? 'Sending...' : 'Submit'}
-            <img src={downarrow} alt="arrow" className="w-4 h-4 ml-2" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+            <span className="relative w-4 h-4 ml-2 inline-block">
+              <img src={downarrow2green} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+              <img src={downarrow} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+            </span>
           </button>
         </div>
         {(submitMessage || submitError) && (

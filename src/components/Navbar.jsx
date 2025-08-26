@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import logo from "/images/navbar/Logo_Devext-removebg-preview 1.png";
 import down from "/images/navbar/Vector.png";
+import downarrow2green from "/images/home/arrow Down.svg"
 import { useState, useEffect } from 'react';
 
 function Navbar() {
@@ -148,7 +149,7 @@ function Navbar() {
         <div className="hidden md:flex items-center md:mr-32">
           <Link 
             to="/contact" 
-            className="border-2 border-yellow-100 text-yellow-100 px-6 py-3 rounded-full hover:bg-yellow-100 hover:text-green-800 transition-all duration-200 flex items-center text-xl"
+            className="border-2 border-yellow-100 text-yellow-100 px-6 py-3 rounded-full hover:bg-yellow-100 hover:text-green-800 transition-all duration-200 flex items-center text-xl group"
             style={{
               fontFamily: 'Inter',
               fontWeight: 500,
@@ -159,7 +160,10 @@ function Navbar() {
             }}
           >
             Contact Us
-            <img src={down} alt="down arrow" className="w-4 h-4 ml-2" />
+            <span className="relative w-4 h-4 ml-2 inline-block">
+              <img src={down} alt="down arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+              <img src={downarrow2green} alt="down arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+            </span>
           </Link>
         </div>
 

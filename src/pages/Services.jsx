@@ -91,6 +91,7 @@ import card4 from "/images/services/screencapture-alwidadtaxation-2025-07-11-16_
 import firstsectionarrow from "/images/services/Vector.svg";
 import leftarrow from "/images/services/Frame 18.svg";
 import rightarrow from "/images/services/Frame 17.png";
+import icon2 from "/images/home/Vector2.png"
 
 
 function Services() {
@@ -185,10 +186,13 @@ function Services() {
              
               <Link 
                 to="/services"
-                className="bg-transparent border-2 border-[#E9F2CD] text-[#E9F2CD] px-6 py-3 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-base"
+                className="bg-transparent border-2 border-[#E9F2CD] text-[#E9F2CD] px-6 py-3 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-base group"
               >
                 Speak With Our Experts
-                <img src={uparrow} alt="arrow" className="w-4 h-4 ml-2" />
+                <span className="relative w-4 h-4 ml-2 inline-block">
+                  <img src={uparrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                  <img src={icon2} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                </span>
               </Link>
             </div>
           </div>
@@ -257,10 +261,13 @@ function Services() {
                 <div className="flex justify-end">
                   <Link 
                     to="/services"
-                    className="inline-flex items-right border-2 border-[#2F5B44] text-[#2F5B44] px-6 py-3 rounded-full hover:bg-[#2F5B44] hover:text-[#E9F2CD] transition-colors font-medium text-[16px]"
+                    className="inline-flex items-right border-2 border-[#2F5B44] text-[#2F5B44] px-6 py-3 rounded-full hover:bg-[#2F5B44] hover:text-[#E9F2CD] transition-colors font-medium text-[16px] group"
                   >
                     Explore Web Design Services
-                    <img src={firstsectionarrow} alt="arrow" className="w-4 h-4 ml-4 mt-1" />
+                    <span className="relative w-4 h-4 ml-4 mt-1 inline-block">
+                      <img src={firstsectionarrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                      <img src={uparrow} alt="arrow up" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                    </span>
                   </Link>
                 </div>
               </div>
@@ -336,10 +343,13 @@ function Services() {
                 <div className="flex justify-end">
                   <Link 
                     to="/services"
-                    className="inline-flex items-center border-2 border-[#FEF9D0] text-[#FEF9D0] px-6 py-3 rounded-full hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-colors font-medium text-[16px]"
+                    className="inline-flex items-center border-2 border-[#FEF9D0] text-[#FEF9D0] px-6 py-3 rounded-full hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-colors font-medium text-[16px] group"
                   >
                     Explore App Developing Services
-                    <img src={uparrow} alt="arrow" className="w-4 h-4 ml-2" />
+                    <span className="relative w-4 h-4 ml-2 inline-block">
+                      <img src={uparrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                      <img src={icon2} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                    </span>
                   </Link>
                 </div>
               </div>
@@ -412,10 +422,13 @@ function Services() {
                  <div className="flex justify-end">
                    <Link 
                      to="/services"
-                     className="inline-flex items-center border-2 border-[#2F5B44] text-[#2F5B44] px-6 py-3 rounded-full hover:bg-[#2F5B44] hover:text-[#E9F2CD] transition-colors font-medium text-[16px]"
+                     className="inline-flex items-center border-2 border-[#2F5B44] text-[#2F5B44] px-6 py-3 rounded-full hover:bg-[#2F5B44] hover:text-[#E9F2CD] transition-colors font-medium text-[16px] group"
                    >
                      Explore Ecommerce Services
-                     <img src={firstsectionarrow} alt="arrow" className="w-4 h-4 ml-2" />
+                     <span className="relative w-4 h-4 ml-2 inline-block">
+                       <img src={firstsectionarrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                       <img src={uparrow} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                     </span>
                    </Link>
                  </div>
                </div>
@@ -492,10 +505,13 @@ function Services() {
                 <div className="flex justify-end">
                   <Link 
                     to="/services"
-                    className="inline-flex items-center border-2 border-[#FEF9D0] text-[#FEF9D0] px-6 py-3 rounded-full hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-colors font-medium text-[16px]"
+                    className="inline-flex items-center border-2 border-[#FEF9D0] text-[#FEF9D0] px-6 py-3 rounded-full hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-colors font-medium text-[16px] group"
                   >
                     Explore App Developing Services
-                    <img src={uparrow} alt="arrow" className="w-4 h-4 ml-2" />
+                    <span className="relative w-4 h-4 ml-2 inline-block">
+                      <img src={uparrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                      <img src={icon2} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                    </span>
                   </Link>
                 </div>
               </div>
@@ -567,10 +583,13 @@ function Services() {
                  <div className="flex justify-center">
                    <Link 
                      to="/services"
-                     className="inline-flex items-center border-2 border-[#2F5B44] text-[#2F5B44] px-6 py-3 rounded-full hover:bg-[#2F5B44] hover:text-[#E9F2CD] transition-colors font-medium text-[16px]"
+                     className="inline-flex items-center border-2 border-[#2F5B44] text-[#2F5B44] px-6 py-3 rounded-full hover:bg-[#2F5B44] hover:text-[#E9F2CD] transition-colors font-medium text-[16px] group"
                    >
                      Explore Digital & Branding Services
-                     <img src={firstsectionarrow} alt="arrow" className="w-4 h-4 ml-2" />
+                     <span className="relative w-4 h-4 ml-2 inline-block">
+                       <img src={firstsectionarrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                       <img src={uparrow} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                     </span>
                    </Link>
                  </div>
                </div>

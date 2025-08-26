@@ -17,6 +17,8 @@ import phone from "/images/home/phone.svg"
 import message from "/images/home/message.svg"
 import downarrow from "/images/home/Vector1.svg"
 import line2 from "/images/home/Line 1.svg"
+import icon2 from "/images/home/Vector2.png"
+import downarrow2green from "/images/home/arrow Down.svg"
 
 // Smooth scroll styles
 const smoothScrollStyles = `
@@ -241,10 +243,13 @@ function Calculator() {
              
               <Link 
                 to="/services"
-                className="bg-transparent border-2 border-[#E9F2CD] text-[#E9F2CD] px-6 py-3 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-base"
+                className="bg-transparent border-2 border-[#E9F2CD] text-[#E9F2CD] px-6 py-3 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-base group"
               >
                Speak With Our Experts
-                <img src={uparrow} alt="arrow" className="w-4 h-4 ml-4" />
+               <span className="relative w-4 h-4 ml-4 inline-block">
+                 <img src={uparrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                 <img src={icon2} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+               </span>
               </Link>
             </div>
           </div>
@@ -981,11 +986,14 @@ function Calculator() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="inline-flex items-center bg-transparent text-[#FEF9D0] px-8 py-3 rounded-full font-medium text-[16px] hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-all duration-300 transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed"
+            className="inline-flex items-center bg-transparent text-[#FEF9D0] px-8 py-3 rounded-full font-medium text-[16px] hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-all duration-300 transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed group"
             style={{ border: '2px solid #FEF9D0' }}
           >
             {isSubmitting ? 'Sending...' : 'Submit'}
-            <img src={downarrow} alt="arrow" className="w-4 h-4 ml-2" />
+            <span className="relative w-4 h-4 ml-2 inline-block">
+              <img src={downarrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+              <img src={downarrow2green} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+            </span>
           </button>
         </div>
         {(submitMessage || submitError) && (
@@ -997,11 +1005,12 @@ function Calculator() {
     </div>
   </div>
 </div>
-</section>
 
+      </section>
 
+      {/* Footer */}
       <Footer />
-</div>
+      </div>
     </>
   );
 }

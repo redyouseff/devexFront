@@ -123,13 +123,13 @@ return(
             onClick={() => swiperInstance && swiperInstance.slideNext()}
             className="hover:opacity-70 transition-opacity cursor-pointer"
           >
-            <img src={upthird} alt="previous arrow" className="w-12 h-12" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+            <img src={upthird} alt="previous arrow" className="w-8 h-8" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
           </button>
           <button 
             onClick={() => swiperInstance && swiperInstance.slidePrev()}
             className="hover:opacity-70 transition-opacity cursor-pointer"
           >
-            <img src={downthird} alt="next arrow" className="w-12 h-12" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+            <img src={downthird} alt="next arrow" className="w-8 h-8" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
           </button>
         </div>
 
