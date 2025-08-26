@@ -213,7 +213,7 @@ function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 min-h-[70vh]">
             
             {/* Left Content */}
-            <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 bg-[#E9F2CD] overflow-hidden">
+            <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 bg-[#FEF9D0] overflow-hidden">
               {/* Background Pattern */}
               <div className="absolute -left-90 top-0 w-full h-full flex items-center justify-start opacity-15">
                 <img 
@@ -373,7 +373,7 @@ function Services() {
            <div className="grid grid-cols-1 md:grid-cols-2 min-h-[70vh]">
              
              {/* Left Content */}
-             <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 bg-[#E9F2CD] overflow-hidden">
+             <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 bg-[#FEF9D0] overflow-hidden">
                {/* Background Pattern */}
                <div className="absolute -left-90 top-0 w-full h-full flex items-center justify-start opacity-15">
                  <img 
@@ -534,7 +534,7 @@ function Services() {
            <div className="grid grid-cols-1 md:grid-cols-2 min-h-[70vh]">
              
              {/* Left Content */}
-             <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 bg-[#E9F2CD] overflow-hidden">
+             <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 bg-[#FEF9D0] overflow-hidden">
                {/* Background Pattern */}
                <div className="absolute -left-90 top-0 w-full h-full flex items-center justify-start opacity-15">
                  <img 

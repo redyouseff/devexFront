@@ -272,12 +272,7 @@ function Home() {
               For A Better Tomorrow
             </h2>
             <p className="text-base sm:text-lg mb-8 leading-relaxed text-[#E9F2CD] opacity-80 max-w-md">
-              Lorem ipsum is simply dummy text of the printing and 
-              typesetting industry. Lorem Ipsum has been the 
-              industry's standard dummy text ever since the 
-              1500s, when an unknown printer took a galley 
-              of type and scrambled it to make a type 
-              specimen book.
+            From web and app development to creative design and marketing strategies, we provide end-to-end services tailored to your goals. Our mission is to help brands transform their ideas into impactful digital experiences and achieve long-term success in today’s fast-paced market.
             </p>
             <div className="flex flex-col gap-4">
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">

@@ -147,8 +147,8 @@ return(
             centeredSlides={true}
             watchOverflow={true}
             freeMode={false}
-            allowTouchMove={true}
-            grabCursor={true}
+            allowTouchMove={false}
+            grabCursor={false}
             className="!overflow-hidden third-section-swiper h-full"
             style={{ paddingLeft: '0px', paddingRight: '0px' }}
             navigation={{
