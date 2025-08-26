@@ -299,7 +299,7 @@ function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
             
             {/* Left Content */}
-            <div className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden">
+            <div className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden order-2 md:order-1">
               <img 
                 src={image2} 
                 alt="Services Image" 
@@ -308,7 +308,7 @@ function Services() {
             </div>
 
             {/* Right Content */}
-            <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 font-['Inter'] overflow-hidden bg-[#2F5B44]">
+            <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 font-['Inter'] overflow-hidden bg-[#2F5B44] order-1 md:order-2">
               <div className="relative z-10 max-w-lg text-left">
                 <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-[#FEF9D0] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
                   APP DESIGN & DEVELOPMENT
@@ -461,7 +461,7 @@ function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
             
             {/* Left Content */}
-            <div className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden">
+            <div className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden order-2 md:order-1">
               <img 
                 src={image2} 
                 alt="Services Image" 
@@ -470,7 +470,7 @@ function Services() {
             </div>
 
             {/* Right Content */}
-            <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 font-['Inter'] overflow-hidden bg-[#2F5B44]">
+            <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 font-['Inter'] overflow-hidden bg-[#2F5B44] order-1 md:order-2">
               <div className="relative z-10 max-w-lg text-left">
                 <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-[#FEF9D0] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
                   SHOPIFY WEBSITES

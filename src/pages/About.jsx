@@ -164,7 +164,7 @@ function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
             
                          {/* Left Content */}
-             <div className="relative flex items-center justify-center p-6 sm:p-8 lg:p-12 font-['Inter'] overflow-hidden bg-[#2F5B44]">
+             <div className="relative flex items-center justify-center p-6 sm:p-8 lg:p-12 font-['Inter'] overflow-hidden bg-[#2F5B44] order-2 md:order-1">
                <div className="relative z-10 max-w-lg text-left">
                  <h3 className="text-[20px] sm:text-[24px] lg:text-[28px] font-medium text-[#FEF9D0] mb-4 sm:mb-6 leading-tight uppercase">
                    CREATIVE SOFTWARE<br />
@@ -181,7 +181,7 @@ function About() {
              </div>
 
                         {/* Right  */}
-            <div className="relative flex items-center justify-center p-6 sm:p-8 bg-[#FEF9D0] overflow-hidden">
+            <div className="relative flex items-center justify-center p-6 sm:p-8 bg-[#FEF9D0] overflow-hidden order-1 md:order-2">
               <div className="relative z-10 w-full h-full flex items-center justify-center">
                 <img 
                   src={secondsection} 
