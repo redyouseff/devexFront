@@ -486,14 +486,10 @@ function Home() {
               {/* Header */}
               <div className="text-center mb-16">
                 <h2 className="text-[36px] font-bold text-[#2F5B44] mb-4 leading-tight">
-                  WHAT OUR CUSTOMERS SAY<br />
-                  ABOUT US!
+                DISCOVER SOME OF OUR <br /> UNIQU PROJECTS
                 </h2>
                 <p className="text-[20px] text-[#2F5B44] max-w-4xl mx-auto text-center" style={{ fontFamily: 'Inter', fontWeight: 400, lineHeight: '100%', letterSpacing: '0%' }}>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
-                  the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley 
-                  of type and scrambled it to make a type specimen book.
-                </p>
+                Discover some of our unique projects that showcase our creativity, innovation, and technical expertise. Each project reflects our commitment to delivering tailored solutions that not only meet client needs but also set new standards in design and development.  </p>
               </div>
 
               {/* Navigation Arrows */}
@@ -768,9 +764,7 @@ function Home() {
                   ABOUT US!
                 </h2>
                 <p className="text-[20px] text-[#2F5B44] max-w-4xl mx-auto text-center" style={{ fontFamily: 'Inter', fontWeight: 400, lineHeight: '100%', letterSpacing: '0%' }}>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
-                  the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley 
-                  of type and scrambled it to make a type specimen book.
+                Discover some of our unique projects that showcase our creativity, innovation, and technical expertise. Each project reflects our commitment to delivering tailored solutions that not only meet client needs but also set new standards in design and development.
                 </p>
               </div>
 

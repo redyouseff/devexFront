@@ -158,18 +158,18 @@ return(
                   <div className="relative z-10 max-w-sm sm:max-w-md md:max-w-lg text-center md:text-left mx-auto px-2 sm:px-4">
                     <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-2 sm:gap-3 mb-3 sm:mb-4 md:mb-6">
                       <img src={card.icon} alt="Card Icon" className="w-10 h-10 sm:w-6 sm:h-6 md:w-10 md:h-12" />
-                      <h3 className={`text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] font-medium leading-tight uppercase ${card.id % 2 === 0 ? 'text-[#FEF9D0]' : 'text-[#2F5B44]'}`}>
+                      <h3 className={`text-[22px] sm:text-[24px] md:text-[26px] lg:text-[30px] font-medium leading-tight uppercase ${card.id % 2 === 0 ? 'text-[#FEF9D0]' : 'text-[#2F5B44]'}`}>
                         {card.title}
                       </h3>
                     </div>
                     
-                    <p className={`text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-normal mb-4 sm:mb-6 md:mb-8 leading-relaxed ${card.id % 2 === 0 ? 'text-[#FEF9D0]' : 'text-[#2F5B44]'}`}>
+                    <p className={`text-[16px] sm:text-[16px] md:text-[16px] lg:text-[17px] font-normal mb-4 sm:mb-6 md:mb-8 leading-relaxed ${card.id % 2 === 0 ? 'text-[#FEF9D0]' : 'text-[#2F5B44]'}`}>
                       {card.description}
                     </p>
                     <div className="flex justify-center md:justify-end">
                       <Link 
                         to="/services"
-                        className={`inline-flex items-center px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-full transition-colors font-medium text-xs sm:text-sm md:text-base ${
+                        className={`inline-flex items-center px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-full transition-colors font-medium text-sm sm:text-sm md:text-base ${
                           card.id % 2 === 0 
                             ? 'text-[#FEF9D0] hover:bg-[#FEF9D0] hover:text-[#2F5B44] border-[#FEF9D0]' 
                             : 'text-[#2F5B44] hover:bg-[#2F5B44] hover:text-white border-[#2F5B44]'
