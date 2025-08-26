@@ -123,10 +123,7 @@ function About() {
             
            
             <p className="text-base sm:text-lg mb-8 leading-relaxed text-[#E9F2CD] opacity-80 max-w-2xl mx-auto">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 
-              1500s, when an unknown printer took a galley of type and scrambled it to 
-              make a type specimen book.
+            At DEVEXT, we are a team of innovators, designers, and developers dedicated to turning ideas into impactful solutions. With years of experience and a passion for excellence, we partner with businesses of all sizes to deliver web, app, and digital services that inspire growth and success.
             </p>  
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-5">
               <Link 
@@ -175,18 +172,10 @@ function About() {
                    SOLUTIONS
                  </h3>
                  <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-[#FEF9D0] mb-4 sm:mb-6 leading-relaxed">
-                   Lorem Ipsum is simply dummy text of the printing and typesetting 
-                   industry. Lorem Ipsum has been the industry's standard dummy 
-                   text ever since the 1500s, when an unknown printer took a galley 
-                   of type and scrambled it to make a type specimen book.
+                 DEVEXT began as a small team of talented freelancers, each working on individual projects with passion and creativity. Over time, our dedication and commitment to excellence enabled us to grow into a full-service digital agency, trusted by businesses across the UAE, KSA, and Turkey.
                  </p>
                  <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-[#FEF9D0] mb-6 sm:mb-8 leading-relaxed">
-                   Lorem Ipsum is simply dummy text of the printing and typesetting 
-                   industry. Lorem Ipsum has been the industry's standard dummy 
-                   text ever since the 1500s, when an unknown printer took a galley 
-                   of type and scrambled it to make a type specimen book. Lorem 
-                   Ipsum is simply dummy text of the printing and typesetting 
-                   industry. Lorem Ipsum has been the industry's standard
+                 With more than 5 years of experience in the industry, we have partnered with startups, SMEs, and large enterprises to deliver innovative solutions that meet diverse business needs. Our journey reflects not only growth in scale but also in expertise, creativity, and the ability to adapt to dynamic markets.
                  </p>
                </div>
              </div>
@@ -234,7 +223,7 @@ function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
             
             {/* Left Content */}
-            <div className="relative flex items-center justify-center p-6 sm:p-8 bg-[#E9F2CD] overflow-hidden">
+            <div className="relative flex items-center justify-center p-6 sm:p-8 bg-[#FEF9D0] overflow-hidden">
               <div className="relative z-10 w-full h-full flex items-center justify-center">
                 <img 
                   src={thirdsection} 
@@ -265,18 +254,10 @@ function About() {
                   SOLUTIONS
                 </h3>
                 <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-[#FEF9D0] mb-4 sm:mb-6 leading-relaxed">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting 
-                  industry. Lorem Ipsum has been the industry's standard dummy 
-                  text ever since the 1500s, when an unknown printer took a galley 
-                  of type and scrambled it to make a type specimen book.
+                At DEVEXT, client satisfaction is at the heart of everything we do. We follow the latest trends and best practices in web and app development to ensure that every project we deliver is modern, user-friendly, and impactful. From intuitive design to powerful functionality, we craft solutions that help our clients thrive in the digital era.
                 </p>
                 <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-[#FEF9D0] mb-6 sm:mb-8 leading-relaxed">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting 
-                  industry. Lorem Ipsum has been the industry's standard dummy 
-                  text ever since the 1500s, when an unknown printer took a galley 
-                  of type and scrambled it to make a type specimen book. Lorem 
-                  Ipsum is simply dummy text of the printing and typesetting 
-                  industry. Lorem Ipsum has been the industry's standard
+                Our success is built on innovation, collaboration, and trust. By combining technical expertise with a deep understanding of business goals, we continue to push boundaries and deliver custom solutions tailored to each client’s vision. With DEVEXT, you don’t just get a service provider—you gain a long-term partner dedicated to your success.
                 </p>
               </div>
             </div>

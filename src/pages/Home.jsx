@@ -277,7 +277,7 @@ function Home() {
             <div className="flex flex-col gap-4">
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
                 <div className="flex flex-col gap-1">
-                  <img src={icons} alt="User Reviews" className="h-8 sm:h-10" />
+                  <img src={icons} alt="User Reviews" className="h-8 sm:h-10" />   
                   <div className="flex">
                     {[1,2,3,4,5].map((star, index) => (
                       <svg key={index} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -323,7 +323,7 @@ function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
             
             {/* Left Content */}
-            <div className="relative flex items-center justify-center p-6 sm:p-8 lg:p-12 font-['Inter'] overflow-hidden bg-[#E9F2CD]">
+            <div className="relative flex items-center justify-center p-6 sm:p-8 lg:p-12 font-['Inter'] overflow-hidden bg-[#FEF9D0]">
               {/* Background Pattern */}
               <div className="absolute inset-1 w-[calc(100%-0.5rem)] h-[calc(100%-0.5rem)] opacity-50 z-0">
                 <img 
@@ -340,15 +340,10 @@ function Home() {
                   CUSTOM SOLUTIONS
                 </h3>
                 <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-[#2F5B44] mb-4 sm:mb-6 leading-relaxed">
-                  Lorem ipsum is simply dummy text of the printing and typesetting 
-                  industry. Lorem ipsum has been the industry's standard dummy 
-                  text ever since the 1500s, when an unknown printer took a galley 
-                  of type and scrambled it to make a type specimen book.
+                DEVEXT began as a small team of talented freelancers, each working on individual projects with passion and creativity. Over time, our dedication and commitment to excellence enabled us to grow into a full-service digital agency, trusted by businesses across the UAE, KSA, and Turkey.
                 </p>
                 <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-[#2F5B44] mb-6 sm:mb-8 leading-relaxed">
-                  Lorem ipsum is simply dummy text of the printing and typesetting 
-                  industry. Lorem ipsum has been the industry's standard dummy 
-                  text ever since the 1500s.
+                With more than 5 years of experience in the industry, we have partnered with startups, SMEs, and large enterprises to deliver innovative solutions that meet diverse business needs. Our journey reflects not only growth in scale but also in expertise, creativity, and the ability to adapt to dynamic markets.
                 </p>
                 <div className="flex justify-center md:justify-end">           
                   <Link 
@@ -386,7 +381,7 @@ function Home() {
       </section>
 
      {/* Third Section */}
-     <Thirdseciont />
+     <Thirdseciont />  
     
 
       {/* fourth Section */}

@@ -26,7 +26,7 @@ const Thirdseciont = () => {
         id:1,
         icon:rectangle,
         title:"Custom Web Design", 
-        description:"Each website we create is meticulously crafted to deliver a 100% unique online experience tailored to your brand. Our expert designers transform your vision into a dynamic, custom design that enhances your brand's visibility, boosts engagement, and drives conversions. With us, your website will not only stand out but also connect deeply with your audience. ",
+        description:"Each website we create is meticulously crafted to deliver a 100% unique online experience tailored to your brand. Our expert designers transform your vision into a dynamic, custom design that enhances your brand’s visibility, boosts engagement, and drives conversions. With us, your website will not only stand out but also connect deeply with your audience. ",
     
       },
       {
@@ -38,26 +38,26 @@ const Thirdseciont = () => {
       {
         id:3,
         icon:card3,
-        title:"Responsive Web Design", 
-        description:"We deliver seamless user experiences across all devices. Our responsive designs adapt flawlessly to any screen size, ensuring that your website not only meets but exceeds user expectations. From planning to design and development, we ensure a consistent, engaging experience for every visitor, no matter how they access your site.",
+        title:"Website Redesign", 
+        description:"Whether you need a design refresh or a complete website overhaul, we analyze your site’s pain points and opportunities to revitalize your digital presence. Our award-winning web designers will breathe new life into your website, enhancing its functionality, user experience, and aesthetic appeal. The result? A modern, dynamic site that drives increased traffic and bolsters your industry reputation. ",
       },
       {
         id:4,
         icon:card4,
-        title:"Responsive Web Design", 
-        description:"We deliver seamless user experiences across all devices. Our responsive designs adapt flawlessly to any screen size, ensuring that your website not only meets but exceeds user expectations. From planning to design and development, we ensure a consistent, engaging experience for every visitor, no matter how they access your site.",
+        title:"UX/UI Web Design", 
+        description:"Our award-winning designers use trusted methods and innovative approaches to create engaging visual experiences and seamless user journeys. Whether you’re looking to build a custom UX/UI or redesign your current one, we’ll enhance your visual identity and ensure your website is both aesthetically pleasing and highly functional. ",
       },
       {
         id:5,
         icon:card5,
-        title:"Responsive Web Design", 
-        description:"We deliver seamless user experiences across all devices. Our responsive designs adapt flawlessly to any screen size, ensuring that your website not only meets but exceeds user expectations. From planning to design and development, we ensure a consistent, engaging experience for every visitor, no matter how they access your site.",
+        title:"SEO", 
+        description:"Our award-winning designers use trusted methods and innovative approaches to create engaging visual experiences and seamless user journeys. Whether you’re looking to build a custom UX/UI or redesign your current one, we’ll enhance your visual identity and ensure your website is both aesthetically pleasing and highly functional.",
       },
       {
         id:6,
         icon:card6,
-        title:"Responsive Web Design", 
-        description:"We deliver seamless user experiences across all devices. Our responsive designs adapt flawlessly to any screen size, ensuring that your website not only meets but exceeds user expectations. From planning to design and development, we ensure a consistent, engaging experience for every visitor, no matter how they access your site.",
+        title:"eCommerce sOLUTIONS", 
+        description:"We specialize in design and development for leading content management systems (CMSs) like Shopify, Magento, and WooCommerce. Our experts can help you build and scale your eCommerce website across platforms, ensuring a seamless and robust online shopping experience for your customers. ",
       },
       
     ]
@@ -106,11 +106,7 @@ return(
             A WEB DESIGN COMPANY
           </h2>
           <p className="text-[12px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-normal text-[#FEF9D0] mb-4 sm:mb-6 md:mb-8 leading-relaxed">
-            As a full-service web design agency, we handle all your 
-            digital needs under one roof. Our custom web design 
-            services include thorough research and planning, 
-            bespoke designs and digital strategies tailored to grow 
-            your reach, drive traffic and encourage engagement.
+          As a full-service web design agency, we handle all your digital needs under one roof. Our custom web design services include thorough research and planning, bespoke designs and digital strategies tailored to grow your reach, drive traffic and encourage engagement.
           </p>
         </div>
       </div>
