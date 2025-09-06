@@ -61,7 +61,7 @@ const Footer = () => {
               <h3 className="text-[16px] sm:text-[18px] font-bold mb-4 sm:mb-6 uppercase ">APPS & DEVELOPMENT</h3>
               <ul className="space-y-4">
                 <li>
-                  <Link to="/calculator" className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/calculator" className="text-[14px] hover:text-[#E9F2CD] transition-colors text-decoration-none">
                     WEBSITE COST CALCULATOR
                   </Link>
                 </li>

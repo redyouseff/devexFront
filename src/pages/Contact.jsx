@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import SEO from '../components/SEO';
+
 import downarrow from "/images/home/Vector1.svg"
 import whatsapp from "/images/home/WhatsApp.svg"
 import instagram from "/images/home/Instagram.svg"
@@ -12,15 +13,44 @@ import message from "/images/home/message.svg"
 import { useState } from 'react';
 
 function Contact() {
-
+  // Structured Data for Contact Page
+  const contactStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Us - Devext",
+    "description": "Get in touch with us for a free consultation about your technical project",
+    "url": "https://devext.io/contact",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Devext",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+966-XX-XXX-XXXX",
+        "contactType": "customer service",
+        "availableLanguage": "English",
+        "areaServed": "SA"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "SA",
+        "addressLocality": "Riyadh"
+      }
+    }
+  };
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
   const [submitError, setSubmitError] = useState('');
   return (
-
     <>
-    <Navbar />
+      <SEO 
+        title="Contact Us - Devext"
+        description="Get in touch with us for a free consultation about your technical project. Our team is ready to help you develop your website or application"
+        keywords="contact us, get in touch, free consultation, website development, app development, development team, customer service"
+        canonical="/contact"
+        structuredData={contactStructuredData}
+      />
+      <Navbar />
     {/* form Section - Contact Form */}
     <section className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden m" style={{ background: '#2F5B44' }}>
 
@@ -257,7 +287,6 @@ function Contact() {
 
 
 
-    <Footer />
     </>
    
   );

@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 import Thirdseciont from '../components/Thirdseciont';
 import cardsShape from "/images/home/Frame 416.svg"
 
@@ -127,18 +127,27 @@ import fifthsectionbackgroundIcon from "/images/home/Devext Pattern 2 2.svg"
 import fiftharrowright from "/images/home/Frame 17.svg"
 import fiftharrowleft from "/images/home/Frame 18.svg"
 import image1 from "/images/home/screencapture-alwidadtaxation-2025-07-11-16_12_43 1.svg"
-import image2 from "/images/home/screencapture-alwidadtaxation-2025-07-11-16_12_43 2.svg"
+import image2 from "/images/home/3788abf59bb8563cfad9a30cbb8be62658a13910.png"
 import image3 from "/images/home/screencapture-alwidadtaxation-2025-07-11-16_12_43 3.svg"
-import image4 from "/images/home/screencapture-alwidadtaxation-2025-07-11-16_12_43 4.svg"
-import image5 from "/images/home/screencapture-alwidadtaxation-2025-07-11-16_12_43 5.svg"
+import image4 from "/images/home/3d7675919d681e878c4dbc9cc7684b49b3b2807e.png"
+import image5 from "/images/home/20a22ebbdefa41431733ac1b9ec7ce874179aa06.png"
 import image6 from "/images/home/screencapture-alwidadtaxation-2025-07-11-16_12_43 6.svg"
+import image7 from "/images/home/e149bc6f4d10dac13f72230078469be1d13dbf6d.png"
+import image8 from "/images/home/be473d244406dd15c8246e2e9a3702ccddaa62e4.png"
+import image9 from "/images/home/48c5b184a126ae61d83228824568c52e72d48d44.png"
+import image10 from "/images/home/f10676c3cd53de4b42ddaf947957061621a1d28d.png"
 import circle1 from "/images/home/Ellipse 7.svg"
 import circle2 from "/images/home/Ellipse 8.svg"
-import circle3 from "/images/home/Ellipse 9.svg"
+import circle3 from "/images/home/Ellipse 3.svg"
 import circle4 from "/images/home/Ellipse 10.svg"
 import circle5 from "/images/home/Ellipse 11.svg"
 import circle6 from "/images/home/Ellipse 12.svg" 
+import circle7 from "/images/home/Ellipse 77.svg"
+import circle8 from "/images/home/Ellipse 88.svg"
+import circle9 from "/images/home/Ellipse 99.svg"
+import circle10 from "/images/home/Ellipse 1010.svg"
 import downarrow2green from "/images/home/arrow Down.svg"
+import location from "/images/home/location.svg"
 
 
 
@@ -168,6 +177,37 @@ function Home() {
   const [submitMessage, setSubmitMessage] = useState('');
   const [submitError, setSubmitError] = useState('');
 
+  // Structured Data for Home Page
+  const homeStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Devext",
+    "description": "We provide advanced development and programming solutions, web applications, mobile applications, and comprehensive technical solutions",
+    "url": "https://devext.io",
+    "logo": "https://devext.io/images/navbar/Logo_Devext-removebg-preview 1.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+966-XX-XXX-XXXX",
+      "contactType": "customer service",
+      "availableLanguage": "English"
+    },
+    "sameAs": [
+      "https://www.instagram.com/devext",
+      "https://www.linkedin.com/company/devext",
+      "https://wa.me/966XXXXXXXXX"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "SA",
+      "addressLocality": "Riyadh"
+    },
+    "offers": {
+      "@type": "Offer",
+      "description": "Application and website development services",
+      "category": "Software Development"
+    }
+  };
+
   // Cards data for testimonials
   const cardsData = [
     {
@@ -177,7 +217,7 @@ function Home() {
       image: image1,
       circle: circle1,
       name: "joyaproperties.com",
-      location: "Dubai"
+      location: "UAE"
     },
     {
       id: 2,
@@ -186,7 +226,7 @@ function Home() {
       image: image2,
       circle: circle2,
       name: "ldc-investment.sa",
-      location: "Riyadh"
+      location: "KSA"
     },
     {
       id: 3,
@@ -195,7 +235,7 @@ function Home() {
       image: image3,
       circle: circle3,
       name: "sada-alawael.sa",
-      location: "Dubai",
+      location: "KSA",
     },
     {
       id: 4,
@@ -204,7 +244,7 @@ function Home() {
       image: image4,
       circle: circle4,
       name: "joudandkaram.com",
-      location: "Dubai"
+      location: "UAE"
     },
     {
       id: 5,
@@ -212,8 +252,8 @@ function Home() {
       title: 'Al-Tal Al-Kabir is a leading provider of heavy and light construction equipment, offering cutting-edge machinery and reliable solutions for industrial and infrastructure projects across Saudi Arabia. With a commitment to quality and efficiency.',
       image: image5,
       circle: circle5,
-      name: "Alwidadtaxation.com",
-      location: "Dubai"
+      name: "Altal-alkabir.sa",
+      location: "KSA"
     },
     {
       id: 6,
@@ -222,8 +262,45 @@ function Home() {
       image: image6,
       circle: circle6,
       name: "Alwidadtaxation.com",
-      location: "Dubai"
+      location: "UAE"
+    },
+    {
+      id: 7,
+      type: 'testimonial',
+      title: 'Art Design is a creative marketing agency that positions itself as a dynamic engine of innovation, with over five years of experience in delivering branding, marketing, and design solutions. The company focuses on crafting unique strategies.',
+      image: image7,
+      circle: circle7,
+      name: "Artdesgin.business",
+      location: "UAE"
+    },
+    {
+      id: 8,
+      type: 'testimonial',
+      title: 'appears to be an online classifieds platformthat enables users to buy, sell, or rent various items such as real estate, cars, land, and more.The app emphasizes ease of use, security, and simplicity in communication between buyers and sellers ',
+      image: image8,
+      circle: circle8,
+      name: "Albazar.app",
+      location: "Syria"
+    },
+    {
+      id: 9,
+      type: 'testimonial',
+      title: 'appears to be a UAE-based provider focusing on the design and manufacturing of various uniforms and workwear. Their offerings include:  Security uniforms, Medical attire like scrub suits & Uniforms tailored for restaurant staff. ',
+      image: image9,
+      circle: circle9,
+      name: "Bedaytmeshwar.com",
+      location: "UAE"
+    },
+    {
+      id: 10,
+      type: 'testimonial',
+      title: 'An Emirati e-commerce site specializing in handcrafted, natural skincare and haircare products. Founded in Ajman, the brand prides itself on using purely organic, chemical-free ingredients, offering a range of vitamin- and mineral-rich formulations. ',
+      image: image10,
+      circle: circle10,
+      name: "Aljamalaltabeeiy.com",
+      location: "UAE"
     }
+
   ];
 
 
@@ -231,6 +308,13 @@ function Home() {
 
   return (
     <>
+        <SEO 
+          title="Devext - Advanced Development & Programming Solutions"
+          description="Transform your ideas into reality with DEVEXT. We provide end-to-end digital solutions, from development to marketing, for your success"
+          keywords="Transform your ideas into reality with DEVEXT. We provide end-to-end digital solutions, from development to marketing, for your success"
+          canonical="/"
+          structuredData={homeStructuredData}
+        />
       <style>{smoothScrollStyles}</style>
     <div className="min-h-screen bg-gray-100">
       <Navbar />
@@ -565,12 +649,17 @@ function Home() {
                           <div className="flex items-center gap-3 mt-auto">
                             <img src={card.circle} alt="Client Icon" className="w-6 h-6 sm:w-8 sm:h-8" />
                     <div>
-                              <p className="text-[#FEF9D0] text-xs sm:text-sm font-medium">{card.name}</p>
-                      <div className="flex items-center gap-1 mt-1">
-                        <svg className="w-3 h-3 text-[#FEF9D0]" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                        </svg>
-                                <p className="text-[#FEF9D0] text-xs">{card.location}</p>
+                              <a
+                                href={`https://${(card.name || '').replace(/^https?:\/\//, '')}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-[#FEF9D0] text-xs sm:text-sm font-medium hover:underline"
+                              >
+                                {card.name}
+                              </a>
+                      <div className="flex items-center gap-1.5 mt-1">
+                        <img src={location} alt="Location" className="w-4 h-4" />
+                         <p className="text-[#FEF9D0] text-sm">{card.location}</p>
                       </div>
                     </div>
                   </div>
@@ -983,7 +1072,6 @@ function Home() {
             </div>
           </section>
 
-          <Footer />
               </div>
     </>
   );

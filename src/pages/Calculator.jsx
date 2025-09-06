@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import uparrow from "/images/home/Vector.svg"
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import SEO from '../components/SEO';
+
 import dropdown from "/images/calculator/Vector.svg"
 import line from "/images/calculator/Line 10.svg"
 import lineList from "/images/calculator/Calculatur Line.svg"
@@ -70,6 +71,21 @@ const smoothScrollStyles = `
 `;
 
 function Calculator() {
+  // Structured Data for Calculator Page
+  const calculatorStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Development Cost Calculator - Devext",
+    "description": "Calculate the cost of developing your website or application easily with our smart cost calculator",
+    "url": "https://devext.io/calculator",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "description": "Free calculator for estimating development costs"
+    }
+  };
+
   // State for form inputs
   const [websiteType, setWebsiteType] = useState('Informational');
   const [platform, setPlatform] = useState('Wordpress');
@@ -197,6 +213,15 @@ function Calculator() {
 
   return(
     <>
+      <SEO 
+        title="Cost Calculator - Devext"
+        description="Curious about the cost? Use our simple calculator to get an instant estimate for your web, app, or design project. Plan your budget now."
+        keywords="Curious about the cost? Use our simple calculator to get an instant estimate for your web, app, or design project. Plan your budget now."
+
+
+        canonical="/calculator"
+        structuredData={calculatorStructuredData}
+      />
       <style>{smoothScrollStyles}</style>
  <div className="min-h-screen bg-gray-100">   
         <Navbar />
@@ -430,7 +455,7 @@ function Calculator() {
                 <div className="flex items-center flex-1">
                   <button
                     onClick={() => toggleFeature('uniqueDesign')}
-                    className={`w-12 h-6 rounded-full p-1 transition-colors ${
+                    className={`w-12 h-6 rounded-full p-1 transition-colors shrink-0 ${
                       features.uniqueDesign ? 'bg-[#E9F2CD]' : 'bg-gray-400'
                     }`}
                   >
@@ -458,7 +483,7 @@ function Calculator() {
                 <div className="flex items-center flex-1">
                   <button
                     onClick={() => toggleFeature('onsiteOptimization')}
-                    className={`w-12 h-6 rounded-full p-1 transition-colors ${
+                    className={`w-12 h-6 rounded-full p-1 transition-colors shrink-0 ${
                       features.onsiteOptimization ? 'bg-[#E9F2CD]' : 'bg-gray-400'
                     }`}
                   >
@@ -486,7 +511,7 @@ function Calculator() {
                 <div className="flex items-center flex-1">
                   <button
                     onClick={() => toggleFeature('copywriting')}
-                    className={`w-12 h-6 rounded-full p-1 transition-colors ${
+                    className={`w-12 h-6 rounded-full p-1 transition-colors shrink-0 ${
                       features.copywriting.enabled ? 'bg-[#E9F2CD]' : 'bg-gray-400'
                     }`}
                   >
@@ -543,7 +568,7 @@ function Calculator() {
                 <div className="flex items-center flex-1">
                   <button
                     onClick={() => toggleFeature('multiLanguage')}
-                    className={`w-12 h-6 rounded-full p-1 transition-colors ${
+                    className={`w-12 h-6 rounded-full p-1 transition-colors shrink-0 ${
                       features.multiLanguage.enabled ? 'bg-[#E9F2CD]' : 'bg-gray-400'
                     }`}
                   >
@@ -551,7 +576,10 @@ function Calculator() {
                       features.multiLanguage.enabled ? 'translate-x-6 bg-[#2F5B44]' : 'translate-x-0 bg-white'
                     }`}></div>
                   </button>
-                  <span className="ml-4 text-[#FEF9D0] text-lg whitespace-normal sm:whitespace-nowrap break-words" style={{ fontFamily: 'Inter' }}>Multi-Language Feature (Per Language)</span>
+                  <span className="ml-4 text-[#FEF9D0] text-sm sm:text-lg leading-snug whitespace-normal sm:whitespace-nowrap break-words max-w-[180px] sm:max-w-none" style={{ fontFamily: 'Inter' }}>
+                    Multi-Language Feature
+                    <span className="hidden sm:inline"> (Per Language)</span>
+                  </span>
                   {features.multiLanguage.enabled && (
                     <div className="relative ml-auto w-fit mt-2 sm:mt-0">
                       <div className="bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm w-20 text-center cursor-pointer ml-auto" onClick={() => setShowMultiLanguageDropdown(!showMultiLanguageDropdown)}>
@@ -600,7 +628,7 @@ function Calculator() {
                 <div className="flex items-center flex-1">
                   <button
                     onClick={() => toggleFeature('contentMigration')}
-                    className={`w-12 h-6 rounded-full p-1 transition-colors ${
+                    className={`w-12 h-6 rounded-full p-1 transition-colors shrink-0 ${
                       features.contentMigration ? 'bg-[#E9F2CD]' : 'bg-gray-400'
                     }`}
                   >
@@ -628,7 +656,7 @@ function Calculator() {
                 <div className="flex items-center flex-1">
                   <button
                     onClick={() => toggleFeature('motionGraphics')}
-                    className={`w-12 h-6 rounded-full p-1 transition-colors ${
+                    className={`w-12 h-6 rounded-full p-1 transition-colors shrink-0 ${
                       features.motionGraphics.enabled ? 'bg-[#E9F2CD]' : 'bg-gray-400'
                     }`}
                   >
@@ -685,7 +713,7 @@ function Calculator() {
                 <div className="flex items-center flex-1">
                   <button
                     onClick={() => toggleFeature('basicSearch')}
-                    className={`w-12 h-6 rounded-full p-1 transition-colors ${
+                    className={`w-12 h-6 rounded-full p-1 transition-colors shrink-0 ${
                       features.basicSearch ? 'bg-[#E9F2CD]' : 'bg-gray-400'
                     }`}
                   >
@@ -713,7 +741,7 @@ function Calculator() {
                 <div className="flex items-center flex-1">
                   <button
                     onClick={() => toggleFeature('interactiveMap')}
-                    className={`w-12 h-6 rounded-full p-1 transition-colors ${
+                    className={`w-12 h-6 rounded-full p-1 transition-colors shrink-0 ${
                       features.interactiveMap ? 'bg-[#E9F2CD]' : 'bg-gray-400'
                     }`}
                   >
@@ -741,7 +769,7 @@ function Calculator() {
                 <div className="flex items-center flex-1">
                   <button
                     onClick={() => toggleFeature('eventsCalendar')}
-                    className={`w-12 h-6 rounded-full p-1 transition-colors ${
+                    className={`w-12 h-6 rounded-full p-1 transition-colors shrink-0 ${
                       features.eventsCalendar ? 'bg-[#E9F2CD]' : 'bg-gray-400'
                     }`}
                   >
@@ -769,7 +797,7 @@ function Calculator() {
                 <div className="flex items-center flex-1">
                   <button
                     onClick={() => toggleFeature('chatFeature')}
-                    className={`w-12 h-6 rounded-full p-1 transition-colors ${
+                    className={`w-12 h-6 rounded-full p-1 transition-colors shrink-0 ${
                       features.chatFeature ? 'bg-[#E9F2CD]' : 'bg-gray-400'
                     }`}
                   >
@@ -1008,8 +1036,6 @@ function Calculator() {
 
       </section>
 
-      {/* Footer */}
-      <Footer />
       </div>
     </>
   );

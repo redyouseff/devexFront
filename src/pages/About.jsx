@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
+import SEO from '../components/SEO';
 
 // Smooth scroll styles
 const smoothScrollStyles = `
@@ -52,7 +53,7 @@ const smoothScrollStyles = `
 `;
 import uparrow from "/images/home/Vector.svg"
 import downarrow from "/images/home/Vector1.svg"
-import Footer from '../components/Footer';
+
 import logo  from "/images/about/Devext Pattern 1 1.svg"
 import logo2  from "/images/about/Devext Pattern 1 2.svg"
 import name from "/images/about/Vector.svg"
@@ -82,8 +83,37 @@ function About() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
   const [submitError, setSubmitError] = useState('');
+
+  // Structured Data for About Page
+  const aboutStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Us - Devext",
+    "description": "Meet the Devext team and our expertise in development and programming",
+    "url": "https://devext.io/about",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Devext",
+      "description": "A company specialized in developing applications and websites",
+      "foundingDate": "2020",
+      "numberOfEmployees": "10-50",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "SA",
+        "addressLocality": "Riyadh"
+      }
+    }
+  };
+
   return (
     <>
+      <SEO 
+        title="About Us - Devext"
+        description="About DEVEXT: Your dedicated partner in digital innovation. Learn more about our values, our team, and our commitment to your success."
+        keywords="About DEVEXT: Your dedicated partner in digital innovation. Learn more about our values, our team, and our commitment to your success."
+        canonical="/about"
+        structuredData={aboutStructuredData}
+      />
       <style>{smoothScrollStyles}</style>
       <div className="min-h-screen bg-gray-100">   
         <Navbar />
@@ -292,7 +322,7 @@ function About() {
                   <div className="absolute inset-1 rounded-2xl sm:rounded-3xl" />
                   {/* Avatar image or fallback silhouette */}
                   {img ? (
-                    <img src={img} alt={name} className="absolute inset-0 w-full h-full object-contain object-center" />
+                    <img src={img} alt={name} className="absolute inset-0 w-[70%] h-[70%] object-contain object-center mx-auto my-auto left-0 right-0 top-0 bottom-0" />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center pt-4">
                       <svg viewBox="0 0 128 160" className="w-[70%] h-[70%]" aria-hidden="true">
@@ -304,9 +334,9 @@ function About() {
                     </div>
                   )}
                   {/* Bottom label */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#214C38] px-2 sm:px-3 py-2 text-center">
-                    <div className="text-[#FEF9D0] text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] font-medium leading-tight mb-1 sm:mb-2">{name}</div>
-                    <div className="text-[#FEF9D0] text-[8px] sm:text-[9px] md:text-[10px] opacity-80 leading-tight">{role}</div>
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-[#214C38] px-3 sm:px-4 py-3 text-center rounded-b-3xl cursor-default select-text" style={{ width: '70%' }}>
+                    <div className="text-[#FEF9D0] text-[12px] sm:text-[13px] md:text-[14px] lg:text-[10px] font-bold leading-tight mb-1 sm:mb-2 whitespace-nowrap">{name}</div>
+                    <div className="text-[#FEF9D0] text-[10px] sm:text-[11px] md:text-[12px] opacity-90 leading-tight">{role}</div>
                   </div>
                 </div>
               );
@@ -335,7 +365,11 @@ function About() {
                       <TeamCard name="Mohaned Altokhy" role="Sales Manager" img={mohamed} />
                     </div>
                     <div className="relative flex flex-col items-center">
-                      <TeamCard name="Adbelrahman Ibrahim" role="SEO Specialist" img={abdelrahman} />
+                      <TeamCard 
+                        name={<><span className="hidden sm:inline">Adbelrahman Ibrahim</span><span className="inline sm:hidden">Adbelrahman</span></>} 
+                        role="SEO Specialist" 
+                        img={abdelrahman} 
+                      />
                     </div>
                   </div>
                 </>
@@ -546,7 +580,6 @@ function About() {
       
 
 
-      <Footer />
       </div>
     </>
   );

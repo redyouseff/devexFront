@@ -5,6 +5,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import SEO from '../components/SEO';
 
 // Custom styles for Swiper
 const swiperStyles = `
@@ -77,7 +78,7 @@ const swiperStyles = `
   }
 `;
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+
 import uparrow from "/images/home/Vector.svg"
 import logo2  from "/images/about/Devext Pattern 1 2.svg"
 import image1 from "/images/services/314320 1 1.svg";
@@ -95,6 +96,48 @@ import icon2 from "/images/home/Vector2.png"
 
 
 function Services() {
+  // Structured Data for Services Page
+  const servicesStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Development & Programming Services",
+    "description": "We provide a comprehensive range of development and programming services including website and application development",
+    "url": "https://devext.io/services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Devext"
+    },
+    "serviceType": "Software Development",
+    "areaServed": "Saudi Arabia",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Development Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Website Development"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Mobile Application Development"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Web Application Development"
+          }
+        }
+      ]
+    }
+  };
+
   // Cards data array
   const cardsData = [
     {
@@ -139,6 +182,13 @@ function Services() {
 
   return (
     <>
+      <SEO 
+        title="Our Services - Devext"
+        description="Our digital services are designed for your success. From development and design to marketing, we provide end-to-end solutions."
+        keywords="Our digital services are designed for your success. From development and design to marketing, we provide end-to-end solutions."
+        canonical="/services"
+        structuredData={servicesStructuredData}
+      />
     <style>{swiperStyles}</style>
     <div className="min-h-screen bg-gray-100">
 
@@ -787,8 +837,6 @@ function Services() {
 
 
 
-
-      <Footer />
 
       </div>
 
