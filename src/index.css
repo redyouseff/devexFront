@@ -4,6 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Force LTR direction globally */
+html, body {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+* {
+  direction: ltr !important;
+}
+
 @layer components {
   .coming-soon-container {
     @apply w-screen h-screen relative flex flex-col justify-between overflow-hidden;

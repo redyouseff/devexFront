@@ -24,9 +24,9 @@ const SEO = ({
       <link rel="canonical" href={fullCanonical} />
       
       {/* Language and Locale */}
-      <html lang="ar" dir="rtl" />
-      <meta name="language" content="Arabic" />
-      <meta name="locale" content="ar_SA" />
+      <html lang="en" dir="ltr" />
+      <meta name="language" content="English" />
+      <meta name="locale" content="en_US" />
       
       {/* Robots Meta */}
       <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
@@ -38,7 +38,7 @@ const SEO = ({
       <meta property="og:url" content={fullCanonical} />
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content="Devext" />
-      <meta property="og:locale" content="ar_SA" />
+      <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
@@ -50,6 +50,17 @@ const SEO = ({
       <meta name="author" content="Devext Team" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#2563eb" />
+      
+      {/* Force LTR Direction */}
+      <style>{`
+        html, body {
+          direction: ltr !important;
+          text-align: left !important;
+        }
+        * {
+          direction: ltr !important;
+        }
+      `}</style>
       
       {/* Favicon */}
       <link rel="icon" type="image/svg+xml" href="/images/Fav. icon.svg" />
