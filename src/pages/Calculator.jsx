@@ -538,7 +538,7 @@ function Calculator() {
                                 index < 9 ? 'border-b border-dashed border-[#FEF9D0] border-opacity-30' : ''
                               }`}
                               onClick={() => {
-                                updateFeatureCount('copywriting', num);
+                                updateFeatureCount('copywriting', num)
                                 setShowCopywritingDropdown(false);
                               }}
                             >
