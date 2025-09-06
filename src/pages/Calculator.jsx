@@ -441,11 +441,11 @@ function Calculator() {
             {/* Header */}
             <div className="bg-[#FEF9D0] p-6 sm:p-8 mb-8 -mx-6 sm:-mx-8 -mt-[6rem] ">
               <h2 className="text-[#2F5B44] text-2xl font-medium mb-4 text-start text-[23px] -mt-4" style={{ fontFamily: 'Inter' }}>Informational Website Quote Calculator</h2>
-              <div className="flex text-[#2F5B44] text-sm font-medium -mb-3 mt-1" style={{ fontFamily: 'Inter' }}>
-                <div className="flex-1 text-[16px] sm:text-[20px]">Select:</div>
-                <div className="w-20 text-center text-[16px] sm:text-[20px]">Hours</div>
-                <div className="w-20 text-right text-[16px] sm:text-[20px] ml-4 sm:ml-6">Price</div>
-              </div>
+                <div className="flex text-[#2F5B44] text-sm font-medium -mb-3 mt-1" style={{ fontFamily: 'Inter' }}>
+                  <div className="flex-1 text-[16px] sm:text-[20px]">Select:</div>
+                  <div className="w-20 text-center text-[16px] sm:text-[20px]">Hours</div>
+                  <div className="w-20 text-right text-[16px] sm:text-[20px] ml-4 sm:ml-6">Price</div>
+                </div>
             </div>
 
             {/* Features List */}
@@ -493,7 +493,7 @@ function Calculator() {
                   </button>
                   <span className="ml-4 text-[#FEF9D0] text-lg" style={{ fontFamily: 'Inter' }}>Onsite Optimization</span>
                 </div>
-                <div className="text-[#FEF9D0]  text-center w-20 text-[15px]">
+                <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
                   {featurePricing.onsiteOptimization.hours}
                 </div>
                 <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-4 sm:ml-6">
@@ -530,7 +530,7 @@ function Calculator() {
                       </div>
                       
                       {showCopywritingDropdown && (
-                        <div className="-ml-4 absolute mt-2 w-full bg-[#2F5B44] border border-[#FEF9D0] rounded-3xl py-2 z-50">
+                        <div className="absolute mt-2 w-full bg-[#2F5B44] border border-[#FEF9D0] rounded-3xl py-2 z-50 right-0">
                           {[1,2,3,4,5,6,7,8,9,10].map((num, index) => (
                             <div 
                               key={num}
@@ -590,7 +590,7 @@ function Calculator() {
                       </div>
                       
                       {showMultiLanguageDropdown && (
-                        <div className="-ml-4 absolute mt-2 w-full bg-[#2F5B44] border border-[#FEF9D0] rounded-3xl py-2 z-50">
+                        <div className="absolute mt-2 w-full bg-[#2F5B44] border border-[#FEF9D0] rounded-3xl py-2 z-50 right-0">
                           {[1,2,3,4,5].map((num, index) => (
                             <div 
                               key={num}
@@ -675,7 +675,7 @@ function Calculator() {
                       </div>
                       
                       {showMotionGraphicsDropdown && (
-                        <div className="-ml-4 absolute mt-2 w-full bg-[#2F5B44] border border-[#FEF9D0] rounded-3xl py-2 z-50">
+                        <div className="absolute mt-2 w-full bg-[#2F5B44] border border-[#FEF9D0] rounded-3xl py-2 z-50 right-0">
                           {[1,2,3,4,5].map((num, index) => (
                             <div 
                               key={num}
@@ -810,7 +810,7 @@ function Calculator() {
                 <div className="text-[#FEF9D0] text-center w-20 text-[15px]">
                   {featurePricing.chatFeature.hours}
                 </div>
-                <div className="text-[#FEF9D0]  text-[20px] text-right w-20 ml-4 sm:ml-6">
+                <div className="text-[#FEF9D0] text-[20px] text-right w-20 ml-4 sm:ml-6">
                   ${featurePricing.chatFeature.price}  
                 </div>
               </div>
