@@ -126,12 +126,12 @@ import logoFourthsection from "/images/home/Devext Pattern 2 1.svg"
 import fifthsectionbackgroundIcon from "/images/home/Devext Pattern 2 2.svg"
 import fiftharrowright from "/images/home/Frame 17.svg"
 import fiftharrowleft from "/images/home/Frame 18.svg"
-import image1 from "/images/home/screencapture-alwidadtaxation-2025-07-11-16_12_43 1.svg"
+import image1 from "/images/home/f8f89d1ad7d0ecd0a24395993d02e58ee421a350.png"
 import image2 from "/images/home/3788abf59bb8563cfad9a30cbb8be62658a13910.png"
-import image3 from "/images/home/screencapture-alwidadtaxation-2025-07-11-16_12_43 3.svg"
+import image3 from "/images/home/7a8fcd165e9054d439309e4f9bd522d9fa1db41e.png"
 import image4 from "/images/home/3d7675919d681e878c4dbc9cc7684b49b3b2807e.png"
 import image5 from "/images/home/20a22ebbdefa41431733ac1b9ec7ce874179aa06.png"
-import image6 from "/images/home/screencapture-alwidadtaxation-2025-07-11-16_12_43 6.svg"
+import image6 from "/images/home/bd6527f377c313f1c886ed27fcab32b474cc1296.png"
 import image7 from "/images/home/e149bc6f4d10dac13f72230078469be1d13dbf6d.png"
 import image8 from "/images/home/be473d244406dd15c8246e2e9a3702ccddaa62e4.png"
 import image9 from "/images/home/48c5b184a126ae61d83228824568c52e72d48d44.png"
@@ -168,6 +168,7 @@ import instagram from "/images/home/Instagram.svg"
 import linkedin from "/images/home/Linkedin.svg"
 import line from "/images/home/Line 1.svg"
 import backgroundsectionseven from "/images/home/Devext Pattern 1 7.png"
+import TestFigma from '../components/testFigma';
 
 function Home() {
   const [swiperInstance, setSwiperInstance] = useState(null);
@@ -363,7 +364,7 @@ function Home() {
                 <div className="flex flex-col gap-1">
                   <img src={icons} alt="User Reviews" className="h-8 sm:h-10" />   
                   <div className="flex">
-                    {[1,2,3,4,5].map((star, index) => (
+                    {[1,2,3,4,5].map((star, index) => (      
                       <svg key={index} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
@@ -472,7 +473,7 @@ function Home() {
 
       {/* fourth Section */}
       <section className="relative py-20 px-6 text-center overflow-hidden" style={{ background: '#2F5B44' }}>
-        {/* Background Pattern with Logo */}
+        {/* Background Pattern with Logo */}   
         <div className="absolute inset-0">
           {/* Curved flowing pattern background */}
           <div className="absolute inset-0">
@@ -571,7 +572,7 @@ function Home() {
             <div className="w-full relative z-10">
               {/* Header */}
               <div className="text-center mb-16">
-                <h2 className="text-[36px] font-bold text-[#2F5B44] mb-4 leading-tight">
+                <h2 className="text-[36px] font-bold text-[#2F5B44] mb-4 leading-tight"> 
                 DISCOVER SOME OF OUR <br /> UNIQU PROJECTS
                 </h2>
                 <p className="text-[20px] text-[#2F5B44] max-w-4xl mx-auto text-center" style={{ fontFamily: 'Inter', fontWeight: 400, lineHeight: '100%', letterSpacing: '0%' }}>
@@ -631,11 +632,11 @@ function Home() {
                     <SwiperSlide key={card.id}>
                       <div className="bg-[#2F5B44] rounded-3xl overflow-hidden p-4 sm:p-6 text-[#FEF9D0] flex flex-col w-full" style={{ height: '400px' }}>
                         {/* Image Section */}
-                        <div className="h-90 sm:h-40 relative overflow-hidden rounded-lg mb-4 sm:mb-6">
+                        <div className="h-40 sm:h-48 md:h-56 relative rounded-lg mb-4 sm:mb-6 flex items-center justify-center overflow-hidden ">
                           <img 
                             src={card.image} 
                             alt={card.title}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain"
                           />
                 </div>
 

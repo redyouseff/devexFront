@@ -356,16 +356,27 @@ function About() {
                   {/* Bottom Row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
                     <div className="relative flex flex-col items-center">
-                      <TeamCard name="Yousef Magdy" role="Lead Developer" img={yousef} />
+                      <TeamCard
+                       w="w-48 sm:w-56 md:w-64 lg:w-72" 
+                       h="h-60 sm:h-64 md:h-68 lg:h-72 xl:h-80" 
+                       name="Yousef Magdy" role="Lead Developer" img={yousef} />
                     </div>
                     <div className="relative flex flex-col items-center">
-                      <TeamCard name="Pansee Omran" role="Graphic Designer" img={pansee} />
+                      <TeamCard
+                       w="w-48 sm:w-56 md:w-64 lg:w-72" 
+                       h="h-60 sm:h-64 md:h-68 lg:h-72 xl:h-80" 
+                       name="Pansee Omran" role="Graphic Designer" img={pansee} />
                     </div>
                     <div className="relative flex flex-col items-center">
-                      <TeamCard name="Mohaned Altokhy" role="Sales Manager" img={mohamed} />
+                      <TeamCard
+                       w="w-48 sm:w-56 md:w-64 lg:w-72" 
+                       h="h-60 sm:h-64 md:h-68 lg:h-72 xl:h-80" 
+                       name="Mohaned Altokhy" role="Sales Manager" img={mohamed} />
                     </div>
                     <div className="relative flex flex-col items-center">
                       <TeamCard 
+                       w="w-48 sm:w-56 md:w-64 lg:w-72" 
+                       h="h-60 sm:h-64 md:h-68 lg:h-72 xl:h-80" 
                         name={<><span className="hidden sm:inline">Adbelrahman Ibrahim</span><span className="inline sm:hidden">Adbelrahman</span></>} 
                         role="SEO Specialist" 
                         img={abdelrahman} 

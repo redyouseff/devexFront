@@ -11,6 +11,8 @@ import Blogs from './pages/blogs';
 import Profile from './pages/Profile';
 import Footer from './components/Footer';
 import SpeceficBlogs from './pages/SpeceficBlogs';
+import TestCircleSwiper from './components/testCircleSwiper';
+
 
 function App() {
   return (
@@ -26,6 +28,9 @@ function App() {
              <Route path="/contact" element={<Contact />} />
              <Route path="/blogs" element={<Blogs />} />
              <Route path="/blogs/:id" element={<SpeceficBlogs />} />
+             <Route path="/swiper" element={<swiper />} /> 
+             <Route path="/TestCircleSwiper" element={<TestCircleSwiper />} />
+           
            
           </Routes>
           <Footer />

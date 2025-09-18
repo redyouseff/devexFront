@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import logo from "/images/home/Logo_Devext-removebg-preview 2.svg"
 
 const Footer = () => {
+  const handleFooterLinkClick = () => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-[#2F5B44] text-[#FEF9D0] py-8 sm:py-12 px-4 sm:px-6 border-t-2 border-[#FEF9D0] ">
       <div className="container mx-auto max-w-6xl">
@@ -26,27 +32,27 @@ const Footer = () => {
               <h3 className="text-[16px] sm:text-[18px] font-bold mb-4 sm:mb-6 uppercase">MAIN SERVICES</h3>
               <ul className="space-y-4">
                 <li>
-                  <Link to="/services" className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/services" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     CUSTOM WEB DESIGN
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services"  className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/services"  onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     ECOMMERCE DESIGN
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/services" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     SHOPIFY WEBSITE DESIGN
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/services" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     WORDPRESS WEB DESIGN
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/services" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     DIGITAL MARKETING
                   </Link>
                 </li>
@@ -61,27 +67,27 @@ const Footer = () => {
               <h3 className="text-[16px] sm:text-[18px] font-bold mb-4 sm:mb-6 uppercase ">APPS & DEVELOPMENT</h3>
               <ul className="space-y-4">
                 <li>
-                  <Link to="/calculator" className="text-[14px] hover:text-[#E9F2CD] transition-colors text-decoration-none">
+                  <Link to="/calculator" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors text-decoration-none">
                     WEBSITE COST CALCULATOR
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/services" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     CUSTOM WEB DEVELOPMENT
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/services" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     APP DEVELOPMENT
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/services" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     ECOMMERCE DEVELOPMENT
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/services" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     WOOCOMMERCE DEVELOPMENT
                   </Link>
                 </li>
@@ -96,17 +102,17 @@ const Footer = () => {
               <h3 className="text-[32px] sm:text-[18px] font-bold mb-4 sm:mb-6 uppercase">COMPANY</h3>
               <ul className="space-y-4">
                 <li>
-                  <Link to="/about" className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/about" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     ABOUT US
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className="text-[14px] hover:text-[#E9F2CD] transition-colors whitespace-nowrap">
+                  <Link to="/services" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors whitespace-nowrap">
                     DIGITAL TRENDS
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/contact" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     CONTACT US
                   </Link>
                 </li>
@@ -122,10 +128,10 @@ const Footer = () => {
               ©2025 DEVEXT. ALL RIGHTS RESERVED
             </div>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-[11px] sm:text-[12px] order-1 sm:order-2">
-              <Link to="/privacy" className="hover:text-[#E9F2CD] transition-colors">
+              <Link to="/privacy" onClick={handleFooterLinkClick} className="hover:text-[#E9F2CD] transition-colors">
                 PRIVACY POLICY
               </Link>
-              <Link to="/accessibility" className="hover:text-[#E9F2CD] transition-colors">
+              <Link to="/accessibility" onClick={handleFooterLinkClick} className="hover:text-[#E9F2CD] transition-colors">
                 ACCESSIBILITY
               </Link>
             </div>
