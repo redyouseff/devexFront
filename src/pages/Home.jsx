@@ -323,7 +323,7 @@ function Home() {
       {/* Hero Section */}
             <section className="relative min-h-screen flex items-center overflow-hidden">
           {/* Video Background */}
-                                             <div className="absolute inset-0 w-full h-full overflow-hidden">
+             <div className="absolute inset-0 w-full h-full overflow-hidden">
                 <div className="absolute inset-0 bg-[linear-gradient(257.99deg,rgba(254,249,208,0.1)_0%,rgba(47,91,68,0.1)_1%,#2F5B44_95%)] z-10"></div>
                 <video
                   autoPlay

@@ -13,5 +13,5 @@ Disallow: /private/
 Allow: /about
 Allow: /services
 Allow: /blogs
-Allow: /calculator
+Allow: /calculator   
 Allow: /contact
