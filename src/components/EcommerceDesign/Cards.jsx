@@ -86,7 +86,7 @@ return(
           eCommerce Development Solutions
           </h2>
           <p className="text-[12px] font-inter  sm:text-[14px] md:text-[15px] lg:text-[16px] font-normal text-[#FEF9D0] mb-4 sm:mb-6 md:mb-8 leading-relaxed">
-          As a recognized eCommerce development agency, Digital Silk offers industry-specific and research-backed solutions that boost engagement, drive organic traffic and increase conversion rates.
+          As a recognized eCommerce development agency, Digital Silk offers industry-specific and research-backed solutions that boost engagement, drive organic traffic and increase conversion rates. 
           </p>
         </div>
       </div>
@@ -144,11 +144,8 @@ return(
                     </div>
 
                     {
-                        card.description.map((description, index) => (
-                            <p
-                              key={index}
-                              className={`${card.id === 2 ? 'text-[14px] sm:text-[16px]' : 'text-[16px] sm:text-[16px]'} md:text-[16px] lg:text-[18px] font-inter font-normal mb-4 sm:mb-6 md:mb-8 leading-relaxed ${card.id % 2 === 0 ? 'text-[#FEF9D0]' : 'text-[#2F5B44]'}`}
-                            >
+                        card.description.map((description) => (
+                            <p className={`text-[16px] font-inter sm:text-[16px] md:text-[16px] lg:text-[18px] font-normal mb-4 sm:mb-6 md:mb-8 leading-relaxed ${card.id % 2 === 0 ? 'text-[#FEF9D0]' : 'text-[#2F5B44]'}`}>
                                 {description}
                             </p>
                         ))
