@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import SpeceficBlogs from './pages/SpeceficBlogs';
 import TestCircleSwiper from './components/testCircleSwiper';
 import EcommerceDesign from './pages/EcommerceDesign';
+import CustomWebDesignServices from './pages/CustomWebDesignServices';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
              <Route path="/ecommerce-design" element={<EcommerceDesign />} />
              <Route path="/swiper" element={<swiper />} /> 
              <Route path="/TestCircleSwiper" element={<TestCircleSwiper />} />
+             <Route path="/CustomWebDesignServices" element={<CustomWebDesignServices />} />
            
            
           </Routes>

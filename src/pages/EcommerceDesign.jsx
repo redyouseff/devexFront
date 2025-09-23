@@ -2,9 +2,6 @@
 import { useEffect, useState } from 'react';
 import Navbar from "../components/Navbar";
 import backgroundlogo from "/images/EcommerceDesign/Mask group.svg";
-import secondsectionImage1 from "/images/EcommerceDesign/mobile app mockup 1 1.svg";
-import secondsectionImage2 from "/images/EcommerceDesign/mobile app mockup 1 2.svg";
-import secondsectionImage3 from "/images/EcommerceDesign/mobile app mockup 1 3.svg";
 import Cards from '../components/EcommerceDesign/Cards';
 import icon1 from "/images/EcommerceDesign/Group.svg";
 import icon2 from "/images/EcommerceDesign/Vector.svg";
@@ -13,7 +10,10 @@ import icon4 from "/images/EcommerceDesign/Vector4.svg";
 import devexbackground from "/images/EcommerceDesign/DEVEXT.svg";
 import downarrow from "/images/home/Vector1.svg"
 import downarrow2green from "/images/home/arrow Down.svg"
+import image1 from "/images/EcommerceDesign/ecommerce website 1.svg";
+import image2 from "/images/EcommerceDesign/ecommerce website 3 2.svg";
 import { Link } from 'react-router-dom';
+
 
 
 
@@ -47,7 +47,7 @@ const EcommerceDesign = () => {
         setActiveTab(index);
     };
 
-    const images = [secondsectionImage1, secondsectionImage2, secondsectionImage3];
+    const images = [image2, image2, image2, image2];
 
   // Solutions grid data (4 cells)
   const solutionCards = [
@@ -99,26 +99,30 @@ const EcommerceDesign = () => {
         <>
         <Navbar />
         <div>
-            <section
-                className="relative w-full min-h-[60vh] md:min-h-[80vh] lg:min-h-[80vh] sm:min-h-[42.1875rem] xl:min-h-[42.1875rem] bg-[#2F5B44] flex items-center justify-center text-[#FEF9D0] overflow-hidden"
-            >
-                {/* Background logo: full width, never cropped */}
-                <img
-                    src={backgroundlogo}
-                    alt=""
-                    aria-hidden="true"
-                    className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 h-full w-auto object-contain pointer-events-none sm:inset-0 sm:w-full sm:h-full sm:left-0 sm:translate-x-0 object-left"
-                />
-                <div className="relative z-10 px-4 lg:mt-[20rem]  sm:px-6 lg:px-8 text-center py-16 sm:py-20 md:py-24 max-w-5xl mx-auto">
-                    <h1 className="text-[#FEF9D0] text-center font-inter not-italic font-semibold leading-tight text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[40px] mb-4">
-                        eCommerce Development Services  
-                    </h1>   
-                    <p className="mt-2 text-[#FEF9D0] text-center font-inter not-italic font-normal leading-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[24px] max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto px-2 sm:px-4">
-                        Providing end-to-end eCommerce design and development services, we help to
-                        build and grow your eCommerce website across platforms.
-                    </p>
-                </div>
-            </section>
+        <Navbar />
+
+<section
+        className="relative w-full min-h-[60vh] md:min-h-[80vh] lg:min-h-[80vh] sm:min-h-[42.1875rem] xl:min-h-[42.1875rem] bg-[#2F5B44] flex items-center justify-center text-[#FEF9D0] overflow-hidden"
+    >
+        {/* Background logo: full width, never cropped */}
+        <img
+            src={backgroundlogo}
+            alt=""
+            aria-hidden="true"
+            className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 h-full w-auto object-contain pointer-events-none sm:inset-0 sm:w-full sm:h-full sm:left-0 sm:translate-x-0 object-left"
+        />
+
+        <div className=" container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2  mt-[7rem] sm:mt-[10rem]">
+            <div className="col-span-1 flex flex-col  justify-center ">  
+                <h6 className="text-[#FEF9D0] font-inter text-[40px] not-italic font-semibold leading-normal">eCommerce Development Services</h6>
+                <p className="text-[#FEF9D0] font-inter text-[24px] not-italic font-normal leading-normal"> Providing end-to-end eCommerce design and development services, we help to build and grow your eCommerce website across platforms.</p>
+            </div>
+            <div className="col-span-1 flex items-center  lg:justify-end justify-center ">  
+                <img src={image1} alt="" />
+            </div>
+        </div>
+       
+    </section>
 
             {/* second section */}
             
@@ -176,7 +180,7 @@ const EcommerceDesign = () => {
                         {/* Image */}
                         <div className="lg:col-span-1 flex justify-center lg:justify-end">   
                             <AnimatedImage
-                                key={`${activeTab}-${direction}`}
+                                key={`${activeTab}-${direction}`} 
                                 src={images[activeTab]}
                                 alt="eCommerce mobile mockups"
                                 direction={direction}

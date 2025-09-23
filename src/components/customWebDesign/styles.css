@@ -1,0 +1,68 @@
+/* Custom timeline-style pagination for Swiper */
+
+.mySwiper .swiper-pagination {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-bottom: 1rem;
+    height: 20px; /* provides space for bullets over the line */
+    display: flex;
+    align-items: center;
+    
+    justify-content: space-between;
+    padding: 0 12px; /* keep line inset so endpoints align with bullet centers */
+    /* Progress width controlled from JS via --progress */
+    --progress: 0%;
+  }
+  
+  /* Base line (light) */
+  .mySwiper .swiper-pagination::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    top: 50%;
+    height: 2px;
+    background: #e5e7eb; /* light gray */
+    transform: translateY(-50%);
+  }
+  
+  /* Filled line (blue) up to current bullet */
+  .mySwiper .swiper-pagination::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    height: 2px;
+    width: var(--progress);
+    background: #2563eb; /* blue-600 */
+    transform: translateY(-50%);
+    transition: width 400ms ease;
+  }
+  
+  /* Bullets as nodes on the line */
+  .mySwiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background: #fef9d0; /* light node color */
+    opacity: 1; /* override Swiper default */
+    margin: 0 !important; /* we space via flex between */
+    z-index: 1; /* above the line */
+    box-shadow: 0 0 0 2px #fef9d0 inset; /* keep node visible on dark backgrounds */
+  }
+  
+  /* Current step */
+  .mySwiper .swiper-pagination-bullet-active {
+    background: #2563eb; /* blue node for active */
+    box-shadow: 0 0 0 2px #2563eb inset;
+  }
+  
+  /* Completed steps */
+  .mySwiper .swiper-pagination-bullet.is-complete {
+    background: #2563eb;
+    box-shadow: 0 0 0 2px #2563eb inset;
+  }
+  
+  
+  
