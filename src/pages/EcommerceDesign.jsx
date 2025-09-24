@@ -99,30 +99,32 @@ const EcommerceDesign = () => {
         <>
         <Navbar />
         <div>
-        <Navbar />
+     
 
-<section
-        className="relative w-full min-h-[60vh] md:min-h-[80vh] lg:min-h-[80vh] sm:min-h-[42.1875rem] xl:min-h-[42.1875rem] bg-[#2F5B44] flex items-center justify-center text-[#FEF9D0] overflow-hidden"
-    >
-        {/* Background logo: full width, never cropped */}
-        <img
-            src={backgroundlogo}
-            alt=""
-            aria-hidden="true"
-            className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 h-full w-auto object-contain pointer-events-none sm:inset-0 sm:w-full sm:h-full sm:left-0 sm:translate-x-0 object-left"
-        />
 
-        <div className="  container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2  mt-[7rem] sm:mt-[10rem] px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-            <div className="col-span-1 flex flex-col  justify-center ">  
-                <h6 className="text-[#FEF9D0] font-inter text-[40px] not-italic font-semibold leading-normal">eCommerce Development Services</h6>
-                <p className="text-[#FEF9D0] font-inter text-[24px] not-italic font-normal leading-normal"> Providing end-to-end eCommerce design and development services, we help to build and grow your eCommerce website across platforms.</p>
-            </div>
-            <div className="col-span-1 flex items-center  lg:justify-end justify-center ">  
-                <img src={image1} alt="" />
-            </div>
-        </div>
-       
-    </section>
+    
+    <section
+                className="relative w-full min-h-[60vh] md:min-h-[80vh] lg:min-h-[80vh] sm:min-h-[42.1875rem] xl:min-h-[42.1875rem] bg-[#2F5B44] flex items-center justify-center text-[#FEF9D0] overflow-hidden"
+            >
+                {/* Background logo: full width, never cropped */}
+                <img
+                    src={backgroundlogo}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 h-full w-auto object-contain pointer-events-none sm:inset-0 sm:w-full sm:h-full sm:left-0 sm:translate-x-0 object-left"
+                />
+
+                <div className=" container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2  mt-[7rem] sm:mt-[10rem] px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+                    <div className="col-span-1 flex flex-col  justify-center ">  
+                        <h6 className="text-[#FEF9D0] font-inter text-[40px] not-italic font-semibold leading-normal">eCommerce Development Services</h6>
+                        <p className="text-[#FEF9D0] font-inter text-[24px] not-italic font-normal leading-normal">  Providing end-to-end eCommerce design and development services, we help to build and grow your eCommerce website across platforms.</p>
+                    </div>
+                    <div className="col-span-1 flex items-center  lg:justify-end justify-center ">  
+                        <img src={image1} alt="" />
+                    </div>
+                </div>
+               
+            </section>
 
             {/* second section */}
             
