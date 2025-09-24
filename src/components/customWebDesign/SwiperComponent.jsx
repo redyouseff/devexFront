@@ -171,11 +171,14 @@ const SwiperComponent =()=>{
               <div className='flex flex-col justify-between h-full gap-4 mx-auto max-w-[95%] px-4 sm:px-6 lg:px-8 py-12 md:py-16'>
     
                 <img src={item.image} alt="image1" className='w-[100px] h-[100px]' />
-                <div className="max-h-[60vh] overflow-y-auto min-h-[52vh]">
+                <div className=' overflow-y-auto lg:max-h-[66vh]  lg:min-h-[26rem] md:min-h-[63vh]'>
                 <h1 className=" font-inter text-[36px] not-italic font-medium leading-normal uppercase">{item.title}</h1>
                 <p>{item.description}</p>
-                <div  >
+                <div >
                   <h1 className=" font-inter text-[20px] not-italic font-normal leading-normal">{item.listTitle}</h1>
+
+                </div>
+              
                    <ul className=" list-disc list-inside ml-7">
 
                     {
@@ -191,29 +194,12 @@ const SwiperComponent =()=>{
                   
 
                 </div>
-                </div>
-               
+
                 {
-                  item.id==1? (<img src={item.vector} alt="Vector1" className={`w-[100px] h-[100px] mt-[1rem] transform ${item.vector !== Vector2 ? 'translate-y-4 md:translate-y-6' : 'translate-y-0'}`} /> ):null
-                
-                }
-                {
-                  item.id==2? (<img src={item.vector} alt="Vector1" className={`w-[100px] h-[100px] mt-[1rem] transform ${item.vector !== Vector2 ? 'translate-y-4 md:translate-y-6' : 'translate-y-0'}`} /> ):null
-                }
-                {
-                  item.id==3? (<img src={item.vector} alt="Vector1" className={`w-[100px] h-[100px] mt-4 transform ${item.vector !== Vector2 ? 'translate-y-4 md:translate-y-6' : 'translate-y-0'}`} /> ):null
-                }
-                {
-                  item.id==4? (<img src={item.vector} alt="Vector1" className={`w-[100px] h-[100px] mt-4 transform ${item.vector !== Vector2 ? 'translate-y-4 md:translate-y-6' : 'translate-y-0'}`} /> ):null
-                }
-                {
-                  item.id==5? (<img src={item.vector} alt="Vector1" className={`w-[100px] h-[100px] mt-4 transform ${item.vector !== Vector2 ? 'translate-y-4 md:translate-y-6' : 'translate-y-0'}`} /> ):null
-                }
-                {
-                  item.id==6? (<img src={item.vector} alt="Vector1" className={`w-[100px] h-[100px] mt-4 transform ${item.vector !== Vector2 ? 'translate-y-4 md:translate-y-6' : 'translate-y-0'}`} /> ):null
+                  item.id==2? (<img src={item.vector} alt="Vector1" className={`w-[100px] h-[100px]  md:mt-[2rem] transform ${item.vector !== Vector2 ? 'translate-y-4 md:translate-y-6' : 'translate-y-0'}`} /> )
+                  :(<img src={item.vector} alt="Vector1" className={`w-[100px] h-[100px] mt-4 transform ${item.vector !== Vector2 ? 'translate-y-4 md:translate-y-6' : 'translate-y-0'}`} /> )
                 }
                 
-               
     
               </div>
     

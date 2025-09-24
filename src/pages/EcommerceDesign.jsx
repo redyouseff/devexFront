@@ -112,7 +112,7 @@ const EcommerceDesign = () => {
             className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 h-full w-auto object-contain pointer-events-none sm:inset-0 sm:w-full sm:h-full sm:left-0 sm:translate-x-0 object-left"
         />
 
-        <div className=" container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2  mt-[7rem] sm:mt-[10rem]">
+        <div className="  container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2  mt-[7rem] sm:mt-[10rem] px-4 sm:px-6 lg:px-8 py-12 md:py-16">
             <div className="col-span-1 flex flex-col  justify-center ">  
                 <h6 className="text-[#FEF9D0] font-inter text-[40px] not-italic font-semibold leading-normal">eCommerce Development Services</h6>
                 <p className="text-[#FEF9D0] font-inter text-[24px] not-italic font-normal leading-normal"> Providing end-to-end eCommerce design and development services, we help to build and grow your eCommerce website across platforms.</p>
@@ -131,7 +131,7 @@ const EcommerceDesign = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12 items-center">
                         {/* Text content */}
                         <div className="lg:col-span-2">
-                            <h2 onClick={() => handleSelect(0)} className="font-inner leading-tight text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] cursor-pointer">
+                            <h2 onClick={() => handleSelect(0)} className="mt-10 font-semibold text-2xl sm:text-3xl cursor-pointer font-inter">
                                 eCommerce Web Design
                             </h2>
                             {activeTab === 0 && (
@@ -255,23 +255,23 @@ const EcommerceDesign = () => {
             {/* fifth section */}
             <section>
                    {/* CTA banner */}
-                   <div className='relative w-full h-full overflow-hidden  bg-[#FEF9D0]   '>
+                   <div className='relative w-full min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] overflow-hidden bg-[#FEF9D0] flex items-center justify-center   '>
                     <img
                       src={devexbackground}
                       alt=""
                       aria-hidden="true"
-                      className="absolute inset-0 w-[140%] md:w-full h-full object-contain  pointer-events-none"
+                      className="absolute inset-0 w-full h-full object-contain pointer-events-none"
                     />
-                    <div className='relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 text-center'>
-                      <h3 className='text-[#2F5B44] mb-3 tracking-wider font-inter font-semibold leading-loose text-xl sm:text-2xl md:text-3xl lg:text-4xl '>
+                    <div className='relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 text-center '>
+                      <h3 className='text-[#2F5B44] text-center font-inter text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-medium uppercase leading-normal'>
                         SPEAK WITH OUR RELIABLE        
                       </h3>
-                      <h3 className='text-[#2F5B44] font-inter tracking-wider  font-semibold leading-loose text-xl sm:text-2xl md:text-3xl lg:text-4xl '>
-                      ECOMMERCE DEVELOPMENT EXPERTS        
+                      <h3 className='text-[#2F5B44] text-center font-inter text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-medium uppercase leading-normal whitespace-nowrap '>
+                      ECOMMERCE DEVELOPMENT EXPERTS  
                       </h3>
-                      <Link 
+                      <Link        
                     to="/services"
-                    className="inline-flex items-right font-inter  mt-10 border-2 border-[#2F5B44] text-[#2F5B44] px-6 py-3 rounded-full hover:bg-[#2F5B44] hover:text-[#E9F2CD] transition-colors font-medium text-[16px] group"
+                    className="inline-flex items-right font-inter  mt-10 border-2 border-[#2F5B44] text-[#2F5B44] px-6 py-3 rounded-full hover:bg-[#2F5B44] hover:text-[#E9F2CD] transition-colors font-bold text-[16px] group"
                   >
                     Explore Web Design Services
                     <span className="relative w-4 h-4 ml-4 mt-1 inline-block ">
@@ -283,13 +283,7 @@ const EcommerceDesign = () => {
                 
                   </div>
             </section>
-            <p className='bg-[#FEF9D0] text-[#FEF9D0]'>
-                .
-            </p>
 
-            <p className='bg-[#FEF9D0] text-[#FEF9D0]'>
-                .
-            </p>
 
                             
 

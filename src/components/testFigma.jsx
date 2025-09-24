@@ -10,8 +10,8 @@ const TestFigma = () => {
     <div className="relative w-full min-h-[42.158rem] flex flex-col md:flex-row items-center justify-center px-4">
 
       {/* Left far card */}
-      <div className="hidden md:flex absolute left-[12%] top-[44%] rotate-[-50deg] z-0 flex-col justify-center items-start w-[17rem] h-[22rem] px-[1.6875rem] py-[2.3125rem] gap-[4.25rem] shrink-0 rounded-[2.5rem] bg-[#FEF9D0] shadow-[-0.125rem_0.375rem_0.25rem_0_rgba(0,0,0,0.25)]">
-        {/* <p className="text-[#FEF9D0] text-center font-inter text-[1.25rem] not-italic font-normal leading-normal self-stretch">
+      <div className="hidden md:flex absolute left-[12%] top-[32%] rotate-[-24deg] z-0 flex-col justify-center items-start w-[17rem] h-[24rem] px-[1.6875rem] py-[2.3125rem] gap-[4.25rem] shrink-0 rounded-[2.5rem] bg-[#FEF9D0] shadow-[-0.125rem_0.375rem_0.25rem_0_rgba(0,0,0,0.25)]">
+        <p className="text-[#FEF9D0] text-center font-inter text-[1.25rem] not-italic font-normal leading-normal self-stretch">
           DEVEXT transformed our website into a modern, user-friendly platform that truly reflects our brand. Their team went the extra mile to ensure everything was perfectly tailored to our needs.
         </p>
         <div className="flex items-end gap-[0.625rem]">
@@ -22,12 +22,12 @@ const TestFigma = () => {
             </p>
             <img src={location} alt="logo" className="w-[1rem] h-[1.25rem]" />
           </div>
-        </div> */}
+        </div>
       </div>
 
       {/* Left near card */}
-      <div className="hidden md:flex absolute left-[24%] top-[29%] rotate-[-22deg] z-10 flex-col justify-center items-start w-[17rem] h-[24rem] px-[3rem] py-[2.3125rem] gap-[5rem] shrink-0 rounded-[2.5rem] bg-[#FEF9D0] shadow-[0.125rem_0.3125rem_0.25rem_0_rgba(0,0,0,0.25)]">
-        {/* <p className="text-[#FEF9D0] text-center font-inter text-[1.25rem] not-italic font-normal leading-normal self-stretch">
+      <div className="hidden md:flex absolute left-[24%] top-[26%] rotate-[-12deg] z-10 flex-col justify-center items-start w-[17rem] h-[24rem] px-[1.6875rem] py-[2.3125rem] gap-[4.25rem] shrink-0 rounded-[2.5rem] bg-[#FEF9D0] shadow-[-0.125rem_0.375rem_0.25rem_0_rgba(0,0,0,0.25)]">
+        <p className="text-[#FEF9D0] text-center font-inter text-[1.25rem] not-italic font-normal leading-normal self-stretch">
           DEVEXT transformed our website into a modern, user-friendly platform that truly reflects our brand. Their team went the extra mile to ensure everything was perfectly tailored to our needs.
         </p>
         <div className="flex items-end gap-[0.625rem]">
@@ -38,7 +38,7 @@ const TestFigma = () => {
             </p>
             <img src={location} alt="logo" className="w-[1rem] h-[1.25rem]" />
           </div>
-        </div> */}
+        </div>
       </div>
 
       {/* Center card */}

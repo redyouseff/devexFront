@@ -80,13 +80,13 @@ return(
           </button>
         </div>
 
-        <div className="relative z-10 max-w-sm sm:max-w-md md:max-w-lg text-center md:text-left px-2 sm:px-4">
+        <div className="relative z-10 max-w-sm sm:max-w-md md:max-w-lg text-center md:text-left px-2 sm:px-4 ">
        
           <h2 className="text-[18px] font-inter sm:text-[22px] md:text-[26px] lg:text-[30px] font-medium text-[#FEF9D0] mb-3 sm:mb-4 md:mb-6 leading-tight uppercase">
           eCommerce Development Solutions
           </h2>
           <p className="text-[12px] font-inter  sm:text-[14px] md:text-[15px] lg:text-[16px] font-normal text-[#FEF9D0] mb-4 sm:mb-6 md:mb-8 leading-relaxed">
-          As a recognized eCommerce development agency, Digital Silk offers industry-specific and research-backed solutions that boost engagement, drive organic traffic and increase conversion rates. 
+          As a recognized eCommerce development agency, Digital Silk offers industry-specific and research-backed solutions that boost engagement, drive organic traffic and increase conversion rates. 
           </p>
         </div>
       </div>
@@ -135,19 +135,19 @@ return(
             {cardone.map((card) => (
               <SwiperSlide key={card.id}>
                 <div className={`relative flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-12 font-['Inter'] overflow-hidden h-full w-full min-h-[80vh] sm:min-h-[85vh] md:min-h-[90vh] ${card.id % 2 === 0 ? 'bg-[#2F5B44]' : 'bg-[#FEF9D0]'}`}>
-                  <div className="relative z-10 max-w-sm sm:max-w-md md:max-w-lg text-center md:text-left mx-auto px-2 sm:px-4">
-                    <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-2 sm:gap-3 mb-3 sm:mb-4 md:mb-6">
+                  <div className="relative z-10 max-w-sm sm:max-w-md md:max-w-lg text-center md:text-left mx-auto px-2 sm:px-4 min-w-0 overflow-hidden">
+                    <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-2 sm:gap-3 mb-3 sm:mb-4 md:mb-6  ">
                     
-                      <h3 className={`text-[22px] font-inter sm:text-[24px] md:text-[26px] lg:text-[30px] font-medium leading-tight uppercase ${card.id % 2 === 0 ? 'text-[#FEF9D0]' : 'text-[#2F5B44]'}`}>
+                      <h3 className={`text-[20px] font-inter sm:text-[22px] md:text-[24px] lg:text-[28px] font-medium leading-tight uppercase break-words ${card.id % 2 === 0 ? 'text-[#FEF9D0]' : 'text-[#2F5B44]'}`}>
                         {card.title}
                       </h3>
                     </div>
 
                     {
                         card.description.map((description) => (
-                            <p className={`text-[16px] font-inter sm:text-[16px] md:text-[16px] lg:text-[18px] font-normal mb-4 sm:mb-6 md:mb-8 leading-relaxed ${card.id % 2 === 0 ? 'text-[#FEF9D0]' : 'text-[#2F5B44]'}`}>
+                            <p className={`text-[14px] font-inter sm:text-[15px] md:text-[16px] lg:text-[17px] font-normal mb-3 sm:mb-4 md:mb-5 leading-normal break-words max-w-full ${card.id % 2 === 0 ? 'text-[#FEF9D0]' : 'text-[#2F5B44]'}`}>
                                 {description}
-                            </p>
+                            </p> 
                         ))
                     }
                     
