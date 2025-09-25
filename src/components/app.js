@@ -10,7 +10,7 @@ let prev = document.getElementById('prev');
     let rotateAdd = 360 / countItem;
     
     function nextSlider(){
-        active = active + 1 > countItem - 1 ? 0 : active + 1;
+        active = active + 1 > countItem - 1 ? 0 : active + 1;    
         rotate = rotate + rotateAdd; 
         show();
     }

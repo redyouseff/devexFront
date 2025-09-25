@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 import Navbar from '../components/Navbar';
 import SEO from '../components/SEO';
 import Thirdseciont from '../components/Thirdseciont';
-import cardsShape from "/images/home/Frame 416.svg"
+ 
 
 // Smooth scroll styles
 const smoothScrollStyles = `
@@ -169,6 +169,7 @@ import linkedin from "/images/home/Linkedin.svg"
 import line from "/images/home/Line 1.svg"
 import backgroundsectionseven from "/images/home/Devext Pattern 1 7.png"
 import TestFigma from '../components/testFigma';
+import TestCircleSwiper from '../components/testCircleSwiper';
 
 function Home() {
   const [swiperInstance, setSwiperInstance] = useState(null);
@@ -552,7 +553,7 @@ function Home() {
  
 
                    {/* fifth Section - Customer Testimonials */}
-          <section className="relative py-20 px-6 overflow-hidden" style={{ background: '#FEF9D0' }}>
+          <section className="relative py-20 px-6 overflow-visible" style={{ background: '#FEF9D0' }}>
             {/* Background Pattern */}
             <div className="absolute inset-0">
               <div className="absolute left-0 top-0 w-1/2 h-full flex items-center justify-start opacity-50">
@@ -850,7 +851,7 @@ function Home() {
 
             <div className="container mx-auto max-w-6xl relative z-10">
               {/* Header */}
-              <div className="text-center mb-16">
+              <div className="text-center mb-16 relative z-10">
                 <h2 className="text-[36px] font-bold text-[#2F5B44] mb-4 leading-tight">
                   WHAT OUR CUSTOMERS SAY<br />
                   ABOUT US!
@@ -873,10 +874,29 @@ function Home() {
               </div> */}
 
               {/* Cards fan replaced by a single image shape (full-bleed) */}
-              <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mt-10 -mb-[5rem]">
+
+
+
+
+              {/* <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mt-10 -mb-[5rem]">
                 <img src={cardsShape} alt="Cards Shape" className="w-screen h-auto sm:h-auto min-h-[300px] sm:min-h-[400px] lg:min-h-[500px]" />
-              </div>
+              </div> */}
+
+
+           
+
+
+
+
             </div>
+            
+     
+            <div className="relative z-[9999]  "> 
+              <TestCircleSwiper className="-mb-[5rem]" /> 
+            </div>
+
+         
+
           </section>
 
           {/* eighth Section - Contact Form */}

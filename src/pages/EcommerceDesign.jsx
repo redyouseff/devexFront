@@ -126,11 +126,11 @@ const EcommerceDesign = () => {
                
             </section>
 
-            {/* second section */}
+            {/* second section */}     
             
             <section className="bg-[#FEF9D0] text-[#2F5B44] py-12 sm:py-16 lg:py-24">
                 <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12 items-center">  
                         {/* Text content */}
                         <div className="lg:col-span-2">
                             <h2 onClick={() => handleSelect(0)} className="mt-10 font-semibold text-2xl sm:text-3xl cursor-pointer font-inter">
