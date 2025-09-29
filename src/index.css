@@ -8,6 +8,8 @@
 html, body {
   direction: ltr !important;
   text-align: left !important;
+  background-color: #2F5B44; /* match brand to avoid blue gaps on iOS */
+  min-height: 100%;
 }
 
 * {
