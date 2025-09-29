@@ -138,22 +138,22 @@ function TestCircleSwiper({ slides = defaultSlides, autoMs = 0, className = '' }
                   <div className="relative md:absolute md:left-1/2 md:-translate-x-1/2 md:top-[-2%] z-20 flex w-[20.625rem] h-[27.125rem] px-[1.5rem] py-[2rem] flex-col justify-between items-start gap-[1.25rem] shrink-0 rounded-[2.5rem] bg-[#2F5B44] shadow-[0.125rem_0.3125rem_0.25rem_0_rgba(0,0,0,0.25)] overflow-hidden">
                     <p className="text-[#FEF9D0] text-center font-inter text-[20px] font-normal leading-normal">
                       {s.title}
-                    </p>
+                    </p>   
                     <div className="flex items-center gap-[0.75rem] self-start mt-auto">
-                      <img src={s.image} alt="logo" className="w-[3rem] h-[3rem] rounded-full" />
+                      <img src={s.image} alt="logo" className="w-[3rem] h-[3rem] rounded-full" />   
                       <div className="flex flex-col items-start">
                         <p className="text-[#FEF9D0] font-inter text-[1.125rem] not-italic font-semibold leading-normal">Joud&Karam</p>
                         <div className="flex items-center gap-[0.375rem] opacity-90">
                           <img src={location} alt="location" className="w-[1rem] h-[1.25rem]" />
-                          <span className="text-[#FEF9D0] text-[0.9375rem]">Dubai</span>
+                          <span className="text-[#FEF9D0] text-[0.9375rem]">Dubai</span>  
                         </div>
                       </div>
-                    </div>
+                    </div>  
                   </div>
-                ) : (
+                ) : (   
                   <div className="relative md:absolute md:left-1/2 md:-translate-x-1/2 md:top-[-2%] z-20 flex w-[20.625rem] h-[27.125rem] px-[1.5rem] py-[2rem] flex-col justify-between items-start gap-[1.25rem] shrink-0 rounded-[2.5rem] bg-[#FEF9D0] shadow-[-2px_6px_4px_0_rgba(0,0,0,0.25)] overflow-hidden">
                     <p className="text-[#2F5B44] text-center font-inter text-[1.125rem] not-italic font-normal leading-[1.8rem] w-full break-words whitespace-normal overflow-hidden text-ellipsis [display:-webkit-box] [-webkit-line-clamp:8] [-webkit-box-orient:vertical]">
-                      {s.title}
+                      {s.title}   
                     </p>
                     <div className="flex items-center gap-[0.75rem] self-start mt-auto">
                       <img src={s.image} alt="logo" className="w-[3rem] h-[3rem] rounded-full" />

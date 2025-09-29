@@ -1,18 +1,26 @@
 
 import { useEffect, useState } from 'react';
 import Navbar from "../components/Navbar";
-import backgroundlogo from "/images/EcommerceDesign/Mask group.svg";
+
+
+// import backgroundlogo from "/images/EcommerceDesign/Mask group.svg";
+
+// import icon1 from "/images/EcommerceDesign/Group.svg";
+// import icon2 from "/images/EcommerceDesign/Vector.svg";
+// import icon3 from "/images/EcommerceDesign/Vector3.svg";
+// import icon4 from "/images/EcommerceDesign/Vector4.svg";
+// import devexbackground from "/images/EcommerceDesign/DEVEXT.svg";
+// import image1 from "/images/EcommerceDesign/ecommerce website 1.svg";
+// import image2 from "/images/EcommerceDesign/ecommerce website 3 2.svg";
+// import downarrow from "/images/home/Vector1.svg"
+// import downarrow2green from "/images/home/arrow Down.svg"
+
+const image2 = "https://res.cloudinary.com/daop3bufa/image/upload/v1759051036/ecommerce_website_3_2_lw4ewc.svg";
+
+
 import Cards from '../components/EcommerceDesign/Cards';
-import icon1 from "/images/EcommerceDesign/Group.svg";
-import icon2 from "/images/EcommerceDesign/Vector.svg";
-import icon3 from "/images/EcommerceDesign/Vector3.svg";
-import icon4 from "/images/EcommerceDesign/Vector4.svg";
-import devexbackground from "/images/EcommerceDesign/DEVEXT.svg";
-import downarrow from "/images/home/Vector1.svg"
-import downarrow2green from "/images/home/arrow Down.svg"
-import image1 from "/images/EcommerceDesign/ecommerce website 1.svg";
-import image2 from "/images/EcommerceDesign/ecommerce website 3 2.svg";
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 
 
@@ -39,6 +47,25 @@ const AnimatedImage = ({ src, alt, direction }) => {
 
 const EcommerceDesign = () => {
  
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "eCommerce Design & Development",
+        "description": "End-to-end eCommerce design and development services across platforms to grow your store.",
+        "url": "https://devext.io/ecommerce-design",
+        "provider": {
+          "@type": "Organization",
+          "name": "Devext"
+        },
+        "serviceType": "eCommerce Development",
+        "areaServed": "Saudi Arabia",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "SAR",
+          "availability": "https://schema.org/InStock"
+        }
+    };
+ 
     const [activeTab, setActiveTab] = useState(0);
     const [direction, setDirection] = useState('down');
 
@@ -53,8 +80,8 @@ const EcommerceDesign = () => {
   const solutionCards = [
     {
       id: 1,
-      image: icon1,
-      title: 'Our eCommerce <br /> Development Services',
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050997/Group_nnkkbr.svg",
+      title: 'Our eCommerce <br /> Development Services',   
       paragraphs: [
         "Our eCommerce development agency tailors its eCommerce solutions by analyzing client needs, current market trends and relevant consumer behavior.",
         "Digital Silk customizes its eCommerce websites with industry‑specific features, including manufacturing, healthcare, education, finance, fashion and retail.",
@@ -64,7 +91,7 @@ const EcommerceDesign = () => {
     },
     {
       id: 2,
-      image: icon2,
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050998/Vector_vvsg3d.svg",
       title: 'Robust Analytics',
       paragraphs: [
         "Our eCommerce development agency’s personalized analytics offer insights into customer preferences, existing sales trends and current website performance.",
@@ -74,7 +101,7 @@ const EcommerceDesign = () => {
     },
     {
       id: 3,
-      image: icon3,
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050999/Vector3_hlmu6l.svg",
       title: 'Customization Options',
       paragraphs: [
         "Digital Silk’s development services use tailored recommendations, targeted promotions and custom interfaces to enhance engagement and target individual customer preferences.",
@@ -84,7 +111,7 @@ const EcommerceDesign = () => {
     },
     {
       id: 4,
-      image: icon4,
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759051001/Vector4_pp94o2.svg",
       title: 'Growth-Oriented Tools',
       paragraphs: [
         "Digital Silk’s growth‑oriented eCommerce development services contribute to the scalability and competitiveness of online stores.",
@@ -97,6 +124,13 @@ const EcommerceDesign = () => {
 
     return(
         <>
+        <SEO 
+          title="eCommerce Development Services - Devext"
+          description="Providing end-to-end eCommerce design and development services to build and grow your eCommerce website across platforms."
+          keywords="ecommerce development, shopify development, woocommerce, ecommerce web design, online store development"
+          canonical="/ecommerce-design"
+          structuredData={structuredData}
+        />
         <Navbar />
         <div>
      
@@ -108,8 +142,8 @@ const EcommerceDesign = () => {
             >
                 {/* Background logo: full width, never cropped */}
                 <img
-                    src={backgroundlogo}
-                    alt=""
+                    src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050998/Mask_group_wlabwd.svg"
+                    alt="hero section background"
                     aria-hidden="true"
                     className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 h-full w-auto object-contain pointer-events-none sm:inset-0 sm:w-full sm:h-full sm:left-0 sm:translate-x-0 object-left"
                 />
@@ -120,7 +154,7 @@ const EcommerceDesign = () => {
                         <p className="text-[#FEF9D0] font-inter text-[24px] not-italic font-normal leading-normal">  Providing end-to-end eCommerce design and development services, we help to build and grow your eCommerce website across platforms.</p>
                     </div>
                     <div className="col-span-1 flex items-center  lg:justify-end justify-center ">  
-                        <img src={image1} alt="" />
+                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051075/ecommerce_website_1_dgzvud.svg" alt="hero section image" />
                     </div>
                 </div>
                
@@ -259,8 +293,8 @@ const EcommerceDesign = () => {
                    {/* CTA banner */}
                    <div className='relative w-full min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] overflow-hidden bg-[#FEF9D0] flex items-center justify-center   '>
                     <img
-                      src={devexbackground}
-                      alt=""
+                      src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050997/DEVEXT_oc3zqv.svg"
+                      alt="devexbackground"
                       aria-hidden="true"
                       className="absolute inset-0 w-full h-full object-contain pointer-events-none"
                     />
@@ -277,8 +311,8 @@ const EcommerceDesign = () => {
                   >
                     Explore Web Design Services
                     <span className="relative w-4 h-4 ml-4 mt-1 inline-block ">
-                      <img src={downarrow2green} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                      <img src={downarrow} alt="arrow up" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                      <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052589/arrow_Down_jlay7a.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                      <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052696/Vector1_yust9l.svg" alt="arrow up" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
                     </span>
                   </Link>
                     </div>

@@ -119,24 +119,15 @@ const smoothScrollStyles = `
   }
 `;
 
-import bacground from "/images/blogs/6ea1bb9e3fb7abc1288b8600edddbfc333ea0e28.jpg";
-import bacgroundSection from "/images/blogs/Devext Pattern 1 3.svg";
-import image1 from "/images/blogs/39fe9b9d1d42d713a96f4061d8de02a0c59fabde.jpg";
-import image2 from "/images/blogs/1cc2cadd3aac660d21d6e6394f98d416cda2ffda.jpg";
-import image3 from "/images/blogs/screencapture-alwidadtaxation-2025-07-11-16_12_43 1.svg";
-import image4 from "/images/blogs/39fe9b9d1d42d713a96f4061d8de02a0c59fabde.jpg";
-import image5 from "/images/blogs/39fe9b9d1d42d713a96f4061d8de02a0c59fabde.jpg";
-import image6 from "/images/blogs/1cc2cadd3aac660d21d6e6394f98d416cda2ffda.jpg";
-import downarrow from "/images/blogs/Vector.svg";
-
-
-
-
-
-
-
-
-
+// import bacground from "/images/blogs/6ea1bb9e3fb7abc1288b8600edddbfc333ea0e28.jpg";
+// import bacgroundSection from "/images/blogs/Devext Pattern 1 3.svg";
+// import image1 from "/images/blogs/39fe9b9d1d42d713a96f4061d8de02a0c59fabde.jpg";
+// import image2 from "/images/blogs/1cc2cadd3aac660d21d6e6394f98d416cda2ffda.jpg";
+// import image3 from "/images/blogs/screencapture-alwidadtaxation-2025-07-11-16_12_43 1.svg";
+// import image4 from "/images/blogs/39fe9b9d1d42d713a96f4061d8de02a0c59fabde.jpg";
+// import image5 from "/images/blogs/39fe9b9d1d42d713a96f4061d8de02a0c59fabde.jpg";
+// import image6 from "/images/blogs/1cc2cadd3aac660d21d6e6394f98d416cda2ffda.jpg";
+// import downarrow from "/images/blogs/Vector.svg";
 
 
 const blogs =()=>{
@@ -166,12 +157,12 @@ const blogs =()=>{
     };
 
     const cards = [
-      { id: 1, image: image1, title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
-      { id: 2, image: image2, title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
-      { id: 3, image: image3, title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
-      { id: 4, image: image4, title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
-      { id: 5, image: image5, title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
-      { id: 6, image: image6, title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
+      { id: 1, image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050848/39fe9b9d1d42d713a96f4061d8de02a0c59fabde_sm65le.jpg", title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
+      { id: 2, image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050834/screencapture-alwidadtaxation-2025-07-11-16_12_43_1_nhcba9.svg", title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
+      { id: 3, image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050834/screencapture-alwidadtaxation-2025-07-11-16_12_43_1_nhcba9.svg", title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
+      { id: 4, image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050848/39fe9b9d1d42d713a96f4061d8de02a0c59fabde_sm65le.jpg", title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
+      { id: 5, image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050848/39fe9b9d1d42d713a96f4061d8de02a0c59fabde_sm65le.jpg", title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
+      { id: 6, image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050834/screencapture-alwidadtaxation-2025-07-11-16_12_43_1_nhcba9.svg", title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
     ];
     return(
         <>
@@ -190,7 +181,7 @@ const blogs =()=>{
              {/* Image Background */}
              <div className="absolute inset-0 w-full h-full overflow-hidden">
                 <img
-                  src={bacground}
+                  src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050898/6ea1bb9e3fb7abc1288b8600edddbfc333ea0e28_argdky.jpg"
                   alt="Background"
                   className="absolute w-full h-full object-cover opacity-30"
                   style={{ 
@@ -225,7 +216,7 @@ const blogs =()=>{
       <section
         className="py-20 bg-[#FEF9D0]"
         style={{
-          backgroundImage: `url(${bacgroundSection})`,
+          backgroundImage: `url(https://res.cloudinary.com/daop3bufa/image/upload/v1759050824/Devext_Pattern_1_3_kdsko3.svg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -244,9 +235,11 @@ const blogs =()=>{
                 </div>
                 <h3 className="text-xl font-bold text-[#FEF9D0] mb-4 text-center">{card.title}</h3>
                 <p className="text-[#FEF9D0] opacity-80 text-sm mb-6 leading-relaxed text-center">{card.description}</p>
-                <button className="w-40% text-center mx-auto border border-[#FEF9D0] text-[#FEF9D0] py-3 px-6 rounded-full font-medium transition-colors flex items-center justify-center">
+                <button className="relative w-40% text-center mx-auto border border-[#FEF9D0] text-[#FEF9D0] py-3 px-6 rounded-full font-medium transition-colors flex items-center justify-center">
                   Read More
-                  <img src={downarrow} alt="" className="w-4 h-4 ml-2" />   
+                 <span className="relative w-4 h-4 ml-2 inline-block">
+
+                 </span>
                 </button>
               </div>   
             ))}

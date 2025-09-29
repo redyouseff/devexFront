@@ -79,20 +79,20 @@ const swiperStyles = `
 `;
 import Navbar from '../components/Navbar';
 
-import uparrow from "/images/home/Vector.svg"
-import logo2  from "/images/about/Devext Pattern 1 2.svg"
-import image1 from "/images/services/314320 1 1.svg";
-import image2 from "/images/services/314320 1 2.svg";
-import image3 from "/images/services/314320 1 3.svg";
-import image5 from "/images/services/314320 1 5.svg";
-import card1 from "/images/services/screencapture-alwidadtaxation-2025-07-11-16_12_43 1.svg";
-import card2 from "/images/services/screencapture-alwidadtaxation-2025-07-11-16_12_43 2.svg";
-import card3 from "/images/services/screencapture-alwidadtaxation-2025-07-11-16_12_43 3.svg";
-import card4 from "/images/services/screencapture-alwidadtaxation-2025-07-11-16_12_43 4.svg";
-import firstsectionarrow from "/images/services/Vector.svg";
-import leftarrow from "/images/services/Frame 18.svg";
-import rightarrow from "/images/services/Frame 17.png";
-import icon2 from "/images/home/Vector2.png"
+// import uparrow from "/images/home/Vector.svg"
+// import logo2  from "/images/about/Devext Pattern 1 2.svg"
+// import image1 from "/images/services/314320 1 1.svg";
+// import image2 from "/images/services/314320 1 2.svg";
+// import image3 from "/images/services/314320 1 3.svg";
+// import image5 from "/images/services/314320 1 5.svg";
+// import card1 from "/images/services/screencapture-alwidadtaxation-2025-07-11-16_12_43 1.svg";
+// import card2 from "/images/services/screencapture-alwidadtaxation-2025-07-11-16_12_43 2.svg";
+// import card3 from "/images/services/screencapture-alwidadtaxation-2025-07-11-16_12_43 3.svg";
+// import card4 from "/images/services/screencapture-alwidadtaxation-2025-07-11-16_12_43 4.svg";
+// import firstsectionarrow from "/images/services/Vector.svg";
+// import leftarrow from "/images/services/Frame 18.svg";
+// import rightarrow from "/images/services/Frame 17.png";
+// import icon2 from "/images/home/Vector2.png"
 
 
 function Services() {
@@ -144,25 +144,25 @@ function Services() {
       id: 1,
       type: 'image',
       title: 'What Tech Company Executives Expect From Branding In 2026  ',
-      image: card1
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759051224/screencapture-alwidadtaxation-2025-07-11-16_12_43_4_el2rkm.svg"
     },
     {
       id: 2,
       type: 'image',
       title: 'What Tech Company Executives Expect From Branding In 2026 ',
-      image: card2
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759051225/screencapture-alwidadtaxation-2025-07-11-16_12_43_2_yujmhb.svg"
     },
     {
       id: 3,
       type: 'image',
       title: 'What Tech Company Executives Expect From Branding In 2026  ',
-      image: card3
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759051250/screencapture-alwidadtaxation-2025-07-11-16_12_43_3_lzfl2b.svg"
     },
     {
       id: 4,
       type: 'image',
       title: 'What Tech Company Executives Expect From Branding In 2026  ',
-      image: card4
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759051224/screencapture-alwidadtaxation-2025-07-11-16_12_43_4_el2rkm.svg"
     },
   
    
@@ -242,8 +242,8 @@ function Services() {
               >
                 Speak With Our Experts
                 <span className="relative w-4 h-4 ml-2 inline-block">
-                  <img src={uparrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                  <img src={icon2} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector1_ok0wi0.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector_mzxonf.svg" alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
                 </span>
               </a>
             </div>
@@ -269,7 +269,7 @@ function Services() {
               {/* Background Pattern */}
               <div className="absolute -left-90 top-0 w-full h-full flex items-center justify-start opacity-15">
                 <img 
-                  src={logo2} 
+                  src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052604/Devext_Pattern_1_1_p20awb.svg"
                   alt="Background Pattern" 
                   className="w-auto h-full object-contain object-left"
                   style={{ 
@@ -317,8 +317,8 @@ function Services() {
                   >
                     Explore Web Design Services
                     <span className="relative w-4 h-4 ml-4 mt-1 inline-block">
-                      <img src={firstsectionarrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                      <img src={uparrow} alt="arrow up" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                      <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector_mzxonf.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                      <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector1_ok0wi0.svg" alt="arrow up" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
                     </span>
                   </Link>
                 </div>
@@ -328,7 +328,7 @@ function Services() {
             {/* Right Content */}
             <div className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden">
               <img 
-                src={image1} 
+                src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051183/314320_1_1_vrvgom.svg" 
                 alt="Services Image" 
                 className="w-full h-full object-cover"
               />
@@ -353,7 +353,7 @@ function Services() {
             {/* Left Content */}
             <div className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden order-2 md:order-1">
               <img 
-                src={image2} 
+                src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051258/314320_1_2_ccfmxr.svg"
                 alt="Services Image" 
                 className="w-full h-full object-cover"
               />
@@ -399,8 +399,8 @@ function Services() {
                   >
                     Explore App Developing Services
                     <span className="relative w-4 h-4 ml-2 inline-block">
-                      <img src={uparrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                      <img src={icon2} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                      <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector1_ok0wi0.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                      <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector_mzxonf.svg" alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
                     </span>
                   </Link>
                 </div>
@@ -429,7 +429,7 @@ function Services() {
                {/* Background Pattern */}
                <div className="absolute -left-90 top-0 w-full h-full flex items-center justify-start opacity-15">
                  <img 
-                   src={logo2} 
+                   src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052604/Devext_Pattern_1_1_p20awb.svg"
                    alt="Background Pattern" 
                    className="w-auto h-full object-contain object-left"
                    style={{ 
@@ -478,8 +478,8 @@ function Services() {
                    >
                      Explore Ecommerce Services
                      <span className="relative w-4 h-4 ml-2 inline-block">
-                       <img src={firstsectionarrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                       <img src={uparrow} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                       <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052699/Vector2_tcuogh.png" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                       <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
                      </span>
                    </Link>
                  </div>
@@ -489,7 +489,7 @@ function Services() {
              {/* Right Content */}
              <div className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden">
                <img 
-                 src={image3} 
+                 src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051259/314320_1_3_y4cot9.svg"
                  alt="Services Image" 
                  className="w-full h-full object-cover"
                />
@@ -515,7 +515,7 @@ function Services() {
             {/* Left Content */}
             <div className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden order-2 md:order-1">
               <img 
-                src={image2} 
+                src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051258/314320_1_2_ccfmxr.svg"
                 alt="Services Image" 
                 className="w-full h-full object-cover"
               />
@@ -561,8 +561,8 @@ function Services() {
                   >
                     Explore App Developing Services
                     <span className="relative w-4 h-4 ml-2 inline-block">
-                      <img src={uparrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                      <img src={icon2} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                      <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector1_ok0wi0.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                      <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector_mzxonf.svg" alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
                     </span>
                   </Link>
                 </div>
@@ -590,7 +590,7 @@ function Services() {
                {/* Background Pattern */}
                <div className="absolute -left-90 top-0 w-full h-full flex items-center justify-start opacity-15">
                  <img 
-                   src={logo2} 
+                   src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052604/Devext_Pattern_1_1_p20awb.svg"
                    alt="Background Pattern" 
                    className="w-auto h-full object-contain object-left"
                    style={{ 
@@ -639,8 +639,8 @@ function Services() {
                    >
                      Explore Digital & Branding Services
                      <span className="relative w-4 h-4 ml-2 inline-block">
-                       <img src={firstsectionarrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                       <img src={uparrow} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                       <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector_mzxonf.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                       <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector1_ok0wi0.svg" alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
                      </span>
                    </Link>
                  </div>
@@ -650,7 +650,7 @@ function Services() {
              {/* Right Content */}
              <div className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden">
                <img 
-                 src={image5} 
+                 src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051259/314320_1_3_y4cot9.svg" 
                  alt="Services Image" 
                  className="w-full h-full object-cover"
                />
@@ -675,10 +675,10 @@ function Services() {
               {/* Navigation Arrows */}
               <div className="flex items-center justify-start gap-4 mt-8">
                 <button onClick={prevSlide} className="hover:opacity-70 transition-opacity">
-                  <img src={leftarrow} alt="Previous" className="w-10 h-10" />
+                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051175/Frame_18_lnvz5x.svg" alt="Previous" className="w-10 h-10" />
                 </button>
                 <button onClick={nextSlide} className="hover:opacity-70 transition-opacity">
-                  <img src={rightarrow} alt="Next" className="w-10 h-10" />
+                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051175/Frame_17_z4rjlz.png" alt="Next" className="w-10 h-10" />
                 </button>
               </div>
             </div>

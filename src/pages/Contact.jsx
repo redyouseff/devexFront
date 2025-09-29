@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import SEO from '../components/SEO';
 
-import downarrow from "/images/home/Vector1.svg"
-import whatsapp from "/images/home/WhatsApp.svg"
-import instagram from "/images/home/Instagram.svg"
-import linkedin from "/images/home/Linkedin.svg"
-import name from "/images/home/name.svg"
-import email from "/images/home/email.svg"
-import phone from "/images/home/phone.svg"
-import message from "/images/home/message.svg"
+// import downarrow from "/images/home/Vector1.svg"
+// import whatsapp from "/images/home/WhatsApp.svg"
+// import instagram from "/images/home/Instagram.svg"
+// import linkedin from "/images/home/Linkedin.svg"
+// import name from "/images/home/name.svg"
+// import email from "/images/home/email.svg"
+// import phone from "/images/home/phone.svg"
+// import message from "/images/home/message.svg"
 import { useState } from 'react';
 
 function Contact() {
@@ -124,7 +124,7 @@ function Contact() {
         {/* Name Field */}
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
-            <img src={name} alt="name icon" className="w-5 h-5" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052653/name_x24mhl.svg" alt="name icon" className="w-5 h-5" />
             <label className="text-[#FEF9D0] text-sm font-medium">NAME *</label>
           </div>
           <input
@@ -139,7 +139,7 @@ function Contact() {
         {/* Company Name Field */}
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
-            <img src={name} alt="company icon" className="w-5 h-5" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052599/Company_Name_jsmiuk.svg" alt="company icon" className="w-5 h-5" />
             <label className="text-[#FEF9D0] text-sm font-medium">COMPANY NAME *</label>
           </div>
           <input
@@ -154,7 +154,7 @@ function Contact() {
         {/* Email Field */}
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
-            <img src={email} alt="email icon" className="w-5 h-5" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052639/email_oc0uix.svg" alt="email icon" className="w-5 h-5" />
             <label className="text-[#FEF9D0] text-sm font-medium">EMAIL *</label>
           </div>
           <input
@@ -169,7 +169,7 @@ function Contact() {
         {/* Phone Field */}
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
-            <img src={phone} alt="phone icon" className="w-5 h-5" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052655/phone_i9bnxz.svg" alt="phone icon" className="w-5 h-5" />
             <label className="text-[#FEF9D0] text-sm font-medium">PHONE *</label>
           </div>
           <input
@@ -184,7 +184,7 @@ function Contact() {
         {/* Message Field */}
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
-            <img src={message} alt="message icon" className="w-5 h-5" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052653/message_hiaunj.svg" alt="message icon" className="w-5 h-5" />
             <label className="text-[#FEF9D0] text-sm font-medium">YOUR MESSAGE*</label>
           </div>
           <textarea
@@ -198,16 +198,17 @@ function Contact() {
 
         {/* Submit Button */}
         <div className="flex justify-end pt-6">
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="inline-flex items-center bg-transparent text-[#FEF9D0] px-8 py-3 rounded-full font-medium text-[16px] hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-all duration-300 transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed"
-            style={{ border: '2px solid #FEF9D0' }}
-          >
-            {isSubmitting ? 'Sending...' : 'Submit'}
-            <img src={downarrow} alt="arrow" className="w-4 h-4 ml-2" />
-          </button>
-        </div>
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="inline-flex items-center bg-transparent text-[#FEF9D0] px-8 py-3 rounded-full font-medium text-[16px] hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-all duration-300 transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed group"
+                        style={{ border: '2px solid #FEF9D0' }}
+                      >
+                        {isSubmitting ? 'Sending...' : 'Submit'}
+                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052696/Vector1_yust9l.svg" alt="arrow" className="w-4 h-4 ml-2 transition-all duration-300 group-hover:hidden" />
+                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052589/arrow_Down_jlay7a.svg" alt="arrow" className="w-4 h-4 ml-2 transition-all duration-300 hidden group-hover:block" />
+                      </button>
+                    </div>
         {(submitMessage || submitError) && (
           <div className={`mt-4 text-sm ${submitError ? 'text-red-300' : 'text-[#FEF9D0]'}`}>
             {submitError || submitMessage}
@@ -250,13 +251,13 @@ function Contact() {
         <p className="text-[#FEF9D0] text-[16px] sm:text-[18px] font-semibold mb-2">FOLLOW US</p>
         <div className="flex items-center gap-4 mb-2 ">
           <a href="#" className="hover:opacity-70 transition-opacity" aria-label="WhatsApp">
-            <img src={whatsapp} alt="WhatsApp" className="w-5 h-5 sm:w-6 sm:h-6" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052727/WhatsApp_udvzpw.svg" alt="WhatsApp" className="w-5 h-5 sm:w-6 sm:h-6" />
           </a>
           <a href="#" className="hover:opacity-70 transition-opacity" aria-label="Instagram">
-            <img src={instagram} alt="Instagram" className="w-5 h-5 sm:w-6 sm:h-6" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052651/Instagram_kkvsnz.svg" alt="Instagram" className="w-5 h-5 sm:w-6 sm:h-6" />
           </a>
           <a href="#" className="hover:opacity-70 transition-opacity" aria-label="LinkedIn">
-            <img src={linkedin} alt="LinkedIn" className="w-5 h-5 sm:w-6 sm:h-6" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052651/Linkedin_sqzkyo.svg" alt="LinkedIn" className="w-5 h-5 sm:w-6 sm:h-6" />
           </a>
         </div>
       </div>

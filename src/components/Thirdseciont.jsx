@@ -5,18 +5,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import card2 from "/images/home/Responsive Web.svg"
-import card3 from "/images/home/Group3.svg"
-import card4 from "/images/home/Vector4.svg"
-import card5 from "/images/home/Vector5.svg"
-import card6 from "/images/home/Vector6.svg"
-
-import downthird from "/images/home/Frame 16.svg"
-import upthird from "/images/home/Frame 15.svg"
-import rectangle from "/images/home/Rectangle 3.svg"
-import downarrow from "/images/home/Vector1.svg"
 import { Navigation, Pagination } from 'swiper/modules';
-import downarrow2green from "/images/home/arrow Down.svg"
+
 
 const Thirdseciont = () => {
     const [swiperInstance, setSwiperInstance] = useState(null);
@@ -24,38 +14,38 @@ const Thirdseciont = () => {
     
     const cardone =[{
         id:1,
-        icon:rectangle,
+        icon:"https://res.cloudinary.com/daop3bufa/image/upload/v1759052655/Rectangle_3_pw5xkf.svg",
         title:"Custom Web Design", 
         description:"Each website we create is meticulously crafted to deliver a 100% unique online experience tailored to your brand. Our expert designers transform your vision into a dynamic, custom design that enhances your brand’s visibility, boosts engagement, and drives conversions. With us, your website will not only stand out but also connect deeply with your audience. ",
     
       },
       {
         id:2,
-        icon:card2,
+        icon:"https://res.cloudinary.com/daop3bufa/image/upload/v1759052656/Responsive_Web_ndht6f.svg",
         title:"Responsive Web Design", 
         description:"We deliver seamless user experiences across all devices. Our responsive designs adapt flawlessly to any screen size, ensuring that your website not only meets but exceeds user expectations. From planning to design and development, we ensure a consistent, engaging experience for every visitor, no matter how they access your site.",
       },
       {
         id:3,
-        icon:card3,
+        icon:"https://res.cloudinary.com/daop3bufa/image/upload/v1759052648/Group3_xrr3o9.svg",
         title:"Website Redesign", 
         description:"Whether you need a design refresh or a complete website overhaul, we analyze your site’s pain points and opportunities to revitalize your digital presence. Our award-winning web designers will breathe new life into your website, enhancing its functionality, user experience, and aesthetic appeal. The result? A modern, dynamic site that drives increased traffic and bolsters your industry reputation. ",
       },
       {
         id:4,
-        icon:card4,
+        icon:"https://res.cloudinary.com/daop3bufa/image/upload/v1759052699/Vector4_rqfsma.svg",
         title:"UX/UI Web Design", 
         description:"Our award-winning designers use trusted methods and innovative approaches to create engaging visual experiences and seamless user journeys. Whether you’re looking to build a custom UX/UI or redesign your current one, we’ll enhance your visual identity and ensure your website is both aesthetically pleasing and highly functional. ",
       },
       {
         id:5,
-        icon:card5,
+        icon:"https://res.cloudinary.com/daop3bufa/image/upload/v1759052702/Vector5_lugusq.svg",
         title:"SEO", 
         description:"Our award-winning designers use trusted methods and innovative approaches to create engaging visual experiences and seamless user journeys. Whether you’re looking to build a custom UX/UI or redesign your current one, we’ll enhance your visual identity and ensure your website is both aesthetically pleasing and highly functional.",
       },
       {
         id:6,
-        icon:card6,
+        icon:"https://res.cloudinary.com/daop3bufa/image/upload/v1759052704/Vector6_v8nkme.svg",
         title:"eCommerce sOLUTIONS", 
         description:"We specialize in design and development for leading content management systems (CMSs) like Shopify, Magento, and WooCommerce. Our experts can help you build and scale your eCommerce website across platforms, ensuring a seamless and robust online shopping experience for your customers. ",
       },
@@ -85,7 +75,7 @@ return(
             onClick={() => swiperInstance && swiperInstance.slideNext()}
             className="hover:opacity-70 transition-opacity cursor-pointer"
           >
-            <img src={upthird} alt="previous arrow" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052642/Frame_15_ys3rmj.svg" alt="previous arrow" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
           </button>
           
           {/* Next Arrow */}
@@ -93,7 +83,7 @@ return(
             onClick={() => swiperInstance && swiperInstance.slidePrev()}
             className="hover:opacity-70 transition-opacity cursor-pointer"
           >
-            <img src={downthird} alt="next arrow" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052642/Frame_16_jjrwvd.svg" alt="next arrow" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
           </button>
         </div>
 
@@ -119,13 +109,13 @@ return(
             onClick={() => swiperInstance && swiperInstance.slideNext()}
             className="hover:opacity-70 transition-opacity cursor-pointer"
           >
-            <img src={upthird} alt="previous arrow" className="w-8 h-8" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052642/Frame_15_ys3rmj.svg" alt="previous arrow" className="w-8 h-8" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
           </button>
           <button 
             onClick={() => swiperInstance && swiperInstance.slidePrev()}
             className="hover:opacity-70 transition-opacity cursor-pointer"
           >
-            <img src={downthird} alt="next arrow" className="w-8 h-8" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052642/Frame_16_jjrwvd.svg" alt="next arrow" className="w-8 h-8" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
           </button>
         </div>
 
@@ -180,7 +170,7 @@ return(
                       >
                         Learn More
                         <img 
-                          src={hoveredCard === card.id && card.id % 2 === 0 ? downarrow2green : downarrow} 
+                          src={hoveredCard === card.id && card.id % 2 === 0 ? "https://res.cloudinary.com/daop3bufa/image/upload/v1759052589/arrow_Down_jlay7a.svg" : "https://res.cloudinary.com/daop3bufa/image/upload/v1759052696/Vector1_yust9l.svg"} 
                           alt="arrow" 
                           className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 ml-1.5 sm:ml-2" 
                           style={{ 

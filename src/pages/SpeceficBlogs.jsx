@@ -1,14 +1,14 @@
 
 import { Link } from 'react-router-dom';
-import heroImage from "/images/blogs/39fe9b9d1d42d713a96f4061d8de02a0c59fabde.jpg";
-import sideImage1 from "/images/blogs/39fe9b9d1d42d713a96f4061d8de02a0c59fabde.jpg";
-import sideImage2 from "/images/blogs/1cc2cadd3aac660d21d6e6394f98d416cda2ffda.jpg";
+// import heroImage from "/images/blogs/39fe9b9d1d42d713a96f4061d8de02a0c59fabde.jpg";
+// import sideImage1 from "/images/blogs/39fe9b9d1d42d713a96f4061d8de02a0c59fabde.jpg";
+// import sideImage2 from "/images/blogs/1cc2cadd3aac660d21d6e6394f98d416cda2ffda.jpg";
 import Navbar2 from "../components/Navbar2";
 import SEO from "../components/SEO";
-import icon1 from "/images/blogs/Group 1.svg";
-import uparrow from "/images/blogs/Vector4.svg";
-import uparrow2 from "/images/home/Vector.svg";
-import circle from "/images/blogs/Ellipse 9.svg";
+// import icon1 from "/images/blogs/Group 1.svg";
+// import uparrow from "/images/blogs/Vector4.svg";
+// import uparrow2 from "/images/home/Vector.svg";
+// import circle from "/images/blogs/Ellipse 9.svg";
 
 
 
@@ -51,7 +51,7 @@ const SpeceficBlogs = () => {
         structuredData={blogPostStructuredData}
       />
       <div className="min-h-screen bg-[#FEF9D0]">
-        <Navbar2 />
+        <Navbar2 />   
 
       <main className="container mx-auto max-w-[90rem]  px-4 sm:px-6 py-8">
         {/* Title */}
@@ -62,7 +62,7 @@ const SpeceficBlogs = () => {
        
             </div>
             <div className="shrink-0 flex items-center gap-2 mr-[2rem]">                                                              
-            <img src={icon1} alt="Published icon" className="w-4 h-4" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050824/Group_1_lgh8oa.svg" alt="Published icon" className="w-4 h-4" />
             <span className="hidden sm:inline text-[#2F5B44] font-bold">Published on</span>
             <span className="text-[rem] text-[#2F5B44]" >18 Sep. 2025</span>       
           </div>
@@ -79,10 +79,10 @@ const SpeceficBlogs = () => {
 
         {/* Hero image with author pill */}
         <div className="mt-4 rounded-xl overflow-hidden relative">
-          <img src={heroImage} alt="Blog cover" className="w-full h-auto object-cover" />
+          <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050848/39fe9b9d1d42d713a96f4061d8de02a0c59fabde_sm65le.jpg" alt="Blog cover" className="w-full h-auto object-cover" />
           <span className="ml-[2rem] mb-[2rem] absolute bottom-3 left-3 inline-flex items-center gap-2 text-white text-lg">
             Written By
-            <img src={circle} alt="DEVEXT logo" className="w-12 h-12" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050825/Ellipse_9_kvhzov.svg" alt="DEVEXT logo" className="w-12 h-12" />
           </span>
         </div>
 
@@ -99,10 +99,10 @@ const SpeceficBlogs = () => {
           {/* Images side by side */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div className="rounded-xl overflow-hidden">
-              <img src={sideImage1} alt="Analytics dashboard" className="w-full h-full object-cover" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050848/39fe9b9d1d42d713a96f4061d8de02a0c59fabde_sm65le.jpg" alt="Analytics dashboard" className="w-full h-full object-cover" />
             </div>
             <div className="rounded-xl overflow-hidden">
-              <img src={sideImage2} alt="Reports and charts" className="w-full h-full object-cover" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050847/1cc2cadd3aac660d21d6e6394f98d416cda2ffda_a3irmh.jpg" alt="Reports and charts" className="w-full h-full object-cover" />
             </div>
           </div>
           
@@ -129,8 +129,8 @@ const SpeceficBlogs = () => {
           >
             Back To Blogs
             <span className="relative w-4 h-4 ml-2 inline-block">
-              <img src={uparrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-              <img src={uparrow2} alt="arrow hover" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050828/Vector4_gerqlb.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow hover" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
             </span>
           </Link>
         </div>

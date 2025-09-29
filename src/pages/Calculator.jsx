@@ -1,25 +1,26 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import uparrow from "/images/home/Vector.svg"
+
 import Navbar from '../components/Navbar';
 import SEO from '../components/SEO';
 
-import dropdown from "/images/calculator/Vector.svg"
-import line from "/images/calculator/Line 10.svg"
-import lineList from "/images/calculator/Calculatur Line.svg"
-import lineList2 from "/images/calculator/Calculatur Line2.svg"
-import whatsapp from "/images/home/WhatsApp.svg"
-import instagram from "/images/home/Instagram.svg"
-import linkedin from "/images/home/Linkedin.svg"
-import name from "/images/home/name.svg"
-import email from "/images/home/email.svg"
-import phone from "/images/home/phone.svg"
-import message from "/images/home/message.svg"
-import downarrow from "/images/home/Vector1.svg"
-import line2 from "/images/home/Line 1.svg"
-import icon2 from "/images/home/Vector2.png"
-import downarrow2green from "/images/home/arrow Down.svg"
+// import dropdown from "/images/calculator/Vector.svg"
+// import line from "/images/calculator/Line 10.svg"
+// import uparrow from "/images/home/Vector.svg"
+
+// import lineList2 from "/images/calculator/Calculatur Line2.svg"
+// import whatsapp from "/images/home/WhatsApp.svg"
+// import instagram from "/images/home/Instagram.svg"
+// import linkedin from "/images/home/Linkedin.svg"
+// import name from "/images/home/name.svg"
+// import email from "/images/home/email.svg"
+// import phone from "/images/home/phone.svg"
+// import message from "/images/home/message.svg"
+// import downarrow from "/images/home/Vector1.svg"
+// import line2 from "/images/home/Line 1.svg"
+// import icon2 from "/images/home/Vector2.png"
+// import downarrow2green from "/images/home/arrow Down.svg"
 
 // Smooth scroll styles
 const smoothScrollStyles = `
@@ -272,8 +273,8 @@ function Calculator() {
               >
                Speak With Our Experts
                <span className="relative w-4 h-4 ml-4 inline-block">
-                 <img src={uparrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                 <img src={icon2} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                 <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                 <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052699/Vector2_tcuogh.png" alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
                </span>
               </Link>
             </div>
@@ -286,7 +287,7 @@ function Calculator() {
           <div className="container mx-auto max-w-7xl px-4 sm:px-6">
             {/* Line Separator */}
             <div className="flex justify-center my-8 -mb-4">
-              <img src={lineList} alt="Separator" className=" max-w-[80px] h-auto opacity-100" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050912/Calculatur_Line_xehavk.svg" alt="Separator" className=" max-w-[80px] h-auto opacity-100" />
             </div>
 
             {/* Top Form Section */}
@@ -298,7 +299,7 @@ function Calculator() {
                   <div className=" relative w-full bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm">
                     <div className="flex items-center justify-between cursor-pointer" onClick={() => setShowWebsiteTypeDropdown(!showWebsiteTypeDropdown)}>
                       <span>{websiteType}</span>
-                      <img src={dropdown} alt="dropdown" className="w-4 h-4" />
+                      <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759139552/Vector_ybtwt1.svg" alt="dropdown" className="w-4 h-4" />
                     </div>
                     
                     {showWebsiteTypeDropdown && (
@@ -341,7 +342,7 @@ function Calculator() {
                 <div className="relative w-full bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm">
                   <div className="flex items-center justify-between cursor-pointer" onClick={() => setShowPlatformDropdown(!showPlatformDropdown)}>
                     <span>{platform}</span>
-                    <img src={dropdown} alt="dropdown" className="w-4 h-4" />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759139552/Vector_ybtwt1.svg" alt="dropdown" className="w-4 h-4" />
                   </div>
                   
                   {showPlatformDropdown && (
@@ -384,7 +385,7 @@ function Calculator() {
                 <div className="relative w-full bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm">
                   <div className="flex items-center justify-between cursor-pointer" onClick={() => setShowPagesDropdown(!showPagesDropdown)}>
                     <span>{pages}</span>
-                    <img src={dropdown} alt="dropdown" className="w-4 h-4" />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759139552/Vector_ybtwt1.svg" alt="dropdown" className="w-4 h-4" />
                   </div>
                   
                   {showPagesDropdown && (
@@ -416,6 +417,7 @@ function Calculator() {
                       >
                         10 Or More
                       </div>
+                      
                     </div>
                   )}
                 </div>
@@ -433,7 +435,7 @@ function Calculator() {
 
           {/* Separator Line */}
           <div className="flex justify-center my-8">
-            <img src={line} alt="Separator" className="w-full max-w-4xl h-auto opacity-60" />
+            
           </div>
 
           {/* Calculator Features Section - Part 1 */}
@@ -475,7 +477,7 @@ function Calculator() {
 
               {/* Line Separator */}
               <div className="flex justify-center my-4">
-                <img src={line} alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
+                <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050912/Line_10_qn2cpa.svg" alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
               </div>
 
               {/* Onsite Optimization */}
@@ -503,7 +505,7 @@ function Calculator() {
 
               {/* Line Separator */}
               <div className="flex justify-center my-4">
-                <img src={line} alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
+                <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050912/Line_10_qn2cpa.svg" alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
               </div>
 
               {/* Copywriting Page Count */}
@@ -525,7 +527,7 @@ function Calculator() {
                       <div className="bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm w-20 text-center cursor-pointer ml-auto" onClick={() => setShowCopywritingDropdown(!showCopywritingDropdown)}>
                         <div className="flex items-center justify-between">
                           <span>{features.copywriting.count}</span>
-                          <img src={dropdown} alt="dropdown" className="w-4 h-4" />
+                          <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759139552/Vector_ybtwt1.svg" alt="dropdown" className="w-4 h-4" />
                         </div>
                       </div>
                       
@@ -560,7 +562,7 @@ function Calculator() {
 
               {/* Line Separator */}
               <div className="flex justify-center my-4">
-                <img src={line} alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
+                <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050912/Line_10_qn2cpa.svg" alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
               </div>
 
               {/* Multi-Language Feature */}
@@ -585,7 +587,7 @@ function Calculator() {
                       <div className="bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm w-20 text-center cursor-pointer ml-auto" onClick={() => setShowMultiLanguageDropdown(!showMultiLanguageDropdown)}>
                         <div className="flex items-center justify-between">
                           <span>{features.multiLanguage.count}</span>
-                          <img src={dropdown} alt="dropdown" className="w-4 h-4" />
+                          <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759139552/Vector_ybtwt1.svg" alt="dropdown" className="w-4 h-4" />
                         </div>
                       </div>
                       
@@ -620,7 +622,7 @@ function Calculator() {
 
               {/* Line Separator */}
               <div className="flex justify-center my-4">
-                <img src={line} alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
+                <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050912/Line_10_qn2cpa.svg" alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
               </div>
 
               {/* Content Migration */}
@@ -648,7 +650,7 @@ function Calculator() {
 
               {/* Line Separator */}
               <div className="flex justify-center my-4">
-                <img src={line} alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
+                <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050912/Line_10_qn2cpa.svg" alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
               </div>
 
               {/* Motion Graphics */}
@@ -670,7 +672,7 @@ function Calculator() {
                       <div className="bg-transparent border border-[#FEF9D0] rounded-full px-4 py-2 text-[#FEF9D0] text-sm w-20 text-center cursor-pointer ml-auto" onClick={() => setShowMotionGraphicsDropdown(!showMotionGraphicsDropdown)}>
                         <div className="flex items-center justify-between">
                           <span>{features.motionGraphics.count}</span>
-                          <img src={dropdown} alt="dropdown" className="w-4 h-4" />
+                          <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759139552/Vector_ybtwt1.svg" alt="dropdown" className="w-4 h-4" />
                         </div>
                       </div>
                       
@@ -705,7 +707,7 @@ function Calculator() {
 
               {/* Line Separator */}
               <div className="flex justify-center my-4">
-                <img src={line} alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
+                <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050912/Line_10_qn2cpa.svg" alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
               </div>
 
               {/* Basic Search */}
@@ -733,7 +735,7 @@ function Calculator() {
 
               {/* Line Separator */}
               <div className="flex justify-center my-4">
-                <img src={line} alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
+                <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050912/Line_10_qn2cpa.svg" alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
               </div>
 
               {/* Interactive Map */}
@@ -761,7 +763,7 @@ function Calculator() {
 
               {/* Line Separator */}
               <div className="flex justify-center my-4">
-                <img src={line} alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
+                <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050912/Line_10_qn2cpa.svg" alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
               </div>
 
               {/* Events Calendar */}
@@ -789,7 +791,7 @@ function Calculator() {
 
                 {/* Line Separator */}
                 <div className="flex justify-center my-4">
-                <img src={line} alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
+                <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050912/Line_10_qn2cpa.svg" alt="Separator" className="w-full max-w-[100] h-auto opacity-60" />
               </div>
 
               {/* Chat Feature */}
@@ -832,7 +834,7 @@ function Calculator() {
           </div>   
            {/* Line Separator */}   
            <div className="flex justify-center -mt-[1rem]">
-              <img src={lineList2} alt="Separator" className="max-w-[80px] h-auto opacity-100" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050912/Calculatur_Line_xehavk.svg" alt="Separator" className="max-w-[80px] h-auto opacity-100" />
             </div>
         </div>
       </section>
@@ -853,17 +855,17 @@ function Calculator() {
           GROWTH
         </h2>
         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-between mb-6 sm:mb-8 mt-6 sm:mt-10 gap-4 sm:gap-0">
-          <img src={line2} alt="line" className="w-24 sm:w-32 order-1 sm:order-none" />
+          <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052650/Line_1_xq3ukd.svg" alt="line" className="w-24 sm:w-32 order-1 sm:order-none" />
           <span className="text-[#FEF9D0] text-base sm:text-lg font-medium order-2 sm:order-none mr-[4rem]">FOLLOW US</span>
           <div className="flex gap-4 sm:gap-6 order-3 sm:order-none mr-[3rem]">
             <a href="#" className="hover:opacity-70 transition-opacity">
-              <img src={whatsapp} alt="WhatsApp" className="w-5 h-5 sm:w-6 sm:h-6" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052727/WhatsApp_udvzpw.svg" alt="WhatsApp" className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
             <a href="#" className="hover:opacity-70 transition-opacity">
-              <img src={instagram} alt="Instagram" className="w-5 h-5 sm:w-6 sm:h-6" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052651/Instagram_kkvsnz.svg" alt="Instagram" className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
             <a href="#" className="hover:opacity-70 transition-opacity">
-              <img src={linkedin} alt="LinkedIn" className="w-5 h-5 sm:w-6 sm:h-6" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052651/Linkedin_sqzkyo.svg" alt="LinkedIn" className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
           </div>
         </div>
@@ -937,7 +939,7 @@ function Calculator() {
         {/* Name Field */}
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
-            <img src={name} alt="name icon" className="w-5 h-5" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052653/name_x24mhl.svg" alt="name icon" className="w-5 h-5" />
             <label className="text-[#FEF9D0] text-sm font-medium">NAME *</label>
           </div>
           <input
@@ -952,7 +954,7 @@ function Calculator() {
         {/* Company Name Field */}
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
-            <img src={name} alt="company icon" className="w-5 h-5" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052599/Company_Name_jsmiuk.svg" alt="company icon" className="w-5 h-5" />
             <label className="text-[#FEF9D0] text-sm font-medium">COMPANY NAME *</label>
           </div>
           <input
@@ -967,7 +969,7 @@ function Calculator() {
         {/* Email Field */}
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
-            <img src={email} alt="email icon" className="w-5 h-5" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052639/email_oc0uix.svg" alt="email icon" className="w-5 h-5" />
             <label className="text-[#FEF9D0] text-sm font-medium">EMAIL *</label>
           </div>
           <input
@@ -982,7 +984,7 @@ function Calculator() {
         {/* Phone Field */}
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
-            <img src={phone} alt="phone icon" className="w-5 h-5" />
+            <img src='https://res.cloudinary.com/daop3bufa/image/upload/v1759052655/phone_i9bnxz.svg' alt="phone icon" className="w-5 h-5" />
             <label className="text-[#FEF9D0] text-sm font-medium">PHONE *</label>
           </div>
           <input
@@ -997,7 +999,7 @@ function Calculator() {
         {/* Message Field */}
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
-            <img src={message} alt="message icon" className="w-5 h-5" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052653/message_hiaunj.svg" alt="message icon" className="w-5 h-5" />
             <label className="text-[#FEF9D0] text-sm font-medium">YOUR MESSAGE*</label>
           </div>
           <textarea
@@ -1019,8 +1021,8 @@ function Calculator() {
           >
             {isSubmitting ? 'Sending...' : 'Submit'}
             <span className="relative w-4 h-4 ml-2 inline-block">
-              <img src={downarrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-              <img src={downarrow2green} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+              <img src='https://res.cloudinary.com/daop3bufa/image/upload/v1759052696/Vector1_yust9l.svg' alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052589/arrow_Down_jlay7a.svg" alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
             </span>
           </button>
         </div>

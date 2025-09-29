@@ -15,3 +15,5 @@ Allow: /services
 Allow: /blogs
 Allow: /calculator   
 Allow: /contact
+Allow: /ecommerce-design
+Allow: /CustomWebDesignServices

@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
-import logo from "/images/navbar2/Logo_Devext-removebg-preview 1.svg";
+
 // removed old down icons in favor of blogs downarrow
 import { useState, useEffect } from 'react';
-import whatsapp from "/images/navbar/WhatsApp.svg";
-import instagram from "/images/navbar/Instagram.svg";
-import linkedin from "/images/navbar/Linkedin.svg";
-import downarrow from "/images/blogs/Vector2.svg";
-import down from "/images/navbar/Vector.png";
+
+// import logo from "/images/navbar2/Logo_Devext-removebg-preview 1.svg";
+// import whatsapp from "/images/navbar/WhatsApp.svg";
+// import instagram from "/images/navbar/Instagram.svg";
+// import linkedin from "/images/navbar/Linkedin.svg";
+// import downarrow from "/images/blogs/Vector2.svg";
+// import down from "/images/navbar/Vector.png";
 
 function Navbar2() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -112,13 +114,13 @@ function Navbar2() {
               href="https://wa.me/201200064762" 
               className="text-[#2F5B44] hover:text-[#1D3D2D] transition-colors duration-200 flex items-center"
             >
-              <img src={whatsapp} alt="WhatsApp icon" className="w-6 h-6" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051147/WhatsApp_ogp1um.svg" alt="WhatsApp icon" className="w-6 h-6" />
             </a>
             <a href="https://www.instagram.com/devext_co/" className="text-[#2F5B44] hover:text-[#1D3D2D]">
-              <img src={instagram} alt="Instagram icon" className="h-6 w-6" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051144/Instagram_xyjbzn.png" alt="Instagram icon" className="h-6 w-6" />
             </a>
             <a href="https://www.linkedin.com/company/devext/" className="text-[#2F5B44] hover:text-[#1D3D2D]">
-              <img src={linkedin} alt="LinkedIn icon" className="h-6 w-6" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051143/Linkedin_vortfh.svg" alt="LinkedIn icon" className="h-6 w-6" />
             </a>
           </div>
         </div>
@@ -133,7 +135,7 @@ function Navbar2() {
         <div className="flex items-center md:ml-32">
           <Link to="/" className="flex items-center">
             <img 
-              src={logo} 
+              src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051161/Logo_Devext-removebg-preview_1_mktmbg.svg" 
               alt="DEVEXT Logo" 
               className="h-14 w-auto hover:opacity-80 transition-opacity duration-200"
             />
@@ -238,8 +240,8 @@ function Navbar2() {
           >
             Contact Us
             <span className="relative w-4 h-4 ml-2 inline-block">
-              <img src={downarrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-              <img src={down} alt="arrow hover" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052589/arrow_Down_jlay7a.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052696/Vector1_yust9l.svg" alt="arrow hover" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
             </span>
           </Link>
         </div>

@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import logo from "/images/navbar/Logo_Devext-removebg-preview 1.png";
-import down from "/images/navbar/Vector.png";
-import downarrow2green from "/images/home/arrow Down.svg"
 import { useState, useEffect } from 'react';
-import whatsapp from "/images/navbar/WhatsApp.svg";
-import instagram from "/images/navbar/Instagram.svg";
-import linkedin from "/images/navbar/Linkedin.svg";
+// import logo from "/images/navbar/Logo_Devext-removebg-preview 1.png";
+// import down from "/images/navbar/Vector.png";
+// import downarrow2green from "/images/home/arrow Down.svg"
+// import whatsapp from "/images/navbar/WhatsApp.svg";
+// import instagram from "/images/navbar/Instagram.svg";
+// import linkedin from "/images/navbar/Linkedin.svg";
 
 function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -111,13 +111,13 @@ function Navbar() {
               href="https://wa.me/201200064762" 
               className="text-[#2F5B44] hover:text-[#1D3D2D] transition-colors duration-200 flex items-center"
             >
-              <img src={whatsapp} alt="WhatsApp icon" className="w-6 h-6" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051147/WhatsApp_ogp1um.svg" alt="WhatsApp icon" className="w-6 h-6" />
             </a>
             <a href="https://www.instagram.com/devext_co/" className="text-[#2F5B44] hover:text-[#1D3D2D]">
-              <img src={instagram} alt="Instagram icon" className="h-6 w-6" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051144/Instagram_xyjbzn.png" alt="Instagram icon" className="h-6 w-6" />
             </a>
             <a href="https://www.linkedin.com/company/devext/" className="text-[#2F5B44] hover:text-[#1D3D2D]">
-              <img src={linkedin} alt="LinkedIn icon" className="h-6 w-6" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051143/Linkedin_vortfh.svg" alt="LinkedIn icon" className="h-6 w-6" />
             </a>
           </div>
         </div>
@@ -132,7 +132,7 @@ function Navbar() {
         <div className="flex items-center md:ml-32">
           <Link to="/" className="flex items-center">
             <img 
-              src={logo} 
+              src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051145/Logo_Devext-removebg-preview_1_xk94pb.png" 
               alt="DEVEXT Logo" 
               className="h-14 w-auto hover:opacity-80 transition-opacity duration-200"
             />
@@ -237,8 +237,8 @@ function Navbar() {
           >
             Contact Us
             <span className="relative w-4 h-4 ml-2 inline-block">
-              <img src={down} alt="down arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-              <img src={downarrow2green} alt="down arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051146/Vector_bh7jql.png" alt="down arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052589/arrow_Down_jlay7a.svg" alt="down arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
             </span>
           </Link>
         </div>

@@ -1,22 +1,25 @@
 
-import backgroundlogo from "/images/EcommerceDesign/Mask group.svg";
-import image from "/images/CustomWebDesignServices/website mockup image 2.svg";
+
 import Navbar from "../components/Navbar";
-import icon1 from "/images/CustomWebDesignServices/Vector.svg";
-import icon2 from "/images/CustomWebDesignServices/custom we design.svg"
-import icon3 from "/images/CustomWebDesignServices/Mask group.svg";
-import icon4 from "/images/CustomWebDesignServices/Responsive Web.svg";
-import downarrow2green from "/images/home/arrow Down.svg"
-import downarrow from "/images/home/Vector1.svg"
-import image1 from "/images/CustomWebDesignServices/Rectangle 2.svg";
-import vector1 from "/images/CustomWebDesignServices/Vector11.svg";
-import vector2 from "/images/CustomWebDesignServices/Vector12.svg";
-import vector3 from "/images/CustomWebDesignServices/Vector13.svg";
-import vector4 from "/images/CustomWebDesignServices/Group 14.svg";
-import vector5 from "/images/CustomWebDesignServices/Vector15.svg";
-import vector6 from "/images/CustomWebDesignServices/Vector16.svg";
-import vector7 from "/images/CustomWebDesignServices/Vector17.svg";
-import vector8 from "/images/CustomWebDesignServices/Vector18.svg";
+import SEO from '../components/SEO';
+
+// import backgroundlogo from "/images/EcommerceDesign/Mask group.svg";
+// import image from "/images/CustomWebDesignServices/website mockup image 2.svg";
+// import icon1 from "/images/CustomWebDesignServices/Vector.svg";
+// import icon2 from "/images/CustomWebDesignServices/custom we design.svg"
+// import icon3 from "/images/CustomWebDesignServices/Mask group.svg";
+// import icon4 from "/images/CustomWebDesignServices/Responsive Web.svg";
+// import downarrow2green from "/images/home/arrow Down.svg"
+// import downarrow from "/images/home/Vector1.svg"
+// import image1 from "/images/CustomWebDesignServices/Rectangle 2.svg";
+// import vector1 from "/images/CustomWebDesignServices/Vector11.svg";
+// import vector2 from "/images/CustomWebDesignServices/Vector12.svg";
+// import vector3 from "/images/CustomWebDesignServices/Vector13.svg";
+// import vector4 from "/images/CustomWebDesignServices/Group 14.svg";
+// import vector5 from "/images/CustomWebDesignServices/Vector15.svg";
+// import vector6 from "/images/CustomWebDesignServices/Vector16.svg";
+// import vector7 from "/images/CustomWebDesignServices/Vector17.svg";
+// import vector8 from "/images/CustomWebDesignServices/Vector18.svg";
 
 import { Link} from "react-router-dom";
 import SwiperComponent from "../components/customWebDesign/SwiperComponent";
@@ -25,35 +28,61 @@ import SwiperComponent from "../components/customWebDesign/SwiperComponent";
 
 
 const CustomWebDesignServices = () => {
+
+	const structuredData = {
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"name": "Custom Web Design Services",
+		"description": "Full-service custom website design agency delivering UI/UX, responsive design, and high-performance websites aligned to your brand.",
+		"url": "https://devext.io/CustomWebDesignServices",
+		"provider": {
+			"@type": "Organization",
+			"name": "Devext"
+		},
+		"serviceType": "Custom Web Design",
+		"areaServed": "Saudi Arabia",
+		"offers": {
+			"@type": "Offer",
+			"priceCurrency": "SAR",
+			"availability": "https://schema.org/InStock"
+		}
+	};
 	const features = [
 		{
 			title: "UI/UX DESIGN",
 			desc:
 				"Tailored designs that reflect your brand identity and engage your target audience.",
-			icon:icon1,
+			icon:"https://res.cloudinary.com/daop3bufa/image/upload/v1759050958/Vector_milai2.svg",
 		},
 		{
 			title: "CUSTOM WEB DESIGN",
 			desc:
 				"Tailored designs that reflect your brand identity and engage your target audience.",
-			icon: icon2
+			icon: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050953/custom_we_design_e3ph98.svg"
 		},
 		{
 			title: "LANDING PAGE DESIGN",
 			desc:
 				"Tailored designs that reflect your brand identity and engage your target audience.",
-			icon: icon3
+			icon: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050957/Mask_group_qprbky.svg"
 		},
 		{
 			title: "RESPONSIVE DESIGN",
 			desc:
 				"Tailored designs that reflect your brand identity and engage your target audience.",
-			icon:icon4
+			icon:"https://res.cloudinary.com/daop3bufa/image/upload/v1759050957/Responsive_Web_bfzesf.svg"
 		},
 	];
 
     return(
         <>
+        <SEO 
+          title="Custom Website Design Services - Devext"
+          description="A full-service custom web design agency. UI/UX, responsive design, and conversion-focused websites tailored to your brand."
+          keywords="custom web design, ui ux design, responsive web design, landing page design, website redesign"
+          canonical="/CustomWebDesignServices"
+          structuredData={structuredData}
+        />
         <Navbar />
 
         <section
@@ -61,7 +90,7 @@ const CustomWebDesignServices = () => {
             >
                 {/* Background logo: full width, never cropped */}
                 <img
-                    src={backgroundlogo}
+                    src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050998/Mask_group_wlabwd.svg"
                     alt=""
                     aria-hidden="true"
                     className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 h-full w-auto object-contain pointer-events-none sm:inset-0 sm:w-full sm:h-full sm:left-0 sm:translate-x-0 object-left"
@@ -73,7 +102,7 @@ const CustomWebDesignServices = () => {
                         <p className="text-[#FEF9D0] font-inter text-[24px] not-italic font-normal leading-normal"> is a full-service agency comprised of leading web designers from around the globe. Whether building a website from scratch or redesigning your current digital presence, our web design services include:</p>
                     </div>
                     <div className="col-span-1 flex items-center  lg:justify-end justify-center ">  
-                        <img src={image} alt="" />
+                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050993/website_mockup_image_2_jn5mfp.svg" alt="side iamge" />
                     </div>
                 </div>
                
@@ -140,7 +169,7 @@ const CustomWebDesignServices = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 container mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 py-12 md:py-16 ">
             <div className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl not-italic font-medium leading-snug uppercase flex items-center justify-start">Why Your  Business <br /> Needs Custom  Web  <br />  Design Services</div>
                 <img
-                    src={image1}
+                    src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050963/Rectangle_2_pxptsi.svg"
                     alt="image1"
                     className="w-full h-auto object-cover"
                     style={{ WebkitMaskImage: 'linear-gradient(to bottom, black 65%, transparent 100%)', maskImage: 'linear-gradient(to bottom, black 65%, transparent 100%)' }}
@@ -153,7 +182,7 @@ const CustomWebDesignServices = () => {
                 {/* leftside */}
                 <div className="ml-0 md:ml-[3rem]">
                 <div className="flex flex-col gap-4  items-start justify-start">
-                    <img src={vector1} alt="vector1" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20" />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050962/Vector11_fgd8c9.svg" alt="vector1" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20" />
                     <h6 className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl not-italic font-medium leading-snug uppercase flex items-center justify-center"> Establish Your Brand Identity</h6>
                     <p className="text-[#2F5B44] font-inter text-base sm:text-lg md:text-xl not-italic font-normal leading-normal max-w-[40rem]"> Your brand’s unique identity is reflected through visuals — like your logo, color palette, typography, imagery and illustrations. <br /> As a recognized web design agency, Digital Silk helps <br /> businesses use their signature brand voice and messaging to boost user engagement, foster long-term loyalty and increase <br />  conversions. <br /> Our experienced web designers can create visually appealing, brand-specific and engaging visuals that separate your business from the competition and effectively target your audience’s pain points. </p>
 
@@ -163,7 +192,7 @@ const CustomWebDesignServices = () => {
                 {/* rightside */}
                <div className="ml-0 md:ml-[5rem]"> 
                <div className="flex flex-col gap-4  items-start justify-start ">
-                    <img src={vector2} alt="vector2" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20" />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050963/Vector12_siycml.svg" alt="vector2" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20" />
                     <h6 className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl not-italic font-medium leading-snug uppercase flex items-center justify-center"> Establish Your Brand Identity</h6>
                     <p className="text-[#2F5B44] font-inter text-base sm:text-lg md:text-xl not-italic font-normal leading-normal max-w-[40rem] "> It takes only a few seconds for users to form an opinion about your website and Devext can help you take advantage of this short time window. <br />
                     Devext’s custom web designs can improve brand recognition and credibility through high-performance <br /> and conversion-focused sites that resonate with your target <br /> demographic. </p>
@@ -175,7 +204,7 @@ const CustomWebDesignServices = () => {
                 {/* thirdrow */}
                <div className="ml-0 md:ml-[3rem]">
                <div className="flex flex-col gap-4  items-start justify-start ">
-                    <img src={vector3} alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050964/Vector13_cow2xn.svg" alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
                     <h6 className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl not-italic font-medium leading-snug uppercase flex items-center justify-center">Enhance User Experience And <br /> Navigation</h6>
                     <p className="text-[#2F5B44] font-inter text-base sm:text-lg md:text-xl not-italic font-normal leading-normal max-w-[40rem]"> Navigation menus provide an overview of your website’s structural organization — from the home page to all relevant child pages or subcategories. <br /> Devext’s custom web designs can help users find relevant information through seamless layouts that guide their attention to the desired action. <br /> This minimizes bounce rates, establishes proper conversion funnels and encourages visitors to continue browsing. <br /> Our SEO-optimized custom web designs can boost your search engine rankings and build your authority in your chosen market</p>
 
@@ -184,7 +213,7 @@ const CustomWebDesignServices = () => {
                </div>
                 <div className="ml-0 md:ml-[5rem]">
                 <div className="flex flex-col gap-4  items-start justify-center  ">  
-                    <img src={vector4} alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050953/Group_14_kv1tc3.svg" alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
                     <h6 className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl not-italic font-medium leading-snug uppercase flex items-center justify-center"> Drive Conversions And Boost <br />  Engagement</h6>
                     <p className="text-[#2F5B44] font-inter text-base sm:text-lg md:text-xl not-italic font-normal leading-normal max-w-[40rem]"> Devext’s certified web designers use compelling calls-to-action (CTAs) to turn passive visitors into active customers by aligning their actions with your brand’s goals.<br /> These design elements provide a clear sense of urgency and emphasize the benefits of the intended action to drive conversions and engagement. <br /> Our custom web design services can help businesses encourage audiences to make a purchase, subscribe to a service or engage with on-page content through strategically placed and carefully executed calls-to-action.<br /> Devext optimizes CTA sizes and relies on the calculated use of white space to make them more visible and easily noticeable on the page. </p>
 
@@ -194,7 +223,7 @@ const CustomWebDesignServices = () => {
                 {/* fourthrow */}
                 <div className="ml-0 md:ml-[3rem]">
                 <div className="flex flex-col gap-4  items-start justify-center ">
-                    <img src={vector5} alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050965/Vector15_bt9mki.svg" alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
                     <h6 className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl not-italic font-medium leading-snug uppercase flex items-center justify-center"> Ensure Cross-Device <br />  Compatibility</h6>
                     <p className="text-[#2F5B44] font-inter text-base sm:text-lg md:text-xl not-italic font-normal leading-normal max-w-[40rem]"> Devext’s custom web designs ensure website layouts, images and on-page content adapt seamlessly to different screen sizes and devices. <br /> Our team uses a mobile-first approach — we plan and design the mobile version alongside the desktop site.<br /> This allows us to make proactive changes to the overall design to ensure the mobile experience is just as excellent as the desktop one. <br /> Our designers rely on Fluid Grid layouts that adapt proportionally to any screen size or device and ensure consistent layouts across all platforms. <br /> Our custom web design company also implements CSS Media Queries to customize cross-device layouts to ensure your design is responsive and user-friendly. </p>
 
@@ -202,7 +231,7 @@ const CustomWebDesignServices = () => {
                 </div>
                 <div className="ml-0 md:ml-[5rem]">
                 <div className="flex flex-col gap-4  items-start justify-start  ">  
-                    <img src={vector6} alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050965/Vector16_xazlr0.svg" alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
                     <h6 className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl not-italic font-medium leading-snug uppercase flex items-center justify-center"> Improve Search Engine <br />  Optimization </h6>
                     <p className="text-[#2F5B44] font-inter text-base sm:text-lg md:text-xl not-italic font-normal leading-normal max-w-[40rem]">Devext’s custom SEO strategies deliver tailored solutions that align with target audience needs and company goals. <br /> Our data-driven strategies enhance website visibility, scalability and flexibility to adapt to changing industry trends. <br /> Devext’s custom web designs facilitate both on and off-page SEO efforts to help your business rank higher in search engine results and attract organic traffic. </p>
 
@@ -213,7 +242,7 @@ const CustomWebDesignServices = () => {
                 {/* fifthrow */}   
                <div className="ml-0 md:ml-[3rem]">
                <div className="flex flex-col gap-4  items-start justify-center ">
-                    <img src={vector7} alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050966/Vector17_resmln.svg" alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
                     <h6 className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl not-italic font-medium leading-snug uppercase flex items-center justify-center"> Ensure Cross-Device <br />  Compatibility</h6>
                     <p className="text-[#2F5B44] font-inter text-base sm:text-lg md:text-xl not-italic font-normal leading-normal max-w-[40rem]"> Devext’s custom web designs ensure website layouts, images and on-page content adapt seamlessly to different screen sizes and devices. <br /> Our team uses a mobile-first approach — we plan and design the mobile version alongside the desktop site.<br /> This allows us to make proactive changes to the overall design to ensure the mobile experience is just as excellent as the desktop one. <br /> Our designers rely on Fluid Grid layouts that adapt proportionally to any screen size or device and ensure consistent layouts across all platforms. <br /> Our custom web design company also implements CSS Media Queries to customize cross-device layouts to ensure your design is responsive and user-friendly. </p>
 
@@ -221,7 +250,7 @@ const CustomWebDesignServices = () => {
                </div>
                 <div className="ml-0 md:ml-[5rem]">
                 <div className="flex flex-col gap-4  items-start justify-start  ">  
-                    <img src={vector8} alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050967/Vector18_xou8pe.svg" alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
                     <h6 className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl not-italic font-medium leading-snug uppercase flex items-center justify-center"> Improve Search Engine <br />  Optimization </h6>
                     <p className="text-[#2F5B44] font-inter text-base sm:text-lg md:text-xl not-italic font-normal leading-normal max-w-[40rem]">Devext’s custom SEO strategies deliver tailored solutions that align with target audience needs and company goals. <br /> Our data-driven strategies enhance website visibility, scalability and flexibility to adapt to changing industry trends. <br /> Devext’s custom web designs facilitate both on and off-page SEO efforts to help your business rank higher in search engine results and attract organic traffic. </p>
 
@@ -244,8 +273,8 @@ className="inline-flex items-center bg-transparent text-[#FEF9D0] px-8 py-3 roun
 style={{ border: '2px solid #FEF9D0' }}
 >
 Request A quote
-<img src={downarrow} alt="arrow" className="w-5 h-5 ml-3 transition-all duration-300 group-hover:hidden" />
-<img src={downarrow2green} alt="arrow" className="w-5 h-5 ml-3 transition-all duration-300 hidden group-hover:block" />
+<img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052696/Vector1_yust9l.svg" alt="arrow" className="w-5 h-5 ml-3 transition-all duration-300 group-hover:hidden" />
+<img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052589/arrow_Down_jlay7a.svg" alt="arrow" className="w-5 h-5 ml-3 transition-all duration-300 hidden group-hover:block" />
 </Link>
 
 

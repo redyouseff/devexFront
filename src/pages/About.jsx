@@ -51,32 +51,32 @@ const smoothScrollStyles = `
     background: #1e3d2a;
   }
 `;
-import uparrow from "/images/home/Vector.svg"
-import downarrow from "/images/home/Vector1.svg"
+// import uparrow from "/images/home/Vector.svg"
+// import downarrow from "/images/home/Vector1.svg"
 
-import logo  from "/images/about/Devext Pattern 1 1.svg"
-import logo2  from "/images/about/Devext Pattern 1 2.svg"
-import name from "/images/about/Vector.svg"
-import email from "/images/about/Vector3.svg"
-import phone from "/images/about/Vector4.svg"
-import message from "/images/about/Vector5.svg"
-import company from "/images/about/Vector6.svg"
+// import logo  from "/images/about/Devext Pattern 1 1.svg"
+// import logo2  from "/images/about/Devext Pattern 1 2.svg"
+// import name from "/images/about/Vector.svg"
+// import email from "/images/about/Vector3.svg"
+// import phone from "/images/about/Vector4.svg"
+// import message from "/images/about/Vector5.svg"
+// import company from "/images/about/Vector6.svg"
 
-import whatsapp from "/images/home/WhatsApp.svg"
-import instagram from "/images/home/Instagram.svg"
-import linkedin from "/images/home/Linkedin.svg"
-import line from "/images/home/Line 1.svg"
-import basm from "/images/about/Frame 432.svg"
+// import whatsapp from "/images/home/WhatsApp.svg"
+// import instagram from "/images/home/Instagram.svg"
+// import linkedin from "/images/home/Linkedin.svg"
+// import line from "/images/home/Line 1.svg"
+// import basm from "/images/about/Frame 432.svg"
 
-import yousef from "/images/about/Frame 433.svg"
+// import yousef from "/images/about/Frame 433.svg"
 
-import pansee from "/images/about/Frame 434.svg"
-import mohamed from "/images/about/Frame 435.svg"
-import abdelrahman from "/images/about/Frame 436.svg"
-import thirdsection from "/images/about/mobile app mockup 1 1.svg"
-import secondsection from "/images/about/website mockup 1 1.svg"
-import downarrow2green from "/images/home/arrow Down.svg"
-import icon2 from "/images/home/Vector2.png"
+// import pansee from "/images/about/Frame 434.svg"
+// import mohamed from "/images/about/Frame 435.svg"
+// import abdelrahman from "/images/about/Frame 436.svg"
+// import thirdsection from "/images/about/mobile app mockup 1 1.svg"
+// import secondsection from "/images/about/website mockup 1 1.svg"
+// import downarrow2green from "/images/home/arrow Down.svg"
+// import icon2 from "/images/home/Vector2.png"
 
 
 function About() {
@@ -162,8 +162,8 @@ function About() {
               >
                 Our Team
                 <span className="relative w-4 h-4 ml-2 inline-block">
-                  <img src={downarrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                  <img src={downarrow2green} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052696/Vector1_yust9l.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052589/arrow_Down_jlay7a.svg" alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
                 </span>
               </a>
               <Link 
@@ -172,8 +172,8 @@ function About() {
               >
                 Learn More
                 <span className="relative w-4 h-4 ml-2 inline-block">
-                  <img src={uparrow} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                  <img src={icon2} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052699/Vector2_tcuogh.png" alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
                 </span>
               </Link>
             </div>
@@ -214,7 +214,7 @@ function About() {
             <div className="relative flex items-center justify-center p-6 sm:p-8 bg-[#FEF9D0] overflow-hidden order-1 md:order-2">
               <div className="relative z-10 w-full h-full flex items-center justify-center">
                 <img 
-                  src={secondsection} 
+                  src="https://res.cloudinary.com/daop3bufa/image/upload/v1759049292/website_mockup_1_1_lbzuqx.svg" 
                   alt="Website Mockup" 
                   className="w-full h-auto max-w-lg object-contain -mb-8 md:-mb-14 "
                 />
@@ -222,7 +222,7 @@ function About() {
                              
               <div className="absolute -right-10  top-0 w-full h-full flex items-center justify-end opacity-30">
                   <img 
-                    src={logo} 
+                    src="https://res.cloudinary.com/daop3bufa/image/upload/v1759049218/Devext_Pattern_1_1_lveq8f.svg"
                     alt="Background Pattern" 
                     className="w-auto h-full object-contain object-right"
                     style={{ 
@@ -256,14 +256,14 @@ function About() {
             <div className="relative flex items-center justify-center p-6 sm:p-8 bg-[#FEF9D0] overflow-hidden">
               <div className="relative z-10 w-full h-full flex items-center justify-center">
                 <img 
-                  src={thirdsection} 
+                  src="https://res.cloudinary.com/daop3bufa/image/upload/v1759049266/mobile_app_mockup_1_1_mpxpuz.svg"
                   alt="Mobile App Mockup" 
                   className="w-full h-auto max-w-lg object-contain"
                 />
               </div>
               <div className="absolute -left-90 top-0 w-full h-full flex items-center justify-start opacity-25">
                 <img 
-                  src={logo2} 
+                  src="https://res.cloudinary.com/daop3bufa/image/upload/v1759049223/Devext_Pattern_1_2_yqrkfk.svg"
                   alt="Background Pattern" 
                   className="w-auto h-full object-contain object-left"
                   style={{ 
@@ -350,7 +350,7 @@ function About() {
                       h="h-60 sm:h-64 md:h-68 lg:h-72 xl:h-80" 
                       name="Basma Omran" 
                       role="Founder/UX UI Designer" 
-                      img={basm} 
+                      img="https://res.cloudinary.com/daop3bufa/image/upload/v1759049226/Frame_432_z9fs6c.svg" 
                     />
                   </div>
                   {/* Bottom Row */}
@@ -359,19 +359,19 @@ function About() {
                       <TeamCard
                        w="w-48 sm:w-56 md:w-64 lg:w-72" 
                        h="h-60 sm:h-64 md:h-68 lg:h-72 xl:h-80" 
-                       name="Yousef Magdy" role="Lead Developer" img={yousef} />
+                       name="Yousef Magdy" role="Lead Developer" img="https://res.cloudinary.com/daop3bufa/image/upload/v1759049228/Frame_433_xxlkzi.svg" />
                     </div>
                     <div className="relative flex flex-col items-center">
                       <TeamCard
                        w="w-48 sm:w-56 md:w-64 lg:w-72" 
                        h="h-60 sm:h-64 md:h-68 lg:h-72 xl:h-80" 
-                       name="Pansee Omran" role="Graphic Designer" img={pansee} />
+                       name="Pansee Omran" role="Graphic Designer" img="https://res.cloudinary.com/daop3bufa/image/upload/v1759049222/Frame_434_ndcrew.svg" />
                     </div>
                     <div className="relative flex flex-col items-center">
                       <TeamCard
                        w="w-48 sm:w-56 md:w-64 lg:w-72" 
                        h="h-60 sm:h-64 md:h-68 lg:h-72 xl:h-80" 
-                       name="Mohaned Altokhy" role="Sales Manager" img={mohamed} />
+                       name="Mohaned Altokhy" role="Sales Manager" img="https://res.cloudinary.com/daop3bufa/image/upload/v1759049221/Frame_435_akthot.svg" />
                     </div>
                     <div className="relative flex flex-col items-center">
                       <TeamCard 
@@ -379,7 +379,7 @@ function About() {
                        h="h-60 sm:h-64 md:h-68 lg:h-72 xl:h-80" 
                         name={<><span className="hidden sm:inline">Adbelrahman Ibrahim</span><span className="inline sm:hidden">Adbelrahman</span></>} 
                         role="SEO Specialist" 
-                        img={abdelrahman} 
+                        img="https://res.cloudinary.com/daop3bufa/image/upload/v1759049226/Frame_436_cnr1nh.svg" 
                       />
                     </div>
                   </div>
@@ -405,17 +405,17 @@ function About() {
            GROWTH
          </h2>
          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-between mb-6 sm:mb-8 mt-6 sm:mt-10 gap-4 sm:gap-0">
-           <img src={line} alt="line"  className=" w-24 sm:w-32 order-1 sm:order-none" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+           <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052650/Line_1_xq3ukd.svg" alt="line"  className=" w-24 sm:w-32 order-1 sm:order-none" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
            <span className="text-[#2F5B44] text-base sm:text-lg font-medium order-2 sm:order-none mr-0 lg:mr-10 ">FOLLOW US</span>
            <div className="flex gap-4 sm:gap-6 order-3 sm:order-none">
              <a href="#" className="hover:opacity-70 transition-opacity">
-               <img src={whatsapp} alt="WhatsApp" className="w-5 h-5 sm:w-6 sm:h-6" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+               <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052727/WhatsApp_udvzpw.svg" alt="WhatsApp" className="w-5 h-5 sm:w-6 sm:h-6" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
              </a>
              <a href="#" className="hover:opacity-70 transition-opacity">
-               <img src={instagram} alt="Instagram" className="w-5 h-5 sm:w-6 sm:h-6" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+               <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052651/Instagram_kkvsnz.svg" alt="Instagram" className="w-5 h-5 sm:w-6 sm:h-6" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
              </a>
              <a href="#" className="hover:opacity-70 transition-opacity">
-               <img src={linkedin} alt="LinkedIn" className="w-5 h-5 sm:w-6 sm:h-6" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+               <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052651/Linkedin_sqzkyo.svg" alt="LinkedIn" className="w-5 h-5 sm:w-6 sm:h-6" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
              </a>
            </div>
          </div>
@@ -485,7 +485,7 @@ function About() {
         {/* Name Field */}
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
-            <img src={name} alt="name icon" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052653/name_x24mhl.svg" alt="name icon" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
             <label className="text-[#2F5B44] text-sm font-medium">NAME *</label>
           </div>
           <input
@@ -500,7 +500,7 @@ function About() {
         {/* Company Name Field */}
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
-            <img src={company} alt="company icon" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052599/Company_Name_jsmiuk.svg" alt="company icon" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
             <label className="text-[#2F5B44] text-sm font-medium">COMPANY NAME *</label>
           </div>
           <input
@@ -515,7 +515,7 @@ function About() {
         {/* Email Field */}
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
-            <img src={email} alt="email icon" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052639/email_oc0uix.svg" alt="email icon" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
             <label className="text-[#2F5B44] text-sm font-medium">EMAIL *</label>
           </div>
           <input
@@ -530,7 +530,7 @@ function About() {
         {/* Phone Field */}
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
-            <img src={phone} alt="phone icon" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052655/phone_i9bnxz.svg" alt="phone icon" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
             <label className="text-[#2F5B44] text-sm font-medium">PHONE *</label>
           </div>
           <input
@@ -545,7 +545,7 @@ function About() {
         {/* Message Field */}
         <div className="relative">
           <div className="flex items-center gap-3 mb-2">
-            <img src={message} alt="message icon" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052639/email_oc0uix.svg" alt="message icon" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
             <label className="text-[#2F5B44] text-sm font-medium">YOUR MESSAGE*</label>
           </div>
           <textarea
@@ -567,9 +567,9 @@ function About() {
           >
             {isSubmitting ? 'Sending...' : 'Submit'}
             <span className="relative w-4 h-4 ml-2 inline-block">
-              <img src={downarrow2green} alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
-              <img src={downarrow} alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
-            </span>
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052589/arrow_Down_jlay7a.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052696/Vector1_yust9l.svg" alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+            </span> 
           </button>
         </div>
         {(submitMessage || submitError) && (

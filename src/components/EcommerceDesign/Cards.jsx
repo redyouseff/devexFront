@@ -4,12 +4,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import card2 from "/images/home/Responsive Web.svg"
-import card3 from "/images/home/Group3.svg"
-import card4 from "/images/home/Vector4.svg"
 import downthird from "/images/home/Frame 16.svg"
 import upthird from "/images/home/Frame 15.svg"
-import rectangle from "/images/home/Rectangle 3.svg"
 import { Navigation, Pagination } from 'swiper/modules';
 
 
@@ -19,26 +15,26 @@ const Cards = () => {
     
     const cardone =[{
         id:1,
-        icon:rectangle,
+
         title:"Marketplace Development", 
         description:["Digital Silk takes a user-centric and data-driven approach to eCommerce marketplace development. Our team creates visually appealing, highly functional and cross-platform optimized websites. ","Our eCommerce developers use real-life consumer analytics and follow the latest industry best practices to enhance the user experience and create high-performing and conversion-focused websites. ","Digital Silk’s end-to-end solutions include intuitive navigation, fast-loading pages, mobile-first designs and interactive elements like reviews and live chat to increase engagement and build a stronger brand identity"],
     
       },
       {
         id:2,
-        icon:card2,
+ 
         title:"Multi-Store Management", 
         description:["As an end-to-end eCommerce development company, Digital Silk allows businesses to streamline operations and run multiple online stores from a single platform. ","This approach offers centralized control over key business operations like inventory and order management, data storage, user behavior analysis and improved efficiency with minimal overhead costs. ","Additionally, professional development services can help businesses reach target markets more effectively, with tailored solutions that cater to specific regions, customer segments or product categories. ","This also facilitates better scalability, since brands can easily grow their online stores as their business expands, without duplicating management efforts."],
       },
       {
         id:3,
-        icon:card3,
+   
         title:"Headless Commerce", 
         description:["Headless commerce separates the front-end or user interface from the backend or admin panel for greater flexibility when designing user experiences. ","This allows eCommerce developers to change the front-end without affecting core functionalities like inventory management or payment processing. ","Our eCommerce development services use headless commerce to create highly customizable and user-centric platforms with quick front-end adaptability to different devices and channels. This ensures consistent, SEO-optimized and conversion-focused experiences across platforms"],
       },
       {
         id:4,
-        icon:card4,
+
         title:"B2B And B2C Solutions", 
         description:["Our eCommerce development agency offers custom solutions to meet the needs of both B2B and B2C clients. ","Digital Silk’s B2B platforms focus on bulk purchases, account-based pricing and complex workflows like custom quotes or procurement. Our solutions prioritize streamlined order processing, CRM integration and personalized experiences for each transaction. ","As for B2C eCommerce websites, Digital Silk emphasizes user-friendly designs, fast checkout processes and high-volume transactions. Our team uses mobile-first optimization, personalized product recommendations and tailored loyalty programs to encourage long-term loyalty. "],
       },
@@ -99,13 +95,13 @@ return(
             onClick={() => swiperInstance && swiperInstance.slideNext()}
             className="hover:opacity-70 transition-opacity cursor-pointer"
           >
-            <img src={upthird} alt="previous arrow" className="w-8 h-8" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052642/Frame_15_ys3rmj.svg" alt="previous arrow" className="w-8 h-8" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
           </button>
           <button 
             onClick={() => swiperInstance && swiperInstance.slidePrev()}
             className="hover:opacity-70 transition-opacity cursor-pointer"
           >
-            <img src={downthird} alt="next arrow" className="w-8 h-8" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052642/Frame_16_jjrwvd.svg" alt="next arrow" className="w-8 h-8" style={{ filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1000%) hue-rotate(120deg) brightness(95%) contrast(85%)' }} />
           </button>
         </div>
 

@@ -36,6 +36,22 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- eCommerce Design Page -->
+  <url>
+    <loc>https://devext.io/ecommerce-design</loc>
+    <lastmod>2025-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Custom Web Design Services Page -->
+  <url>
+    <loc>https://devext.io/CustomWebDesignServices</loc>
+    <lastmod>2025-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Calculator Page -->
   <url>
     <loc>https://devext.io/calculator</loc>

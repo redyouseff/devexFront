@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -115,60 +115,56 @@ const smoothScrollStyles = `
     height: 100% !important;
   }
 `;
-import icons from "/images/home/Frame 7.png"
-import uparrow from "/images/home/Vector.svg"
-import downarrow from "/images/home/Vector1.svg"
-import icon1 from "/images/home/website mockup image 1.svg"
-import icon2 from "/images/home/Vector2.png"
-import icon3 from "/images/home/Devext Pattern 1 1.svg"
 
-import logoFourthsection from "/images/home/Devext Pattern 2 1.svg"
-import fifthsectionbackgroundIcon from "/images/home/Devext Pattern 2 2.svg"
-import fiftharrowright from "/images/home/Frame 17.svg"
-import fiftharrowleft from "/images/home/Frame 18.svg"
-import image1 from "/images/home/f8f89d1ad7d0ecd0a24395993d02e58ee421a350.png"
-import image2 from "/images/home/3788abf59bb8563cfad9a30cbb8be62658a13910.png"
-import image3 from "/images/home/7a8fcd165e9054d439309e4f9bd522d9fa1db41e.png"
-import image4 from "/images/home/3d7675919d681e878c4dbc9cc7684b49b3b2807e.png"
-import image5 from "/images/home/20a22ebbdefa41431733ac1b9ec7ce874179aa06.png"
-import image6 from "/images/home/bd6527f377c313f1c886ed27fcab32b474cc1296.png"
-import image7 from "/images/home/e149bc6f4d10dac13f72230078469be1d13dbf6d.png"
-import image8 from "/images/home/be473d244406dd15c8246e2e9a3702ccddaa62e4.png"
-import image9 from "/images/home/48c5b184a126ae61d83228824568c52e72d48d44.png"
-import image10 from "/images/home/f10676c3cd53de4b42ddaf947957061621a1d28d.png"
-import circle1 from "/images/home/Ellipse 7.svg"
-import circle2 from "/images/home/Ellipse 8.svg"
-import circle3 from "/images/home/Ellipse 3.svg"
-import circle4 from "/images/home/Ellipse 10.svg"
-import circle5 from "/images/home/Ellipse 11.svg"
-import circle6 from "/images/home/Ellipse 12.svg" 
-import circle7 from "/images/home/Ellipse 77.svg"
-import circle8 from "/images/home/Ellipse 88.svg"
-import circle9 from "/images/home/Ellipse 99.svg"
-import circle10 from "/images/home/Ellipse 1010.svg"
-import downarrow2green from "/images/home/arrow Down.svg"
-import location from "/images/home/location.svg"
+// import uparrow from "/images/home/Vector.svg"
+// import downarrow from "/images/home/Vector1.svg"
+// import icon1 from "/images/home/website mockup image 1.svg"
+// import icon2 from "/images/home/Vector2.png"
+// import icon3 from "/images/home/Devext Pattern 1 1.svg"
 
-
-
+// import logoFourthsection from "/images/home/Devext Pattern 2 1.svg"
+// import fifthsectionbackgroundIcon from "/images/home/Devext Pattern 2 2.svg"
+// import fiftharrowright from "/images/home/Frame 17.svg"
+// import fiftharrowleft from "/images/home/Frame 18.svg"
+// import image1 from "/images/home/f8f89d1ad7d0ecd0a24395993d02e58ee421a350.png"
+// import image2 from "/images/home/3788abf59bb8563cfad9a30cbb8be62658a13910.png"
+// import image3 from "/images/home/7a8fcd165e9054d439309e4f9bd522d9fa1db41e.png"
+// import image4 from "/images/home/3d7675919d681e878c4dbc9cc7684b49b3b2807e.png"
+// import image5 from "/images/home/20a22ebbdefa41431733ac1b9ec7ce874179aa06.png"
+// import image6 from "/images/home/bd6527f377c313f1c886ed27fcab32b474cc1296.png"
+// import image7 from "/images/home/e149bc6f4d10dac13f72230078469be1d13dbf6d.png"
+// import image8 from "/images/home/be473d244406dd15c8246e2e9a3702ccddaa62e4.png"
+// import image9 from "/images/home/48c5b184a126ae61d83228824568c52e72d48d44.png"
+// import image10 from "/images/home/f10676c3cd53de4b42ddaf947957061621a1d28d.png"
+// import circle1 from "/images/home/Ellipse 7.svg"
+// import circle2 from "/images/home/Ellipse 8.svg"
+// import circle3 from "/images/home/Ellipse 3.svg"
+// import circle4 from "/images/home/Ellipse 10.svg"
+// import circle5 from "/images/home/Ellipse 11.svg"
+// import circle6 from "/images/home/Ellipse 12.svg" 
+// import circle7 from "/images/home/Ellipse 77.svg"
+// import circle8 from "/images/home/Ellipse 88.svg"
+// import circle9 from "/images/home/Ellipse 99.svg"
+// import circle10 from "/images/home/Ellipse 1010.svg"
+// import downarrow2green from "/images/home/arrow Down.svg"
+// import location from "/images/home/location.svg"
 
 
 
 
 // import location from "/images/home/Group.svg"
 
-import name from "/images/home/name.svg"
-import email from "/images/home/email.svg"
-import phone from "/images/home/phone.svg"
-import message from "/images/home/message.svg"
-import companyname from "/images/home/Company Name.svg"
+// import name from "/images/home/name.svg"
+// import email from "/images/home/email.svg"
+// import phone from "/images/home/phone.svg"
+// import message from "/images/home/message.svg"
+// import companyname from "/images/home/Company Name.svg"
 
-import whatsapp from "/images/home/WhatsApp.svg"
-import instagram from "/images/home/Instagram.svg"
-import linkedin from "/images/home/Linkedin.svg"
-import line from "/images/home/Line 1.svg"
-import backgroundsectionseven from "/images/home/Devext Pattern 1 7.png"
-import TestFigma from '../components/testFigma';
+// import whatsapp from "/images/home/WhatsApp.svg"
+// import instagram from "/images/home/Instagram.svg"
+// import linkedin from "/images/home/Linkedin.svg"
+// import line from "/images/home/Line 1.svg"
+// import backgroundsectionseven from "/images/home/Devext Pattern 1 7.png"
 import TestCircleSwiper from '../components/testCircleSwiper';
 
 function Home() {
@@ -216,8 +212,8 @@ function Home() {
       id: 1,
       type: 'testimonial',
       title: 'Joya Properties is a boutique Dubai real estate agency that delivers personalized, transparent service—tailored for buyers, sellers, and investors. The agency blends market expertise with trusted partnerships across top developers.',
-      image: image1,
-      circle: circle1,
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052679/f8f89d1ad7d0ecd0a24395993d02e58ee421a350_nuaevi.png",
+      circle: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052635/Ellipse_7_on5joo.svg",
       name: "joyaproperties.com",
       location: "UAE"
     },
@@ -225,8 +221,8 @@ function Home() {
       id: 2,
       type: 'testimonial',
       title: 'LDC Investment is a dynamic Saudi-based investment firm dedicated to crafting tailored financial strategies that elevate businesses and individual investors. With a sharp focus on sustainable growth and proactive market insight.',
-      image: image2,
-      circle: circle2,
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052597/3788abf59bb8563cfad9a30cbb8be62658a13910_hfk76n.png",
+      circle: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052637/Ellipse_8_smblui.svg",
       name: "ldc-investment.sa",
       location: "KSA"
     },
@@ -234,8 +230,8 @@ function Home() {
       id: 3,
       type: 'testimonial',
       title: 'Sada Al Awael is a Saudi-based provider of top-quality medical equipment and supplies dedicated to supporting the healthcare sector. Driven by excellence and integrated services, they ensure client satisfaction with flexible payment options & fast Delivery.',
-      image: image3,
-      circle: circle3,
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052632/7a8fcd165e9054d439309e4f9bd522d9fa1db41e_xeacfa.png",
+      circle: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052629/Ellipse_3_vz8oje.svg",
       name: "sada-alawael.sa",
       location: "KSA",
     },
@@ -243,8 +239,8 @@ function Home() {
       id: 4,
       type: 'testimonial',
       title: 'Joud & Karam delivers authentic Jordanian-Palestinian hospitality in the heart of Dubai. Specializing in desert safaris,  parties, corporate buffets and furniture rentals, they blend cultural tradition with modern flair to craft unforgettable experiences.',
-      image: image4,
-      circle: circle4,
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052628/3d7675919d681e878c4dbc9cc7684b49b3b2807e_sd15e9.png",
+      circle: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052619/Ellipse_10_zbmeny.svg",
       name: "joudandkaram.com",
       location: "UAE"
     },
@@ -252,8 +248,8 @@ function Home() {
       id: 5,
       type: 'testimonial',
       title: 'Al-Tal Al-Kabir is a leading provider of heavy and light construction equipment, offering cutting-edge machinery and reliable solutions for industrial and infrastructure projects across Saudi Arabia. With a commitment to quality and efficiency.',
-      image: image5,
-      circle: circle5,
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052585/20a22ebbdefa41431733ac1b9ec7ce874179aa06_edmwd6.png",
+      circle: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052626/Ellipse_11_ohefoc.svg",
       name: "Altal-alkabir.sa",
       location: "KSA"
     },
@@ -261,8 +257,8 @@ function Home() {
       id: 6,
       type: 'testimonial',
       title: 'Al-Widad Taxation & Procedures Follow Up brings over a decade of expert experience in UAE corporate tax and procedural compliance. Built on integrity, client-focused solutions, and innovation, they offer tailored guidance for businesses and individuals. ',
-      image: image6,
-      circle: circle6,
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052640/bd6527f377c313f1c886ed27fcab32b474cc1296_vdzwnq.png",
+      circle: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052632/Ellipse_12_shli7o.svg",
       name: "Alwidadtaxation.com",
       location: "UAE"
     },
@@ -270,8 +266,8 @@ function Home() {
       id: 7,
       type: 'testimonial',
       title: 'Art Design is a creative marketing agency that positions itself as a dynamic engine of innovation, with over five years of experience in delivering branding, marketing, and design solutions. The company focuses on crafting unique strategies.',
-      image: image7,
-      circle: circle7,
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052629/e149bc6f4d10dac13f72230078469be1d13dbf6d_n3xc4d.png",
+      circle: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052633/Ellipse_77_xuvhsu.svg",
       name: "Artdesgin.business",
       location: "UAE"
     },
@@ -279,8 +275,8 @@ function Home() {
       id: 8,
       type: 'testimonial',
       title: 'appears to be an online classifieds platformthat enables users to buy, sell, or rent various items such as real estate, cars, land, and more.The app emphasizes ease of use, security, and simplicity in communication between buyers and sellers ',
-      image: image8,
-      circle: circle8,
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052649/be473d244406dd15c8246e2e9a3702ccddaa62e4_egtn8d.png",
+      circle: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052635/Ellipse_7_on5joo.svg",
       name: "Albazar.app",
       location: "Syria"
     },
@@ -288,8 +284,8 @@ function Home() {
       id: 9,
       type: 'testimonial',
       title: 'appears to be a UAE-based provider focusing on the design and manufacturing of various uniforms and workwear. Their offerings include:  Security uniforms, Medical attire like scrub suits & Uniforms tailored for restaurant staff. ',
-      image: image9,
-      circle: circle9,
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052602/48c5b184a126ae61d83228824568c52e72d48d44_ul2a7t.png",
+      circle: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052637/Ellipse_8_smblui.svg",
       name: "Bedaytmeshwar.com",
       location: "UAE"
     },
@@ -297,8 +293,8 @@ function Home() {
       id: 10,
       type: 'testimonial',
       title: 'An Emirati e-commerce site specializing in handcrafted, natural skincare and haircare products. Founded in Ajman, the brand prides itself on using purely organic, chemical-free ingredients, offering a range of vitamin- and mineral-rich formulations. ',
-      image: image10,
-      circle: circle10,
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052668/f10676c3cd53de4b42ddaf947957061621a1d28d_mizisz.png",
+      circle: "https://res.cloudinary.com/daop3bufa/image/upload/v1759052623/Ellipse_1010_afuwop.svg",
       name: "Aljamalaltabeeiy.com",
       location: "UAE"
     }
@@ -343,7 +339,7 @@ function Home() {
                 >
                   <source src="https://res.cloudinary.com/dp5bcywc7/video/upload/v1754822729/1440X879_Final_tuvtdq.mp4" type="video/mp4" />
            
-                  Your browser does not support the video tag.
+                  Your browser does not support the video tag  .    
                 </video>
               </div>
 
@@ -362,13 +358,13 @@ function Home() {
             </p>
             <div className="flex flex-col gap-4">
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
-                <div className="flex flex-col gap-1">
-                  <img src={icons} alt="User Reviews" className="h-8 sm:h-10" />   
+                <div className="flex flex-col gap-1"> 
+                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052649/Frame_7_g8vlsu.png" alt="User Reviews" className="h-8 sm:h-10" />  
                   <div className="flex">
                     {[1,2,3,4,5].map((star, index) => (      
                       <svg key={index} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
+                      </svg>    
                     ))}
                   </div>
                 </div>
@@ -380,16 +376,16 @@ function Home() {
                     className=" bg-opacity-50 bg-[#2F5B44] border border-[#E9F2CD] text-[#E9F2CD] px-4 sm:px-6 py-2 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-sm group"
                   >
                     Join The Community
-                    <img src={uparrow} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 group-hover:hidden" />
-                    <img src={icon2} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 hidden group-hover:block" />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 group-hover:hidden" />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052699/Vector2_tcuogh.png" alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 hidden group-hover:block" />
                   </a>
                   <Link 
                     to="/contact"
                     className= " bg-opacity-50 bg-[#2F5B44] border border-[#E9F2CD] text-[#E9F2CD] px-4 sm:px-6 py-2 rounded-full font-medium hover:bg-[#E9F2CD]  hover:text-[#2F5B44] transition-colors flex items-center justify-center text-sm  group"
                   >
                     Learn More
-                    <img src={downarrow} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 group-hover:hidden" />
-                    <img src={downarrow2green} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 hidden group-hover:block" />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052696/Vector1_yust9l.svg" alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 group-hover:hidden" />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052589/arrow_Down_jlay7a.svg" alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 hidden group-hover:block" />
                   </Link>
                 </div>
               </div>
@@ -415,7 +411,7 @@ function Home() {
               {/* Background Pattern */}
               <div className="absolute inset-1 w-[calc(100%-0.5rem)] h-[calc(100%-0.5rem)] opacity-50 z-0">
                 <img 
-                  src={icon3} 
+                  src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052604/Devext_Pattern_1_1_p20awb.svg"
                   alt="Decorative Pattern" 
                   className="w-full h-full object-cover"
                 />
@@ -439,8 +435,8 @@ function Home() {
                     className="inline-flex items-center border-2 border-[#2F5B44] text-[#2F5B44] px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-[#2F5B44] hover:text-white transition-colors font-medium text-sm sm:text-base group"
                   >
                     Discover More
-                    <img src={icon2} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 group-hover:hidden" />
-                    <img src={uparrow} alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 hidden group-hover:block" />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052699/Vector2_tcuogh.png" alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 group-hover:hidden" />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 hidden group-hover:block" />
                   </Link>
                 </div>
               </div>
@@ -452,13 +448,13 @@ function Home() {
                 {/* Background Pattern */}
                 <div className="absolute -top-4 -right-4 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 opacity-20 z-0">
                   <img 
-                    src={icon3} 
+                    src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052604/Devext_Pattern_1_1_p20awb.svg"
                     alt="Decorative Pattern" 
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <img 
-                  src={icon1} 
+                  src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052753/website_mockup_image_1_jijsmo.svg" 
                   alt="Website Mockup" 
                   className="w-full h-auto relative z-10"
                 />
@@ -495,7 +491,7 @@ function Home() {
             {/* Logo Pattern Overlay */}
             <div className="absolute inset-0 flex items-center justify-center opacity-90">
               <img 
-                src={logoFourthsection} 
+                src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052608/Devext_Pattern_2_1_yl37pr.svg"
                 alt="Background Pattern" 
                 className="w-full h-full object-contain object-center"
                 style={{ 
@@ -544,8 +540,8 @@ function Home() {
             style={{ border: '2px solid #FEF9D0' }}
           >
             Calculate Your Website Cost
-            <img src={downarrow} alt="arrow" className="w-5 h-5 ml-3 transition-all duration-300 group-hover:hidden" />
-            <img src={downarrow2green} alt="arrow" className="w-5 h-5 ml-3 transition-all duration-300 hidden group-hover:block" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052696/Vector1_yust9l.svg" alt="arrow" className="w-5 h-5 ml-3 transition-all duration-300 group-hover:hidden" />
+            <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052589/arrow_Down_jlay7a.svg" alt="arrow" className="w-5 h-5 ml-3 transition-all duration-300 hidden group-hover:block" />
           </Link>
         </div>
       </section>
@@ -558,7 +554,7 @@ function Home() {
             <div className="absolute inset-0">
               <div className="absolute left-0 top-0 w-1/2 h-full flex items-center justify-start opacity-50">
                 <img 
-                  src={fifthsectionbackgroundIcon} 
+                  src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052610/Devext_Pattern_2_2_s1pdtx.svg"
                   alt="Background Pattern" 
                   className="w-full h-full object-contain object-left"
                   style={{ 
@@ -587,13 +583,13 @@ function Home() {
                     onClick={() => swiperInstance?.slidePrev()}
                     className="hover:opacity-70 transition-opacity"
                   >
-                    <img src={fiftharrowleft} alt="Previous" className="w-10 h-10" />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052644/Frame_18_wju3de.svg" alt="Previous" className="w-10 h-10" />
                   </button>
                   <button 
                     onClick={() => swiperInstance?.slideNext()}
                     className="hover:opacity-70 transition-opacity"
                   >
-                    <img src={fiftharrowright} alt="Next" className="w-10 h-10" />
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052642/Frame_17_owqmwt.svg" alt="Next" className="w-10 h-10" />
                   </button>
                 </div>
               </div>
@@ -660,7 +656,7 @@ function Home() {
                                 {card.name}
                               </a>
                       <div className="flex items-center gap-1.5 mt-1">
-                        <img src={location} alt="Location" className="w-4 h-4" />
+                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052652/location_ftlpwe.svg" alt="Location" className="w-4 h-4" />
                          <p className="text-[#FEF9D0] text-sm">{card.location}</p>
                       </div>
                     </div>
@@ -834,7 +830,7 @@ function Home() {
             <div className="absolute inset-0 w-full h-full">
               <div className="absolute inset-0 flex items-center justify-end opacity-30">
                 <img 
-                  src={backgroundsectionseven} 
+                  src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052618/Devext_Pattern_1_7_bv5adf.png"
                   alt="Background Pattern" 
                   className="w-full h-full object-cover"
                   style={{ 
@@ -861,31 +857,7 @@ function Home() {
                 </p>
               </div>
 
-              {/* Navigation Arrows */}
-              {/* <div className="flex justify-start mb-8">
-                <div className="flex gap-4">
-                  <button className="hover:opacity-70 transition-opacity">
-                    <img src={fiftharrowleft} alt="Previous" className="w-10 h-10" />
-                  </button>
-                  <button className="hover:opacity-70 transition-opacity">
-                    <img src={fiftharrowright} alt="Next" className="w-10 h-10" />
-                  </button>
-                </div>
-              </div> */}
-
-              {/* Cards fan replaced by a single image shape (full-bleed) */}
-
-
-
-
-              {/* <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mt-10 -mb-[5rem]">
-                <img src={cardsShape} alt="Cards Shape" className="w-screen h-auto sm:h-auto min-h-[300px] sm:min-h-[400px] lg:min-h-[500px]" />
-              </div> */}
-
-
-           
-
-
+        
 
 
             </div>
@@ -913,17 +885,17 @@ function Home() {
                       GROWTH
                     </h2>
                     <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-between mb-6 sm:mb-8 mt-6 sm:mt-10 gap-4 sm:gap-0">
-                      <img src={line} alt="line" className="w-24 sm:w-32 order-1 sm:order-none" />
+                      <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052650/Line_1_xq3ukd.svg" alt="line" className="w-24 sm:w-32 order-1 sm:order-none" />
                       <span className="text-[#FEF9D0] text-base sm:text-lg font-medium order-2 sm:order-none lg:mr-[4rem]">FOLLOW US</span>
                       <div className="flex gap-4 sm:gap-6 order-3 sm:order-none lg:mr-[3rem]">
                         <a href="#" className="hover:opacity-70 transition-opacity">
-                          <img src={whatsapp} alt="WhatsApp" className="w-5 h-5 sm:w-6 sm:h-6" />
+                          <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052727/WhatsApp_udvzpw.svg" alt="WhatsApp" className="w-5 h-5 sm:w-6 sm:h-6" />
                         </a>
                         <a href="#" className="hover:opacity-70 transition-opacity">
-                          <img src={instagram} alt="Instagram" className="w-5 h-5 sm:w-6 sm:h-6" />
+                          <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052651/Instagram_kkvsnz.svg" alt="Instagram" className="w-5 h-5 sm:w-6 sm:h-6" />
                         </a>
                         <a href="#" className="hover:opacity-70 transition-opacity">
-                          <img src={linkedin} alt="LinkedIn" className="w-5 h-5 sm:w-6 sm:h-6" />
+                          <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052651/Linkedin_sqzkyo.svg" alt="LinkedIn" className="w-5 h-5 sm:w-6 sm:h-6" />
                         </a>
                       </div>
                     </div>
@@ -997,7 +969,7 @@ function Home() {
                     {/* Name Field */}
                     <div className="relative">
                       <div className="flex items-center gap-3 mb-2">
-                        <img src={name} alt="name icon" className="w-5 h-5" />
+                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052653/name_x24mhl.svg" alt="name icon" className="w-5 h-5" />
                         <label className="text-[#FEF9D0] text-sm font-medium">NAME *</label>
                       </div>
                       <input
@@ -1012,7 +984,7 @@ function Home() {
                     {/* Company Name Field */}
                     <div className="relative">
                       <div className="flex items-center gap-3 mb-2">
-                        <img src={companyname} alt="company icon" className="w-5 h-5" />
+                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052601/company_kq21qx.svg" alt="company icon" className="w-5 h-5" />
                         <label className="text-[#FEF9D0] text-sm font-medium">COMPANY NAME *</label>
                       </div>
                       <input
@@ -1027,7 +999,7 @@ function Home() {
                     {/* Email Field */}
                     <div className="relative">
                       <div className="flex items-center gap-3 mb-2">
-                        <img src={email} alt="email icon" className="w-5 h-5" />
+                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052639/email_oc0uix.svg" alt="email icon" className="w-5 h-5" />
                         <label className="text-[#FEF9D0] text-sm font-medium">EMAIL *</label>
                       </div>
                       <input
@@ -1042,7 +1014,7 @@ function Home() {
                     {/* Phone Field */}
                     <div className="relative">
                       <div className="flex items-center gap-3 mb-2">
-                        <img src={phone} alt="phone icon" className="w-5 h-5" />
+                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052655/phone_i9bnxz.svg" alt="phone icon" className="w-5 h-5" />
                         <label className="text-[#FEF9D0] text-sm font-medium">PHONE *</label>
                       </div>
                       <input
@@ -1057,7 +1029,7 @@ function Home() {
                     {/* Message Field */}
                     <div className="relative">
                       <div className="flex items-center gap-3 mb-2">
-                        <img src={message} alt="message icon" className="w-5 h-5" />
+                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052639/email_oc0uix.svg" alt="message icon" className="w-5 h-5" />
                         <label className="text-[#FEF9D0] text-sm font-medium">YOUR MESSAGE*</label>
                       </div>
                       <textarea
@@ -1078,8 +1050,8 @@ function Home() {
                         style={{ border: '2px solid #FEF9D0' }}
                       >
                         {isSubmitting ? 'Sending...' : 'Submit'}
-                        <img src={downarrow} alt="arrow" className="w-4 h-4 ml-2 transition-all duration-300 group-hover:hidden" />
-                        <img src={downarrow2green} alt="arrow" className="w-4 h-4 ml-2 transition-all duration-300 hidden group-hover:block" />
+                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052696/Vector1_yust9l.svg" alt="arrow" className="w-4 h-4 ml-2 transition-all duration-300 group-hover:hidden" />
+                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052589/arrow_Down_jlay7a.svg" alt="arrow" className="w-4 h-4 ml-2 transition-all duration-300 hidden group-hover:block" />
                       </button>
                     </div>
                     {(submitMessage || submitError) && (
