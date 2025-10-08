@@ -81,7 +81,7 @@ const RedesignservicesintheUAE =()=>{
     
             {/* Paragraphs */}                       
             <section className="mt-6 space-y-6 text-[#2F5B44] leading-relaxed">
-                <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44]' >Telltale Signs Your Business Needs a Website Redesign</h1>
+                <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44]' >Telltale Signs Your Business Needs a Website Redesign</h>
               <h >
               How do you know it's time to invest in a revamp? Look for these critical warning signs that your current website is underperforming.
               </h>
@@ -122,7 +122,7 @@ const RedesignservicesintheUAE =()=>{
               
               {/* Text content below images */}
               <div className="space-y-6 text-[#2F5B44] leading-relaxed">
-              <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44]' >The Tangible Business Benefits of a Professional Website Revamp</h1>
+              <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44]' >The Tangible Business Benefits of a Professional Website Revamp</h>
                <h>Investing in website redesign services in the UAE delivers a significant return on investment by directly impacting your bottom line. A strategic partner will focus on these key pillars of success:</h>
                 <br></br>
                 <h> A successful redesign places the user at its core. By creating a clean, intuitive, and engaging interface, we ensure visitors can easily find what they are looking for. This positive experience builds trust and encourages repeat visits</h>
@@ -151,7 +151,7 @@ const RedesignservicesintheUAE =()=>{
             </div>
 
             <section className="mt-8">
-                <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Choosing the Right Website Redesign Agency in Dubai & Abu Dhabi</h1>
+                <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Choosing the Right Website Redesign Agency in Dubai & Abu Dhabi</h>
                 <h>Selecting the right partner for your project is critical. Look for an agency that:</h>
                 <br></br>
                 <ul className='list-disc list-inside ' >
@@ -162,7 +162,7 @@ const RedesignservicesintheUAE =()=>{
             </section>
 
             <section className='mt-8'>
-                <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' > Ready to Transform Your Digital Future?</h1> 
+                <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' > Ready to Transform Your Digital Future?</h> 
                 <h> Your website is your gateway to the thriving market in the UAE. Don't let an outdated or underperforming site hold your business back. A strategic and professional redesign is an investment in your brand’s future, ensuring you not only meet but exceed the expectations of your customers and stay ahead of the competition.</h>
                 <br></br>
                 <h>If you’re ready to unlock your website's true potential, it’s time to start the conversation. Let's build a digital experience that drives results.</h>

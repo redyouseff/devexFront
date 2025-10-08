@@ -95,7 +95,7 @@ import SEO from "../../components/SEO";
     
             {/* Paragraphs */}                       
             <section className="mt-6 space-y-6 text-[#2F5B44] leading-relaxed">
-                <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >The MVP Philosophy: Why UAE Startups Must Launch Smart, Not Big </h1>
+                <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >The MVP Philosophy: Why UAE Startups Must Launch Smart, Not Big </h>
            <h>
            The most crucial acronym in a startup’s vocabulary is MVP: Minimum Viable Product. This is not a cheaper version of your final app; it's a strategic instrument. An MVP is the most basic version of your product, containing only the essential features needed to solve a core problem for your initial users.
            </h>
@@ -125,7 +125,7 @@ import SEO from "../../components/SEO";
               
               {/* Text content below images */}
               <div className="space-y-6 text-[#2F5B44] leading-relaxed">
-              <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Choosing Your Tech Stack: A Pivotal Decision for Future Scale</h1>
+              <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Choosing Your Tech Stack: A Pivotal Decision for Future Scale</h>
                <h>The technology underpinning your app will dictate its performance, scalability, and long-term maintenance costs. The choice is a strategic one</h>
                 <br></br>
     
@@ -153,7 +153,7 @@ import SEO from "../../components/SEO";
             </div>
     
             <section className="mt-8">
-                <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Beyond the Code: Critical Success Factors for UAE Startup Apps in 2025</h1>
+                <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Beyond the Code: Critical Success Factors for UAE Startup Apps in 2025</h>
                 <h>A flawlessly coded app can still fail if it neglects the business ecosystem around it. Success requires a holistic view.</h>
                 <br></br>
                 <ol className='list-decimal list-inside ml-4 ' >
@@ -164,7 +164,7 @@ import SEO from "../../components/SEO";
             </section>
     
             <section className='mt-8'>
-                <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Selecting a Development Partner Who Thinks Like a Startup </h1> 
+                <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Selecting a Development Partner Who Thinks Like a Startup </h> 
                 <h>Startups don't need a vendor; they need a partner. When vetting a company for mobile app development UAE startups, look for a team that embodies the startup ethos:</h>
 
                 <ul className='list-disc list-inside ml-4 mt-4 ' >
@@ -180,7 +180,7 @@ import SEO from "../../components/SEO";
 
 
             <section className='mt-8'>
-                <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Let's Build Your Vision</h1>
+                <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Let's Build Your Vision</h>
                <div className='flex flex-col gap-4'>
                 <h>Your app has the potential to be the next big success story in the UAE. Don't let technical hurdles or a flawed strategy dim your vision. The right approach transforms development from an expense into a strategic investment in your future growth.</h>
                 <h>Partner with a team that understands the startup journey from idea to impact. Let's build your MVP and launch your vision into the world.</h>

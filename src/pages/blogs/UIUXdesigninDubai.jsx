@@ -84,7 +84,7 @@ const UIUXdesigninDubai =()=>{
     
             {/* Paragraphs */}                       
             <section className="mt-6 space-y-6 text-[#2F5B44] leading-relaxed">
-                <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-3' >The Tangible Business Impact of Professional UI UX Design in Dubai </h1>
+                <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-3' >The Tangible Business Impact of Professional UI UX Design in Dubai </h>
               <h >
               Investing in a high-quality user experience is not an expense; it is a direct investment in your bottom line. A strategic approach to UI UX design in Dubai delivers measurable returns by influencing key performance indicators.
               </h>
@@ -114,7 +114,7 @@ const UIUXdesigninDubai =()=>{
               
               {/* Text content below images */}
               <div className="space-y-6 text-[#2F5B44] leading-relaxed">
-              <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44]' >Core Principles of Effective UI UX Design in Dubai</h1>
+              <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44]' >Core Principles of Effective UI UX Design in Dubai</h>
                <h>A successful digital product is built on a foundation of proven design principles. A top-tier agency for UI UX design in Dubai will masterfully implement the following:</h>
                 <br></br>
 
@@ -164,7 +164,7 @@ const UIUXdesigninDubai =()=>{
             </div>
 
             <section className="mt-8">
-                <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Choosing the Right Website Redesign Agency in Dubai & Abu Dhabi</h1>
+                <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Choosing the Right Website Redesign Agency in Dubai & Abu Dhabi</h>
                 <h>Selecting the right partner for your project is critical. Look for an agency that:</h>
                 <br></br>
                 <ul className='list-disc list-inside ml-5 ' >
@@ -175,7 +175,7 @@ const UIUXdesigninDubai =()=>{
             </section>
 
             <section className='mt-8'>  
-                <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' > Conclusion: Designing for Your User is Designing for Success </h1> 
+                <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' > Conclusion: Designing for Your User is Designing for Success </h> 
               <div className='flex flex-col gap-3'>
 
               <h> Your website is your gateway to the thriving market in the UAE. Don't let an outdated or underperforming site hold your business back. A strategic and professional redesign is an investment in your brand’s future, ensuring you not only meet but exceed the expectations of your customers and stay ahead of the competition.</h>

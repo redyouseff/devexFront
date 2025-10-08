@@ -82,7 +82,7 @@ const EcommerceWebsiteDevelopmentUAE =()=>{
 
         {/* Paragraphs */}                       
         <section className="mt-6 space-y-6 text-[#2F5B44] leading-relaxed">
-            <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Essential Features for a High-Converting UAE Online Store </h1>
+            <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Essential Features for a High-Converting UAE Online Store </h>
          <h>
          When developing an online store for the UAE market, a one-size-fits-all approach will fail. Success requires a deep understanding of local consumer behavior and the integration of specific, market-relevant features.
          </h>
@@ -113,7 +113,7 @@ const EcommerceWebsiteDevelopmentUAE =()=>{
           
           {/* Text content below images */}
           <div className="space-y-6 text-[#2F5B44] leading-relaxed">
-          <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Choosing the Right Ecommerce Platform for Your Business</h1>
+          <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Choosing the Right Ecommerce Platform for Your Business</h>
            <h>Selecting the right technology is fundamental to your store's success. The three leading platforms each offer distinct advantages:</h>
             <br></br>
 
@@ -141,7 +141,7 @@ const EcommerceWebsiteDevelopmentUAE =()=>{
         </div>
 
         <section className="mt-8">
-            <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >What to Look for in an Ecommerce Development Partner in Dubai</h1>
+            <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >What to Look for in an Ecommerce Development Partner in Dubai</h>
             <h>Your choice of a development agency is as important as your choice of platform. A top-tier partner in the UAE will possess:</h>
             <br></br>
             <ul className='list-disc list-inside ' >
@@ -153,7 +153,7 @@ const EcommerceWebsiteDevelopmentUAE =()=>{
         </section>
 
         <section className='mt-8'>
-            <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Launch Your Online Success Story Today </h1> 
+            <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Launch Your Online Success Story Today </h> 
             <h>The digital marketplace in the UAE is booming. A strategic investment in professional Ecommerce Website Development UAE is your ticket to entering and conquering this space. By focusing on user experience, integrating local features, and building on a scalable platform, you can create an online store that not only looks great but also delivers outstanding results.</h>
         </section>
 

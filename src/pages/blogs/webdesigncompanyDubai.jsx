@@ -80,7 +80,7 @@ const WebdesigncompanyDubai =()=>{
     
             {/* Paragraphs */}                       
             <section className="mt-6 space-y-6 text-[#2F5B44] leading-relaxed">
-                <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-3' >The Services Offered by a Leading Web Design Company in Dubai </h1>
+                <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-3' >The Services Offered by a Leading Web Design Company in Dubai </h>
                 <h>
                 company Dubai, you gain access to a comprehensive suite of services tailored to meet your specific business needs. These services typically include:
                 </h>
@@ -112,7 +112,7 @@ const WebdesigncompanyDubai =()=>{
               
               {/* Text content below images */}
               <div className="space-y-6 text-[#2F5B44] leading-relaxed">
-              <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-3' >Choosing the Right Web Design Company in Dubai for Your Needs </h1>
+              <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-3' >Choosing the Right Web Design Company in Dubai for Your Needs </h>
                <h>With a plethora of web design companies in Dubai, selecting the right partner for your project is a critical decision. Look for a company with a strong portfolio that showcases a diverse range of successful projects. Client testimonials and case studies can also provide valuable insights into their work ethic, communication, and ability to deliver on their promises.</h>
             <br></br>
           <p className='mt-3'>Ultimately, the right web design company Dubai will act as a strategic partner, invested in your long-term success. They will take the time to understand your business objectives, target audience, and competitive landscape to create a website that not only meets but exceeds your expectations. By investing in a professional and results-driven web design company in Dubai, you are laying a solid foundation for your digital success and ensuring that your business stands out in the dynamic and ever-evolving online world.</p>  

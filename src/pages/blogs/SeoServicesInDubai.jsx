@@ -89,7 +89,7 @@ const SeoServicesInDubai=()=>{
     
             {/* Paragraphs */}                       
             <section className="mt-6 space-y-6 text-[#2F5B44] leading-relaxed">
-                <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-3' >Why Are Professional SEO Services in Dubai a Non-Negotiable Strategy? </h1>
+                <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-3' >Why Are Professional SEO Services in Dubai a Non-Negotiable Strategy? </h>
               <h >
               The Dubai market is uniquely positioned for digital marketing success, but this also means the competition is fierce. Investing in a robust campaign of SEO services in Dubai is no longer optional; it's essential for survival and growth.
               </h>
@@ -118,7 +118,7 @@ const SeoServicesInDubai=()=>{
               
               {/* Text content below images */}
               <div className="space-y-6 text-[#2F5B44] leading-relaxed">
-              <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-3' >The Core Pillars of Effective SEO Services in Dubai </h1>
+              <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-3' >The Core Pillars of Effective SEO Services in Dubai </h>
              <h>A successful SEO strategy is a multi-faceted discipline. The best agencies providing SEO services in Dubai will build your campaign on four essential pillars.</h>
 
 
@@ -181,7 +181,7 @@ const SeoServicesInDubai=()=>{
             </div>
 
             <section className="mt-8">
-                <h1 className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Choosing the Right Partner for SEO Services in Dubai</h1>
+                <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Choosing the Right Partner for SEO Services in Dubai</h>
                 <h>Your choice of SEO agency can make or break your campaign. Look for a partner that:</h>
 
                 <ul className='list-disc list-inside mt-3'>

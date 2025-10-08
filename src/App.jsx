@@ -48,8 +48,7 @@ function App() {
              <Route path="/blogs/EcommerceWebsiteDevelopmentUAE" element={<EcommerceWebsiteDevelopmentUAE />} />
              <Route path="/blogs/ProfessionalwebsitedesignUAE" element={<ProfessionalwebsitedesignUAE />} />
              <Route path="/blogs/WebdesigncompanyDubai"  element={<WebdesigncompanyDubai />} />
-             <Route path="/blogs/SeoServicesInDubai"  element={<SeoServicesInDubai   />} />
-             <Route path="/CustomWebDesignServices" element={<CustomWebDesignServices />} />
+             <Route path="/blogs/SeoServicesInDubai"  element={<SeoServicesInDubai   />} />    
              <Route path="/blogs/UIUXdesigninDubai" element={<UIUXdesigninDubai />} />
              <Route path="/blogs/MobileAppDevelopmentUae" element={<MobileAppDevelopmentUae />} />
      
@@ -58,6 +57,7 @@ function App() {
              <Route path="/ecommerce-design" element={<EcommerceDesign />} />
              <Route path="/swiper" element={<swiper />} /> 
              <Route path="/TestCircleSwiper" element={<TestCircleSwiper />} />
+             <Route path="/CustomWebDesignServices" element={<CustomWebDesignServices />} />
             
              
 
