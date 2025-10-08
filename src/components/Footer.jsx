@@ -107,7 +107,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors whitespace-nowrap">
+                  <Link to="/blogs  " onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors whitespace-nowrap">
                     DIGITAL TRENDS
                   </Link>
                 </li>
