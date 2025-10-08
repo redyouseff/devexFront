@@ -166,6 +166,10 @@ const smoothScrollStyles = `
 // import line from "/images/home/Line 1.svg"
 // import backgroundsectionseven from "/images/home/Devext Pattern 1 7.png"
 import TestCircleSwiper from '../components/testCircleSwiper';
+import ImageSlider from '../components/EffectCard/EffectCard';
+import ImageSlider2 from '../components/EffectCard/test';
+
+
 
 function Home() {
   const [swiperInstance, setSwiperInstance] = useState(null);
@@ -465,6 +469,7 @@ function Home() {
       </section>
 
      {/* Third Section */}
+    
      <Thirdseciont />  
     
 
@@ -845,7 +850,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="container mx-auto max-w-6xl relative z-10">
+            <div className="container mx-auto max-w-6xl relative z-10 -mb-[9rem]">
               {/* Header */}
               <div className="text-center mb-16 relative z-10">
                 <h2 className="text-[36px] font-bold text-[#2F5B44] mb-4 leading-tight">
@@ -863,9 +868,15 @@ function Home() {
             </div>
             
      
-            <div className="relative z-[9999]  "> 
+            {/* <div className="relative z-[9999]  "> 
               <TestCircleSwiper className="-mb-[5rem]" /> 
-            </div>
+           
+            </div> */}
+
+           <div className='-mb-[6rem]'> 
+           <ImageSlider2></ImageSlider2>
+           </div>
+            
 
          
 

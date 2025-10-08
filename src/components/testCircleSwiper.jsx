@@ -21,6 +21,8 @@ const defaultSlides = [
   {id:6, image: image1, title: '“Thanks to DEVEXT, our new app is not only functional but also engaging and easy to use. We’ve received great feedback from our customers since its launch.”', description: 'Sample description 6' },
   {id:7, image: image7, title: 'The team at DEVEXT combines professionalism with a personal touch. Their attention to detail and commitment to quality gave us confidence throughout the entire project.”', description: 'Sample description 7' },
   {id:8, image: image8, title: 'DEVEXT transformed our website into a modern, user-friendly platform that truly reflects our brand. Their team went the extra mile to ensure everything was perfectly tailored to our needs.', description: 'Sample description 8' },
+  {id:8, image: image8, title: 'DEVEXT transformed our website into a modern, user-friendly platform that truly reflects our brand. Their team went the extra mile to ensure everything was perfectly tailored to our needs.', description: 'Sample description 8' },
+  {id:8, image: image8, title: 'DEVEXT transformed our website into a modern, user-friendly platform that truly reflects our brand. Their team went the extra mile to ensure everything was perfectly tailored to our needs.', description: 'Sample description 8' },
 ]
 
 function TestCircleSwiper({ slides = defaultSlides, autoMs = 0, className = '' }) {
@@ -31,7 +33,7 @@ function TestCircleSwiper({ slides = defaultSlides, autoMs = 0, className = '' }
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth <= 768);
+    const check = () => setIsMobile(window.innerWidth <= 768);   
     check();
     window.addEventListener('resize', check);
     return () => window.removeEventListener('resize', check);

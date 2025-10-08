@@ -14,6 +14,20 @@ import SpeceficBlogs from './pages/SpeceficBlogs';
 import TestCircleSwiper from './components/testCircleSwiper';
 import EcommerceDesign from './pages/EcommerceDesign';
 import CustomWebDesignServices from './pages/CustomWebDesignServices';
+import ImageSlider from './components/EffectCard/EffectCard';
+import ImageSlider2 from './components/EffectCard/test';
+import RedesignservicesintheUAE from './pages/blogs/RedesignservicesintheUAE';
+import EcommerceWebsiteDevelopmentUAE from './pages/blogs/EcommerceWebsiteDevelopmentUAE';
+import ProfessionalwebsitedesignUAE from './pages/blogs/professionalwebsitedesignUAE';
+import WebdesigncompanyDubai from './pages/blogs/webdesigncompanyDubai';
+import SeoServicesInDubai from './pages/blogs/SeoServicesInDubai';
+import UIUXdesigninDubai from './pages/blogs/UIUXdesigninDubai';
+import MobileAppDevelopmentUae from './pages/blogs/MobileAppDevelopmentUae';
+
+
+
+
+
 
 
 function App() {
@@ -29,11 +43,27 @@ function App() {
             <Route path="/calculator" element={<Calculator />} />
              <Route path="/contact" element={<Contact />} />
              <Route path="/blogs" element={<Blogs />} />
-             <Route path="/blogs/:id" element={<SpeceficBlogs />} />
+             {/* <Route path="/blogs/:id" element={<SpeceficBlogs />} /> */}
+             <Route path="/blogs/RedesignservicesintheUAE" element={<RedesignservicesintheUAE />} />
+             <Route path="/blogs/EcommerceWebsiteDevelopmentUAE" element={<EcommerceWebsiteDevelopmentUAE />} />
+             <Route path="/blogs/ProfessionalwebsitedesignUAE" element={<ProfessionalwebsitedesignUAE />} />
+             <Route path="/blogs/WebdesigncompanyDubai"  element={<WebdesigncompanyDubai />} />
+             <Route path="/blogs/SeoServicesInDubai"  element={<SeoServicesInDubai   />} />
+             <Route path="/CustomWebDesignServices" element={<CustomWebDesignServices />} />
+             <Route path="/blogs/UIUXdesigninDubai" element={<UIUXdesigninDubai />} />
+             <Route path="/blogs/MobileAppDevelopmentUae" element={<MobileAppDevelopmentUae />} />
+     
+            
+             
              <Route path="/ecommerce-design" element={<EcommerceDesign />} />
              <Route path="/swiper" element={<swiper />} /> 
              <Route path="/TestCircleSwiper" element={<TestCircleSwiper />} />
-             <Route path="/CustomWebDesignServices" element={<CustomWebDesignServices />} />
+            
+             
+
+         
+   
+            
            
            
           </Routes>

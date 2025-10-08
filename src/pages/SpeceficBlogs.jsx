@@ -1,19 +1,13 @@
 
 import { Link } from 'react-router-dom';
-// import heroImage from "/images/blogs/39fe9b9d1d42d713a96f4061d8de02a0c59fabde.jpg";
-// import sideImage1 from "/images/blogs/39fe9b9d1d42d713a96f4061d8de02a0c59fabde.jpg";
-// import sideImage2 from "/images/blogs/1cc2cadd3aac660d21d6e6394f98d416cda2ffda.jpg";
 import Navbar2 from "../components/Navbar2";
 import SEO from "../components/SEO";
-// import icon1 from "/images/blogs/Group 1.svg";
-// import uparrow from "/images/blogs/Vector4.svg";
-// import uparrow2 from "/images/home/Vector.svg";
-// import circle from "/images/blogs/Ellipse 9.svg";
+
 
 
 
 const SpeceficBlogs = () => {
-  // Structured Data for Blog Post
+  
   const blogPostStructuredData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",

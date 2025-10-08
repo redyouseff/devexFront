@@ -32,12 +32,12 @@ const Footer = () => {
               <h3 className="text-[16px] sm:text-[18px] font-bold mb-4 sm:mb-6 uppercase">MAIN SERVICES</h3>
               <ul className="space-y-4">
                 <li>
-                  <Link to="/services" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/CustomWebDesignServices" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     CUSTOM WEB DESIGN
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services"  onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/ecommerce-design"  onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     ECOMMERCE DESIGN
                   </Link>
                 </li>
@@ -72,7 +72,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/CustomWebDesignServices" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     CUSTOM WEB DEVELOPMENT
                   </Link>
                 </li>
@@ -82,7 +82,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/ecommerce-design" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     ECOMMERCE DEVELOPMENT
                   </Link>
                 </li>
