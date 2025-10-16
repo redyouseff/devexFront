@@ -23,6 +23,7 @@ import WebdesigncompanyDubai from './pages/blogs/webdesigncompanyDubai';
 import SeoServicesInDubai from './pages/blogs/SeoServicesInDubai';
 import UIUXdesigninDubai from './pages/blogs/UIUXdesigninDubai';
 import MobileAppDevelopmentUae from './pages/blogs/MobileAppDevelopmentUae';
+import CustomWebDevelopment from './pages/CustomWebDevelopment';
 
 
 
@@ -58,6 +59,7 @@ function App() {
              <Route path="/swiper" element={<swiper />} /> 
              <Route path="/TestCircleSwiper" element={<TestCircleSwiper />} />
              <Route path="/CustomWebDesignServices" element={<CustomWebDesignServices />} />
+             <Route path="/CustomWebDevelopment" element={<CustomWebDevelopment />} />
             
              
 
