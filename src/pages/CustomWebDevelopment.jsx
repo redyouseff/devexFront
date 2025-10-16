@@ -5,16 +5,16 @@ import Navbar from "../components/Navbar";
 import SEO from '../components/SEO';
 const image2 = "https://res.cloudinary.com/daop3bufa/image/upload/v1759051036/ecommerce_website_3_2_lw4ewc.svg";
 import { useEffect, useState } from "react";
-import image1 from "/images/CustomWebDevelopment/Group.svg";
-import image3 from "/images/CustomWebDevelopment/Vector.svg";
-import image4 from "/images/CustomWebDevelopment/Vector4.svg";
-import image5 from "/images/CustomWebDevelopment/carbon_development.svg";
-import image6 from "/images/CustomWebDevelopment/Group 4.svg";
-import image7 from "/images/CustomWebDevelopment/Vector7.svg";
-import image9 from "/images/CustomWebDevelopment/Vector9.svg";
-import image8 from "/images/CustomWebDevelopment/Devext Pattern.png";
-import image10 from "/images/CustomWebDevelopment/d491b2dbc4c0ac592aff2da00e1ed6656b01ac11.png"
-import image11 from "/images/CustomWebDevelopment/Frame 517.svg";
+const image1 = "https://res.cloudinary.com/daop3bufa/image/upload/v1760610715/Group_4_m5eatr.svg";
+const image3 = "https://res.cloudinary.com/daop3bufa/image/upload/v1760610790/Vector_prqjyg.svg"
+const image4 = "https://res.cloudinary.com/daop3bufa/image/upload/v1760610825/Vector4_rfbwy1.svg"
+const image5 = "https://res.cloudinary.com/daop3bufa/image/upload/v1760610864/carbon_development_l2ddly.svg"
+const image6 = "https://res.cloudinary.com/daop3bufa/image/upload/v1760610896/Group_4_gsdxvk.svg"
+const image7 = "https://res.cloudinary.com/daop3bufa/image/upload/v1760610935/Vector7_hypupt.svg"
+const image9 = "https://res.cloudinary.com/daop3bufa/image/upload/v1760610971/Vector9_a8ik1j.svg"
+const image8 = "https://res.cloudinary.com/daop3bufa/image/upload/v1760611008/Devext_Pattern_inepkt.png"
+const image10 = "https://res.cloudinary.com/daop3bufa/image/upload/v1760611044/d491b2dbc4c0ac592aff2da00e1ed6656b01ac11_n0rczg.png"
+const image11 = "https://res.cloudinary.com/daop3bufa/image/upload/v1760611083/Frame_517_ncobsz.svg"
 
 const CustomWebDevelopment =()=>{
    
