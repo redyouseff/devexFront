@@ -72,7 +72,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/CustomWebDesignServices" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/CustomWebDevelopment" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     CUSTOM WEB DEVELOPMENT
                   </Link>
                 </li>
@@ -107,7 +107,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/blogs  " onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors whitespace-nowrap">
+                  <Link to="/DigitalTrends" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors whitespace-nowrap">
                     DIGITAL TRENDS
                   </Link>
                 </li>

@@ -4,9 +4,15 @@
 import { Link } from 'react-router-dom';
 import Navbar2 from "../../components/Navbar2";
 import SEO from "../../components/SEO";
+import { useEffect } from 'react';
 
 
 const SeoServicesInDubai=()=>{
+
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  }
+  ,[])
     
     const blogPostStructuredData = {
         "@context": "https://schema.org",
@@ -37,6 +43,112 @@ const SeoServicesInDubai=()=>{
         },
         "articleSection": "SEO"
       };
+
+      // Smooth scroll styles
+const smoothScrollStyles = `
+/* Smooth and slower page scroll */
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* Make scroll even smoother and slower */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Add momentum scrolling for iOS */
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar styling for smoother experience */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2F5B44;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e3d2a;
+}
+
+/* Swiper custom styles */
+.swiper-slide {
+  width: calc((100% - 64px) / 3) !important;
+  max-width: 400px !important;
+}
+
+@media (max-width: 1023px) {
+  .swiper-slide {
+    width: calc((100% - 24px) / 2) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .swiper-slide {
+    width: 100% !important;
+  }
+}
+
+/* Third section Swiper styles */
+.third-section-swiper {
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+.third-section-swiper .swiper-slide {
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+.third-section-swiper .swiper-slide-active {
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+.third-section-swiper .swiper-slide-prev,
+.third-section-swiper .swiper-slide-next {
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+/* Vertical Swiper specific styles */
+.third-section-swiper.swiper-vertical {
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+.third-section-swiper.swiper-vertical .swiper-wrapper {
+  flex-direction: column;
+  height: 100% !important;
+}
+
+.third-section-swiper .swiper-wrapper {
+  height: 100% !important;
+}
+`;
     
       return (
         <>
@@ -49,6 +161,7 @@ const SeoServicesInDubai=()=>{
           />
           <div className="min-h-screen bg-[#FEF9D0]">
             <Navbar2 />   
+            <style>{smoothScrollStyles}</style>
     
           <main className="container mx-auto max-w-[90rem]  px-4 sm:px-6 py-8">
             {/* Title */}

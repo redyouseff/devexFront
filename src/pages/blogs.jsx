@@ -157,12 +157,74 @@ const blogs =()=>{
     };
 
     const cards = [
-      { id: 1, image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050848/39fe9b9d1d42d713a96f4061d8de02a0c59fabde_sm65le.jpg", title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
-      { id: 2, image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050834/screencapture-alwidadtaxation-2025-07-11-16_12_43_1_nhcba9.svg", title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
-      { id: 3, image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050834/screencapture-alwidadtaxation-2025-07-11-16_12_43_1_nhcba9.svg", title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
-      { id: 4, image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050848/39fe9b9d1d42d713a96f4061d8de02a0c59fabde_sm65le.jpg", title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
-      { id: 5, image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050848/39fe9b9d1d42d713a96f4061d8de02a0c59fabde_sm65le.jpg", title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
-      { id: 6, image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050834/screencapture-alwidadtaxation-2025-07-11-16_12_43_1_nhcba9.svg", title: 'Explore the Latest Digital Trends', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
+      { id: 1,
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050848/39fe9b9d1d42d713a96f4061d8de02a0c59fabde_sm65le.jpg",
+      title: 'Why a Strategic Website Redesign is Crucial for Your Success in the UAE',
+      description: "In the fast-paced, digitally-driven economy of the United Arab Emirates, your website is more than just a digital brochure; it's your most powerful marketing asset and a 24/7 sales representative. However, a website that was  ....",
+      link:"/digitaltrends/RedesignservicesintheUAE"
+
+        
+      },
+      { id: 2,
+      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050834/screencapture-alwidadtaxation-2025-07-11-16_12_43_1_nhcba9.svg",
+      title: 'Building Your Digital Empire', 
+      description: 'The United Arab Emirates boasts one of the most dynamic and rapidly growing digital economies in the world. With sky-high internet penetration and a tech-savvy consumer base eager for online shopping, the opportunity for entrepreneurs and established businesses to thrive online has never ....' ,
+      link:"/digitaltrends/EcommerceWebsiteDevelopmentUAE"
+        
+        },
+
+      {
+        
+        id: 3, image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050834/screencapture-alwidadtaxation-2025-07-11-16_12_43_1_nhcba9.svg", 
+        title: 'Your Website is Your Digital Handshake',
+        description: "Before a meeting is scheduled, before a phone call is made, your first interaction with a potential client in the UAE is almost certainly digital. Your website is that first handshake—an immediate reflection of your brand's calibre, competence, and attention to detail. In a marketplace as  ....",
+        link:"/digitaltrends/ProfessionalwebsitedesignUAE"
+
+        },
+
+
+      {
+        
+        id: 4,
+        image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050848/39fe9b9d1d42d713a96f4061d8de02a0c59fabde_sm65le.jpg",
+        title: 'How a Premier Web Design Company in Dubai Can Transform Your Business',
+        description: "In the bustling and competitive market of Dubai, a strong online presence is not just an advantage; it's a necessity. Your website is often the first interaction potential customers have with your brand ....",
+        link:"/digitaltrends/WebdesigncompanyDubai"
+      
+      
+      },
+        
+
+
+
+      {
+        
+        id: 5,
+        image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050848/39fe9b9d1d42d713a96f4061d8de02a0c59fabde_sm65le.jpg",
+        title: 'Unlocking Your Potential',
+        description: "In the bustling, digital-first economy of Dubai, your business’s visibility on Google is not just a marketing metric—it's a primary driver of revenue and growth. With countless companies competing for the attention of the same audience, simply having a website is insufficient. To succeed, you must  ...." ,
+        link:"/digitaltrends/SeoServicesInDubai"
+      
+      },
+
+
+
+      { id: 6,
+        image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050834/screencapture-alwidadtaxation-2025-07-11-16_12_43_1_nhcba9.svg",
+        title: 'Beyond Beauty: Why Expert UI UX Design',
+        description: "In Dubai's hyper-competitive and digitally-savvy market, a visually appealing website or mobile app is merely the price of entry. The true differentiator—the factor that separates market leaders from the rest—lies in the quality of the user's experience. This is where the discipline of professional UI UX design .....",
+        link:"/digitaltrends/UIUXdesigninDubai"
+      
+      },
+
+      {
+        id: 7,
+        image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050834/screencapture-alwidadtaxation-2025-07-11-16_12_43_1_nhcba9.svg",
+        title: 'From Idea to Impactr',
+        description: "In the vibrant, fast-paced startup ecosystem of the UAE, a groundbreaking app idea is the spark. It’s the vision for a service that could redefine an industry, a platform that could connect communities, or a tool that solves a nagging problem. But the path from a brilliant concept to a dominant market player  ....",
+        link:"/digitaltrends/MobileAppDevelopmentUae"
+      
+      }
     ];
     return(
         <>
@@ -235,12 +297,17 @@ const blogs =()=>{
                 </div>
                 <h3 className="text-xl font-bold text-[#FEF9D0] mb-4 text-center">{card.title}</h3>
                 <p className="text-[#FEF9D0] opacity-80 text-sm mb-6 leading-relaxed text-center">{card.description}</p>
+                <Link to={card.link}>
+
                 <button className="relative w-40% text-center mx-auto border border-[#FEF9D0] text-[#FEF9D0] py-3 px-6 rounded-full font-medium transition-colors flex items-center justify-center">
                   Read More
                  <span className="relative w-4 h-4 ml-2 inline-block">
-
+                   <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="up arrow " />
                  </span>
                 </button>
+                
+                </Link>
+
               </div>   
             ))}
           </div>

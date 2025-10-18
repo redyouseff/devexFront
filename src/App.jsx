@@ -43,15 +43,16 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/calculator" element={<Calculator />} />
              <Route path="/contact" element={<Contact />} />
-             <Route path="/blogs" element={<Blogs />} />
+             <Route path="/DigitalTrends" element={<Blogs />} />
+             
              {/* <Route path="/blogs/:id" element={<SpeceficBlogs />} /> */}
-             <Route path="/blogs/RedesignservicesintheUAE" element={<RedesignservicesintheUAE />} />
-             <Route path="/blogs/EcommerceWebsiteDevelopmentUAE" element={<EcommerceWebsiteDevelopmentUAE />} />
-             <Route path="/blogs/ProfessionalwebsitedesignUAE" element={<ProfessionalwebsitedesignUAE />} />
-             <Route path="/blogs/WebdesigncompanyDubai"  element={<WebdesigncompanyDubai />} />
-             <Route path="/blogs/SeoServicesInDubai"  element={<SeoServicesInDubai   />} />    
-             <Route path="/blogs/UIUXdesigninDubai" element={<UIUXdesigninDubai />} />
-             <Route path="/blogs/MobileAppDevelopmentUae" element={<MobileAppDevelopmentUae />} />
+             <Route path="/DigitalTrends/RedesignservicesintheUAE" element={<RedesignservicesintheUAE />} />
+             <Route path="/DigitalTrends/EcommerceWebsiteDevelopmentUAE" element={<EcommerceWebsiteDevelopmentUAE />} />
+             <Route path="/DigitalTrends/ProfessionalwebsitedesignUAE" element={<ProfessionalwebsitedesignUAE />} />
+             <Route path="/DigitalTrends/WebdesigncompanyDubai"  element={<WebdesigncompanyDubai />} />
+             <Route path="/DigitalTrends/SeoServicesInDubai"  element={<SeoServicesInDubai   />} />    
+             <Route path="/DigitalTrends/UIUXdesigninDubai" element={<UIUXdesigninDubai />} />
+             <Route path="/DigitalTrends/MobileAppDevelopmentUae" element={<MobileAppDevelopmentUae />} />
      
             
              
@@ -61,13 +62,7 @@ function App() {
              <Route path="/CustomWebDesignServices" element={<CustomWebDesignServices />} />
              <Route path="/CustomWebDevelopment" element={<CustomWebDevelopment />} />
             
-             
-
-         
-   
-            
-           
-           
+                       
           </Routes>
           <Footer />
         </div>
