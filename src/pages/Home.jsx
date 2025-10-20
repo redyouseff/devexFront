@@ -348,8 +348,8 @@ function Home() {
               </div>
 
           {/* Content */}
-        <div className="container mx-auto max-w-6xl relative z-20 px-4 sm:px-6 pt-20 sm:pt-40">
-            <div className="max-w-2xl">
+        <div className="container mx-auto max-w-7xl relative z-20 px-4 sm:px-6 pt-20 sm:pt-40 ">
+            <div className="max-w-2xl mb-6 ">
             <h1 className="text-[40px] sm:text-[60px] lg:text-[80px] font-bold mb-0 text-[#E9F2CD]">
               DEVEXT
             </h1>
@@ -581,9 +581,15 @@ function Home() {
                 Discover some of our unique projects that showcase our creativity, innovation, and technical expertise. Each project reflects our commitment to delivering tailored solutions that not only meet client needs but also set new standards in design and development.  </p>
               </div>
 
-              {/* Navigation Arrows */}
-              <div className="flex justify-start mb-8 mt-16">
-                <div className="flex gap-4">
+             
+             
+
+              {/* Swiper Carousel */}
+              <div className="max-w-7xl mx-auto px-6">
+
+              <div className="flex justify-start mb-8 mt-16 ">
+                 {/* Navigation Arrows */}
+                <div className="flex gap-4 mb-5">
                   <button 
                     onClick={() => swiperInstance?.slidePrev()}
                     className="hover:opacity-70 transition-opacity"
@@ -598,9 +604,7 @@ function Home() {
                   </button>
                 </div>
               </div>
-
-              {/* Swiper Carousel */}
-              <div className="max-w-7xl mx-auto px-6">
+                  
                 <Swiper
                   modules={[Navigation, Pagination]}
                   spaceBetween={32}
@@ -631,7 +635,7 @@ function Home() {
                   style={{ paddingLeft: '0px', paddingRight: '0px' }}
                 >
                   {cardsData.map((card) => (
-                    <SwiperSlide key={card.id}>
+                    <SwiperSlide key={card.id}> 
                       <div className="bg-[#2F5B44] rounded-3xl overflow-hidden p-4 sm:p-6 text-[#FEF9D0] flex flex-col w-full" style={{ height: '400px' }}>
                         {/* Image Section */}
                         <div className="h-40 sm:h-48 md:h-56 relative rounded-lg mb-4 sm:mb-6 flex items-center justify-center overflow-hidden ">
@@ -676,7 +680,7 @@ function Home() {
           </section>  
           
           {/* sixth Section - FAQ */}
-          <section className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 xl:px-20" style={{ background: '#2F5B44' }}>
+          <section className="relative py-13 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 xl:px-20" style={{ background: '#2F5B44' }}>
             <div className="container mx-auto max-w-full">
               {/* Header */}
               <div className="text-center mb-8 sm:mb-12">
@@ -686,7 +690,7 @@ function Home() {
               </div>
 
               {/* FAQ Accordion */}
-              <div className="space-y-3 sm:space-y-4 max-w-6xl mx-auto">
+              <div className="space-y-3 sm:space-y-4 max-w-7xl mx-auto">
                 {/* FAQ Item 1 */}
                 <div className="border-2 border-[#FEF9D0] rounded-full px-4 sm:px-6 lg:px-8 py-3 sm:py-4 hover:bg-[#FEF9D0] hover:bg-opacity-20 transition-all cursor-pointer" onClick={() => setOpenFaqIndex(openFaqIndex === 0 ? null : 0)}>
                   <div className="flex items-center justify-between">
@@ -889,7 +893,7 @@ function Home() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                 
                 {/* Left Side - Text Content */}
-                <div className="space-y-6 lg:space-y-8 pb-4 text-center lg:text-left">
+                <div className="space-y-6 lg:space-y-8 pb-4 text-center lg:text-left">   
                   <div>
                     <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] xl:text-[36px] font-bold text-[#FEF9D0] mb-4 sm:mb-6 leading-tight whitespace-nowrap  " style={{ fontFamily: 'Inter' }}>
                       DIGITIZING YOUR BUSINESS<br />

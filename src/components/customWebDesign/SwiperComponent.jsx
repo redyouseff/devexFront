@@ -174,7 +174,7 @@ const SwiperComponent =()=>{
               <div className='flex flex-col justify-between h-full gap-4 mx-auto max-w-[95%] px-4 sm:px-6 lg:px-8 py-12 md:py-16'>
     
                 <img src={item.image} alt="image1" className='w-[100px] h-[100px]' />
-                <div className=' overflow-y-auto lg:max-h-[66vh]  lg:min-h-[26rem] md:min-h-[63vh]'>
+                <div className='  lg:max-h-[66vh]  lg:min-h-[26rem] md:min-h-[63vh]'>
                 <h1 className=" font-inter text-[36px] not-italic font-medium leading-normal uppercase">{item.title}</h1>
                 <p>{item.description}</p>
                 <div >
@@ -182,12 +182,12 @@ const SwiperComponent =()=>{
 
                 </div>
               
-                   <ul className=" list-disc list-inside ml-7">
+                   <ul className="list-disc list-inside ml-7">
 
                     {
                       item.list.map((list)=>{
                         return(
-                          <li className=' font-inter text-[15px] not-italic font-normal leading-normal'>{list}</li>
+                          <li className='font-inter text-[15px] not-italic font-normal leading-normal'>{list}</li>
                         )
                       })
                     }

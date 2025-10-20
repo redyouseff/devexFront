@@ -6,15 +6,15 @@ import image1 from "/images/circleSwiperHome/Ellipse 1.svg";
 import image2 from "/images/circleSwiperHome/Ellipse 2.svg";
 import image7 from "/images/circleSwiperHome/Ellipse 77.svg";
 import greenicon from "/images/circleSwiperHome/Group.svg";
-import fiftharrowleft from "/images/home/Frame 18.svg";
-import fiftharrowright from "/images/home/Frame 17.svg";
+
+const MotionDiv = motion.div;
 
 const ImageSlider2 = () => {
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
   const [screenSize, setScreenSize] = useState('desktop');
 
   useEffect(() => {
-    const handleResize = () => {
+    const handleResize = () => {  
       const width = window.innerWidth;
       if (width < 640) {
         setScreenSize('mobile');
@@ -121,39 +121,36 @@ const ImageSlider2 = () => {
   const imageVariants = getImageVariants();
   
   return (
-    <div className="relative flex items-center flex-col justify-center  min-h-screen py-8 sm:py-12 lg:py-0"> 
+    <div className="relative flex items-center flex-col justify-center  min-h-screen py-8 sm:py-12 lg:py-0 lg:mb-9"> 
       <div
         className="relative w-full max-w-screen-xl overflow-hidden px-4 sm:px-8"
         style={{ height: "clamp(380px, 70vh, 640px)" }}
       >
       {/* Controls - responsive positioning */}
       <div className="absolute top-2  sm:top-4 sm:left-4 md:top-6 md:left-6 z-10 flex flex-row ">
-        <button
-          className="text-white rounded-md py-1 px-2 sm:py-2 sm:px-3 md:py-2 md:px-4 hover:cursor-pointer transition-transform hover:scale-110"
-          onClick={handleBack}
-          aria-label="Previous"
-        >
-          <img 
-            src={fiftharrowleft} 
-            alt="Previous" 
-            className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10"
-          />
-        </button>
-        <button
-          className="text-white rounded-md py-1 px-2 sm:py-2 sm:px-3 md:py-2 md:px-4 hover:cursor-pointer transition-transform hover:scale-110"
-          onClick={handleNext}
-          aria-label="Next"
-        >
-          <img 
-            src={fiftharrowright} 
-            alt="Next" 
-            className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10"
-          />
-        </button>
+
+                <div className="flex gap-4">
+                <button 
+                    onClick={handleNext}
+                    className="hover:opacity-70 transition-opacity"
+                  >
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052644/Frame_18_wju3de.svg" alt="Previous" className="w-10 h-10" />
+                  </button>
+                  
+
+                  <button 
+                    onClick={handleBack}
+                    className="hover:opacity-70 transition-opacity"
+                  >
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052642/Frame_17_owqmwt.svg" alt="Next" className="w-10 h-10" />
+                  </button>
+                </div>
+           
+        
       </div>
       </div>
       {cards.map((card, index) => (
-        <motion.div
+        <MotionDiv
           key={index}
           initial="center"
           animate={positions[positionIndexes[index]]}
@@ -161,24 +158,8 @@ const ImageSlider2 = () => {
           transition={{ duration: 0.5 }}
           style={{ position: "absolute", marginTop: "9rem" }}
         >
-          {card.id ? (
-            <div className="relative z-20 flex w-[16rem] h-[22rem] sm:w-[18rem] sm:h-[24rem] md:w-[20rem] md:h-[26rem] lg:w-[20.625rem] lg:h-[27.125rem] px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8 flex-col justify-between items-start gap-4 sm:gap-5 shrink-0 rounded-[2rem] sm:rounded-[2.25rem] md:rounded-[2.5rem] bg-[#2F5B44] shadow-[0.125rem_0.3125rem_0.25rem_0_rgba(0,0,0,0.25)] overflow-hidden ">
-              <p className="text-[#FEF9D0] text-center font-inter text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] font-normal leading-normal">
-                {card.title}
-              </p>
-              <div className="flex items-center gap-2 sm:gap-3 self-start mt-auto">
-                <img src={card.image} alt="logo" className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full" />
-                <div className="flex flex-col items-start">
-                  <p className="text-[#FEF9D0] font-inter text-[14px] sm:text-[15px] md:text-[16px] lg:text-[1.125rem] not-italic font-semibold leading-normal">{card.name}</p>
-                  <div className="flex items-center gap-1 sm:gap-[0.375rem] opacity-90">
-                    <img src={location} alt="location" className="w-3 h-4 sm:w-[0.875rem] sm:h-[1.125rem] md:w-[1rem] md:h-[1.25rem]" />
-                    <span className="text-[#FEF9D0] text-[12px] sm:text-[13px] md:text-[14px] lg:text-[0.9375rem]">{card.location}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="relative z-20 flex w-[16rem] h-[22rem] sm:w-[18rem] sm:h-[24rem] md:w-[20rem] md:h-[26rem] lg:w-[20.625rem] lg:h-[27.125rem] px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8 flex-col justify-between items-start gap-4 sm:gap-5 shrink-0 rounded-[2rem] sm:rounded-[2.25rem] md:rounded-[2.5rem] bg-[#FEF9D0] shadow-[-2px_6px_4px_0_rgba(0,0,0,0.25)] overflow-hidden">
+          {positions[positionIndexes[index]] === 'center' ? (
+            <div className="relative z-20 flex w-[16rem] h-[22rem] sm:w-[18rem] sm:h-[24rem] md:w-[20rem] md:h-[26rem] lg:w-[20.625rem] lg:h-[27.125rem] px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8 flex-col justify-between items-start gap-4 sm:gap-5 shrink-0 rounded-[2rem] sm:rounded-[2.25rem] md:rounded-[2.5rem] bg-[#FEF9D0] shadow-[0_12px_16px_-8px_rgba(0,0,0,0.25),0_-12px_16px_-8px_rgba(0,0,0,0.25)]  overflow-hidden">
               <p className="text-[#2F5B44] text-center font-inter text-[14px] sm:text-[15px] md:text-[16px] lg:text-[1.125rem] not-italic font-normal leading-[1.6rem] sm:leading-[1.7rem] md:leading-[1.8rem] w-full break-words whitespace-normal overflow-hidden text-ellipsis [display:-webkit-box] [-webkit-line-clamp:8] [-webkit-box-orient:vertical]">
                 {card.title}
               </p>
@@ -193,8 +174,24 @@ const ImageSlider2 = () => {
                 </div>
               </div>
             </div>
+          ) : (
+            <div className="relative z-20 flex w-[16rem] h-[22rem] sm:w-[18rem] sm:h-[24rem] md:w-[20rem] md:h-[26rem] lg:w-[20.625rem] lg:h-[27.125rem] px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8 flex-col justify-between items-start gap-4 sm:gap-5 shrink-0 rounded-[2rem] sm:rounded-[2.25rem] md:rounded-[2.5rem] bg-[#2F5B44] shadow-[0_12px_16px_-8px_rgba(0,0,0,0.25),0_-12px_16px_-8px_rgba(0,0,0,0.25)] overflow-hidden ">
+              <p className="text-[#FEF9D0] text-center font-inter text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] font-normal leading-normal">
+                {card.title}
+              </p>
+              <div className="flex items-center gap-2 sm:gap-3 self-start mt-auto">
+                <img src={card.image} alt="logo" className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full" />
+                <div className="flex flex-col items-start">
+                  <p className="text-[#FEF9D0] font-inter text-[14px] sm:text-[15px] md:text-[16px] lg:text-[1.125rem] not-italic font-semibold leading-normal">{card.name}</p>
+                  <div className="flex items-center gap-1 sm:gap-[0.375rem] opacity-90">
+                    <img src={location} alt="location" className="w-3 h-4 sm:w-[0.875rem] sm:h-[1.125rem] md:w-[1rem] md:h-[1.25rem]" />
+                    <span className="text-[#FEF9D0] text-[12px] sm:text-[13px] md:text-[14px] lg:text-[0.9375rem]">{card.location}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           )}
-        </motion.div>
+        </MotionDiv>
       ))}
     </div>
   );

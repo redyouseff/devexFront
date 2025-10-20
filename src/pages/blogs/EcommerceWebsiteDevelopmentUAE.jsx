@@ -157,7 +157,7 @@ body {
         <Navbar2 />   
         <style>{smoothScrollStyles}</style>
 
-      <main className="container mx-auto max-w-[90rem]  px-4 sm:px-6 py-8">
+      <main className="container mx-auto max-w-7xl px-8 py-8">
         {/* Title */}
 
         <div className="flex items-center justify-between  mt-[10rem] mb-6"> 
@@ -196,9 +196,10 @@ body {
         {/* Paragraphs */}                       
         <section className="mt-6 space-y-6 text-[#2F5B44] leading-relaxed">
             <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Essential Features for a High-Converting UAE Online Store </h>
-         <h>
+            <br></br>
+         <p className='mt-3'>
          When developing an online store for the UAE market, a one-size-fits-all approach will fail. Success requires a deep understanding of local consumer behavior and the integration of specific, market-relevant features.
-         </h>
+         </p>
           <br></br>
           <ul className="list-disc list-inside  ">
             <li className='mb-4'> Secure & Diverse Payment Gateway Integration: Trust is paramount. Your website must offer secure payment options that UAE customers know and prefer. This includes standard credit/debit cards (Visa, Mastercard), but also crucial integration with local Buy Now, Pay Later (BNPL) services like Tabby and Tamara, alongside international options like Stripe and PayPal.</li>
@@ -227,7 +228,8 @@ body {
           {/* Text content below images */}
           <div className="space-y-6 text-[#2F5B44] leading-relaxed">
           <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Choosing the Right Ecommerce Platform for Your Business</h>
-           <h>Selecting the right technology is fundamental to your store's success. The three leading platforms each offer distinct advantages:</h>
+          <br></br>
+           <p className='mt-3'>Selecting the right technology is fundamental to your store's success. The three leading platforms each offer distinct advantages:</p>
             <br></br>
 
             <ol className='list-decimal list-inside ' >
@@ -255,7 +257,8 @@ body {
 
         <section className="mt-8">
             <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >What to Look for in an Ecommerce Development Partner in Dubai</h>
-            <h>Your choice of a development agency is as important as your choice of platform. A top-tier partner in the UAE will possess:</h>
+            <br></br>
+            <p className='mt-3'>Your choice of a development agency is as important as your choice of platform. A top-tier partner in the UAE will possess:</p>
             <br></br>
             <ul className='list-disc list-inside ' >
                <li className='mt-4'> A Proven Portfolio: They should be able to showcase a portfolio of successful, high-traffic e-commerce websites they have built for clients in the region.</li>
@@ -265,9 +268,10 @@ body {
             </ul>
         </section>
 
-        <section className='mt-8'>
-            <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Launch Your Online Success Story Today </h> 
-            <h>The digital marketplace in the UAE is booming. A strategic investment in professional Ecommerce Website Development UAE is your ticket to entering and conquering this space. By focusing on user experience, integrating local features, and building on a scalable platform, you can create an online store that not only looks great but also delivers outstanding results.</h>
+        <section className='mt-8 '>
+            <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-5' >Launch Your Online Success Story Today </h> 
+            <br ></br>
+            <p className='mt-3'>The digital marketplace in the UAE is booming. A strategic investment in professional Ecommerce Website Development UAE is your ticket to entering and conquering this space. By focusing on user experience, integrating local features, and building on a scalable platform, you can create an online store that not only looks great but also delivers outstanding results.</p>
         </section>
 
 

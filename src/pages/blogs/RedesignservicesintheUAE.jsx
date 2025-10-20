@@ -157,12 +157,12 @@ body {
             <Navbar2 />  
             <style>{smoothScrollStyles}</style> 
     
-          <main className="container mx-auto max-w-[90rem]  px-4 sm:px-6 py-8">
+          <main className="container   mx-auto max-w-7xl px-8 py-8">
             {/* Title */}
     
             <div className="flex items-center justify-between  mt-[10rem] mb-6"> 
                 <div>
-                <h1 className="text-5xl sm:text-3xl font-semibold text-[#2F5B44]">Why a Strategic Website Redesign is Crucial for Your Success in the UAE</h1>     
+                <h1 className="text-5xl sm:text-3xl font-semibold text-[#2F5B44]">Why a Strategic Website Redesign is Crucial for Your Success<br/> in the UAE</h1>     
            
                 </div>
                 <div className="shrink-0 flex items-center gap-2 mr-[2rem]">                                                              
@@ -195,9 +195,10 @@ body {
             {/* Paragraphs */}                       
             <section className="mt-6 space-y-6 text-[#2F5B44] leading-relaxed">
                 <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44]' >Telltale Signs Your Business Needs a Website Redesign</h>
-              <h >
+              <p className='mt-3' >
+                <br/>
               How do you know it's time to invest in a revamp? Look for these critical warning signs that your current website is underperforming.
-              </h>
+              </p>
               <br></br>
               <h>
               It’s Not Mobile-Responsive: With the majority of web traffic in the UAE coming from mobile devices, a non-responsive site delivers a frustrating user experience. If visitors have to pinch and zoom to navigate your content, they will leave for a competitor's site.
@@ -236,7 +237,8 @@ body {
               {/* Text content below images */}
               <div className="space-y-6 text-[#2F5B44] leading-relaxed">
               <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44]' >The Tangible Business Benefits of a Professional Website Revamp</h>
-               <h>Investing in website redesign services in the UAE delivers a significant return on investment by directly impacting your bottom line. A strategic partner will focus on these key pillars of success:</h>
+              <br/>
+               <p className='mt-3'>Investing in website redesign services in the UAE delivers a significant return on investment by directly impacting your bottom line. A strategic partner will focus on these key pillars of success:</p>
                 <br></br>
                 <h> A successful redesign places the user at its core. By creating a clean, intuitive, and engaging interface, we ensure visitors can easily find what they are looking for. This positive experience builds trust and encourages repeat visits</h>
                 <br></br>
@@ -265,7 +267,8 @@ body {
 
             <section className="mt-8">
                 <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Choosing the Right Website Redesign Agency in Dubai & Abu Dhabi</h>
-                <h>Selecting the right partner for your project is critical. Look for an agency that:</h>
+                <br/>
+                <p className='mt-3'>Selecting the right partner for your project is critical. Look for an agency that:</p>
                 <br></br>
                 <ul className='list-disc list-inside ' >
                     <li>Has a Strong Local Portfolio: They should demonstrate a clear understanding of the UAE market and have a track record of successful projects with local businesses.</li>
@@ -275,8 +278,9 @@ body {
             </section>
 
             <section className='mt-8'>
-                <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' > Ready to Transform Your Digital Future?</h> 
-                <h> Your website is your gateway to the thriving market in the UAE. Don't let an outdated or underperforming site hold your business back. A strategic and professional redesign is an investment in your brand’s future, ensuring you not only meet but exceed the expectations of your customers and stay ahead of the competition.</h>
+                <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' > Ready to Transform Your Digital Future? </h>
+                <br></br> 
+                <p className='mt-3'> Your website is your gateway to the thriving market in the UAE. Don't let an outdated or underperforming site hold your business back. A strategic and professional redesign is an investment in your brand’s future, ensuring you not only meet but exceed the expectations of your customers and stay ahead of the competition.</p>
                 <br></br>
                 <h>If you’re ready to unlock your website's true potential, it’s time to start the conversation. Let's build a digital experience that drives results.</h>
 

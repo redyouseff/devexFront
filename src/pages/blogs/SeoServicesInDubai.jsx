@@ -163,12 +163,12 @@ body {
             <Navbar2 />   
             <style>{smoothScrollStyles}</style>
     
-          <main className="container mx-auto max-w-[90rem]  px-4 sm:px-6 py-8">
+          <main className="container  mx-auto max-w-7xl px-8 py-8">
             {/* Title */}
     
             <div className="flex items-center justify-between  mt-[10rem] mb-6"> 
                 <div>
-                <h1 className="text-5xl sm:text-3xl font-semibold text-[#2F5B44]">Unlocking Your Potential: The Essential Guide to SEO Services in Dubai 
+                <h1 className="text-5xl sm:text-3xl font-semibold text-[#2F5B44]">Unlocking Your Potential: The Essential Guide to SEO <br></br> Services in Dubai 
                 </h1>     
            
                 </div>
@@ -203,9 +203,9 @@ body {
             {/* Paragraphs */}                       
             <section className="mt-6 space-y-6 text-[#2F5B44] leading-relaxed">
                 <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-3' >Why Are Professional SEO Services in Dubai a Non-Negotiable Strategy? </h>
-              <h >
+              <p className='mt-3' >
               The Dubai market is uniquely positioned for digital marketing success, but this also means the competition is fierce. Investing in a robust campaign of SEO services in Dubai is no longer optional; it's essential for survival and growth.
-              </h>
+              </p>
               <br></br>
 
               <ul>
@@ -232,7 +232,8 @@ body {
               {/* Text content below images */}
               <div className="space-y-6 text-[#2F5B44] leading-relaxed">
               <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-3' >The Core Pillars of Effective SEO Services in Dubai </h>
-             <h>A successful SEO strategy is a multi-faceted discipline. The best agencies providing SEO services in Dubai will build your campaign on four essential pillars.</h>
+              <br></br>
+             <p className='mt-3'>A successful SEO strategy is a multi-faceted discipline. The best agencies providing SEO services in Dubai will build your campaign on four essential pillars.</p>
 
 
             <ol className='list-decimal list-inside'>
@@ -295,7 +296,8 @@ body {
 
             <section className="mt-8">
                 <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Choosing the Right Partner for SEO Services in Dubai</h>
-                <h>Your choice of SEO agency can make or break your campaign. Look for a partner that:</h>
+                <br></br>
+                <p className='mt-4'>Your choice of SEO agency can make or break your campaign. Look for a partner that:</p>
 
                 <ul className='list-disc list-inside mt-3'>
                     <li> Is Data-Driven and Transparent: They should provide clear, regular reports that show progress on key metrics.</li>

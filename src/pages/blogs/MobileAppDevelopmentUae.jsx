@@ -169,7 +169,7 @@ body {
             <Navbar2 />   
             <style>{smoothScrollStyles}</style>
     
-          <main className="container mx-auto max-w-[90rem]  px-4 sm:px-6 py-8">   
+          <main className="container  mx-auto max-w-7xl px-8 py-8">   
             {/* Title */}
     
             <div className="flex items-center justify-between  mt-[10rem] mb-6"> 
@@ -209,9 +209,10 @@ body {
             {/* Paragraphs */}                       
             <section className="mt-6 space-y-6 text-[#2F5B44] leading-relaxed">
                 <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >The MVP Philosophy: Why UAE Startups Must Launch Smart, Not Big </h>
-           <h>
+                <br></br>
+           <p className='mt-4'>
            The most crucial acronym in a startup’s vocabulary is MVP: Minimum Viable Product. This is not a cheaper version of your final app; it's a strategic instrument. An MVP is the most basic version of your product, containing only the essential features needed to solve a core problem for your initial users.
-           </h>
+           </p>
               <br></br>
               <p className='mt-4'>For startups in hubs like Dubai and Abu Dhabi, embracing the MVP approach is non-negotiable:</p>
               <ul className="list-disc list-inside ml-4  ">
@@ -239,7 +240,8 @@ body {
               {/* Text content below images */}
               <div className="space-y-6 text-[#2F5B44] leading-relaxed">
               <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Choosing Your Tech Stack: A Pivotal Decision for Future Scale</h>
-               <h>The technology underpinning your app will dictate its performance, scalability, and long-term maintenance costs. The choice is a strategic one</h>
+              <br></br>
+               <p className='mt-3'>The technology underpinning your app will dictate its performance, scalability, and long-term maintenance costs. The choice is a strategic one</p>
                 <br></br>
     
                 <ul className='list-disc list-inside ml-4 ' >
@@ -267,7 +269,8 @@ body {
     
             <section className="mt-8">
                 <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Beyond the Code: Critical Success Factors for UAE Startup Apps in 2025</h>
-                <h>A flawlessly coded app can still fail if it neglects the business ecosystem around it. Success requires a holistic view.</h>
+                <br></br>
+                <p className='mt-3'>A flawlessly coded app can still fail if it neglects the business ecosystem around it. Success requires a holistic view.</p>
                 <br></br>
                 <ol className='list-decimal list-inside ml-4 ' >
                     <li className='mb-4'>Obsessive Focus on User Experience (UX): Your app must be intuitive, solving a problem so effortlessly that it becomes indispensable to the user.</li>
@@ -277,8 +280,9 @@ body {
             </section>
     
             <section className='mt-8'>
-                <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Selecting a Development Partner Who Thinks Like a Startup </h> 
-                <h>Startups don't need a vendor; they need a partner. When vetting a company for mobile app development UAE startups, look for a team that embodies the startup ethos:</h>
+                <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Selecting a Development Partner Who Thinks Like a Startup </h>
+                <br></br> 
+                <p className='mt-3'>Startups don't need a vendor; they need a partner. When vetting a company for mobile app development UAE startups, look for a team that embodies the startup ethos:</p>
 
                 <ul className='list-disc list-inside ml-4 mt-4 ' >
                     <li className='mb-4'>They champion the MVP and agile methodologies.</li>
@@ -294,7 +298,7 @@ body {
 
             <section className='mt-8'>
                 <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Let's Build Your Vision</h>
-               <div className='flex flex-col gap-4'>
+               <div className='flex flex-col gap-4 mt-3'>
                 <h>Your app has the potential to be the next big success story in the UAE. Don't let technical hurdles or a flawed strategy dim your vision. The right approach transforms development from an expense into a strategic investment in your future growth.</h>
                 <h>Partner with a team that understands the startup journey from idea to impact. Let's build your MVP and launch your vision into the world.</h>
 

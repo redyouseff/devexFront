@@ -162,7 +162,7 @@ body {
             <Navbar2 />   
             <style>{smoothScrollStyles}</style>
     
-          <main className="container mx-auto max-w-[90rem]  px-4 sm:px-6 py-8">
+          <main className="container  mx-auto max-w-7xl px-8 py-8">
             {/* Title */}
     
             <div className="flex items-center justify-between  mt-[10rem] mb-6"> 
@@ -204,10 +204,11 @@ body {
             {/* Paragraphs */}                       
             <section className="mt-6 space-y-6 text-[#2F5B44] leading-relaxed">
                 <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Beyond Templates: <br></br> What "Professional Design" Truly Means in 2025 </h>
-             <h className="mb-4">
+                <br></br>
+             <p className="mt-3">
              The term "professional" is often diluted. In the context of modern web design, it signifies a meticulous fusion of art and science—a bespoke solution engineered for a specific business objective. It is the antithesis of the one-size-fits-all template.
 
-             </h>
+             </p>
              <h className="mb-4"> A truly professional website is characterized by:
              </h>
               <br></br>
@@ -239,7 +240,8 @@ body {
               {/* Text content below images */}
               <div className="space-y-6 text-[#2F5B44] leading-relaxed">
               <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >The Pillars of an Elite Digital Experience </h>
-               <h>A world-class website is built upon several non-negotiable pillars. When seeking professional website design UAE, ensure your digital architect prioritizes these critical elements.</h>
+              <br></br>
+               <p className='mt-3'>A world-class website is built upon several non-negotiable pillars. When seeking professional website design UAE, ensure your digital architect prioritizes these critical elements.</p>
                 <br></br>
     
                 <ol className='list-decimal list-inside ' >
@@ -288,7 +290,8 @@ body {
     
             <section className="mt-8">
                 <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Vetting Your Digital Architect:<br></br> Questions to Ask a UAE Web Design Agency</h>
-                <h>Choosing the right agency is the most critical decision in this process. To distinguish a true partner from a mere vendor, ask these penetrating questions:</h>
+                <br></br>
+                <p className='mt-3'>Choosing the right agency is the most critical decision in this process. To distinguish a true partner from a mere vendor, ask these penetrating questions:</p>
                 <br></br>
                 <ul className='list-disc list-inside mb-5 ' >
                    <li className='mt-4'>"Can you walk me through your strategic process, from initial discovery to post-launch analysis?" </li>
@@ -301,8 +304,9 @@ body {
     
             <section className='mt-8'>
                 <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Elevate Your Brand's First Impression </h> 
-                <h >Your website is the single most important touchpoint for your brand in the digital age. It's an investment in perception, a tool for growth, and your most articulate salesperson. Don't let a subpar digital presence define your business.</h>
-                <p className='mt-3'>Is your online presence a true reflection of your company's excellence? Let's collaborate to build a website that doesn't just represent your brand—it elevates it.</p>
+                <br></br>
+                <p  className='mt-4'>Your website is the single most important touchpoint for your brand in the digital age. It's an investment in perception, a tool for growth, and your most articulate salesperson. Don't let a subpar digital presence define your business.</p>
+                <p className='mt-3 '>Is your online presence a true reflection of your company's excellence? Let's collaborate to build a website that doesn't just represent your brand—it elevates it.</p>
             </section>
     
     

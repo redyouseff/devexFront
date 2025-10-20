@@ -112,9 +112,9 @@ const CustomWebDevelopment =()=>{
             
                       <section className="bg-[#FEF9D0] text-[#2F5B44] py-12 sm:py-16 lg:py-24">
                 <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12 items-center">  
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10  items-center">  
                         {/* Text content */}
-                        <div className="lg:col-span-2">
+                        <div className="lg:col-span-1">
                             <h2 onClick={() => handleSelect(0)} className="mt-10 font-semibold text-2xl sm:text-3xl cursor-pointer font-inter">
                             Custom Web Design
                             </h2>
@@ -184,7 +184,7 @@ const CustomWebDevelopment =()=>{
 
 
 
-                   <div className="grid grid-cols-1 md:grid-cols-3 mx-auto gap-x-2 gap-y-3  sm:px-6 lg:px-8 mb-20 gap-0 justify-items-stretch ">
+                   <div className="grid grid-cols-1 md:grid-cols-3 mx-auto gap-x-2 gap-y-3   max-w-[85rem] px-8 py-8 sm:px-6 lg:px-8 mb-20 gap-0 justify-items-stretch ">
 
                  <div className="flex flex-col items-start space-y-5 md:space-y-5 w-full   px-[14.27px] py-[19.02px] rounded-2xl border-2 border-[#FEF9D0] sm:px-4 sm:py-3 ">
                         <p className="text-[#FEF9D0] text-center font-inter text-[42px] not-italic font-semibold leading-normal uppercase mt-4">
@@ -338,13 +338,13 @@ const CustomWebDevelopment =()=>{
 
 
             <section>
-                <div className="bg-[#FEF9D0] min-h-[30vh] flex justify-center items-center">
+                <div className="bg-[#FEF9D0] min-h-[30vh] flex justify-center items-center ">
                     <div className="grid grid-cols-1 md:grid-cols-3">
                   
 
-                        <div className="mt-10 col-span-2 mb-10 py-10 px-10">
+                        <div className="mt-10 col-span-2 mb-10 py-10 px-10 ">
 
-                            <div className="flex  gap-2 justify-start items-start mb-5">
+                            <div className="flex  gap-2 justify-start items-start mb-5  mx-auto max-w-7xl px-8 py-8">
                                 <img src={image10} alt="logo" className="w-20 h-20" />
                                 <p className="text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl not-italic font-medium leading-snug uppercase">Do You Need Custom Web Design & <br />  Development?</p>
 
