@@ -20,8 +20,12 @@ const ImageSlider2 = () => {
         setScreenSize('mobile');
       } else if (width < 1024) {
         setScreenSize('tablet');
-      } else {
+      } else if (width < 1536) {
         setScreenSize('desktop');
+      } else if (width < 1920) {
+        setScreenSize('s');
+      } else {
+        setScreenSize('xl');
       }
     };
 
@@ -108,12 +112,13 @@ const ImageSlider2 = () => {
         right1: { x: "100%", scale: 0.85, zIndex: 3, opacity: 1 },
       };
     } else {
+      // Desktop and larger: use viewport-based offsets for consistent spacing
       return {
         center: { x: "0%", scale: 1, zIndex: 5, opacity: 1 },
-        left1: { x: "-90%", scale: 0.9, zIndex: 3, opacity: 1 },
-        left: { x: "-160%", scale: 0.85, zIndex: 2, opacity: 1 },
-        right: { x: "160%", scale: 0.85, zIndex: 1, opacity: 1 },
-        right1: { x: "90%", scale: 0.9, zIndex: 3, opacity: 1 },
+        left1: { x: "-18vw", scale: 0.9, zIndex: 3, opacity: 1 },
+        left: { x: "-32vw", scale: 0.85, zIndex: 2, opacity: 1 },
+        right: { x: "32vw", scale: 0.85, zIndex: 1, opacity: 1 },
+        right1: { x: "18vw", scale: 0.9, zIndex: 3, opacity: 1 },
       };
     }
   };
@@ -149,6 +154,8 @@ const ImageSlider2 = () => {
         
       </div>
       </div>
+
+ 
       {cards.map((card, index) => (
         <MotionDiv
           key={index}
@@ -156,10 +163,10 @@ const ImageSlider2 = () => {
           animate={positions[positionIndexes[index]]}
           variants={imageVariants}
           transition={{ duration: 0.5 }}
-          style={{ position: "absolute", marginTop: "9rem" }}
+          style={{ position: "absolute", marginTop: "9rem"  }}
         >
           {positions[positionIndexes[index]] === 'center' ? (
-            <div className="relative z-20 flex w-[16rem] h-[22rem] sm:w-[18rem] sm:h-[24rem] md:w-[20rem] md:h-[26rem] lg:w-[20.625rem] lg:h-[27.125rem] px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8 flex-col justify-between items-start gap-4 sm:gap-5 shrink-0 rounded-[2rem] sm:rounded-[2.25rem] md:rounded-[2.5rem] bg-[#FEF9D0] shadow-[0_12px_16px_-8px_rgba(0,0,0,0.25),0_-12px_16px_-8px_rgba(0,0,0,0.25)]  overflow-hidden">
+            <div className="relative z-20 flex w-[16rem] h-[22rem] sm:w-[18rem] sm:h-[24rem] md:w-[20rem] md:h-[26rem] lg:w-[20.625rem] lg:h-[27.125rem] xl:w-[22rem] xl:h-[29rem] 2xl:w-[24rem] 2xl:h-[31rem] px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8 flex-col justify-between items-start gap-4 sm:gap-5 shrink-0 rounded-[2rem] sm:rounded-[2.25rem] md:rounded-[2.5rem] bg-[#FEF9D0] shadow-[0_12px_16px_-8px_rgba(0,0,0,0.25),0_-12px_16px_-8px_rgba(0,0,0,0.25)]  overflow-hidden">
               <p className="text-[#2F5B44] text-center font-inter text-[14px] sm:text-[15px] md:text-[16px] lg:text-[1.125rem] not-italic font-normal leading-[1.6rem] sm:leading-[1.7rem] md:leading-[1.8rem] w-full break-words whitespace-normal overflow-hidden text-ellipsis [display:-webkit-box] [-webkit-line-clamp:8] [-webkit-box-orient:vertical]">
                 {card.title}
               </p>
@@ -175,7 +182,7 @@ const ImageSlider2 = () => {
               </div>
             </div>
           ) : (
-            <div className="relative z-20 flex w-[16rem] h-[22rem] sm:w-[18rem] sm:h-[24rem] md:w-[20rem] md:h-[26rem] lg:w-[20.625rem] lg:h-[27.125rem] px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8 flex-col justify-between items-start gap-4 sm:gap-5 shrink-0 rounded-[2rem] sm:rounded-[2.25rem] md:rounded-[2.5rem] bg-[#2F5B44] shadow-[0_12px_16px_-8px_rgba(0,0,0,0.25),0_-12px_16px_-8px_rgba(0,0,0,0.25)] overflow-hidden ">
+            <div className="relative z-20 flex w-[16rem] h-[22rem] sm:w-[18rem] sm:h-[24rem] md:w-[20rem] md:h-[26rem] lg:w-[20.625rem] lg:h-[27.125rem] xl:w-[22rem] xl:h-[29rem] 2xl:w-[24rem] 2xl:h-[31rem] px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8 flex-col justify-between items-start gap-4 sm:gap-5 shrink-0 rounded-[2rem] sm:rounded-[2.25rem] md:rounded-[2.5rem] bg-[#2F5B44] shadow-[0_12px_16px_-8px_rgba(0,0,0,0.25),0_-12px_16px_-8px_rgba(0,0,0,0.25)] overflow-hidden ">
               <p className="text-[#FEF9D0] text-center font-inter text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] font-normal leading-normal">
                 {card.title}
               </p>
@@ -193,6 +200,8 @@ const ImageSlider2 = () => {
           )}
         </MotionDiv>
       ))}
+   
+
     </div>
   );
 };

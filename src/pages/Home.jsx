@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -114,6 +114,15 @@ const smoothScrollStyles = `
   .third-section-swiper .swiper-wrapper {
     height: 100% !important;
   }
+
+  /* Fix 100vh issues on mobile browsers */
+  :root { --vh: 1vh; }
+  .min-h-fix { min-height: calc(var(--vh, 1vh) * 100); }
+  .h-fix { height: calc(var(--vh, 1vh) * 100); }
+  @supports (height: 100dvh) {
+    .min-h-fix { min-height: 100dvh; }
+    .h-fix { height: 100dvh; }
+  }
 `;
 
 // import uparrow from "/images/home/Vector.svg"
@@ -178,6 +187,17 @@ function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
   const [submitError, setSubmitError] = useState('');
+
+  // Update --vh for mobile 100vh correctness
+  useEffect(() => {
+    const setVh = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+    setVh();
+    window.addEventListener('resize', setVh);
+    return () => window.removeEventListener('resize', setVh);
+  }, []);
 
   // Structured Data for Home Page
   const homeStructuredData = {
@@ -322,9 +342,9 @@ function Home() {
       <Navbar />
       
       {/* Hero Section */}
-            <section className="relative min-h-screen flex items-center overflow-hidden">
+            <section className="relative min-h-screen min-h-fix flex items-center overflow-hidden">
           {/* Video Background */}
-             <div className="absolute inset-0 w-full h-full overflow-hidden">
+             <div className="absolute inset-0 w-full h-full overflow-hidden h-fix">
                 <div className="absolute inset-0 bg-[linear-gradient(257.99deg,rgba(254,249,208,0.1)_0%,rgba(47,91,68,0.1)_1%,#2F5B44_95%)] z-10"></div>
                 <video
                   autoPlay
@@ -333,8 +353,8 @@ function Home() {
                   playsInline
                   className="absolute w-full h-full object-cover"
                   style={{ 
-                    width: '100vw',
-                    height: '100vh',
+                    width: '100%',
+                    height: '100%',
                     left: '0',
                     top: '0',
                     objectFit: 'cover',

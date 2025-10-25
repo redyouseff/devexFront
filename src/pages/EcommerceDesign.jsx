@@ -164,9 +164,9 @@ const EcommerceDesign = () => {
             
             <section className="bg-[#FEF9D0] text-[#2F5B44] py-12 sm:py-16 lg:py-24">
                 <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12 items-center">  
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">  
                         {/* Text content */}
-                        <div className="lg:col-span-2">
+                        <div className="lg:col-span-1">
                             <h2 onClick={() => handleSelect(0)} className="mt-10 font-semibold text-2xl sm:text-3xl cursor-pointer font-inter">
                                 eCommerce Web Design
                             </h2>
@@ -240,7 +240,7 @@ const EcommerceDesign = () => {
                   <div className='text-center py-12 sm:py-16 lg:py-24'>
                     <h2 className='text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] font-inter font-semibold leading-tight'>
                         eCommerce Development Solutions
-                    </h2>
+                    </h2> 
 
                     <p className='text-[#2F5B44] mt-10 mb-5 text-center font-inter not-italic font-normal leading-[130%] text-lg sm:text-xl md:text-2xl lg:text-[24px] lg:max-w-6xl mx-auto'>
                     Our eCommerce development agency tailors its eCommerce solutions by analyzing client needs, current market trends and relevant consumer behavior.
@@ -260,7 +260,7 @@ const EcommerceDesign = () => {
                     {solutionCards.map((card) => (
                       <div
                         key={card.id}
-                        className={`bg-[rgba(47,91,68,0.70)] text-[#FEF9D0] flex w-full h-[600px] px-[68px] py-0 flex-col justify-center items-start gap-6 flex-shrink-0 rounded-[24px] ${card.corner} shadow-[0_10px_30px_rgba(47,91,68,0.15)]`}
+                        className={`bg-[rgba(47,91,68,0.70)] text-[#FEF9D0] flex w-full min-h-[30rem] px-[68px] py-0 flex-col justify-center items-start gap-6 flex-shrink-0 rounded-[24px] ${card.corner} shadow-[0_10px_30px_rgba(47,91,68,0.15)]`}
                       >
                         <img 
                         src={card.image}
