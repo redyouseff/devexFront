@@ -24,6 +24,8 @@ import SeoServicesInDubai from './pages/blogs/SeoServicesInDubai';
 import UIUXdesigninDubai from './pages/blogs/UIUXdesigninDubai';
 import MobileAppDevelopmentUae from './pages/blogs/MobileAppDevelopmentUae';
 import CustomWebDevelopment from './pages/CustomWebDevelopment';
+import AffordableWebDesign from './pages/blogs/AffordableWebDesign';
+import AppDevelopment from './pages/AppDevelopment';
 
 
 
@@ -53,6 +55,7 @@ function App() {
              <Route path="/DigitalTrends/SeoServicesInDubai"  element={<SeoServicesInDubai   />} />    
              <Route path="/DigitalTrends/UIUXdesigninDubai" element={<UIUXdesigninDubai />} />
              <Route path="/DigitalTrends/MobileAppDevelopmentUae" element={<MobileAppDevelopmentUae />} />
+             <Route path="/DigitalTrends/AffordableWebDesign" element={<AffordableWebDesign />} />
      
             
              
@@ -61,6 +64,7 @@ function App() {
              <Route path="/TestCircleSwiper" element={<TestCircleSwiper />} />
              <Route path="/CustomWebDesignServices" element={<CustomWebDesignServices />} />
              <Route path="/CustomWebDevelopment" element={<CustomWebDevelopment />} />
+             <Route path="/AppDevelopment" element={<AppDevelopment />} />
             
                        
           </Routes>

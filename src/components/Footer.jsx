@@ -77,7 +77,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                  <Link to="/AppDevelopment" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     APP DEVELOPMENT
                   </Link>
                 </li>
