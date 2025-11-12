@@ -17,7 +17,7 @@ import { useEffect } from 'react';
         "@type": "BlogPosting",
         "headline": "Mobile App Development UAE Startups: From MVP to Market Leader",
         "description": "A startup's guide to mobile app development in the UAE—MVP strategy, agile builds, and scalable tech to launch fast and secure funding in Dubai and Abu Dhabi.",
-        "url": "https://devext.io/blogs/MobileAppDevelopmentUae",
+        "url": "https://devext.io/DigitalTrends/MobileAppDevelopmentUae",
         "datePublished": "2025-09-18",
         "dateModified": "2025-09-18",
         "author": {
@@ -46,7 +46,7 @@ import { useEffect } from 'react';
         ],
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://devext.io/blogs/MobileAppDevelopmentUae"
+          "@id": "https://devext.io/DigitalTrends/MobileAppDevelopmentUae"
         }
       };
 
@@ -162,7 +162,7 @@ body {
             title="mobile app development UAE startups | From MVP to Market Leader"
             description="A startup's guide to mobile app development UAE startups. We focus on MVP strategy, agile development, and scalable tech to help Dubai & Abu Dhabi startups launch fast and secure funding."
             keywords="mobile app development UAE startups"
-            canonical="/blogs/MobileAppDevelopmentUae"
+            canonical="/DigitalTrends/MobileAppDevelopmentUae"
             structuredData={blogPostStructuredData}
           />
           <div className="min-h-screen bg-[#FEF9D0]">
@@ -253,19 +253,7 @@ body {
               </div>
             </section>
     
-            {/* Right aligned back button */}
-            <div className="mt-6 flex justify-end">    
-              <Link
-                to="/blogs"
-                className="border-2 border-[#2F5B44] text-[#2F5B44] px-10 py-5 rounded-full hover:bg-[#2F5B44] hover:text-[#FEF9D0] transition-all duration-200 flex items-center group font-semibold text-xl"
-              >
-                Back To Blogs
-                <span className="relative w-4 h-4 ml-2 inline-block">
-                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050828/Vector4_gerqlb.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow hover" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
-                </span>
-              </Link>
-            </div>
+
     
             <section className="mt-8">
                 <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Beyond the Code: Critical Success Factors for UAE Startup Apps in 2025</h>
@@ -304,6 +292,19 @@ body {
 
                </div>
             </section>
+                        {/* Right aligned back button */}
+                        <div className="mt-6 flex justify-end">    
+              <Link
+                to="/DigitalTrends"
+                className="border-2 border-[#2F5B44] text-[#2F5B44] px-10 py-5 rounded-full hover:bg-[#2F5B44] hover:text-[#FEF9D0] transition-all duration-200 flex items-center group font-semibold text-xl"
+              >
+                Back To Blogs
+                <span className="relative w-4 h-4 ml-2 inline-block">
+                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050828/Vector4_gerqlb.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow hover" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                </span>
+              </Link>
+            </div>
     
     
           </main>

@@ -256,11 +256,11 @@ const EcommerceDesign = () => {
           
 
                   {/* grid cards */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 pb-16">
+                  <div className="grid grid-cols-1 md:grid-cols-2 md:gap-0.5  gap-4 sm:ga pb-16">
                     {solutionCards.map((card) => (
                       <div
                         key={card.id}
-                        className={`bg-[rgba(47,91,68,0.70)] text-[#FEF9D0] flex w-full min-h-[30rem] px-[68px] py-0 flex-col justify-center items-start gap-6 flex-shrink-0 rounded-[24px] ${card.corner} shadow-[0_10px_30px_rgba(47,91,68,0.15)]`}
+                        className={`bg-[rgba(47,91,68,0.70)] text-[#FEF9D0] flex w-full min-h-[30rem] px-[68px] py-5 flex-col justify-center items-start gap-6 flex-shrink-0 rounded-[24px] ${card.corner} shadow-[0_10px_30px_rgba(47,91,68,0.15)]`}
                       >
                         <img 
                         src={card.image}
@@ -302,7 +302,7 @@ const EcommerceDesign = () => {
                       <h3 className='text-[#2F5B44] text-center font-inter text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-medium uppercase leading-normal'>
                         SPEAK WITH OUR RELIABLE        
                       </h3>
-                      <h3 className='text-[#2F5B44] text-center font-inter text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-medium uppercase leading-normal whitespace-nowrap '>
+                      <h3 className='text-[#2F5B44] text-center font-inter text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-medium uppercase leading-normal  '>
                       ECOMMERCE DEVELOPMENT EXPERTS  
                       </h3>
                       <Link        

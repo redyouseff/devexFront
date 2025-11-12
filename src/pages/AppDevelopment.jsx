@@ -20,7 +20,6 @@ const beating ="https://res.cloudinary.com/daop3bufa/image/upload/v1762435937/Fr
 const location ="https://res.cloudinary.com/daop3bufa/image/upload/v1762435946/Group_vbaufy.svg"
 import { Link } from "react-router-dom";
 
-import test from "/images/AppDevelopment/test.png";
 
 
 
@@ -248,7 +247,7 @@ const  AppDevelopment =()=>{
             <section>
                 <div className=" mt-5  bg-[#2F5B44B2] min-h-[25vh]  ">
 
-                    <div className="  mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-[6rem] py-[5rem]  items-center  ">
+                    <div className="  mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-[6rem] py-[5rem] px-7 sm:px-6 lg:px-8 items-center  ">
                         <img src={albazar} alt="albazar" className="w-full h-full object-cover" />
                         <div className="flex flex-col gap-3 ">
                             <p className="text-[#FEF9D0] font-inter text-[42px] md:text-[36px] sm:text-[28px] font-bold not-italic leading-normal uppercase">Marketplace App</p>
@@ -323,13 +322,13 @@ const  AppDevelopment =()=>{
             <section>
                 <div className="mt-20 bg-[#2F5B44] min-h-[25vh]  " >
 
-                    <div className=" container mx-auto max-w-7xl py-[5rem] flex w-full justify-between items-center">
-                        <p className="text-[#FEF9D0] font-inter text-[48px] md:text-[40px] sm:text-[32px] not-italic font-medium leading-normal uppercase">
+                    <div className=" container mx-auto  max-w-7xl py-[5rem] flex flex-col md:flex-row w-full  justify-between items-center gap-6">
+                        <p className="text-[#FEF9D0] font-inter text-[48px] md:text-[40px] sm:text-[32px] not-italic font-medium leading-normal uppercase text-center md:text-left">
                         Have an App Development <br /> project? <br /> Contact us Now
                         </p>
                         <Link 
                             to="/calculator"
-                            className="inline-flex items-center bg-transparent text-[#FEF9D0] px-8 py-3 rounded-full font-medium text-[14px] sm:text-[16px] hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-all duration-300 transform hover:scale-105 group"
+                            className="inline-flex items-center bg-transparent text-[#FEF9D0] px-8 py-3 rounded-full font-medium text-[14px] sm:text-[16px] hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-all duration-300 transform hover:scale-105 group mt-4 md:mt-0"
                             style={{ border: '2px solid #FEF9D0' }}
                             >
                             Request A quote

@@ -26,6 +26,7 @@ import MobileAppDevelopmentUae from './pages/blogs/MobileAppDevelopmentUae';
 import CustomWebDevelopment from './pages/CustomWebDevelopment';
 import AffordableWebDesign from './pages/blogs/AffordableWebDesign';
 import AppDevelopment from './pages/AppDevelopment';
+import CustomCMSDevelopment from './pages/blogs/CustomCMSDevelopment';
 
 
 
@@ -56,6 +57,7 @@ function App() {
              <Route path="/DigitalTrends/UIUXdesigninDubai" element={<UIUXdesigninDubai />} />
              <Route path="/DigitalTrends/MobileAppDevelopmentUae" element={<MobileAppDevelopmentUae />} />
              <Route path="/DigitalTrends/AffordableWebDesign" element={<AffordableWebDesign />} />
+             <Route path="/DigitalTrends/CustomCMSDevelopment" element={<CustomCMSDevelopment />} />
      
             
              

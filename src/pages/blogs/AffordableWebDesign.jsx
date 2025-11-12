@@ -148,7 +148,7 @@ body {
         <>
       <SEO 
         title="Affordable Web Design Company Dubai | Professional Websites on a Budget"
-        description="Searching for a top affordable web design company Dubai? We build fast, professional, SEO-ready websites for startups and small businesses. Get a quality site without the high price tag."
+        description="Searching for a top affordable web design company Dubai? We build fast, professional, SEO-ready websites for startups and small businesses. Get a quality site without the high price tag. "
         keywords="affordable web design company Dubai"
         canonical="/DigitalTrends/AffordableWebDesign"   
         structuredData={blogPostStructuredData}
@@ -246,19 +246,7 @@ body {
           </div>
         </section>
 
-        {/* Right aligned back button */}
-        <div className="mt-6 flex justify-end">    
-          <Link
-            to="/blogs"
-            className="border-2 border-[#2F5B44] text-[#2F5B44] px-10 py-5 rounded-full hover:bg-[#2F5B44] hover:text-[#FEF9D0] transition-all duration-200 flex items-center group font-semibold text-xl"
-          >
-            Back To Blogs
-            <span className="relative w-4 h-4 ml-2 inline-block">
-              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050828/Vector4_gerqlb.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow hover" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
-            </span>
-          </Link>
-        </div>
+      
 
         <section className="mt-8">
             <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' > Checklist: Choosing the Right Affordable Web Design Partner in Dubai </h>
@@ -281,8 +269,24 @@ body {
             <p className='mt-3'>You no longer have to delay launching your business online due to budget constraints. By making the smart choice to work with a dedicated and affordable web design company Dubai, you can secure a powerful marketing tool that builds credibility and attracts customers.</p>
         </section>
 
+          {/* Right aligned back button */}
+          <div className="mt-6 flex justify-end">    
+          <Link
+            to="/DigitalTrends"
+            className="border-2 border-[#2F5B44] text-[#2F5B44] px-10 py-5 rounded-full hover:bg-[#2F5B44] hover:text-[#FEF9D0] transition-all duration-200 flex items-center group font-semibold text-xl"
+          >
+            Back To Blogs
+            <span className="relative w-4 h-4 ml-2 inline-block">
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050828/Vector4_gerqlb.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+              <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow hover" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+            </span>
+          </Link>
+        </div>
+
+
 
       </main>
+
       </div>
 
       

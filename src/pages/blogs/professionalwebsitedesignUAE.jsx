@@ -20,7 +20,7 @@ const ProfessionalwebsitedesignUAE =()=>{
         "@type": "BlogPosting",
         "headline": "Your Website is Your Digital Handshake: The Imperative of Professional Website Design UAE",
         "description": "Elevate your brand with premier professional website design UAE. Our Dubai-based agency architects bespoke, high-performance websites that captivate audiences and accelerate business growth.",
-        "url": "https://devext.io/blogs/professionalwebsitedesignUAE",
+        "url": "https://devext.io/DigitalTrends/professionalwebsitedesignUAE",
         "datePublished": "2025-09-18",
         "dateModified": "2025-09-18",
         "author": {
@@ -38,7 +38,7 @@ const ProfessionalwebsitedesignUAE =()=>{
         "image": "https://res.cloudinary.com/daop3bufa/image/upload/v1759050848/39fe9b9d1d42d713a96f4061d8de02a0c59fabde_sm65le.jpg",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://devext.io/blogs/professionalwebsitedesignUAE"
+          "@id": "https://devext.io/DigitalTrends/professionalwebsitedesignUAE"
         }
       };
 
@@ -155,7 +155,7 @@ body {
             title="Professional Website Design UAE | Architecting Your Digital Presence"
             description="Elevate your brand with premier professional website design UAE. Our Dubai-based agency architects bespoke, high-performance websites that captivate audiences and accelerate business growth."
             keywords="professional website design UAE"
-            canonical="/blogs/professionalwebsitedesignUAE"
+            canonical="/DigitalTrends/professionalwebsitedesignUAE"
             structuredData={blogPostStructuredData}
           />
           <div className="min-h-screen bg-[#FEF9D0]">
@@ -274,19 +274,7 @@ body {
               </div>
             </section>
     
-            {/* Right aligned back button */}
-            <div className="mt-6 flex justify-end">    
-              <Link
-                to="/blogs"
-                className="border-2 border-[#2F5B44] text-[#2F5B44] px-10 py-5 rounded-full hover:bg-[#2F5B44] hover:text-[#FEF9D0] transition-all duration-200 flex items-center group font-semibold text-xl"
-              >
-                Back To Blogs
-                <span className="relative w-4 h-4 ml-2 inline-block">
-                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050828/Vector4_gerqlb.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow hover" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
-                </span>
-              </Link>
-            </div>
+
     
             <section className="mt-8">
                 <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Vetting Your Digital Architect:<br></br> Questions to Ask a UAE Web Design Agency</h>
@@ -308,6 +296,20 @@ body {
                 <p  className='mt-4'>Your website is the single most important touchpoint for your brand in the digital age. It's an investment in perception, a tool for growth, and your most articulate salesperson. Don't let a subpar digital presence define your business.</p>
                 <p className='mt-3 '>Is your online presence a true reflection of your company's excellence? Let's collaborate to build a website that doesn't just represent your brand—it elevates it.</p>
             </section>
+
+                        {/* Right aligned back button */}
+                        <div className="mt-6 flex justify-end">    
+              <Link
+                to="/DigitalTrends"
+                className="border-2 border-[#2F5B44] text-[#2F5B44] px-10 py-5 rounded-full hover:bg-[#2F5B44] hover:text-[#FEF9D0] transition-all duration-200 flex items-center group font-semibold text-xl"
+              >
+                Back To Blogs
+                <span className="relative w-4 h-4 ml-2 inline-block">
+                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050828/Vector4_gerqlb.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow hover" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                </span>
+              </Link>
+            </div>
     
     
           </main>

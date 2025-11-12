@@ -19,7 +19,7 @@ const SeoServicesInDubai=()=>{
         "@type": "BlogPosting",
         "headline": "Unlocking Your Potential: The Essential Guide to SEO Services in Dubai",
         "description": "Boost your visibility with the best SEO services in Dubai. Our data-driven strategies for on-page, technical, and local SEO help you outrank competitors and generate qualified leads.",
-        "url": "https://devext.io/blogs/SeoServicesInDubai",
+        "url": "https://devext.io/DigitalTrends/SeoServicesInDubai",
         "datePublished": "2025-09-18",
         "dateModified": "2025-09-18",
         "author": {
@@ -39,7 +39,7 @@ const SeoServicesInDubai=()=>{
         ],
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://devext.io/blogs/SeoServicesInDubai"
+          "@id": "https://devext.io/DigitalTrends/SeoServicesInDubai"
         },
         "articleSection": "SEO"
       };
@@ -156,7 +156,7 @@ body {
             title=" Expert SEO services in Dubai | Dominate Google & Drive Growth (2025)"
             description="Boost your visibility with the best SEO services in Dubai. Our data-driven strategies for on-page, technical, and local SEO help you outrank competitors and generate qualified leads."
             keywords="SEO services in Dubai"
-            canonical="/blogs/SeoServicesInDubai"
+            canonical="/DigitalTrends/SeoServicesInDubai"
             structuredData={blogPostStructuredData}
           />
           <div className="min-h-screen bg-[#FEF9D0]">
@@ -280,19 +280,7 @@ body {
               </div>
             </section>
     
-            {/* Right aligned back button */}
-            <div className="mt-6 flex justify-end">    
-              <Link
-                to="/blogs"
-                className="border-2 border-[#2F5B44] text-[#2F5B44] px-10 py-5 rounded-full hover:bg-[#2F5B44] hover:text-[#FEF9D0] transition-all duration-200 flex items-center group font-semibold text-xl"
-              >
-                Back To Blogs
-                <span className="relative w-4 h-4 ml-2 inline-block">
-                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050828/Vector4_gerqlb.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow hover" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
-                </span>
-              </Link>
-            </div>
+
 
             <section className="mt-8">
                 <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Choosing the Right Partner for SEO Services in Dubai</h>
@@ -309,7 +297,19 @@ body {
              
             </section>
 
-         
+                     {/* Right aligned back button */}
+                     <div className="mt-6 flex justify-end">    
+              <Link
+                to="/DigitalTrends"
+                className="border-2 border-[#2F5B44] text-[#2F5B44] px-10 py-5 rounded-full hover:bg-[#2F5B44] hover:text-[#FEF9D0] transition-all duration-200 flex items-center group font-semibold text-xl"
+              >
+                Back To Blogs
+                <span className="relative w-4 h-4 ml-2 inline-block">
+                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050828/Vector4_gerqlb.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow hover" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                </span>
+              </Link>
+            </div>
     
     
           </main>

@@ -16,7 +16,7 @@ const WebdesigncompanyDubai =()=>{
         "@type": "BlogPosting",
         "headline": "How a Premier Web Design Company in Dubai Can Transform Your Business",
         "description": "Looking for a web design company Dubai ? We create stunning, responsive websites that drive results and elevate your brand's digital presence.",
-        "url": "https://devext.io/blogs/webdesigncompanyDubai",
+        "url": "https://devext.io/DigitalTrends/webdesigncompanyDubai",
         "datePublished": "2025-09-18",
         "dateModified": "2025-09-18",
         "author": {
@@ -31,10 +31,10 @@ const WebdesigncompanyDubai =()=>{
             "url": "https://devext.io/images/navbar/Logo_Devext-removebg-preview%201.png"
           }
         },
-        "image": "https://devext.io/images/blogs/39fe9b9d1d42d713a96f4061d8de02a0c59fabde.jpg",
+        "image": "https://devext.io/images/DigitalTrends/39fe9b9d1d42d713a96f4061d8de02a0c59fabde.jpg",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://devext.io/blogs/webdesigncompanyDubai"
+          "@id": "https://devext.io/DigitalTrends/webdesigncompanyDubai"
         }
       };
 
@@ -150,7 +150,7 @@ body {
             title="Top Web Design Company Dubai"
             description=" Looking for a web design company Dubai ? We create stunning, responsive websites that drive results and elevate your brand's digital presence."
             keywords="web design company Dubai"
-            canonical="/blogs/RedesignservicesintheUAE"
+            canonical="/DigitalTrends/RedesignservicesintheUAE"
             structuredData={blogPostStructuredData}
           />
           <div className="min-h-screen bg-[#FEF9D0]">
@@ -238,7 +238,7 @@ body {
             {/* Right aligned back button */}
             <div className="mt-6 flex justify-end">    
               <Link
-                to="/blogs"
+                to="/DigitalTrends"
                 className="border-2 border-[#2F5B44] text-[#2F5B44] px-10 py-5 rounded-full hover:bg-[#2F5B44] hover:text-[#FEF9D0] transition-all duration-200 flex items-center group font-semibold text-xl"
               >
                 Back To Blogs

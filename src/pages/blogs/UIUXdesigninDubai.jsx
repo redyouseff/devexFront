@@ -20,7 +20,7 @@ const UIUXdesigninDubai =()=>{
         "@type": "BlogPosting",
         "headline": "Beyond Beauty: Why Expert UI UX Design in Dubai is a Business Imperative",
         "description": "Discover the power of professional UI UX design in Dubai. We explore how a user-centric approach boosts engagement, increases conversions, and builds brand loyalty in a competitive market.",
-        "url": "https://devext.io/blogs/UIUXdesigninDubai",
+        "url": "https://devext.io/DigitalTrends/UIUXdesigninDubai",
         "datePublished": "2025-09-18",
         "dateModified": "2025-09-18",
         "author": {
@@ -38,7 +38,7 @@ const UIUXdesigninDubai =()=>{
         "image": "https://devext.io/images/blogs/39fe9b9d1d42d713a96f4061d8de02a0c59fabde.jpg",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://devext.io/blogs/UIUXdesigninDubai"
+          "@id": "https://devext.io/DigitalTrends/UIUXdesigninDubai"
         }
       };
 // Smooth scroll styles
@@ -154,7 +154,7 @@ const smoothScrollStyles = `
             title="Expert UI UX design in Dubai | Crafting User-Centric Digital Experiences"
             description="Discover the power of professional UI UX design in Dubai. We explore how a user-centric approach boosts engagement, increases conversions, and builds brand loyalty in a competitive market."
             keywords=" UI UX design in Dubai"
-            canonical="/blogs/UIUXdesigninDubai"    
+            canonical="/DigitalTrends/UIUXdesigninDubai"    
             structuredData={blogPostStructuredData}
           />
           <div className="min-h-screen bg-[#FEF9D0]">
@@ -265,19 +265,7 @@ const smoothScrollStyles = `
               </div>
             </section>
     
-            {/* Right aligned back button */}
-            <div className="mt-6 flex justify-end">    
-              <Link
-                to="/blogs"
-                className="border-2 border-[#2F5B44] text-[#2F5B44] px-10 py-5 rounded-full hover:bg-[#2F5B44] hover:text-[#FEF9D0] transition-all duration-200 flex items-center group font-semibold text-xl"
-              >
-                Back To Blogs
-                <span className="relative w-4 h-4 ml-2 inline-block">
-                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050828/Vector4_gerqlb.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow hover" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
-                </span>
-              </Link>
-            </div>
+
 
             <section className="mt-8">
                 <h className='text-5xl sm:text-3xl font-semibold text-[#2F5B44] mb-4' >Choosing the Right Website Redesign Agency in Dubai & Abu Dhabi</h>
@@ -302,6 +290,20 @@ const smoothScrollStyles = `
 
               </div>
             </section>
+
+                        {/* Right aligned back button */}
+                        <div className="mt-6 flex justify-end">    
+              <Link
+                to="/DigitalTrends"
+                className="border-2 border-[#2F5B44] text-[#2F5B44] px-10 py-5 rounded-full hover:bg-[#2F5B44] hover:text-[#FEF9D0] transition-all duration-200 flex items-center group font-semibold text-xl"
+              >
+                Back To Blogs
+                <span className="relative w-4 h-4 ml-2 inline-block">
+                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050828/Vector4_gerqlb.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow hover" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                </span>
+              </Link>
+            </div>
     
     
           </main>

@@ -224,6 +224,21 @@ const blogs =()=>{
         description: "In the vibrant, fast-paced startup ecosystem of the UAE, a groundbreaking app idea is the spark. It’s the vision for a service that could redefine an industry, a platform that could connect communities, or a tool that solves a nagging problem. But the path from a brilliant concept to a dominant market player  ....",
         link:"/DigitalTrends/MobileAppDevelopmentUae"
       
+      },
+      {
+        id:8,
+        image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050834/screencapture-alwidadtaxation-2025-07-11-16_12_43_1_nhcba9.svg",
+        title: 'Custom CMS Development UAE',
+        description: "Escape the limitations of off-the-shelf platforms. Discover custom CMS development in the UAE for unparalleled security, performance, and workflow integration. Built for Dubai's leading enterprises .....",
+        link:"/DigitalTrends/CustomCMSDevelopment"
+      },
+      {
+        id:9,
+        image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050834/screencapture-alwidadtaxation-2025-07-11-16_12_43_1_nhcba9.svg",
+        title: 'Affordable Web Design Company Dubai',
+        description: "Searching for a top affordable web design company Dubai? We build fast, professional, SEO-ready websites for startups and small businesses. Get a quality site without the high price tag ......",
+        link:"/DigitalTrends/AffordableWebDesign"
+        
       }
     ];
     return(

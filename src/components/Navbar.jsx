@@ -127,7 +127,7 @@ function Navbar() {
       {/* Glassmorphism effect */}
       <div className="absolute inset-0 backdrop-blur-[1px]"></div>
       
-      <div className="relative z-10 flex items-center justify-between max-w-7xl mx-auto">
+      <div className="relative z-10 flex items-center justify-between  max-w-screen-2xl mx-auto">
         {/* Logo - Left Side */}
         <div className="flex items-center md:ml-32">
           <Link to="/" className="flex items-center">
@@ -154,7 +154,7 @@ function Navbar() {
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center justify-between w-[400px] absolute left-1/2 transform -translate-x-1/2">
+        <nav className="hidden md:flex items-center justify-between w-[520px] absolute left-1/2 transform -translate-x-1/2">
           <Link 
             to="/" 
             className="text-yellow-100 hover:text-yellow-200 transition-colors duration-200"
