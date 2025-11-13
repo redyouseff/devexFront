@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
 
 // import downarrow from "/images/home/Vector1.svg"
 // import whatsapp from "/images/home/WhatsApp.svg"
@@ -14,6 +15,15 @@ import { useState } from 'react';
 
 function Contact() {
   // Structured Data for Contact Page
+  const MotionDiv = motion.div;
+  const fadeLeft = {
+    hidden: { opacity: 0, x: -24 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+  };
+  const fadeRight = {
+    hidden: { opacity: 0, x: 24 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+  };
   const contactStructuredData = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
@@ -58,7 +68,13 @@ function Contact() {
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
     
     {/* Right Side - Contact Form - First on Mobile */}
-    <div className="bg-transparent lg:order-2 order-1 lg:ml-[2rem]">
+    <MotionDiv
+      className="bg-transparent lg:order-2 order-1 lg:ml-[2rem]"
+      variants={fadeRight}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.2 }}
+    >
       <div className="mb-6 sm:mb-8 text-center lg:text-left ">
         <h3 className="text-[24px] sm:text-[28px] lg:text-[29px] font-bold text-[#FEF9D0] mb-2 leading-tight">
           START A CONVERSATION<br />
@@ -215,10 +231,16 @@ function Contact() {
           </div>
         )}
       </form>
-    </div>
+    </MotionDiv>
 
     {/* Left Side - Text Content - Second on Mobile */}
-    <div className="space-y-1 lg:space-y-20 pb-4 text-left mr-[3rem] lg:order-1 order-2 mt-[13rem] lg:mt-0">
+    <MotionDiv
+      className="space-y-1 lg:space-y-20 pb-4 text-left mr-[3rem] lg:order-1 order-2 mt-[13rem] lg:mt-0"
+      variants={fadeLeft}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.2 }}
+    >
       <div>
         <h2 className=" -mt-[11rem] text-[24px] sm:text-[30px] lg:text-[36px] xl:text-[27px] font-bold text-[#FEF9D0] leading-tight " style={{ fontFamily: 'Inter' }}>
           DIGITIZING YOUR BUSINESS<br />
@@ -261,7 +283,7 @@ function Contact() {
           </a>
         </div>
       </div>
-    </div>
+    </MotionDiv>
   </div>
 </div>
 

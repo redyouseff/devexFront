@@ -8,7 +8,10 @@ import 'swiper/css/pagination';
 import Navbar from '../components/Navbar';
 import SEO from '../components/SEO';
 import Thirdseciont from '../components/Thirdseciont';
+import { motion } from 'framer-motion';
  
+
+const MotionDiv = motion.div;
 
 // Smooth scroll styles
 const smoothScrollStyles = `
@@ -187,6 +190,23 @@ function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
   const [submitError, setSubmitError] = useState('');
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: 24 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+  };
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.6, ease: 'easeOut' } }
+  };
+  const fadeLeft = {
+    hidden: { opacity: 0, x: -24 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+  };
+  const fadeRight = {
+    hidden: { opacity: 0, x: 24 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+  };
 
   // Update --vh for mobile 100vh correctness
   useEffect(() => {
@@ -368,7 +388,13 @@ function Home() {
               </div>
 
           {/* Content */}
-        <div className="container mx-auto max-w-7xl relative z-20 px-4 sm:px-6  sm:pt-40 ">
+        <MotionDiv
+          className="container mx-auto max-w-7xl relative z-20 px-4 sm:px-6  sm:pt-40 "
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          variants={fadeUp}
+        >
             <div className="max-w-2xl mb-6 ">
             <h1 className="text-[40px] sm:text-[60px] lg:text-[80px] font-bold mb-0 text-[#E9F2CD]">
               DEVEXT
@@ -415,7 +441,7 @@ function Home() {
               </div>
             </div>
           </div>
-        </div>
+          </MotionDiv>
       </section>
 
       {/* Services Section */}
@@ -441,7 +467,13 @@ function Home() {
                 />
               </div>
               
-              <div className="relative z-10 max-w-lg text-center md:text-left">
+              <MotionDiv
+                className="relative z-10 max-w-lg text-center md:text-left"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+                variants={fadeLeft}
+              >
                 <h3 className="text-[20px] sm:text-[24px] lg:text-[30px] font-medium text-[#2F5B44] mb-4 sm:mb-6 leading-tight uppercase">
                   CREATIVE<br />
                   SOFTWARE AGENCY DELIVERING<br />
@@ -463,12 +495,18 @@ function Home() {
                     <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow" className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-all duration-300 hidden group-hover:block" />
                   </Link>
                 </div>
-              </div>
+              </MotionDiv>
             </div>
 
             {/* Right Image */}
             <div className="relative flex items-center justify-center p-6 sm:p-8 bg-[#2F5B44] md:bg-transparent">
-              <div className="relative w-full max-w-md">
+              <MotionDiv
+                className="relative w-full max-w-md"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+                variants={fadeRight}
+              >
                 {/* Background Pattern */}
                 <div className="absolute -top-4 -right-4 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 opacity-20 z-0">
                   <img 
@@ -482,7 +520,7 @@ function Home() {
                   alt="Website Mockup" 
                   className="w-full h-auto relative z-10"
                 />
-              </div>
+              </MotionDiv>
             </div>
           </div>
         </div>
@@ -545,7 +583,13 @@ function Home() {
           </div>
         </div>
         
-        <div className="container mx-auto max-w-4xl relative z-10">
+        <MotionDiv
+          className="container mx-auto max-w-4xl relative z-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          variants={fadeUp}
+        >
           <h2 className="text-2xl   mb-6 text-[#FEF9D0] leading-tight tracking-wide">
             CUSTOM <span className="text-[#FEF9D0] text-3xl font-bold">WEB DESIGN</span> PRICING FOR EACH<br />
             CLIENT'S OBJECTIVES
@@ -568,7 +612,7 @@ function Home() {
             <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052696/Vector1_yust9l.svg" alt="arrow" className="w-5 h-5 ml-3 transition-all duration-300 group-hover:hidden" />
             <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052589/arrow_Down_jlay7a.svg" alt="arrow" className="w-5 h-5 ml-3 transition-all duration-300 hidden group-hover:block" />
           </Link>
-        </div>
+        </MotionDiv>
       </section>
 
  
@@ -593,13 +637,19 @@ function Home() {
 
             <div className="w-full relative z-10">
               {/* Header */}
-              <div className="text-center mb-16">
+              <MotionDiv
+                className="text-center mb-16"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+                variants={fadeUp}
+              >
                 <h2 className="text-[36px] font-bold text-[#2F5B44] mb-4 leading-tight"> 
                 DISCOVER SOME OF OUR <br /> UNIQU PROJECTS
                 </h2>
                 <p className="text-[20px] text-[#2F5B44] max-w-4xl mx-auto text-center" style={{ fontFamily: 'Inter', fontWeight: 400, lineHeight: '100%', letterSpacing: '0%' }}>
                 Discover some of our unique projects that showcase our creativity, innovation, and technical expertise. Each project reflects our commitment to delivering tailored solutions that not only meet client needs but also set new standards in design and development.  </p>
-              </div>
+              </MotionDiv>
 
              
              
@@ -876,7 +926,13 @@ function Home() {
 
             <div className="container mx-auto max-w-6xl relative z-10 -mb-[9rem]">
               {/* Header */}
-              <div className="text-center mb-16 relative z-10">
+              <MotionDiv
+                className="text-center mb-16 relative z-10"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+                variants={fadeUp}
+              >
                 <h2 className="text-[36px] font-bold text-[#2F5B44] mb-4 leading-tight">
                   WHAT OUR CUSTOMERS SAY<br />
                   ABOUT US!
@@ -884,7 +940,7 @@ function Home() {
                 <p className="text-[20px] text-[#2F5B44] max-w-4xl mx-auto text-center" style={{ fontFamily: 'Inter', fontWeight: 400, lineHeight: '100%', letterSpacing: '0%' }}>
                 Discover some of our unique projects that showcase our creativity, innovation, and technical expertise. Each project reflects our commitment to delivering tailored solutions that not only meet client needs but also set new standards in design and development.
                 </p>
-              </div>
+              </MotionDiv>
 
         
 
@@ -897,9 +953,15 @@ function Home() {
            
             </div> */}
 
-           <div className='-mb-[6rem]'> 
+           <MotionDiv
+             className='-mb-[6rem]'
+             initial="hidden"
+             whileInView="visible"
+             viewport={{ once: false, amount: 0.2 }}
+             variants={fadeIn}
+           > 
            <ImageSlider2></ImageSlider2>
-           </div>
+           </MotionDiv>
             
 
          
@@ -913,7 +975,13 @@ function Home() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                 
                 {/* Left Side - Text Content */}
-                <div className="space-y-6 lg:space-y-8 pb-4 text-center lg:text-left">   
+                <MotionDiv
+                  className="space-y-6 lg:space-y-8 pb-4 text-center lg:text-left"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.2 }}
+                variants={fadeLeft}
+                >   
                   <div>
                     <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] xl:text-[36px] font-bold text-[#FEF9D0] mb-4 sm:mb-6 leading-tight whitespace-nowrap  " style={{ fontFamily: 'Inter' }}>
                       DIGITIZING YOUR BUSINESS<br />
@@ -935,10 +1003,16 @@ function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </MotionDiv>
 
                 {/* Right Side - Contact Form */}
-                <div className="bg-transparent">
+                <MotionDiv
+                  className="bg-transparent"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.2 }}
+                variants={fadeRight}
+                >
                   <div className="mb-6 sm:mb-8 text-center lg:text-left">
                     <h3 className="text-[24px] sm:text-[28px] lg:text-[32px] font-bold text-[#FEF9D0] mb-2 leading-tight">
                       START A CONVERSATION<br />
@@ -1095,7 +1169,7 @@ function Home() {
                       </div>
                     )}
                   </form>
-                </div>
+                </MotionDiv>
               </div>
             </div>
           </section>

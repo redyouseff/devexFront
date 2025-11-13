@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import Navbar from "../components/Navbar";
+import { motion } from 'framer-motion';
 
 
 // import backgroundlogo from "/images/EcommerceDesign/Mask group.svg";
@@ -46,6 +47,16 @@ const AnimatedImage = ({ src, alt, direction }) => {
 };
 
 const EcommerceDesign = () => {
+ 
+    const fadeLeft = {
+        hidden: { opacity: 0, x: -24 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+    };
+    const fadeRight = {
+        hidden: { opacity: 0, x: 24 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+    };
+    const MotionDiv = motion.div;
  
     const structuredData = {
         "@context": "https://schema.org",
@@ -149,13 +160,25 @@ const EcommerceDesign = () => {
                 />
 
                 <div className=" container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2  mt-[7rem] sm:mt-[10rem] px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-                    <div className="col-span-1 flex flex-col  justify-center ">  
+                    <MotionDiv
+                        className="col-span-1 flex flex-col  justify-center "
+                        variants={fadeLeft}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false, amount: 0.2 }}
+                    >  
                         <h6 className="text-[#FEF9D0] font-inter text-[40px] not-italic font-semibold leading-normal">eCommerce Development Services</h6>
                         <p className="text-[#FEF9D0] font-inter text-[24px] not-italic font-normal leading-normal">  Providing end-to-end eCommerce design and development services, we help to build and grow your eCommerce website across platforms.</p>
-                    </div>
-                    <div className="col-span-1 flex items-center  lg:justify-end justify-center ">  
+                    </MotionDiv>
+                    <MotionDiv
+                        className="col-span-1 flex items-center  lg:justify-end justify-center "
+                        variants={fadeRight}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false, amount: 0.2 }}
+                    >  
                         <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051075/ecommerce_website_1_dgzvud.svg" alt="hero section image" />
-                    </div>
+                    </MotionDiv>
                 </div>
                
             </section>
@@ -166,7 +189,13 @@ const EcommerceDesign = () => {
                 <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">  
                         {/* Text content */}
-                        <div className="lg:col-span-1">
+                        <MotionDiv
+                            className="lg:col-span-1"
+                            variants={fadeLeft}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: false, amount: 0.2 }}
+                        >
                             <h2 onClick={() => handleSelect(0)} className="mt-10 font-semibold text-2xl sm:text-3xl cursor-pointer font-inter">
                                 eCommerce Web Design
                             </h2>
@@ -211,17 +240,23 @@ const EcommerceDesign = () => {
                                     and services.
                                 </p>
                             )}
-                        </div>
+                        </MotionDiv>
 
                         {/* Image */}
-                        <div className="lg:col-span-1 flex justify-center lg:justify-end">   
+                        <MotionDiv
+                            className="lg:col-span-1 flex justify-center lg:justify-end"
+                            variants={fadeRight}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: false, amount: 0.2 }}
+                        >   
                             <AnimatedImage
                                 key={`${activeTab}-${direction}`} 
                                 src={images[activeTab]}
                                 alt="eCommerce mobile mockups"
                                 direction={direction}
                             />
-                        </div>
+                        </MotionDiv>
                     </div>
                 </div>
             </section>
@@ -237,7 +272,13 @@ const EcommerceDesign = () => {
                 <div className='max-w-full h-full px-4 sm:px-6 lg:px-8 bg-[#FEF9D0] text-[#2F5B44]'>
 
 
-                  <div className='text-center py-12 sm:py-16 lg:py-24'>
+                  <MotionDiv
+                    className='text-center py-12 sm:py-16 lg:py-24'
+                    variants={fadeRight}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.2 }}
+                  >
                     <h2 className='text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] font-inter font-semibold leading-tight'>
                         eCommerce Development Solutions
                     </h2> 
@@ -252,11 +293,17 @@ const EcommerceDesign = () => {
                     Our team helps clients to remain relevant in a saturated market through data-driven strategies such as:  
                     </p>
 
-                  </div>
+                  </MotionDiv>
           
 
                   {/* grid cards */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 md:gap-0.5  gap-4 sm:ga pb-16">
+                  <MotionDiv
+                    className="grid grid-cols-1 md:grid-cols-2 md:gap-0.5  gap-4 sm:ga pb-16"
+                    variants={fadeRight}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.2 }}
+                  >
                     {solutionCards.map((card) => (
                       <div
                         key={card.id}
@@ -281,7 +328,7 @@ const EcommerceDesign = () => {
                         ))}
                       </div>
                     ))}
-                  </div>                                  
+                  </MotionDiv>                                  
                 </div>
 
 
@@ -298,7 +345,13 @@ const EcommerceDesign = () => {
                       aria-hidden="true"
                       className="absolute inset-0 w-full h-full object-contain pointer-events-none"
                     />
-                    <div className='relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 text-center '>
+                    <MotionDiv
+                      className='relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 text-center '
+                      variants={fadeRight}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: false, amount: 0.2 }}
+                    >
                       <h3 className='text-[#2F5B44] text-center font-inter text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-medium uppercase leading-normal'>
                         SPEAK WITH OUR RELIABLE        
                       </h3>
@@ -315,7 +368,7 @@ const EcommerceDesign = () => {
                       <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052696/Vector1_yust9l.svg" alt="arrow up" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
                     </span>
                   </Link>
-                    </div>
+                    </MotionDiv>
                 
                   </div>
             </section>

@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
+
+const MotionDiv = motion.div;
 
 // Smooth scroll styles
 const smoothScrollStyles = `
@@ -84,6 +87,15 @@ function About() {
   const [submitMessage, setSubmitMessage] = useState('');
   const [submitError, setSubmitError] = useState('');
 
+  const fadeLeft = {
+    hidden: { opacity: 0, x: -24 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+  };
+  const fadeRight = {
+    hidden: { opacity: 0, x: 24 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+  };
+
   // Structured Data for About Page
   const aboutStructuredData = {
     "@context": "https://schema.org",
@@ -145,7 +157,13 @@ function About() {
 
           {/* Content */}
           
-        <div className="container mx-auto max-w-6xl relative z-20 px-4 sm:px-6 pt-10 sm:pt-20 flex justify-center -mt-23">
+        <MotionDiv
+          className="container mx-auto max-w-6xl relative z-20 px-4 sm:px-6 pt-10 sm:pt-20 flex justify-center -mt-23"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          variants={fadeRight}
+        >
             <div className="max-w-4xl text-center">
             <h1 className="text-[30px] sm:text-[40px] lg:text-[48px] font-medium leading-tight mb-6 text-[#FFFFFF]">
             The Team You Need On Your Project!
@@ -178,7 +196,7 @@ function About() {
               </Link>
             </div>
           </div>
-        </div>
+        </MotionDiv>
       </section>
 
  {/* second Section */}
@@ -195,7 +213,13 @@ function About() {
             
                          {/* Left Content */}
              <div className="relative flex items-center justify-center p-6 sm:p-8 lg:p-12 font-['Inter'] overflow-hidden bg-[#2F5B44] order-2 md:order-1">
-               <div className="relative z-10 max-w-lg text-left">
+              <MotionDiv
+                className="relative z-10 max-w-lg text-left"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+                variants={fadeLeft}
+              >
                  <h3 className="text-[20px] sm:text-[24px] lg:text-[28px] font-medium text-[#FEF9D0] mb-4 sm:mb-6 leading-tight uppercase">
                    CREATIVE SOFTWARE<br />
                    AGENCY DELIVERING CUSTOM<br />
@@ -207,18 +231,24 @@ function About() {
                  <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-[#FEF9D0] mb-6 sm:mb-8 leading-relaxed">
                  With more than 5 years of experience in the industry, we have partnered with startups, SMEs, and large enterprises to deliver innovative solutions that meet diverse business needs. Our journey reflects not only growth in scale but also in expertise, creativity, and the ability to adapt to dynamic markets.
                  </p>
-               </div>
+               </MotionDiv>
              </div>
 
                         {/* Right  */}
             <div className="relative flex items-center justify-center p-6 sm:p-8 bg-[#FEF9D0] overflow-hidden order-1 md:order-2">
-              <div className="relative z-10 w-full h-full flex items-center justify-center">
+              <MotionDiv
+                className="relative z-10 w-full h-full flex items-center justify-center"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+                variants={fadeRight}
+              >
                 <img 
                   src="https://res.cloudinary.com/daop3bufa/image/upload/v1759049292/website_mockup_1_1_lbzuqx.svg" 
                   alt="Website Mockup" 
                   className="w-full h-auto max-w-lg object-contain -mb-8 md:-mb-14 "
                 />
-              </div>
+              </MotionDiv>
                              
               <div className="absolute -right-10  top-0 w-full h-full flex items-center justify-end opacity-30">
                   <img 
@@ -254,13 +284,19 @@ function About() {
             
             {/* Left Content */}
             <div className="relative flex items-center justify-center p-6 sm:p-8 bg-[#FEF9D0] overflow-hidden">
-              <div className="relative z-10 w-full h-full flex items-center justify-center">
+              <MotionDiv
+                className="relative z-10 w-full h-full flex items-center justify-center"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+                variants={fadeLeft}
+              >
                 <img 
                   src="https://res.cloudinary.com/daop3bufa/image/upload/v1759049266/mobile_app_mockup_1_1_mpxpuz.svg"
                   alt="Mobile App Mockup" 
                   className="w-full h-auto max-w-lg object-contain"
                 />
-              </div>
+              </MotionDiv>
               <div className="absolute -left-90 top-0 w-full h-full flex items-center justify-start opacity-25">
                 <img 
                   src="https://res.cloudinary.com/daop3bufa/image/upload/v1759049223/Devext_Pattern_1_2_yqrkfk.svg"
@@ -277,7 +313,13 @@ function About() {
 
             {/* Right Content */}
             <div className="relative flex items-center justify-center p-6 sm:p-8 lg:p-12 font-['Inter'] overflow-hidden bg-[#2F5B44]">
-              <div className="relative z-10 max-w-lg text-left">
+              <MotionDiv
+                className="relative z-10 max-w-lg text-left"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+                variants={fadeRight}
+              >
                 <h3 className="text-[20px] sm:text-[24px] lg:text-[28px] font-medium text-[#FEF9D0] mb-4 sm:mb-6 leading-tight uppercase">
                   CREATIVE SOFTWARE<br />
                   AGENCY DELIVERING CUSTOM<br />
@@ -289,7 +331,7 @@ function About() {
                 <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-[#FEF9D0] mb-6 sm:mb-8 leading-relaxed">
                 Our success is built on innovation, collaboration, and trust. By combining technical expertise with a deep understanding of business goals, we continue to push boundaries and deliver custom solutions tailored to each client’s vision. With DEVEXT, you don’t just get a service provider—you gain a long-term partner dedicated to your success.
                 </p>
-              </div>
+              </MotionDiv>
             </div>
           </div>
         </div>
@@ -300,7 +342,13 @@ function About() {
       <section id="team-section" className="relative py-20 px-6 bg-[#2F5B44]">
         <div className="container mx-auto max-w-6xl relative z-10">
           {/* Header */}
-          <div className="text-center mb-16">
+          <MotionDiv
+            className="text-center mb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            variants={fadeRight}
+          >
             <h2 className="text-[36px] font-bold text-[#FEF9D0] mb-6 leading-tight">
               MEET OUR LEADERSHIP TEAM
             </h2>
@@ -308,10 +356,16 @@ function About() {
               Top industry with proven experience who are hands-on in managing projects
               Top industry with proven experience who are hands-on in managing projects
             </p>
-          </div>
+          </MotionDiv>
 
           {/* Team Members */}
-          <div className="flex flex-col items-center gap-4 sm:gap-6 -mt-4">
+          <MotionDiv
+            className="flex flex-col items-center gap-4 sm:gap-6 -mt-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            variants={fadeLeft}
+          >
             {/* Inline TeamCard component (supports avatar images) */}
             {(() => {
               const TeamCard = ({ name = 'First & Last Name', role = 'Position & Role', img, w = 'w-40 sm:w-48 md:w-52 lg:w-56', h = 'h-52 sm:h-56 md:h-60 lg:h-64 xl:h-72' }) => (
@@ -338,6 +392,7 @@ function About() {
                     <div className="text-[#FEF9D0] text-[12px] sm:text-[13px] md:text-[14px] lg:text-[10px] font-bold leading-tight mb-1 sm:mb-2 whitespace-nowrap">{name}</div>
                     <div className="text-[#FEF9D0] text-[10px] sm:text-[11px] md:text-[12px] opacity-90 leading-tight">{role}</div>
                   </div>
+
                 </div>
               );
 
@@ -386,7 +441,7 @@ function About() {
                 </>
               );
             })()}
-          </div>
+          </MotionDiv>
         </div>
       </section>
 
@@ -398,7 +453,13 @@ function About() {
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
     
     {/* Left Side - Text Content */}
-    <div className="space-y-6 lg:space-y-8 pb-4 text-center lg:text-left">
+    <MotionDiv
+      className="space-y-6 lg:space-y-8 pb-4 text-center lg:text-left"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.2 }}
+      variants={fadeLeft}
+    >
              <div>
          <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] xl:text-[36px] font-bold text-[#2F5B44] mb-4 sm:mb-6 leading-tight  whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
            DIGITIZING YOUR BUSINESS<br />
@@ -420,10 +481,16 @@ function About() {
            </div>
          </div>
        </div>
-    </div>
+    </MotionDiv>
 
     {/* Right Side - Contact Form */}
-    <div className="bg-transparent">
+    <MotionDiv
+      className="bg-transparent"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.2 }}
+      variants={fadeRight}
+    >
       <div className="mb-6 sm:mb-8 text-center lg:text-left">
         <h3 className="text-[24px] sm:text-[28px] lg:text-[32px] font-bold text-[#2F5B44] mb-2 leading-tight">
           START A CONVERSATION<br />
@@ -578,7 +645,7 @@ function About() {
           </div>
         )}
       </form>
-    </div>
+    </MotionDiv>
   </div>
 </div>
 </section>

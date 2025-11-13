@@ -6,6 +6,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
+
+const MotionDiv = motion.div;
 
 // Custom styles for Swiper
 const swiperStyles = `
@@ -96,6 +99,15 @@ import Navbar from '../components/Navbar';
 
 
 function Services() {
+  const fadeLeft = {
+    hidden: { opacity: 0, x: -24 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+  };
+
+  const fadeRight = {
+    hidden: { opacity: 0, x: 24 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+  };
   // Structured Data for Services Page
   const servicesStructuredData = {
     "@context": "https://schema.org",
@@ -222,7 +234,13 @@ function Services() {
          {/* Content */}
           
          <div className="container mx-auto max-w-6xl relative z-20 px-4 sm:px-6 pt-10 sm:pt-20 flex justify-center -mt-8 sm:-mt-12 lg:-mt-20">
-            <div className="max-w-4xl text-center">
+          <MotionDiv
+             className="max-w-4xl text-center"
+             variants={fadeRight}
+             initial="hidden"
+             whileInView="visible"
+             viewport={{ once: false, amount: 0.2 }}
+           >
             <p className="text-[28px] sm:text-[40px] lg:text-[56px] text-[#FFFFFF] mb-5">
             From Concept To Reality
             </p>
@@ -247,8 +265,8 @@ function Services() {
                 </span>
               </a>
             </div>
+            </MotionDiv>
           </div>
-        </div>
       </section>   
 
 
@@ -281,7 +299,13 @@ function Services() {
               </div>
               
               {/* Content */}
-              <div className="relative z-10 max-w-lg text-left">
+              <MotionDiv
+                className="relative z-10 max-w-lg text-left"
+                variants={fadeLeft}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+              >
                 <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-[#2F5B44] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
                   WEB DESIGN & DEVELOPMENT
                 </h2>
@@ -322,17 +346,23 @@ function Services() {
                     </span>
                   </Link>
                 </div>
-              </div>
+              </MotionDiv>
             </div>
 
             {/* Right Content */}
-            <div className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden">
+            <MotionDiv
+              className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden"
+              variants={fadeRight}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.2 }}
+            >
               <img 
-                src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051183/314320_1_1_vrvgom.svg" 
+                src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051183/314320_1_1_vrvgom.svg"
                 alt="Services Image" 
                 className="w-full h-full object-cover"
               />
-            </div>
+            </MotionDiv>
           </div>
         </div>
       </section>
@@ -351,17 +381,29 @@ function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
             
             {/* Left Content */}
-            <div className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden order-2 md:order-1">
+            <MotionDiv
+              className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden order-2 md:order-1"
+              variants={fadeLeft}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.2 }}
+            >
               <img 
                 src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051258/314320_1_2_ccfmxr.svg"
                 alt="Services Image" 
                 className="w-full h-full object-cover"
               />
-            </div>
+            </MotionDiv>
 
             {/* Right Content */}
             <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 font-['Inter'] overflow-hidden bg-[#2F5B44] order-1 md:order-2">
-              <div className="relative z-10 max-w-lg text-left">
+              <MotionDiv
+                className="relative z-10 max-w-lg text-left"
+                variants={fadeRight}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+              >
                 <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-[#FEF9D0] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
                   APP DESIGN & DEVELOPMENT
                 </h2>
@@ -404,7 +446,7 @@ function Services() {
                     </span>
                   </Link>
                 </div>
-              </div>
+              </MotionDiv>
             </div>
           </div>
         </div>
@@ -441,7 +483,13 @@ function Services() {
                </div>
                
                {/* Content */}
-               <div className="relative z-10 max-w-lg text-left">
+              <MotionDiv
+                 className="relative z-10 max-w-lg text-left"
+                 variants={fadeLeft}
+                 initial="hidden"
+                 whileInView="visible"
+                 viewport={{ once: false, amount: 0.2 }}
+               >
                  <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-[#2F5B44] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
                    ECOMMERCE DEVELOPMENT
                  </h2>
@@ -483,17 +531,23 @@ function Services() {
                      </span>
                    </Link>
                  </div>
-               </div>
+              </MotionDiv>
              </div>
 
              {/* Right Content */}
-             <div className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden">
+             <MotionDiv
+               className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden"
+               variants={fadeRight}
+               initial="hidden"
+               whileInView="visible"
+               viewport={{ once: false, amount: 0.2 }}
+             >
                <img 
                  src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051259/314320_1_3_y4cot9.svg"
                  alt="Services Image" 
                  className="w-full h-full object-cover"
                />
-             </div>
+             </MotionDiv>
            </div>
          </div>
        </section>
@@ -513,17 +567,29 @@ function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
             
             {/* Left Content */}
-            <div className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden order-2 md:order-1">
+            <MotionDiv
+              className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden order-2 md:order-1"
+              variants={fadeLeft}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.2 }}
+            >
               <img 
                 src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051258/314320_1_2_ccfmxr.svg"
                 alt="Services Image" 
                 className="w-full h-full object-cover"
               />
-            </div>
+            </MotionDiv>
 
             {/* Right Content */}
             <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 font-['Inter'] overflow-hidden bg-[#2F5B44] order-1 md:order-2">
-              <div className="relative z-10 max-w-lg text-left">
+              <MotionDiv
+                className="relative z-10 max-w-lg text-left"
+                variants={fadeRight}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+              >
                 <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-[#FEF9D0] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
                   SHOPIFY WEBSITES
                 </h2>
@@ -566,7 +632,7 @@ function Services() {
                     </span>
                   </Link>
                 </div>
-              </div>
+              </MotionDiv>
             </div>
           </div>
         </div>
@@ -601,8 +667,14 @@ function Services() {
                  />
                </div>
                
-               {/* Content */}
-               <div className="relative z-10 max-w-lg text-left">
+              {/* Content */}
+              <motion.div
+                className="relative z-10 max-w-lg text-left"
+                variants={fadeLeft}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+              >
                  <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-[#2F5B44] mb-6 leading-none tracking-normal uppercase" style={{ fontFamily: 'Inter' }}>
                    DIGITAL STRATEGIES &<br/>BRANDING
                  </h2>
@@ -643,18 +715,24 @@ function Services() {
                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector1_ok0wi0.svg" alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
                      </span>
                    </Link>
-                 </div>
-               </div>
+                </div>
+              </motion.div>
              </div>
 
              {/* Right Content */}
-             <div className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden">
+           <MotionDiv
+              className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden"
+              variants={fadeRight}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.2 }}
+            >
                <img 
                  src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051259/314320_1_3_y4cot9.svg" 
                  alt="Services Image" 
                  className="w-full h-full object-cover"
                />
-             </div>
+           </MotionDiv>
            </div>
          </div>
        </section>
@@ -663,7 +741,13 @@ function Services() {
         <section className="relative py-20 px-6 bg-[#2F5B44]">
           <div className="container mx-auto max-w-6xl">
             {/* Header */}
-            <div className="text-center mb-16">
+           <MotionDiv
+              className="text-center mb-16"
+              variants={fadeRight}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.2 }}
+            >
               <h2 className="text-[24px] sm:text-[30px] lg:text-[42px] font-medium text-[#FEF9D0] mb-4 leading-none tracking-normal text-center uppercase" style={{ fontFamily: 'Inter' }}>
                 DIGITAL TRENDS
               </h2>
@@ -681,7 +765,7 @@ function Services() {
                   <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051175/Frame_17_z4rjlz.png" alt="Next" className="w-10 h-10" />
                 </button>
               </div>
-            </div>
+            </MotionDiv>
 
             {/* Swiper Container */}
             <div className="max-w-7xl mx-auto px-6">

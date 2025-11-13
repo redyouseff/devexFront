@@ -3,6 +3,7 @@
 
 import Navbar from "../components/Navbar";
 import SEO from '../components/SEO';
+import { motion } from "framer-motion";
 const image2 = "https://res.cloudinary.com/daop3bufa/image/upload/v1759051036/ecommerce_website_3_2_lw4ewc.svg";
 import { useEffect, useState } from "react";
 const image1 = "https://res.cloudinary.com/daop3bufa/image/upload/v1760610715/Group_4_m5eatr.svg";
@@ -21,6 +22,16 @@ const CustomWebDevelopment =()=>{
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitMessage, setSubmitMessage] = useState('');
     const [submitError, setSubmitError] = useState('');
+
+    const MotionDiv = motion.div;
+    const fadeLeft = {
+        hidden: { opacity: 0, x: -24 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+    };
+    const fadeRight = {
+        hidden: { opacity: 0, x: 24 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+    };
 
     const structuredData = {
 		"@context": "https://schema.org",
@@ -96,14 +107,26 @@ const CustomWebDevelopment =()=>{
                 />
 
                 <div className=" relative z-10 container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2  mt-[7rem] sm:mt-[10rem] px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-                    <div className="col-span-1 flex flex-col  justify-center ">  
+                    <MotionDiv
+                        className="col-span-1 flex flex-col  justify-center "
+                        variants={fadeLeft}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false, amount: 0.2 }}
+                    >  
                         <h6 className="text-[#FEF9D0] font-inter text-[40px] not-italic font-semibold leading-normal lg:whitespace-nowrap mb-3">Custom Web Development Company</h6>
                         <p className="text-[#FEF9D0] font-inter text-[24px] not-italic font-normal leading-normal mb-4"> Leverage the experience and creativity of our award-winning designers through our selection of web design services
                         Our custom solutions target measurable results for your brand. </p>   
-                    </div>
-                    <div className="col-span-1 flex items-center lg:justify-end justify-center  ">  
+                    </MotionDiv>
+                    <MotionDiv
+                        className="col-span-1 flex items-center lg:justify-end justify-center  "
+                        variants={fadeRight}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false, amount: 0.2 }}
+                    >  
                         <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1760358066/3300d62e120a2d3112d4436cdb738e1b99de27b4_shlnuy.png" alt="hero side image" className="w-[25rem] h-[25rem] " />
-                    </div>
+                    </MotionDiv>
                 </div>
                
             </section>
@@ -114,7 +137,13 @@ const CustomWebDevelopment =()=>{
                 <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10  items-center">  
                         {/* Text content */}
-                        <div className="lg:col-span-1">
+                        <MotionDiv
+                            className="lg:col-span-1"
+                            variants={fadeLeft}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: false, amount: 0.2 }}
+                        >
                             <h2 onClick={() => handleSelect(0)} className="mt-10 font-semibold text-2xl sm:text-3xl cursor-pointer font-inter">
                             Custom Web Design
                             </h2>
@@ -158,17 +187,23 @@ const CustomWebDevelopment =()=>{
                                     Using insights into your industry, competitors, and audience, our team will create an SEO plan that increases your local search visibility and attracts new customers.
                                 </p>
                             )}
-                        </div>
+                        </MotionDiv>
 
                         {/* Image */}
-                        <div className="lg:col-span-1 flex justify-center lg:justify-end">   
+                        <MotionDiv
+                            className="lg:col-span-1 flex justify-center lg:justify-end"
+                            variants={fadeRight}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: false, amount: 0.2 }}
+                        >   
                             <AnimatedImage
                                 key={`${activeTab}-${direction}`} 
                                 src={images[activeTab]}
                                 alt="eCommerce mobile mockups"
                                 direction={direction}
                             />
-                        </div>
+                        </MotionDiv>
                     </div>
                 </div>
             </section>
@@ -342,7 +377,13 @@ const CustomWebDevelopment =()=>{
                     <div className="grid grid-cols-1 md:grid-cols-3">
                   
 
-                        <div className="mt-10 col-span-2 mb-10 py-10 px-10 ">
+                        <MotionDiv
+                            className="mt-10 col-span-2 mb-10 py-10 px-10 "
+                            variants={fadeLeft}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: false, amount: 0.2 }}
+                        >
 
                             <div className="flex  gap-2 justify-start items-start mb-5  mx-auto max-w-7xl px-8 py-8">
                                 <img src={image10} alt="logo" className="w-20 h-20" />
@@ -376,11 +417,17 @@ const CustomWebDevelopment =()=>{
 
                             
                           
-                        </div>
+                        </MotionDiv>
 
-                        <div className="flex justify-ends items-end ml-10 col-span-1">
+                        <MotionDiv
+                            className="flex justify-ends items-end ml-10 col-span-1"
+                            variants={fadeRight}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: false, amount: 0.2 }}
+                        >
                         <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1760358066/3300d62e120a2d3112d4436cdb738e1b99de27b4_shlnuy.png" alt="hero side image" className="w-[25rem] h-[25rem] " />                                       
-                        </div>
+                        </MotionDiv>
 
                     </div>
                     
@@ -399,14 +446,14 @@ const CustomWebDevelopment =()=>{
                     <div className="grid grid-cols-1 md:grid-cols-2 px-10 py-10">
 
                     <div className="flex flex-col justify-center items-center py-4 px-5">
-                        <div className="flex justify-center items-center text-center gap-[12.22px] min-h-[240px] h-auto w-full px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)] break-words">
+                        <div className="flex justify-center items-center gap-[12.22px] h-[240px] px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)]">
                             <p className="text-[#FEF9D0] font-inter text-[20px] not-italic font-normal leading-normal">You have specific requirements for an online platform: It may be a SaaS platform, a mobile or a web app, an online store, a subscription-based website, a booking platform, a cloud-based solution or anything else</p>
                         </div>
 
                     </div>
 
                     <div className="flex flex-col justify-center items-center py-4 px-5">
-                        <div className="flex justify-center items-center text-center gap-[12.22px] min-h-[240px] h-auto w-full px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)] break-words">
+                        <div className="flex justify-center items-center gap-[12.22px] h-[240px] px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)]">
                             <p className="text-[#FEF9D0] font-inter text-[20px] not-italic font-normal leading-normal">You want to engage your audience with a unique, distinctive design and your audience expects nothing less from you: This is especially true for large organizations and industry leaders (think Google, Apple or IBM) which may see templates as an unacceptable solution</p>
 
                         </div>
@@ -414,14 +461,14 @@ const CustomWebDevelopment =()=>{
                     </div>
 
                     <div className="flex flex-col justify-center items-center py-4 px-5">
-                        <div className="flex justify-center items-center text-center gap-[12.22px] min-h-[240px] h-auto w-full px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)] break-words">
+                        <div className="flex justify-center items-center gap-[12.22px] h-[240px] px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)]">
                             <p className="text-[#FEF9D0] font-inter text-[20px] not-italic font-normal leading-normal">You have an idea for an innovative digital product  But you need help from experts to turn it into reality this can work well for VC-backed start-ups and fast-growing companies </p>
                         </div>
 
                     </div>
 
                     <div className="flex flex-col justify-center items-center py-4 px-5">
-                        <div className="flex justify-center items-center text-center gap-[12.22px] min-h-[240px] h-auto w-full px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)] break-words">
+                        <div className="flex justify-center items-center gap-[12.22px] h-[240px] px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)]">
                             <p className="text-[#FEF9D0] font-inter text-[20px] not-italic font-normal leading-normal">You have a big budget and complete creative freedom to design and develop a bold website that will truly stand out, even if it’s only to showcase your portfolio</p>
                         </div>
 
@@ -431,7 +478,7 @@ const CustomWebDevelopment =()=>{
 
                     <div className="flex justify-center items-center -mt-9">
                     <div className="flex flex-col justify-center items-center py-4 px-5 max-w-[60%] mx-auto ">
-                        <div className="flex justify-center items-center text-center gap-[12.22px] min-h-[240px] h-auto w-full px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)] break-words">
+                        <div className="flex justify-center items-center gap-[12.22px] h-[240px] px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)]">
                             <p className="text-[#FEF9D0] font-inter text-[20px] not-italic font-normal leading-normal">You have specific requirements for an online platform: It may be a SaaS platform, a mobile or a web app, an online store, a subscription-based website, a booking platform, a cloud-based solution or anything else</p>
                         </div>
 
@@ -446,7 +493,13 @@ const CustomWebDevelopment =()=>{
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
     
     {/* Left Side - Text Content */}
-    <div className="space-y-6 lg:space-y-8 pb-4 text-center lg:text-left">
+    <MotionDiv
+      className="space-y-6 lg:space-y-8 pb-4 text-center lg:text-left"
+      variants={fadeLeft}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.2 }}
+    >
       <div>
         <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] xl:text-[36px] font-bold text-[#FEF9D0] mb-4 sm:mb-6 leading-tight whitespace-nowrap  " style={{ fontFamily: 'Inter' }}>
           DIGITIZING YOUR BUSINESS<br />
@@ -468,10 +521,16 @@ const CustomWebDevelopment =()=>{
           </div>
         </div>
       </div>
-    </div>
+    </MotionDiv>
 
     {/* Right Side - Contact Form */}
-    <div className="bg-transparent">
+    <MotionDiv
+      className="bg-transparent"
+      variants={fadeRight}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.2 }}
+    >
       <div className="mb-6 sm:mb-8 text-center lg:text-left">
         <h3 className="text-[24px] sm:text-[28px] lg:text-[32px] font-bold text-[#FEF9D0] mb-2 leading-tight">
           START A CONVERSATION<br />
@@ -628,7 +687,7 @@ const CustomWebDevelopment =()=>{
           </div>
         )}
       </form>
-    </div>
+    </MotionDiv>
   </div>
 </div>
 </section>

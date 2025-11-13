@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar"
 import SEO from "../components/SEO"
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -131,6 +132,11 @@ const smoothScrollStyles = `
 
 
 const blogs =()=>{
+    const MotionDiv = motion.div;
+    const fadeRight = {
+      hidden: { opacity: 0, x: 24 },
+      visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+    };
     // Structured Data for Blogs Page
     const blogsStructuredData = {
       "@context": "https://schema.org",
@@ -275,7 +281,13 @@ const blogs =()=>{
           {/* Content */}
           
         <div className="container mx-auto max-w-6xl relative z-20 px-4 sm:px-6 pt-10 sm:pt-20 flex justify-center -mt-23">
-            <div className="max-w-4xl text-center">
+            <MotionDiv
+              className="max-w-4xl text-center"
+              variants={fadeRight}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.2 }}
+            >
             <h1 className="text-[20px] sm:text-[40px] lg:text-[48px] font-medium leading-tight mb-4 text-[#FEF9D0]  mx-auto  ">
             Explore the Latest Digital Trends
             </h1>
@@ -284,7 +296,7 @@ const blogs =()=>{
             <p className="text-base sm:text-lg mb-8 leading-relaxed text-[#FEF9D0] opacity-80 max-w-5xl mx-auto">
             Stay ahead of the curve with our curated insights into today's fast-moving digital world. From innovative technologies to creative design strategies and market shifts, we bring you the latest digital trends shaping industries and inspiring fresh ideas. 
             </p>  
-          </div>
+          </MotionDiv>
         </div>
       </section>
 
@@ -304,7 +316,13 @@ const blogs =()=>{
         
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <MotionDiv
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            variants={fadeRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+          >
             {cards.map((card) => (
               <div key={card.id} className="bg-[#2F5B44] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="rounded-xl mb-6 h-48 overflow-hidden">
@@ -325,7 +343,7 @@ const blogs =()=>{
 
               </div>   
             ))}
-          </div>
+          </MotionDiv>
         </div>
       </section>
        
