@@ -368,7 +368,7 @@ function Home() {
               </div>
 
           {/* Content */}
-        <div className="container mx-auto max-w-7xl relative z-20 px-4 sm:px-6 pt-20 sm:pt-40 ">
+        <div className="container mx-auto max-w-7xl relative z-20 px-4 sm:px-6  sm:pt-40 ">
             <div className="max-w-2xl mb-6 ">
             <h1 className="text-[40px] sm:text-[60px] lg:text-[80px] font-bold mb-0 text-[#E9F2CD]">
               DEVEXT
@@ -700,7 +700,7 @@ function Home() {
           </section>  
           
           {/* sixth Section - FAQ */}
-          <section className="relative py-13 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 xl:px-20" style={{ background: '#2F5B44' }}>
+          <section className="relative py-[52px] sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 xl:px-20" style={{ background: '#2F5B44' }}>
             <div className="container mx-auto max-w-full">
               {/* Header */}
               <div className="text-center mb-8 sm:mb-12">
