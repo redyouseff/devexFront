@@ -94,6 +94,7 @@ const CustomWebDesignServices = () => {
           structuredData={structuredData}
         />
         <Navbar />
+        <div className="overflow-x-hidden">
 
         <section
                 className="relative w-full min-h-[60vh] md:min-h-[80vh] lg:min-h-[80vh] sm:min-h-[42.1875rem] xl:min-h-[42.1875rem] bg-[#2F5B44] flex items-center justify-center text-[#FEF9D0] overflow-hidden"
@@ -383,6 +384,7 @@ Request A quote
 
        
 
+        </div>
         </>
     )
 }

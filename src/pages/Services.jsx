@@ -1,932 +1,391 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+
+
+import Navbar from "../components/Navbar";
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 
+// import backgroundlogo from "/images/EcommerceDesign/Mask group.svg";
+// import image from "/images/CustomWebDesignServices/website mockup image 2.svg";
+// import icon1 from "/images/CustomWebDesignServices/Vector.svg";
+// import icon2 from "/images/CustomWebDesignServices/custom we design.svg"
+// import icon3 from "/images/CustomWebDesignServices/Mask group.svg";
+// import icon4 from "/images/CustomWebDesignServices/Responsive Web.svg";
+// import downarrow2green from "/images/home/arrow Down.svg"
+// import downarrow from "/images/home/Vector1.svg"
+// import image1 from "/images/CustomWebDesignServices/Rectangle 2.svg";
+// import vector1 from "/images/CustomWebDesignServices/Vector11.svg";
+// import vector2 from "/images/CustomWebDesignServices/Vector12.svg";
+// import vector3 from "/images/CustomWebDesignServices/Vector13.svg";
+// import vector4 from "/images/CustomWebDesignServices/Group 14.svg";
+// import vector5 from "/images/CustomWebDesignServices/Vector15.svg";
+// import vector6 from "/images/CustomWebDesignServices/Vector16.svg";
+// import vector7 from "/images/CustomWebDesignServices/Vector17.svg";
+// import vector8 from "/images/CustomWebDesignServices/Vector18.svg";
+
+import { Link} from "react-router-dom";
+import SwiperComponent from "../components/customWebDesign/SwiperComponent";
+
 const MotionDiv = motion.div;
-
-// Custom styles for Swiper
-const swiperStyles = `
-  .swiper-container {
-    overflow: hidden !important;
-  }
-  .swiper-wrapper {
-    display: flex !important;
-  }
-  .swiper-slide {
-    flex-shrink: 0 !important;
-    width: calc((100% - 64px) / 3) !important;
-    max-width: 400px !important;
-  }
-  @media (max-width: 1023px) {
-    .swiper-slide {
-      width: calc((100% - 24px) / 2) !important;
-    }
-  }
-  @media (max-width: 767px) {
-    .swiper-slide {
-      width: 100% !important;
-    }
-  }
-
-  /* Smooth and slower page scroll */
-  html {
-    scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
-  }
-  
-  body {
-    scroll-behavior: smooth;
-  }
-  
-  * {
-    scroll-behavior: smooth;
-  }
-  
-  /* Make scroll even smoother and slower */
-  @media (prefers-reduced-motion: no-preference) {
-    html {
-      scroll-behavior: smooth;
-    }
-  }
-  
-  /* Add momentum scrolling for iOS */
-  body {
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  /* Custom scrollbar styling for smoother experience */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 4px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #2F5B44;
-    border-radius: 4px;
-    transition: background 0.3s ease;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #1e3d2a;
-  }
-`;
-import Navbar from '../components/Navbar';
-
-// import uparrow from "/images/home/Vector.svg"
-// import logo2  from "/images/about/Devext Pattern 1 2.svg"
-// import image1 from "/images/services/314320 1 1.svg";
-// import image2 from "/images/services/314320 1 2.svg";
-// import image3 from "/images/services/314320 1 3.svg";
-// import image5 from "/images/services/314320 1 5.svg";
-// import card1 from "/images/services/screencapture-alwidadtaxation-2025-07-11-16_12_43 1.svg";
-// import card2 from "/images/services/screencapture-alwidadtaxation-2025-07-11-16_12_43 2.svg";
-// import card3 from "/images/services/screencapture-alwidadtaxation-2025-07-11-16_12_43 3.svg";
-// import card4 from "/images/services/screencapture-alwidadtaxation-2025-07-11-16_12_43 4.svg";
-// import firstsectionarrow from "/images/services/Vector.svg";
-// import leftarrow from "/images/services/Frame 18.svg";
-// import rightarrow from "/images/services/Frame 17.png";
-// import icon2 from "/images/home/Vector2.png"
+const fadeLeft = {
+	hidden: { opacity: 0, x: -24 },
+	visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+};
+const fadeRight = {
+	hidden: { opacity: 0, x: 24 },
+	visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+};
 
 
-function Services() {
-  const fadeLeft = {
-    hidden: { opacity: 0, x: -24 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
-  };
 
-  const fadeRight = {
-    hidden: { opacity: 0, x: 24 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
-  };
-  // Structured Data for Services Page
-  const servicesStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Development & Programming Services",
-    "description": "We provide a comprehensive range of development and programming services including website and application development",
-    "url": "https://devext.io/services",
-    "provider": {
-      "@type": "Organization",
-      "name": "Devext"
-    },
-    "serviceType": "Software Development",
-    "areaServed": "Saudi Arabia",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Development Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Website Development"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Mobile Application Development"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Web Application Development"
-          }
-        }
-      ]
-    }
-  };
+const CustomWebDesignServices = () => {
 
-  // Cards data array
-  const cardsData = [
-    {
-      id: 1,
-      type: 'image',
-      title: 'What Tech Company Executives Expect From Branding In 2026  ',
-      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759051224/screencapture-alwidadtaxation-2025-07-11-16_12_43_4_el2rkm.svg"
-    },
-    {
-      id: 2,
-      type: 'image',
-      title: 'What Tech Company Executives Expect From Branding In 2026 ',
-      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759051225/screencapture-alwidadtaxation-2025-07-11-16_12_43_2_yujmhb.svg"
-    },
-    {
-      id: 3,
-      type: 'image',
-      title: 'What Tech Company Executives Expect From Branding In 2026  ',
-      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759051250/screencapture-alwidadtaxation-2025-07-11-16_12_43_3_lzfl2b.svg"
-    },
-    {
-      id: 4,
-      type: 'image',
-      title: 'What Tech Company Executives Expect From Branding In 2026  ',
-      image: "https://res.cloudinary.com/daop3bufa/image/upload/v1759051224/screencapture-alwidadtaxation-2025-07-11-16_12_43_4_el2rkm.svg"
-    },
-  
-   
-  ];
+	const structuredData = {
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"name": "Custom Web Design Services",
+		"description": "Full-service custom website design agency delivering UI/UX, responsive design, and high-performance websites aligned to your brand.",
+		"url": "https://devext.io/CustomWebDesignServices",
+		"provider": {
+			"@type": "Organization",
+			"name": "Devext"
+		},
+		"serviceType": "Custom Web Design",
+		"areaServed": "Saudi Arabia",
+		"offers": {
+			"@type": "Offer",
+			"priceCurrency": "SAR",
+			"availability": "https://schema.org/InStock"
+		}
+	};
+	const features = [
+		{
+			title: "UI/UX DESIGN",
+			desc:
+				"Tailored designs that reflect your brand identity and engage your target audience.",
+			icon:"https://res.cloudinary.com/daop3bufa/image/upload/v1759050958/Vector_milai2.svg",
+		},
+		{
+			title: "CUSTOM WEB DESIGN",
+			desc:
+				"Tailored designs that reflect your brand identity and engage your target audience.",
+			icon: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050953/custom_we_design_e3ph98.svg"
+		},
+		{
+			title: "LANDING PAGE DESIGN",
+			desc:
+				"Tailored designs that reflect your brand identity and engage your target audience.",
+			icon: "https://res.cloudinary.com/daop3bufa/image/upload/v1759050957/Mask_group_qprbky.svg"
+		},
+		{
+			title: "RESPONSIVE DESIGN",
+			desc:
+				"Tailored designs that reflect your brand identity and engage your target audience.",
+			icon:"https://res.cloudinary.com/daop3bufa/image/upload/v1759050957/Responsive_Web_bfzesf.svg"
+		},
+	];
 
-  // Swiper instance ref
-  const [swiperInstance, setSwiperInstance] = useState(null);
-
-  // Navigation functions for custom arrows
-  const nextSlide = () => {
-    if (swiperInstance) swiperInstance.slideNext();
-  };
-
-  const prevSlide = () => {
-    if (swiperInstance) swiperInstance.slidePrev();
-  };
-
-  return (
-    <>
-      <SEO 
-        title="Our Services - Devext"
-        description="Our digital services are designed for your success. From development and design to marketing, we provide end-to-end solutions."
-        keywords="Our digital services are designed for your success. From development and design to marketing, we provide end-to-end solutions."
-        canonical="/services"
-        structuredData={servicesStructuredData}
-      />
-    <style>{swiperStyles}</style>
-    <div className="min-h-screen bg-gray-100">
-
-    <Navbar />
-               
-      {/* Hero Section */}
-            <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-           {/* Video Background */}
-           <div className="absolute inset-0 w-full h-full overflow-hidden">
-                                 <div className="absolute inset-0 bg-[linear-gradient(257.99deg,rgba(254,249,208,0.1)_0%,#FEF9D040_1%,#2F5B44_95%)] z-10"></div>
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="absolute w-full h-full object-cover"
-                  style={{ 
-                    width: '100vw',
-                    height: '100vh',
-                    left: '0',
-                    top: '0',
-                    objectFit: 'cover',
-                    position: 'absolute'
-                  }}
-                >
-                  <source src="https://res.cloudinary.com/dp5bcywc7/video/upload/v1754999153/Untitled_Video_1_rthb85.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-
-         {/* Content */}
-          
-         <div className="container mx-auto max-w-6xl relative z-20 px-4 sm:px-6 pt-10 sm:pt-20 flex justify-center -mt-8 sm:-mt-12 lg:-mt-20">
-          <MotionDiv
-             className="max-w-4xl text-center"
-             variants={fadeRight}
-             initial="hidden"
-             whileInView="visible"
-             viewport={{ once: false, amount: 0.2 }}
-           >
-            <p className="text-[28px] sm:text-[40px] lg:text-[56px] text-[#FFFFFF] mb-5">
-            From Concept To Reality
-            </p>
-            
-           
-            <h4 className="text-[18px] sm:text-[22px] lg:text-[40px] mb-8 leading-relaxed text-[#E9F2CD] opacity-90 max-w-3xl mx-auto">
-            Fusing Creativity With Marketing &<br/>
-             Technology To Drive Business Growth
-            </h4>
-            <div className="flex  sm:flex-row gap-4 justify-center items-center pt-1">
-             
-              <a 
-                href="https://wa.me/201200064762"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-transparent border-2 border-[#E9F2CD] text-[#E9F2CD] px-6 py-3 rounded-full font-medium hover:bg-[#E9F2CD] hover:text-[#2F5B44] transition-colors flex items-center justify-center text-base group"
-              >
-                Speak With Our Experts
-                <span className="relative w-4 h-4 ml-2 inline-block">
-                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector1_ok0wi0.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector_mzxonf.svg" alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
-                </span>
-              </a>
-            </div>
-            </MotionDiv>
-          </div>
-      </section>   
-
-
-                  {/* first Section */}
-         <section className="relative min-h-[70vh]">
-        <div className="absolute inset-0 hidden md:block">
-          <div className="flex h-full">
-            <div className="w-1/2 bg-[#E9F2CD]"></div>
-            <div className="w-1/2 bg-[#2F5B44]"></div>
-          </div>
-        </div>
-        
-        <div className="relative h-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 min-h-[70vh]">
-            
-            {/* Left Content */}
-            <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 bg-[#FEF9D0] overflow-hidden">
-              {/* Background Pattern */}
-              <div className="absolute -left-90 top-0 w-full h-full flex items-center justify-start opacity-15">
-                <img 
-                  src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052604/Devext_Pattern_1_1_p20awb.svg"
-                  alt="Background Pattern" 
-                  className="w-auto h-full object-contain object-left"
-                  style={{ 
-                    transform: 'scale(1.2) translateX(10%)',
-                    filter: 'brightness(1.5) contrast(1.5) saturate(1.3)',
-                    mixBlendMode: 'multiply'
-                  }}
+    return(
+        <>
+        <SEO 
+          title="Custom Website Design Services - Devext"
+          description="A full-service custom web design agency. UI/UX, responsive design, and conversion-focused websites tailored to your brand."
+          keywords="custom web design, ui ux design, responsive web design, landing page design, website redesign"
+          canonical="/CustomWebDesignServices"
+          structuredData={structuredData}
+        />
+        <Navbar />
+        <div className="overflow-x-hidden">
+        <section
+                className="relative w-full min-h-[60vh] md:min-h-[80vh] lg:min-h-[80vh] sm:min-h-[42.1875rem] xl:min-h-[42.1875rem] bg-[#2F5B44] flex items-center justify-center text-[#FEF9D0] overflow-hidden"
+            >
+                {/* Background logo: full width, never cropped */}
+                <img
+                    src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050998/Mask_group_wlabwd.svg"
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 h-full w-auto object-contain pointer-events-none sm:inset-0 sm:w-full sm:h-full sm:left-0 sm:translate-x-0 object-left"
                 />
-              </div>
-              
-              {/* Content */}
-              <MotionDiv
-                className="relative z-10 max-w-lg text-left"
-                variants={fadeLeft}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
-              >
-                <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-[#2F5B44] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
-                  WEB DESIGN & DEVELOPMENT
-                </h2>
-                <p className="text-[16px] sm:text-[17px] lg:text-[20px] font-normal text-[#2F5B44] mb-8 leading-relaxed">
-                  Custom web & app development with strategic insights to generate greater brand engagement, higher conversions & measurable results
-                </p>
-                
-                {/* Services List */}
-                <ul className=" mb-8">
-                  <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[20px] text-[#2F5B44]">
-                    <span className="w-2 h-2 bg-[#2F5B44] rounded-full mr-3"></span>
-                    Custom Web Design & Development
-                  </li>
-                  <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[20px] text-[#2F5B44]">
-                    <span className="w-2 h-2 bg-[#2F5B44] rounded-full mr-3"></span>
-                    Information Architecture & UX
-                  </li>
-                  <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[20px] text-[#2F5B44]">
-                    <span className="w-2 h-2 bg-[#2F5B44] rounded-full mr-3"></span>
-                    eCommerce Design & Development
-                  </li>
-                  <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[20px] text-[#2F5B44]">
-                    <span className="w-2 h-2 bg-[#2F5B44] rounded-full mr-3"></span>
-                    App Design & Development
-                  </li>
-                </ul>
-                
-                {/* Button */}
-                <div className="flex justify-end">
-                  <Link 
-                    to="/services"
-                    className="inline-flex items-right border-2 border-[#2F5B44] text-[#2F5B44] px-6 py-3 rounded-full hover:bg-[#2F5B44] hover:text-[#E9F2CD] transition-colors font-medium text-[16px] group"
-                  >
-                    Explore Web Design Services
-                    <span className="relative w-4 h-4 ml-4 mt-1 inline-block">
-                      <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector_mzxonf.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                      <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector1_ok0wi0.svg" alt="arrow up" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
-                    </span>
-                  </Link>
+
+                <div className=" container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2  mt-[7rem] sm:mt-[10rem] px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+                    <MotionDiv
+						className="col-span-1 flex flex-col  justify-center "
+						variants={fadeLeft}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: false, amount: 0.2 }}
+					>  
+                        <h6 className="text-[#FEF9D0] font-inter text-[40px] not-italic font-semibold leading-normal">Custom Website Design <br /> Services</h6>
+                        <p className="text-[#FEF9D0] font-inter text-[24px] not-italic font-normal leading-normal"> is a full-service agency comprised of leading web designers from around the globe. Whether building a website from scratch or redesigning your current digital presence, our web design services include:</p>
+                    </MotionDiv>
+                    <MotionDiv
+						className="col-span-1 flex items-center  lg:justify-end justify-center "
+						variants={fadeRight}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: false, amount: 0.2 }}
+					>  
+                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050993/website_mockup_image_2_jn5mfp.svg" alt="side iamge" />
+                    </MotionDiv>
                 </div>
-              </MotionDiv>
-            </div>
-
-            {/* Right Content */}
-            <MotionDiv
-              className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden"
-              variants={fadeRight}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
-            >
-              <img 
-                src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051183/314320_1_1_vrvgom.svg"
-                alt="Services Image" 
-                className="w-full h-full object-cover"
-              />
-            </MotionDiv>
-          </div>
-        </div>
-      </section>
-
-
-                  {/* second Section */}
-                  <section className="relative min-h-[80vh]">
-        <div className="absolute inset-0 hidden md:block">
-          <div className="flex h-full">
-            <div className="w-1/2 bg-[#E9F2CD]"></div>
-            <div className="w-1/2 bg-[#2F5B44]"></div>
-          </div>
-        </div>
-        
-        <div className="relative h-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
-            
-            {/* Left Content */}
-            <MotionDiv
-              className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden order-2 md:order-1"
-              variants={fadeLeft}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
-            >
-              <img 
-                src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051258/314320_1_2_ccfmxr.svg"
-                alt="Services Image" 
-                className="w-full h-full object-cover"
-              />
-            </MotionDiv>
-
-            {/* Right Content */}
-            <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 font-['Inter'] overflow-hidden bg-[#2F5B44] order-1 md:order-2">
-              <MotionDiv
-                className="relative z-10 max-w-lg text-left"
-                variants={fadeRight}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
-              >
-                <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-[#FEF9D0] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
-                  APP DESIGN & DEVELOPMENT
-                </h2>
-                <p className="text-[16px] sm:text-[17px] lg:text-[18px] font-normal text-[#FEF9D0] mb-8 leading-relaxed">
-                  Custom web & app development with strategic insights to<br/>
-                  generate greater brand engagement, higher conversions &<br/>
-                  measurable results
-                </p>
-                
-                {/* Services List */}
-                <ul className=" mb-8">
-                  <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[20px] text-[#FEF9D0]">
-                    <span className="w-2 h-2 bg-[#FEF9D0] rounded-full mr-3"></span>
-                    Custom Web Design & Development
-                  </li>
-                  <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[20px] text-[#FEF9D0]">
-                    <span className="w-2 h-2 bg-[#FEF9D0] rounded-full mr-3"></span>
-                    Information Architecture & UX
-                  </li>
-                  <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[20px] text-[#FEF9D0]">
-                    <span className="w-2 h-2 bg-[#FEF9D0] rounded-full mr-3"></span>
-                    eCommerce Design & Development
-                  </li>
-                  <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[20px] text-[#FEF9D0]">
-                    <span className="w-2 h-2 bg-[#FEF9D0] rounded-full mr-3"></span>
-                    App Design & Development
-                  </li>
-                </ul>
-                
-                {/* Button */}
-                <div className="flex justify-end">
-                  <Link 
-                    to="/services"
-                    className="inline-flex items-center border-2 border-[#FEF9D0] text-[#FEF9D0] px-6 py-3 rounded-full hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-colors font-medium text-[16px] group"
-                  >
-                    Explore App Developing Services
-                    <span className="relative w-4 h-4 ml-2 inline-block">
-                      <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector1_ok0wi0.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                      <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector_mzxonf.svg" alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
-                    </span>
-                  </Link>
-                </div>
-              </MotionDiv>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-               {/* third Section */}
-        <section className="relative min-h-[70vh]">
-         <div className="absolute inset-0 hidden md:block">
-           <div className="flex h-full">
-             <div className="w-1/2 bg-[#E9F2CD]"></div>
-             <div className="w-1/2 bg-[#2F5B44]"></div>
-           </div>
-         </div>
-         
-         <div className="relative h-full">
-           <div className="grid grid-cols-1 md:grid-cols-2 min-h-[70vh]">
-             
-             {/* Left Content */}
-             <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 bg-[#FEF9D0] overflow-hidden">
-               {/* Background Pattern */}
-               <div className="absolute -left-90 top-0 w-full h-full flex items-center justify-start opacity-15">
-                 <img 
-                   src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052604/Devext_Pattern_1_1_p20awb.svg"
-                   alt="Background Pattern" 
-                   className="w-auto h-full object-contain object-left"
-                   style={{ 
-                     transform: 'scale(1.2) translateX(10%)',
-                     filter: 'brightness(1.5) contrast(1.5) saturate(1.3)',
-                     mixBlendMode: 'multiply'
-                   }}
-                 />
-               </div>
                
-               {/* Content */}
-              <MotionDiv
-                 className="relative z-10 max-w-lg text-left"
-                 variants={fadeLeft}
-                 initial="hidden"
-                 whileInView="visible"
-                 viewport={{ once: false, amount: 0.2 }}
-               >
-                 <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-[#2F5B44] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
-                   ECOMMERCE DEVELOPMENT
-                 </h2>
-                 <p className="text-[16px] sm:text-[17px] lg:text-[18px] font-normal text-[#2F5B44] mb-8 leading-relaxed">
-                   Custom eCommerce sites developed for superior performance,<br/>
-                   greater conversions and engagement
-                 </p>
-                 
-                 {/* Services List */}
-                 <ul className=" mb-8">
-                   <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[16px] text-[#2F5B44]">
-                     <span className="w-2 h-2 bg-[#2F5B44] rounded-full mr-3"></span>
-                     eCommerce Design
-                   </li>
-                   <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[16px] text-[#2F5B44]">
-                     <span className="w-2 h-2 bg-[#2F5B44] rounded-full mr-3"></span>
-                     eCommerce Development
-                   </li>
-                   <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[16px] text-[#2F5B44]">
-                     <span className="w-2 h-2 bg-[#2F5B44] rounded-full mr-3"></span>
-                     eCommerce SEO
-                   </li>
-                   <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[16px] text-[#2F5B44]">
-                     <span className="w-2 h-2 bg-[#2F5B44] rounded-full mr-3"></span>
-                     eCommerce Marketing
-                   </li>
-                 </ul>
-                 
-                 {/* Button */}
-                 <div className="flex justify-end">
-                   <Link 
-                     to="/services"
-                     className="inline-flex items-center border-2 border-[#2F5B44] text-[#2F5B44] px-6 py-3 rounded-full hover:bg-[#2F5B44] hover:text-[#E9F2CD] transition-colors font-medium text-[16px] group"
-                   >
-                     Explore Ecommerce Services
-                     <span className="relative w-4 h-4 ml-2 inline-block">
-                       <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052699/Vector2_tcuogh.png" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                       <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
-                     </span>
-                   </Link>
-                 </div>
-              </MotionDiv>
-             </div>
+            </section>
 
-             {/* Right Content */}
-             <MotionDiv
-               className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden"
-               variants={fadeRight}
-               initial="hidden"
-               whileInView="visible"
-               viewport={{ once: false, amount: 0.2 }}
-             >
-               <img 
-                 src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051259/314320_1_3_y4cot9.svg"
-                 alt="Services Image" 
-                 className="w-full h-full object-cover"
-               />
-             </MotionDiv>
-           </div>
-         </div>
-       </section>
+            {/* second section */}
+            <section>
+
+			<div className="bg-[#FEF9D0] flex justify-center items-center min-h-[30vh] py-10 sm:py-12 md:py-16">
+				<p className="max-w-[901px] w-full px-4 sm:px-6 lg:px-8 text-[#2F5B44] font-inter text-base sm:text-lg md:text-xl lg:text-[28px] not-italic font-semibold leading-normal text-center mt-5">
+				is a full-service agency comprised of leading web designers from around the globe. Whether building a website from scratch or redesigning your current digital presence, our web design services include:
+				</p>
+
+			</div>
+
+			
+            </section>
+
+		{/* third section */}
+		<section>
+			<div className="bg-[#2F5B44]">
+				<div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+						{features.map(({ title, desc, icon }, index) => (
+							<MotionDiv
+								key={index}
+								className="relative bg-[#FEF9D0] text-[#2F5B44] rounded-3xl p-8 sm:p-10 shadow-[0_8px_0_#254C3A]"
+								variants={fadeRight}
+								initial="hidden"
+								whileInView="visible"
+								viewport={{ once: false, amount: 0.2 }}
+							>
+								<div className="w-full flex justify-center md:justify-center mb-6"> 
+									<img src={icon} alt="" />
+								</div>
+								<h3 className="text-center font-inter text-2xl sm:text-3xl font-semibold tracking-tight">
+									{title}
+								</h3>
+								<p className="mt-4 text-center font-inter text-sm sm:text-base md:text-lg leading-relaxed text-[#2F5B44]/90">
+									{desc}
+								</p>
+							</MotionDiv>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
 
 
+        {/* fourth section */}
+        <section>
+            <div className="bg-[#FEF9D0] min-h-[20vh] flex justify-center items-center">  
+                <MotionDiv
+					className="text-[#2F5B44] text-center font-inter text-[42px] not-italic font-medium leading-normal uppercase"
+					variants={fadeRight}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: false, amount: 0.2 }}
+				>
+					Our Custom Website Design Process
+				</MotionDiv>
 
-       {/* fourth Section */}
-        <section className="relative min-h-[80vh]">
-        <div className="absolute inset-0 hidden md:block">
-          <div className="flex h-full">
-            <div className="w-1/2 bg-[#E9F2CD]"></div>
-            <div className="w-1/2 bg-[#2F5B44]"></div>
-          </div>
-        </div>
-        
-        <div className="relative h-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
-            
-            {/* Left Content */}
-            <MotionDiv
-              className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden order-2 md:order-1"
-              variants={fadeLeft}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
-            >
-              <img 
-                src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051258/314320_1_2_ccfmxr.svg"
-                alt="Services Image" 
-                className="w-full h-full object-cover"
-              />
-            </MotionDiv>
 
-            {/* Right Content */}
-            <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 font-['Inter'] overflow-hidden bg-[#2F5B44] order-1 md:order-2">
-              <MotionDiv
-                className="relative z-10 max-w-lg text-left"
-                variants={fadeRight}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
-              >
-                <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-[#FEF9D0] mb-6 leading-none tracking-normal uppercase whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
-                  SHOPIFY WEBSITES
-                </h2>
-                <p className="text-[16px] sm:text-[17px] lg:text-[18px] font-normal text-[#FEF9D0] mb-8 leading-relaxed">
-                  Custom Shopify eCommerce sites designed, developed and<br/>
-                  optimized for superior performance, better rankings and higher conversion
-                  
-                </p>
-                
-                {/* Services List */}
-                <ul className="space-y-2 mb-8">
-                  <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[16px] text-[#FEF9D0]">
-                    <span className="w-2 h-2 bg-[#FEF9D0] rounded-full mr-3"></span>
-                    Custom Web Design & Development
-                  </li>
-                  <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[16px] text-[#FEF9D0]">
-                    <span className="w-2 h-2 bg-[#FEF9D0] rounded-full mr-3"></span>
-                    Information Architecture & UX
-                  </li>
-                  <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[16px] text-[#FEF9D0]">
-                    <span className="w-2 h-2 bg-[#FEF9D0] rounded-full mr-3"></span>
-                    eCommerce Design & Development
-                  </li>
-                  <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[16px] text-[#FEF9D0]">
-                    <span className="w-2 h-2 bg-[#FEF9D0] rounded-full mr-3"></span>
-                    App Design & Development
-                  </li>
-                </ul>
-                
-                {/* Button */}
-                <div className="flex justify-end">
-                  <Link 
-                    to="/services"
-                    className="inline-flex items-center border-2 border-[#FEF9D0] text-[#FEF9D0] px-6 py-3 rounded-full hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-colors font-medium text-[16px] group"
-                  >
-                    Explore App Developing Services
-                    <span className="relative w-4 h-4 ml-2 inline-block">
-                      <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector1_ok0wi0.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                      <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector_mzxonf.svg" alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
-                    </span>
-                  </Link>
-                </div>
-              </MotionDiv>
             </div>
-          </div>
-        </div>
-      </section>
-
-
-             {/* fifth Section */}
-              <section className="relative min-h-[70vh]">
-         <div className="absolute inset-0 hidden md:block">
-           <div className="flex h-full">
-             <div className="w-1/2 bg-[#E9F2CD]"></div>
-             <div className="w-1/2 bg-[#2F5B44]"></div>
-           </div>
-         </div>
-         
-         <div className="relative h-full">
-           <div className="grid grid-cols-1 md:grid-cols-2 min-h-[70vh]">
-             
-             {/* Left Content */}
-             <div className="relative flex items-center justify-center p-8 sm:p-12 lg:p-16 bg-[#FEF9D0] overflow-hidden">
-               {/* Background Pattern */}
-               <div className="absolute -left-90 top-0 w-full h-full flex items-center justify-start opacity-15">
-                 <img 
-                   src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052604/Devext_Pattern_1_1_p20awb.svg"
-                   alt="Background Pattern" 
-                   className="w-auto h-full object-contain object-left"
-                   style={{ 
-                     transform: 'scale(1.2) translateX(10%)',
-                     filter: 'brightness(1.5) contrast(1.5) saturate(1.3)',
-                     mixBlendMode: 'multiply'
-                   }}
-                 />
-               </div>
-               
-              {/* Content */}
-              <motion.div
-                className="relative z-10 max-w-lg text-left"
-                variants={fadeLeft}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
-              >
-                 <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-medium text-[#2F5B44] mb-6 leading-none tracking-normal uppercase" style={{ fontFamily: 'Inter' }}>
-                   DIGITAL STRATEGIES &<br/>BRANDING
-                 </h2>
-                 <p className="text-[16px] sm:text-[17px] lg:text-[18px] font-normal text-[#2F5B44] mb-8 leading-relaxed">
-                   Integrating brand strategy with digital initiatives to improve<br/>
-                   customer experience online & offline
-                 </p>
-                 
-                 {/* Services List */}
-                 <ul className=" mb-8">
-                   <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[16px] text-[#2F5B44]">
-                     <span className="w-2 h-2 bg-[#2F5B44] rounded-full mr-3"></span>
-                     Digital Strategy
-                   </li>
-                   <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[16px] text-[#2F5B44]">
-                     <span className="w-2 h-2 bg-[#2F5B44] rounded-full mr-3"></span>
-                     Brand Strategy
-                   </li>
-                   <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[16px] text-[#2F5B44]">
-                     <span className="w-2 h-2 bg-[#2F5B44] rounded-full mr-3"></span>
-                     Brand Identity
-                   </li>
-                   <li className="flex items-center text-[14px] sm:text-[15px] lg:text-[16px] text-[#2F5B44]">
-                     <span className="w-2 h-2 bg-[#2F5B44] rounded-full mr-3"></span>
-                     Logo Design
-                   </li>
-                 </ul>
-                 
-                 {/* Button */}
-                 <div className="flex justify-center">
-                   <Link 
-                     to="/services"
-                     className="inline-flex items-center border-2 border-[#2F5B44] text-[#2F5B44] px-6 py-3 rounded-full hover:bg-[#2F5B44] hover:text-[#E9F2CD] transition-colors font-medium text-[16px] group"
-                   >
-                     Explore Digital & Branding Services
-                     <span className="relative w-4 h-4 ml-2 inline-block">
-                       <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector_mzxonf.svg" alt="arrow" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
-                       <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051227/Vector1_ok0wi0.svg" alt="arrow green" className="absolute inset-0 w-4 h-4 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
-                     </span>
-                   </Link>
-                </div>
-              </motion.div>
-             </div>
-
-             {/* Right Content */}
-           <MotionDiv
-              className="relative flex items-center justify-center bg-[#2F5B44] overflow-hidden"
-              variants={fadeRight}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
-            >
-               <img 
-                 src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051259/314320_1_3_y4cot9.svg" 
-                 alt="Services Image" 
-                 className="w-full h-full object-cover"
-               />
-           </MotionDiv>
-           </div>
-         </div>
-       </section>
-
-              {/* sixth Section */}
-        <section className="relative py-20 px-6 bg-[#2F5B44]">
-          <div className="container mx-auto max-w-6xl">
-            {/* Header */}
-           <MotionDiv
-              className="text-center mb-16"
-              variants={fadeRight}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
-            >
-              <h2 className="text-[24px] sm:text-[30px] lg:text-[42px] font-medium text-[#FEF9D0] mb-4 leading-none tracking-normal text-center uppercase" style={{ fontFamily: 'Inter' }}>
-                DIGITAL TRENDS
-              </h2>
-              <p className="text-[16px] sm:text-[18px] text-[#FEF9D0] opacity-90 max-w-2xl mx-auto">
-                Discover The Latest Digital Strategies & Emerging Ideas For<br/>
-                Business Growth
-              </p>
-              
-              {/* Navigation Arrows */}
-              <div className="flex items-center justify-start gap-4 mt-8">
-                <button onClick={prevSlide} className="hover:opacity-70 transition-opacity">
-                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051175/Frame_18_lnvz5x.svg" alt="Previous" className="w-10 h-10" />
-                </button>
-                <button onClick={nextSlide} className="hover:opacity-70 transition-opacity">
-                  <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051175/Frame_17_z4rjlz.png" alt="Next" className="w-10 h-10" />
-                </button>
-              </div>
-            </MotionDiv>
-
-            {/* Swiper Container */}
-            <div className="max-w-7xl mx-auto px-6">
-              <Swiper
-                modules={[Navigation, Pagination]}
-                spaceBetween={32}
-                slidesPerView={3}
-                slidesPerGroup={1}
-                loop={true}
-                speed={700}
-                onSwiper={setSwiperInstance}
-                centeredSlides={false}
-                watchOverflow={true}
-                freeMode={false}
-                allowTouchMove={true}
-                breakpoints={{
-                  320: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                  },
-                  768: {
-                    slidesPerView: 2,
-                    spaceBetween: 24,
-                  },
-                  1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 32,
-                  },
-                }}
-                className="!overflow-hidden !pb-4"
-                style={{ paddingLeft: '0px', paddingRight: '0px' }}
-              >
-              {cardsData.map((card) => (
-                <SwiperSlide key={card.id}>
-                  <div className="bg-[#FEF9D0] rounded-3xl overflow-hidden p-4 flex flex-col w-full" style={{ height: '220px' }}>
-                    {/* Dynamic Card Content */}
-                    <div className="h-32 relative overflow-hidden rounded-2xl">
-                      {card.image ? (
-                        // Use image from array if available
-                        <img 
-                          src={card.image} 
-                          alt={card.title}
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        // Use pattern based on type if no image
-                        <>
-                          {card.type === 'tech' && (
-                            <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-black relative overflow-hidden w-full h-full">
-                              {/* Tech Network Pattern */}
-                              <div className="absolute inset-0">
-                                {/* Network nodes and connections */}
-                                <svg className="w-full h-full" viewBox="0 0 400 200" fill="none">
-                                  {/* Connection lines */}
-                                  <g stroke="#3B82F6" strokeWidth="1" opacity="0.6">
-                                    <line x1="50" y1="50" x2="120" y2="80" />
-                                    <line x1="120" y1="80" x2="200" y2="60" />
-                                    <line x1="200" y1="60" x2="280" y2="90" />
-                                    <line x1="280" y1="90" x2="350" y2="70" />
-                                    <line x1="50" y1="50" x2="80" y2="120" />
-                                    <line x1="80" y1="120" x2="150" y2="140" />
-                                    <line x1="150" y1="140" x2="250" y2="120" />
-                                    <line x1="250" y1="120" x2="320" y2="150" />
-                                    <line x1="120" y1="80" x2="150" y2="140" />
-                                    <line x1="200" y1="60" x2="250" y2="120" />
-                                  </g>
-                                  
-                                  {/* Network nodes */}
-                                  <g fill="#3B82F6" opacity="0.8">
-                                    <circle cx="50" cy="50" r="3" />
-                                    <circle cx="120" cy="80" r="4" />
-                                    <circle cx="200" cy="60" r="3" />
-                                    <circle cx="280" cy="90" r="4" />
-                                    <circle cx="350" cy="70" r="3" />
-                                    <circle cx="80" cy="120" r="3" />
-                                    <circle cx="150" cy="140" r="4" />
-                                    <circle cx="250" cy="120" r="3" />
-                                    <circle cx="320" cy="150" r="4" />
-                                  </g>
-                                  
-                                  {/* Glowing effects */}
-                                  <g fill="#60A5FA" opacity="0.4">
-                                    <circle cx="120" cy="80" r="8" />
-                                    <circle cx="280" cy="90" r="6" />
-                                    <circle cx="150" cy="140" r="7" />
-                                  </g>
-                                </svg>
-                                
-                                {/* Additional geometric elements */}
-                                <div className="absolute top-4 right-4 text-blue-400 opacity-30">
-                                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                                  </svg>
-                                </div>
-                              </div>
-                            </div>
-                          )}
-
-                          {card.type === 'social' && (
-                            <div className="bg-gradient-to-br from-blue-500 to-blue-700 relative overflow-hidden flex items-center justify-center w-full h-full">
-                              <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                                  <span className="text-blue-600 font-bold text-xl">f</span>
-                                </div>
-                                <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center">
-                                  <span className="text-white font-bold text-xl">▶</span>
-                                </div>
-                                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                                  <span className="text-white font-bold text-xl">📷</span>
-                                </div>
-                                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                                  <span className="text-white font-bold text-xl">in</span>
-                                </div>
-                              </div>
-                            </div>
-                          )}
-
-                          {card.type === 'grid' && (
-                            <div className="bg-gray-100 relative overflow-hidden flex items-center justify-center w-full h-full">
-                              <div className="grid grid-cols-3 gap-2 opacity-60">
-                                {[...Array(9)].map((_, i) => (
-                                  <div key={i} className="w-8 h-8 border border-gray-400 rounded"></div>
-                                ))}
-                              </div>
-                            </div>
-                          )}
-                        </>
-                      )}
-                    </div>
-
-                    <div className="pt-2 pb-2 flex-1 flex items-end">
-                      <h3 className="text-[16px] font-medium text-[#2F5B44] text-center leading-tight w-full line-clamp-2" 
-                          style={{ 
-                            display: '-webkit-box',
-                            WebkitLineClamp: 2,
-                            WebkitBoxOrient: 'vertical',
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis'
-                          }}>
-                        {card.title}
-                      </h3>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            </div>
-          </div>
         </section>
 
-               
+        {/* fifth section */}
+        <div className="">
+            <div className="bg-[#2F5B44] min-h-[90vh] flex justify-center items-center">
+                <SwiperComponent />
+
+            </div>
+
+        </div>
+
+        {/* sixth section */}
+        <div className="bg-[#FEF9D0] w-full py-12 sm:py-16">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 container mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 py-12 md:py-16 ">
+            <div className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl not-italic font-medium leading-snug uppercase flex items-center justify-start">Why Your  Business <br /> Needs Custom  Web  <br />  Design Services</div>
+                <img
+                    src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050963/Rectangle_2_pxptsi.svg"
+                    alt="image1"
+                    className="w-full h-auto object-cover"
+                    style={{ WebkitMaskImage: 'linear-gradient(to bottom, black 65%, transparent 100%)', maskImage: 'linear-gradient(to bottom, black 65%, transparent 100%)' }}
+                />
+
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[2rem] container mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 py-12 md:py-16  ">
+                {/* {secondrow} */}
+
+                {/* leftside */}
+                <div className="ml-0 md:ml-[3rem]">
+                <MotionDiv
+					className="flex flex-col gap-4  items-start justify-start"
+					variants={fadeLeft}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: false, amount: 0.2 }}
+				>
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050962/Vector11_fgd8c9.svg" alt="vector1" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20" />
+                    <h6 className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl not-italic font-medium leading-snug uppercase flex items-center justify-center"> Establish Your Brand Identity</h6>
+                    <p className="text-[#2F5B44] font-inter text-base sm:text-lg md:text-xl not-italic font-normal leading-normal max-w-[40rem]"> Your brand’s unique identity is reflected through visuals — like your logo, color palette, typography, imagery and illustrations. <br /> As a recognized web design agency, Digital Silk helps <br /> businesses use their signature brand voice and messaging to boost user engagement, foster long-term loyalty and increase <br />  conversions. <br /> Our experienced web designers can create visually appealing, brand-specific and engaging visuals that separate your business from the competition and effectively target your audience’s pain points. </p>
 
 
+                </MotionDiv>
+                </div>
+                {/* rightside */}
+               <div className="ml-0 md:ml-[5rem]"> 
+               <MotionDiv
+					className="flex flex-col gap-4  items-start justify-start "
+					variants={fadeRight}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: false, amount: 0.2 }}
+			   >
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050963/Vector12_siycml.svg" alt="vector2" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20" />
+                    <h6 className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl not-italic font-medium leading-snug uppercase flex items-center justify-center"> Establish Your Brand Identity</h6>
+                    <p className="text-[#2F5B44] font-inter text-base sm:text-lg md:text-xl not-italic font-normal leading-normal max-w-[40rem] "> It takes only a few seconds for users to form an opinion about your website and Devext can help you take advantage of this short time window. <br />
+                    Devext’s custom web designs can improve brand recognition and credibility through high-performance <br /> and conversion-focused sites that resonate with your target <br /> demographic. </p>
+
+                </MotionDiv>
+
+               </div>
+
+                {/* thirdrow */}
+               <div className="ml-0 md:ml-[3rem]">
+               <MotionDiv
+					className="flex flex-col gap-4  items-start justify-start "
+					variants={fadeLeft}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: false, amount: 0.2 }}
+			   >
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050964/Vector13_cow2xn.svg" alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
+                    <h6 className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl not-italic font-medium leading-snug uppercase flex items-center justify-center">Enhance User Experience And <br /> Navigation</h6>
+                    <p className="text-[#2F5B44] font-inter text-base sm:text-lg md:text-xl not-italic font-normal leading-normal max-w-[40rem]"> Navigation menus provide an overview of your website’s structural organization — from the home page to all relevant child pages or subcategories. <br /> Devext’s custom web designs can help users find relevant information through seamless layouts that guide their attention to the desired action. <br /> This minimizes bounce rates, establishes proper conversion funnels and encourages visitors to continue browsing. <br /> Our SEO-optimized custom web designs can boost your search engine rankings and build your authority in your chosen market</p>
+
+                </MotionDiv>  
+
+               </div>
+                <div className="ml-0 md:ml-[5rem]">
+                <MotionDiv
+					className="flex flex-col gap-4  items-start justify-center  "
+					variants={fadeRight}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: false, amount: 0.2 }}
+				>  
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050953/Group_14_kv1tc3.svg" alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
+                    <h6 className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl not-italic font-medium leading-snug uppercase flex items-center justify-center"> Drive Conversions And Boost <br />  Engagement</h6>
+                    <p className="text-[#2F5B44] font-inter text-base sm:text-lg md:text-xl not-italic font-normal leading-normal max-w-[40rem]"> Devext’s certified web designers use compelling calls-to-action (CTAs) to turn passive visitors into active customers by aligning their actions with your brand’s goals.<br /> These design elements provide a clear sense of urgency and emphasize the benefits of the intended action to drive conversions and engagement. <br /> Our custom web design services can help businesses encourage audiences to make a purchase, subscribe to a service or engage with on-page content through strategically placed and carefully executed calls-to-action.<br /> Devext optimizes CTA sizes and relies on the calculated use of white space to make them more visible and easily noticeable on the page. </p>
+
+                </MotionDiv> 
+                </div>
+
+                {/* fourthrow */}
+                <div className="ml-0 md:ml-[3rem]">
+                <MotionDiv
+					className="flex flex-col gap-4  items-start justify-center "
+					variants={fadeLeft}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: false, amount: 0.2 }}
+				>
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050965/Vector15_bt9mki.svg" alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
+                    <h6 className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl not-italic font-medium leading-snug uppercase flex items-center justify-center"> Ensure Cross-Device <br />  Compatibility</h6>
+                    <p className="text-[#2F5B44] font-inter text-base sm:text-lg md:text-xl not-italic font-normal leading-normal max-w-[40rem]"> Devext’s custom web designs ensure website layouts, images and on-page content adapt seamlessly to different screen sizes and devices. <br /> Our team uses a mobile-first approach — we plan and design the mobile version alongside the desktop site.<br /> This allows us to make proactive changes to the overall design to ensure the mobile experience is just as excellent as the desktop one. <br /> Our designers rely on Fluid Grid layouts that adapt proportionally to any screen size or device and ensure consistent layouts across all platforms. <br /> Our custom web design company also implements CSS Media Queries to customize cross-device layouts to ensure your design is responsive and user-friendly. </p>
+
+                </MotionDiv> 
+                </div>
+                <div className="ml-0 md:ml-[5rem]">
+                <MotionDiv
+					className="flex flex-col gap-4  items-start justify-start  "
+					variants={fadeRight}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: false, amount: 0.2 }}
+				>  
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050965/Vector16_xazlr0.svg" alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
+                    <h6 className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl not-italic font-medium leading-snug uppercase flex items-center justify-center"> Improve Search Engine <br />  Optimization </h6>
+                    <p className="text-[#2F5B44] font-inter text-base sm:text-lg md:text-xl not-italic font-normal leading-normal max-w-[40rem]">Devext’s custom SEO strategies deliver tailored solutions that align with target audience needs and company goals. <br /> Our data-driven strategies enhance website visibility, scalability and flexibility to adapt to changing industry trends. <br /> Devext’s custom web designs facilitate both on and off-page SEO efforts to help your business rank higher in search engine results and attract organic traffic. </p>
+
+                </MotionDiv> 
+                </div>
 
 
+                {/* fifthrow */}   
+               <div className="ml-0 md:ml-[3rem]">
+               <MotionDiv
+					className="flex flex-col gap-4  items-start justify-center "
+					variants={fadeLeft}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: false, amount: 0.2 }}
+			   >
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050966/Vector17_resmln.svg" alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
+                    <h6 className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl not-italic font-medium leading-snug uppercase flex items-center justify-center"> Ensure Cross-Device <br />  Compatibility</h6>
+                    <p className="text-[#2F5B44] font-inter text-base sm:text-lg md:text-xl not-italic font-normal leading-normal max-w-[40rem]"> Devext’s custom web designs ensure website layouts, images and on-page content adapt seamlessly to different screen sizes and devices. <br /> Our team uses a mobile-first approach — we plan and design the mobile version alongside the desktop site.<br /> This allows us to make proactive changes to the overall design to ensure the mobile experience is just as excellent as the desktop one. <br /> Our designers rely on Fluid Grid layouts that adapt proportionally to any screen size or device and ensure consistent layouts across all platforms. <br /> Our custom web design company also implements CSS Media Queries to customize cross-device layouts to ensure your design is responsive and user-friendly. </p>
 
-      </div>
+                </MotionDiv> 
+               </div>
+                <div className="ml-0 md:ml-[5rem]">
+                <MotionDiv
+					className="flex flex-col gap-4  items-start justify-start  "
+					variants={fadeRight}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: false, amount: 0.2 }}
+				>  
+                    <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050967/Vector18_xou8pe.svg" alt="vector3" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mt-[rem] " />
+                    <h6 className="col-span-1 text-[#2F5B44] font-inter text-2xl sm:text-3xl md:text-4xl not-italic font-medium leading-snug uppercase flex items-center justify-center"> Improve Search Engine <br />  Optimization </h6>
+                    <p className="text-[#2F5B44] font-inter text-base sm:text-lg md:text-xl not-italic font-normal leading-normal max-w-[40rem]">Devext’s custom SEO strategies deliver tailored solutions that align with target audience needs and company goals. <br /> Our data-driven strategies enhance website visibility, scalability and flexibility to adapt to changing industry trends. <br /> Devext’s custom web designs facilitate both on and off-page SEO efforts to help your business rank higher in search engine results and attract organic traffic. </p>
 
-    </>
-  
-  );
+                </MotionDiv> 
+                </div>
+
+                
+              
+                
+            </div>
+
+
+            <div className=" bg-[#2F5B44] min-h-[30vh]">
+
+<MotionDiv
+	className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16 flex justify-between items-center sm:flex-row flex-col gap-6"
+	variants={fadeRight}
+	initial="hidden"
+	whileInView="visible"
+	viewport={{ once: false, amount: 0.2 }}
+>
+    <p className="text-[#FEF9D0] font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl not-italic font-medium leading-snug uppercase text-center sm:text-left"> Have a web design project? <br /> We build custom websites.</p>
+    <Link 
+to="/calculator"
+className="inline-flex items-center bg-transparent text-[#FEF9D0] px-8 py-3 rounded-full font-medium text-[14px] sm:text-[16px] hover:bg-[#FEF9D0] hover:text-[#2F5B44] transition-all duration-300 transform hover:scale-105 group"
+style={{ border: '2px solid #FEF9D0' }}
+>
+Request A quote
+<img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052696/Vector1_yust9l.svg" alt="arrow" className="w-5 h-5 ml-3 transition-all duration-300 group-hover:hidden" />
+<img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052589/arrow_Down_jlay7a.svg" alt="arrow" className="w-5 h-5 ml-3 transition-all duration-300 hidden group-hover:block" />
+</Link>
+
+
+</MotionDiv>
+
+
+</div>
+         
+               <p className="min-h-[14vh] text-[#FEF9D0]">.</p>
+        
+        </div>
+
+        {/* seventh section */}
+      
+
+       
+
+        </div>
+        </>
+    )
 }
 
-export default Services;
+export default CustomWebDesignServices;

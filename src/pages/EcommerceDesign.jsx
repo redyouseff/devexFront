@@ -143,7 +143,7 @@ const EcommerceDesign = () => {
           structuredData={structuredData}
         />
         <Navbar />
-        <div>
+        <div className="overflow-x-hidden">
      
 
 
@@ -307,7 +307,7 @@ const EcommerceDesign = () => {
                     {solutionCards.map((card) => (
                       <div
                         key={card.id}
-                        className={`bg-[rgba(47,91,68,0.70)] text-[#FEF9D0] flex w-full min-h-[30rem] px-[68px] py-5 flex-col justify-center items-start gap-6 flex-shrink-0 rounded-[24px] ${card.corner} shadow-[0_10px_30px_rgba(47,91,68,0.15)]`}
+                        className={`bg-[rgba(47,91,68,0.70)] text-[#FEF9D0] flex w-full min-h-[30rem] px-6 sm:px-8 lg:px-[68px] py-5 flex-col justify-center items-start gap-6 flex-shrink-0 rounded-[24px] ${card.corner} shadow-[0_10px_30px_rgba(47,91,68,0.15)]`}
                       >
                         <img 
                         src={card.image}
@@ -377,7 +377,7 @@ const EcommerceDesign = () => {
                             
 
 
-
+        
           
         </div>
         
@@ -385,6 +385,7 @@ const EcommerceDesign = () => {
     )
 
 }
+
 
 
 export default EcommerceDesign;

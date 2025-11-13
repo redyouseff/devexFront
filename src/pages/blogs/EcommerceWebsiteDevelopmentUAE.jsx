@@ -153,19 +153,19 @@ body {
         canonical="/DigitalTrends/EcommerceWebsiteDevelopmentUAE"
         structuredData={blogPostStructuredData}
       />
-      <div className="min-h-screen bg-[#FEF9D0]">
+      <div className="min-h-screen bg-[#FEF9D0] overflow-x-hidden">
         <Navbar2 />   
         <style>{smoothScrollStyles}</style>
 
       <main className="container mx-auto max-w-7xl px-8 py-8">
         {/* Title */}
 
-        <div className="flex items-center justify-between  mt-[10rem] mb-6"> 
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-[10rem] mb-6"> 
             <div>
             <h1 className="text-5xl sm:text-3xl font-semibold text-[#2F5B44]">Building Your Digital Empire: <br></br> A Guide to Ecommerce Website Development UAE</h1>     
        
             </div>
-            <div className="shrink-0 flex items-center gap-2 mr-[2rem]">                                                              
+            <div className="flex items-center gap-2 sm:mr-[2rem]">                                                              
             <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050824/Group_1_lgh8oa.svg" alt="Published icon" className="w-4 h-4" />
             <span className="hidden sm:inline text-[#2F5B44] font-bold">Published on</span>
             <span className="text-[rem] text-[#2F5B44]" >18 Sep. 2025</span>       

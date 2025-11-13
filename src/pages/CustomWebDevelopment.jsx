@@ -95,7 +95,7 @@ const CustomWebDevelopment =()=>{
 
         <Navbar />
 
-
+        <div className="overflow-x-hidden">
         <section
                 className="relative z-0 w-full min-h-[60vh] md:min-h-[80vh] lg:min-h-[80vh] sm:min-h-[42.1875rem] xl:min-h-[42.1875rem] bg-[#2F5B44] flex items-center justify-center text-[#FEF9D0] overflow-hidden"
             >
@@ -125,7 +125,7 @@ const CustomWebDevelopment =()=>{
                         whileInView="visible"
                         viewport={{ once: false, amount: 0.2 }}
                     >  
-                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1760358066/3300d62e120a2d3112d4436cdb738e1b99de27b4_shlnuy.png" alt="hero side image" className="w-[25rem] h-[25rem] " />
+                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1760358066/3300d62e120a2d3112d4436cdb738e1b99de27b4_shlnuy.png" alt="hero side image" className="w-full max-w-[25rem] h-auto " />
                     </MotionDiv>
                 </div>
                
@@ -426,7 +426,7 @@ const CustomWebDevelopment =()=>{
                             whileInView="visible"
                             viewport={{ once: false, amount: 0.2 }}
                         >
-                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1760358066/3300d62e120a2d3112d4436cdb738e1b99de27b4_shlnuy.png" alt="hero side image" className="w-[25rem] h-[25rem] " />                                       
+                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1760358066/3300d62e120a2d3112d4436cdb738e1b99de27b4_shlnuy.png" alt="hero side image" className="w-full max-w-[25rem] h-auto " />                                       
                         </MotionDiv>
 
                     </div>
@@ -446,14 +446,14 @@ const CustomWebDevelopment =()=>{
                     <div className="grid grid-cols-1 md:grid-cols-2 px-10 py-10">
 
                     <div className="flex flex-col justify-center items-center py-4 px-5">
-                        <div className="flex justify-center items-center gap-[12.22px] h-[240px] px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)]">
+                        <div className="flex justify-center items-center gap-[12.22px] h-auto md:h-[240px] px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)]">
                             <p className="text-[#FEF9D0] font-inter text-[20px] not-italic font-normal leading-normal">You have specific requirements for an online platform: It may be a SaaS platform, a mobile or a web app, an online store, a subscription-based website, a booking platform, a cloud-based solution or anything else</p>
                         </div>
 
                     </div>
 
                     <div className="flex flex-col justify-center items-center py-4 px-5">
-                        <div className="flex justify-center items-center gap-[12.22px] h-[240px] px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)]">
+                        <div className="flex justify-center items-center gap-[12.22px] h-auto md:h-[240px] px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)]">
                             <p className="text-[#FEF9D0] font-inter text-[20px] not-italic font-normal leading-normal">You want to engage your audience with a unique, distinctive design and your audience expects nothing less from you: This is especially true for large organizations and industry leaders (think Google, Apple or IBM) which may see templates as an unacceptable solution</p>
 
                         </div>
@@ -461,14 +461,14 @@ const CustomWebDevelopment =()=>{
                     </div>
 
                     <div className="flex flex-col justify-center items-center py-4 px-5">
-                        <div className="flex justify-center items-center gap-[12.22px] h-[240px] px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)]">
+                        <div className="flex justify-center items-center gap-[12.22px] h-auto md:h-[240px] px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)]">
                             <p className="text-[#FEF9D0] font-inter text-[20px] not-italic font-normal leading-normal">You have an idea for an innovative digital product  But you need help from experts to turn it into reality this can work well for VC-backed start-ups and fast-growing companies </p>
                         </div>
 
                     </div>
 
                     <div className="flex flex-col justify-center items-center py-4 px-5">
-                        <div className="flex justify-center items-center gap-[12.22px] h-[240px] px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)]">
+                        <div className="flex justify-center items-center gap-[12.22px] h-auto md:h-[240px] px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)]">
                             <p className="text-[#FEF9D0] font-inter text-[20px] not-italic font-normal leading-normal">You have a big budget and complete creative freedom to design and develop a bold website that will truly stand out, even if it’s only to showcase your portfolio</p>
                         </div>
 
@@ -478,7 +478,7 @@ const CustomWebDevelopment =()=>{
 
                     <div className="flex justify-center items-center -mt-9">
                     <div className="flex flex-col justify-center items-center py-4 px-5 max-w-[60%] mx-auto ">
-                        <div className="flex justify-center items-center gap-[12.22px] h-[240px] px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)]">
+                        <div className="flex justify-center items-center gap-[12.22px] h-auto md:h-[240px] px-[29.33px] py-[39.11px] rounded-[29.33px] bg-[rgba(254,249,208,0.1)]">
                             <p className="text-[#FEF9D0] font-inter text-[20px] not-italic font-normal leading-normal">You have specific requirements for an online platform: It may be a SaaS platform, a mobile or a web app, an online store, a subscription-based website, a booking platform, a cloud-based solution or anything else</p>
                         </div>
 
@@ -501,7 +501,7 @@ const CustomWebDevelopment =()=>{
       viewport={{ once: false, amount: 0.2 }}
     >
       <div>
-        <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] xl:text-[36px] font-bold text-[#FEF9D0] mb-4 sm:mb-6 leading-tight whitespace-nowrap  " style={{ fontFamily: 'Inter' }}>
+        <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] xl:text-[36px] font-bold text-[#FEF9D0] mb-4 sm:mb-6 leading-tight lg:whitespace-nowrap  " style={{ fontFamily: 'Inter' }}>
           DIGITIZING YOUR BUSINESS<br />
           GROWTH
         </h2>
@@ -693,6 +693,7 @@ const CustomWebDevelopment =()=>{
 </section>
     
 
+        </div>
         </>
     )
 }

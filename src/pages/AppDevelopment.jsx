@@ -47,7 +47,7 @@ const  AppDevelopment =()=>{
     return (
         <>
         <Navbar />
-        <div className="bg-[#FEF9D0]">
+        <div className="bg-[#FEF9D0] overflow-x-hidden">
 
             
 
@@ -81,7 +81,7 @@ const  AppDevelopment =()=>{
                         whileInView="visible"
                         viewport={{ once: false, amount: 0.2 }}
                     >  
-                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1762160512/9226d22cee17d0df8da0451222535267a6b4577f_qg9ezd.png" alt="hero section image" className="w-[25rem] h-[25rem] " />
+                        <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1762160512/9226d22cee17d0df8da0451222535267a6b4577f_qg9ezd.png" alt="hero section image" className="w-full max-w-[25rem] h-auto " />
                     </MotionDiv>
                 </div>
                
@@ -204,7 +204,7 @@ viewport={{ once: false, amount: 0.2 }}
       
 
     </div>
-    <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[28.533px] md:text-[32px] lg:text-[28px] leading-normal text-center whitespace-nowrap">User-Friendly Designs</p>
+    <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[28.533px] md:text-[32px] lg:text-[28px] leading-normal text-center lg:whitespace-nowrap">User-Friendly Designs</p>
 
 <p className=" px-4 text-[#2F5B44] font-inter  uppercase text-[20px] md:text-[22px] lg:text-[20px] ">By following the latest platform-specific guidelines and design trends, we create professional apps that are visually appealing .</p>
 
