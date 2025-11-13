@@ -41,6 +41,12 @@ const smoothScrollStyles = `
     -webkit-overflow-scrolling: touch;
   }
   
+  /* Prevent horizontal overflow */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
   /* Custom scrollbar styling for smoother experience */
   ::-webkit-scrollbar {
     width: 8px;
@@ -358,7 +364,7 @@ function Home() {
           structuredData={homeStructuredData}
         />
       <style>{smoothScrollStyles}</style>
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 overflow-x-hidden">
       <Navbar />
       
       {/* Hero Section */}
@@ -618,7 +624,7 @@ function Home() {
  
 
                    {/* fifth Section - Customer Testimonials */}
-          <section className="relative py-20 px-6 overflow-visible" style={{ background: '#FEF9D0' }}>
+          <section className="relative py-20 px-6 overflow-hidden" style={{ background: '#FEF9D0' }}>
             {/* Background Pattern */}
             <div className="absolute inset-0">
               <div className="absolute left-0 top-0 w-1/2 h-full flex items-center justify-start opacity-50">
