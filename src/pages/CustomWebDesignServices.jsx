@@ -179,7 +179,7 @@ const CustomWebDesignServices = () => {
         <section>
             <div className="bg-[#FEF9D0] min-h-[20vh] flex justify-center items-center">  
                 <MotionDiv
-					className="text-[#2F5B44] text-center font-inter text-[42px] not-italic font-medium leading-normal uppercase"
+					className="text-[#2F5B44] text-center font-inter text-xl sm:text-2xl md:text-[42px] not-italic font-medium leading-normal uppercase"
 					variants={fadeRight}
 					initial="hidden"
 					whileInView="visible"
