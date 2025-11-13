@@ -395,19 +395,19 @@ function Home() {
 
           {/* Content */}
         <MotionDiv
-          className="container mx-auto max-w-7xl relative z-20 px-4 sm:px-6  sm:pt-40 "
+          className="container mx-auto max-w-7xl relative z-20 px-4 sm:px-6  mt-[7rem]  "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
           variants={fadeUp}
         >
-            <div className="max-w-2xl mb-6 ">
+            <div className="max-w-2xl mb-6  ">
             <h1 className="text-[40px] sm:text-[60px] lg:text-[80px] font-bold mb-0 text-[#E9F2CD]">
               DEVEXT
             </h1>
             <h2 className="text-[20px] sm:text-[26px] lg:text-[32px] leading-none mb-6 text-[#E9F2CD] -mt-2 sm:-mt-4">
               Is Your Best Solution<br />
-              For A Better Tomorrow
+              For A Better Tomorrow 
             </h2>
             <p className="text-base sm:text-lg mb-8 leading-relaxed text-[#E9F2CD] opacity-80 max-w-md">
             From web and app development to creative design and marketing strategies, we provide end-to-end services tailored to your goals. Our mission is to help brands transform their ideas into impactful digital experiences and achieve long-term success in today’s fast-paced market.

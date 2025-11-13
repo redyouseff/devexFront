@@ -60,7 +60,7 @@ function Navbar() {
         ></div>
       )}
       
-      <div className={`fixed top-0 right-0 h-full w-64 bg-[#FEF9D0] transition-all duration-300 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden rounded-l-2xl`} style={{ zIndex: 9999 }}>
+      <div className={`fixed top-0 right-0 h-full w-72 bg-[#FEF9D0] transition-all duration-300 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden rounded-l-2xl`} style={{ zIndex: 9999 }}>
         {/* Close Button */}
         <button 
           onClick={toggleMenu}
@@ -72,7 +72,7 @@ function Navbar() {
         </button>
         
         {/* Menu Content */}
-        <div className="flex flex-col h-full pt-16 px-8">
+        <div className="flex flex-col h-full pt-14 px-6">
           {/* Navigation Links */}
           <div className="flex flex-col space-y-6">
             <Link 
@@ -123,14 +123,14 @@ function Navbar() {
         </div>
       </div>
       
-      <header className={`w-full py-4 px-6 fixed left-0 z-40 transition-all transform ${visible ? 'duration-500 ease-out translate-y-0' : 'duration-300 ease-in -translate-y-full'} ${visible ? 'top-8 opacity-100' : 'top-0 opacity-0'}`}>
+      <header className={`w-full py-2 px-4 md:py-4 md:px-6 fixed left-0 z-40 transition-all transform ${visible ? 'duration-500 ease-out translate-y-0' : 'duration-300 ease-in -translate-y-full'} ${visible ? 'top-8 opacity-100' : 'top-0 opacity-0'}`}>
       {/* Glassmorphism effect */}
       <div className="absolute inset-0 backdrop-blur-[1px]"></div>
       
       <div className="relative z-10 flex items-center justify-between  max-w-screen-2xl mx-auto">
         {/* Logo - Left Side */}
         <div className="flex items-center md:ml-32">
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center -ml-2">
             <img 
               src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051145/Logo_Devext-removebg-preview_1_xk94pb.png" 
               alt="DEVEXT Logo" 

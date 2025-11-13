@@ -59,7 +59,7 @@ const  AppDevelopment =()=>{
                     src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050998/Mask_group_wlabwd.svg"
                     alt="hero section background"
                     aria-hidden="true"
-                    className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 h-full w-auto object-contain pointer-events-none sm:inset-0 sm:w-full sm:h-full sm:left-0 sm:translate-x-0 object-left"
+                    className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 h-full w-auto object-contain pointer-events-none hidden sm:block sm:inset-0 sm:w-full sm:h-full sm:left-0 sm:translate-x-0 object-left"
                 />
                 
 
@@ -90,12 +90,12 @@ const  AppDevelopment =()=>{
 
             <section>
                 <div className="bg-[#FEF9D0] min-h-[50vh]">
-                    <p className="text-[#2F5B44] text-center font-inter text-[42px] not-italic font-medium leading-normal uppercase  pt-[2rem] pb-[4rem]">Project execution handled  by <br />  seasoned  product  builders</p>
+                    <p className="text-[#2F5B44] text-center font-inter text-[24px] sm:text-[32px] md:text-[36px] lg:text-[42px] not-italic font-medium leading-normal uppercase  pt-[2rem] pb-[4rem]">Project execution handled  by <br />  seasoned  product  builders</p>
 
                     <div className=" container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-3 gap-5 pb-[4rem]">
 
                      <MotionDiv 
-                        className="flex flex-col items-start space-y-4 md:space-y-5 w-full px-[4rem] py-[5rem] rounded-2xl border-2 border-[#2F5B44] sm:px-4 sm:py-3"
+                        className="flex flex-col items-start space-y-4 md:space-y-5 w-full px-4 py-6 sm:px-6 sm:py-8 md:px-[4rem] md:py-[5rem] rounded-2xl border-2 border-[#2F5B44]"
                         variants={fadeRight}
                         initial="hidden"
                         whileInView="visible"
@@ -107,17 +107,17 @@ const  AppDevelopment =()=>{
                                     <img src={image4} alt="image1" className="w-20 h-20" />
                                    
                                 </div>
-                                <div className=" ml-auto flex  flex-col justify-center items-center gap-[16.64px] w-[49.93px] h-[49.93px] p-[16.64px] rounded-full bg-[#2F5B44B2]">
-                                      <p className="text-[#FEF9D0] text-center font-inter text-[33.29px] not-italic font-normal leading-normal" >1 </p>
+                                <div className=" ml-auto flex  flex-col justify-center items-center gap-2 w-10 h-10 p-2 rounded-full bg-[#2F5B44B2] md:w-[49.93px] md:h-[49.93px] md:p-[16.64px]">
+                                      <p className="text-[#FEF9D0] text-center font-inter text-[14px] md:text-[33.29px] not-italic font-normal leading-normal" >1 </p>
                                 </div>
 
                                 
                               
 
                             </div>
-                            <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[28.533px] md:text-[32px] lg:text-[36px] leading-normal text-center">Android</p>
+                            <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[20px] sm:text-[24px] md:text-[28px] lg:text-[36px] leading-normal text-center">Android</p>
 
-                            <p className=" px-4 text-[#2F5B44] font-inter font-normal uppercase text-[20px] md:text-[22px] lg:text-[20px] ">Building Android apps using Gradle building tool and Android Studio, for different devices and screen sizes.</p>
+                            <p className=" px-4 text-[#2F5B44] font-inter font-normal uppercase text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] ">Building Android apps using Gradle building tool and Android Studio, for different devices and screen sizes.</p>
 
                            
                         </MotionDiv>
@@ -126,7 +126,7 @@ const  AppDevelopment =()=>{
 
 
 <MotionDiv 
-className="flex flex-col items-start space-y-4 md:space-y-5 w-full px-[4rem] py-[5rem] rounded-2xl border-2 border-[#2F5B44] sm:px-4 sm:py-3"
+className="flex flex-col items-start space-y-4 md:space-y-5 w-full px-4 py-6 sm:px-6 sm:py-8 md:px-[4rem] md:py-[5rem] rounded-2xl border-2 border-[#2F5B44]"
 variants={fadeRight}
 initial="hidden"
 whileInView="visible"
@@ -137,17 +137,17 @@ viewport={{ once: false, amount: 0.2 }}
             <img src={image5} alt="image1" className="w-20 h-20" />
            
         </div>
-        <div className=" ml-auto flex  flex-col justify-center items-center gap-[16.64px] w-[49.93px] h-[49.93px] p-[16.64px] rounded-full bg-[#2F5B44B2]">
-              <p className="text-[#FEF9D0] text-center font-inter text-[33.29px] not-italic font-normal leading-normal" >2 </p>
+        <div className=" ml-auto flex  flex-col justify-center items-center gap-2 w-10 h-10 p-2 rounded-full bg-[#2F5B44B2] md:w-[49.93px] md:h-[49.93px] md:p-[16.64px]">
+              <p className="text-[#FEF9D0] text-center font-inter text-[14px] md:text-[33.29px] not-italic font-normal leading-normal" >2 </p>
         </div>
 
         
       
 
     </div>
-    <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[28.533px] md:text-[32px] lg:text-[36px] leading-normal text-center">iOS</p>
+    <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[20px] sm:text-[24px] md:text-[28px] lg:text-[36px] leading-normal text-center">iOS</p>
 
-    <p className=" px-4 text-[#2F5B44] font-inter font-normal uppercase text-[20px] md:text-[22px] lg:text-[20px] ">Building iOS apps using Swift programming language, for both iPhone and iPad.</p>
+    <p className=" px-4 text-[#2F5B44] font-inter font-normal uppercase text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] ">Building iOS apps using Swift programming language, for both iPhone and iPad.</p>
 
    
 </MotionDiv>
@@ -155,7 +155,7 @@ viewport={{ once: false, amount: 0.2 }}
 
 
 <MotionDiv 
-className="flex flex-col  items-start space-y-4 md:space-y-5 w-full px-[4rem] py-[5rem] rounded-2xl border-2 border-[#2F5B44] sm:px-4 sm:py-3"
+className="flex flex-col  items-start space-y-4 md:space-y-5 w-full px-4 py-6 sm:px-6 sm:py-8 md:px-[4rem] md:py-[5rem] rounded-2xl border-2 border-[#2F5B44]"
 variants={fadeRight}
 initial="hidden"
 whileInView="visible"
@@ -166,17 +166,17 @@ viewport={{ once: false, amount: 0.2 }}
             <img src={image6} alt="image1" className="w-20 h-20" />
            
         </div>
-        <div className=" ml-auto flex  flex-col justify-center items-center gap-[16.64px] w-[49.93px] h-[49.93px] p-[16.64px] rounded-full bg-[#2F5B44B2]">
-              <p className="text-[#FEF9D0] text-center font-inter text-[33.29px] not-italic font-normal leading-normal" >3 </p>
+        <div className=" ml-auto flex  flex-col justify-center items-center gap-2 w-10 h-10 p-2 rounded-full bg-[#2F5B44B2] md:w-[49.93px] md:h-[49.93px] md:p-[16.64px]">
+              <p className="text-[#FEF9D0] text-center font-inter text-[14px] md:text-[33.29px] not-italic font-normal leading-normal" >3 </p>
         </div>
 
         
       
 
     </div>
-    <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[28.533px] md:text-[32px] lg:text-[36px] leading-normal text-center">DevOps</p>
+    <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[20px] sm:text-[24px] md:text-[28px] lg:text-[36px] leading-normal text-center">DevOps</p>
 
-    <p className=" px-4 text-[#2F5B44] font-inter  uppercase text-[20px] md:text-[22px] lg:text-[20px] ">Continuous integration for the project life cycle, starting from development and ending with automatic store submission.</p>
+    <p className=" px-4 text-[#2F5B44] font-inter  uppercase text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] ">Continuous integration for the project life cycle, starting from development and ending with automatic store submission.</p>
 
    
 </MotionDiv>
@@ -185,7 +185,7 @@ viewport={{ once: false, amount: 0.2 }}
 
 
 <MotionDiv 
-className="flex flex-col items-start space-y-4 md:space-y-5 w-full px-[4rem] py-[5rem] rounded-2xl border-2 border-[#2F5B44] sm:px-4 sm:py-3"
+className="flex flex-col items-start space-y-4 md:space-y-5 w-full px-4 py-6 sm:px-6 sm:py-8 md:px-[4rem] md:py-[5rem] rounded-2xl border-2 border-[#2F5B44]"
 variants={fadeRight}
 initial="hidden"
 whileInView="visible"
@@ -196,17 +196,17 @@ viewport={{ once: false, amount: 0.2 }}
             <img src={image7} alt="image1" className="w-20 h-20" />
            
         </div>
-        <div className=" ml-auto flex  flex-col justify-center items-center gap-[16.64px] w-[49.93px] h-[49.93px] p-[16.64px] rounded-full bg-[#2F5B44B2]">
-              <p className="text-[#FEF9D0] text-center font-inter text-[33.29px] not-italic font-normal leading-normal" >4 </p>
+        <div className=" ml-auto flex  flex-col justify-center items-center gap-2 w-10 h-10 p-2 rounded-full bg-[#2F5B44B2] md:w-[49.93px] md:h-[49.93px] md:p-[16.64px]">
+              <p className="text-[#FEF9D0] text-center font-inter text-[14px] md:text-[33.29px] not-italic font-normal leading-normal" >4 </p>
         </div>
 
         
       
 
     </div>
-    <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[28.533px] md:text-[32px] lg:text-[28px] leading-normal text-center lg:whitespace-nowrap">User-Friendly Designs</p>
+    <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[20px] sm:text-[24px] md:text-[26px] lg:text-[28px] leading-normal text-center lg:whitespace-nowrap">User-Friendly Designs</p>
 
-<p className=" px-4 text-[#2F5B44] font-inter  uppercase text-[20px] md:text-[22px] lg:text-[20px] ">By following the latest platform-specific guidelines and design trends, we create professional apps that are visually appealing .</p>
+<p className=" px-4 text-[#2F5B44] font-inter  uppercase text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] ">By following the latest platform-specific guidelines and design trends, we create professional apps that are visually appealing .</p>
 
    
 </MotionDiv>
@@ -215,7 +215,7 @@ viewport={{ once: false, amount: 0.2 }}
 
 
 <MotionDiv 
-className="flex flex-col items-start space-y-4 md:space-y-5 w-full px-[4rem] py-[5rem] rounded-2xl border-2 border-[#2F5B44] sm:px-4 sm:py-3"
+className="flex flex-col items-start space-y-4 md:space-y-5 w-full px-4 py-6 sm:px-6 sm:py-8 md:px-[4rem] md:py-[5rem] rounded-2xl border-2 border-[#2F5B44]"
 variants={fadeRight}
 initial="hidden"
 whileInView="visible"
@@ -226,17 +226,17 @@ viewport={{ once: false, amount: 0.2 }}
             <img src={image8} alt="image1" className="w-20 h-20" />
            
         </div>
-        <div className=" ml-auto flex  flex-col justify-center items-center gap-[16.64px] w-[49.93px] h-[49.93px] p-[16.64px] rounded-full bg-[#2F5B44B2]">
-              <p className="text-[#FEF9D0] text-center font-inter text-[33.29px] not-italic font-normal leading-normal" >5 </p>
+        <div className=" ml-auto flex  flex-col justify-center items-center gap-2 w-10 h-10 p-2 rounded-full bg-[#2F5B44B2] md:w-[49.93px] md:h-[49.93px] md:p-[16.64px]">
+              <p className="text-[#FEF9D0] text-center font-inter text-[14px] md:text-[33.29px] not-italic font-normal leading-normal" >5 </p>
         </div>
 
         
       
 
     </div>
-    <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[28.533px] md:text-[32px] lg:text-[36px] leading-normal text-center">Quality</p>
+    <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[20px] sm:text-[24px] md:text-[28px] lg:text-[36px] leading-normal text-center">Quality</p>
 
-    <p className=" px-4 text-[#2F5B44] font-inter font-normal uppercase text-[18px] md:text-[22px] lg:text-[20px] ">Our mobile apps undergo multiple stages of testing, including functional, compatibility, security, and UI testing.</p>
+    <p className=" px-4 text-[#2F5B44] font-inter font-normal uppercase text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] ">Our mobile apps undergo multiple stages of testing, including functional, compatibility, security, and UI testing.</p>
 
    
 </MotionDiv>
@@ -245,7 +245,7 @@ viewport={{ once: false, amount: 0.2 }}
 
 
 <MotionDiv 
-className="flex flex-col items-start space-y-4 md:space-y-5 w-full px-[4rem] py-[5rem] rounded-2xl border-2 border-[#2F5B44] sm:px-4 sm:py-3"
+className="flex flex-col items-start space-y-4 md:space-y-5 w-full px-4 py-6 sm:px-6 sm:py-8 md:px-[4rem] md:py-[5rem] rounded-2xl border-2 border-[#2F5B44]"
 variants={fadeRight}
 initial="hidden"
 whileInView="visible"
@@ -256,17 +256,17 @@ viewport={{ once: false, amount: 0.2 }}
             <img src={image9} alt="image1" className="w-20 h-20" />
            
         </div>
-        <div className=" ml-auto flex  flex-col justify-center items-center gap-[16.64px] w-[49.93px] h-[49.93px] p-[16.64px] rounded-full bg-[#2F5B44B2]">
-              <p className="text-[#FEF9D0] text-center font-inter text-[33.29px] not-italic font-normal leading-normal" >6 </p>
+        <div className=" ml-auto flex  flex-col justify-center items-center gap-2 w-10 h-10 p-2 rounded-full bg-[#2F5B44B2] md:w-[49.93px] md:h-[49.93px] md:p-[16.64px]">
+              <p className="text-[#FEF9D0] text-center font-inter text-[14px] md:text-[33.29px] not-italic font-normal leading-normal" >6 </p>
         </div>
 
         
       
 
     </div>
-    <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[28.533px] md:text-[32px] lg:text-[28px] leading-normal ">Testing on Different Devices</p>
+    <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[20px] sm:text-[24px] md:text-[26px] lg:text-[28px] leading-normal ">Testing on Different Devices</p>
 
-    <p className=" px-4 text-[#2F5B44] font-inter  uppercase text-[20px] md:text-[22px] lg:text-[24px] min-w-full ">We ensure top-quality apps by testing them across various devices </p>
+    <p className=" px-4 text-[#2F5B44] font-inter  uppercase text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] min-w-full ">We ensure top-quality apps by testing them across various devices </p>
 
    
 </MotionDiv>
@@ -281,22 +281,22 @@ viewport={{ once: false, amount: 0.2 }}
 
             <section>
                 <div className="bg-[#2F5B44] min-h-[25vh]">
-                    <p className="text-[#FEF9D0] text-center font-inter text-[42px] md:text-[36px] sm:text-[28px] font-bold not-italic leading-normal uppercase py-[2rem]">technologies We use!</p>
+                    <p className="text-[#FEF9D0] text-center font-inter text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] font-bold not-italic leading-normal uppercase py-[1.5rem] sm:py-[2rem]">technologies We use!</p>
 
-                    <div className="container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2   lg:grid-cols-3 px-3 gap-5 pb-[4rem] mt-[5rem]">
-                        <div className="col-span-1 text-center flex justify-center gap-5 items-center">
-                            <img src={icon1} alt="icon1" className="w-15 h-15" />
-                            <p className="text-[#FEF9D0] font-inter text-[36.07px] md:text-[30px] sm:text-[24px] not-italic font-normal leading-normal uppercase"> Flutter</p>
+                    <div className="container mx-auto max-w-7xl grid grid-cols-3 md:grid-cols-3   lg:grid-cols-3 px-3 gap-3 sm:gap-4 md:gap-5 mt-6 sm:mt-10 md:mt-[5rem] pb-8 sm:pb-12 md:pb-[4rem]">
+                        <div className="col-span-1 text-center flex justify-center gap-2 sm:gap-3 md:gap-5 items-center">
+                            <img src={icon1} alt="icon1" className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 lg:w-16 lg:h-16" />
+                            <p className="text-[#FEF9D0] font-inter text-[14px] sm:text-[18px] md:text-[30px] lg:text-[36.07px] not-italic font-normal leading-normal uppercase"> Flutter</p>
                             
                         </div>
-                        <div className="col-span-1 text-center flex justify-center gap-5 items-center">
-                            <img src={icon2} alt="icon2" className="w-15 h-15" />
-                            <p className="text-[#FEF9D0] font-inter text-[36.07px] md:text-[30px] sm:text-[24px] not-italic font-normal leading-normal uppercase"> Dart</p>
+                        <div className="col-span-1 text-center flex justify-center gap-2 sm:gap-3 md:gap-5 items-center">
+                            <img src={icon2} alt="icon2" className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 lg:w-16 lg:h-16" />
+                            <p className="text-[#FEF9D0] font-inter text-[14px] sm:text-[18px] md:text-[30px] lg:text-[36.07px] not-italic font-normal leading-normal uppercase"> Dart</p>
                            
                         </div>
-                        <div className="col-span-1 text-center flex justify-center gap-5 items-center">
-                            <img src={icon3} alt="icon3" className="w-15 h-15" />
-                            <p className="text-[#FEF9D0] font-inter text-[36.07px] md:text-[30px] sm:text-[24px] not-italic font-normal leading-normal uppercase"> Kotlin</p>
+                        <div className="col-span-1 text-center flex justify-center gap-2 sm:gap-3 md:gap-5 items-center">
+                            <img src={icon3} alt="icon3" className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 lg:w-16 lg:h-16" />
+                            <p className="text-[#FEF9D0] font-inter text-[14px] sm:text-[18px] md:text-[30px] lg:text-[36.07px] not-italic font-normal leading-normal uppercase"> Kotlin</p>
                         </div>
 
                     
@@ -351,16 +351,7 @@ viewport={{ once: false, amount: 0.2 }}
 
 
                         
-                      
-
-
-
-
-
-
-
-
-
+                    
 
                         <motion.div 
 	             variants={fadeLeft}
@@ -470,7 +461,7 @@ viewport={{ once: false, amount: 0.2 }}
 	             initial="hidden"
 	             whileInView="visible"
 	             viewport={{ once: false, amount: 0.2 }}>
-                         <p className="text-[#FEF9D0] font-inter text-[48px] md:text-[40px] sm:text-[32px] not-italic font-medium leading-normal uppercase text-center md:text-left">
+                         <p className="text-[#FEF9D0] font-inter text-[28px] sm:text-[32px] md:text-[40px] not-italic font-medium leading-normal uppercase text-center md:text-left">
                         Have an App Development <br /> project? <br /> Contact us Now
                         </p>
 
@@ -517,7 +508,7 @@ viewport={{ once: false, amount: 0.2 }}
 
         </div>
 
-        </>
+        </> 
     )
 
 }
