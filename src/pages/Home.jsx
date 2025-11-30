@@ -228,126 +228,32 @@ function Home() {
   // Structured Data for Home Page
   const homeStructuredData = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://devext.io/#organization",
-        "name": "Devext",
-        "legalName": "Devext Digital Solutions",
-        "url": "https://devext.io/",
-        "logo": "https://devext.io/images/home/Logo_Devext-removebg-preview%202.svg",
-        "image": "https://res.cloudinary.com/daop3bufa/image/upload/v1759051145/Logo_Devext-removebg-preview_1_xk94pb.png",
-        "description": "Devext is a Programming and software development company and Specializing in web/app development, Odoo ERP implementation and data driven growth solutions.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "398 Al Hurya St., Abu Quer, Mustafa Kamel",
-          "addressLocality": "Alexandria",
-          "addressCountry": "Egypt"
-        },
-        "telephone": "+201200064762",
-        "sameAs": [
-          "https://www.linkedin.com/company/devext",
-          "https://www.instagram.com/devext_co/"
-        ],
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "contactType": "customer support",
-            "telephone": "+201200064762",
-            "email": "info@devext.io",
-            "availableLanguage": [
-              "en",
-              "ar"
-            ]
-          }
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://devext.io/#website",
-        "name": "Devext",
-        "url": "https://devext.io/",
-        "publisher": {
-          "@id": "https://devext.io/#organization"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://devext.io/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://devext.io/#webpage",
-        "url": "https://devext.io/",
-        "name": "Devext – Software Development, Odoo ERP & Automation",
-        "description": "Devext provides programming, web/app development, Odoo ERP implementation, automation solutions, SEO, digital marketing, and ecommerce development.",
-        "isPartOf": {
-          "@id": "https://devext.io/#website"
-        },
-        "about": {
-          "@id": "https://devext.io/#organization"
-        }
-      },
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://devext.io/#services",
-        "name": "Devext Digital Services",
-        "url": "https://devext.io/",
-        "provider": {
-          "@id": "https://devext.io/#organization"
-        },
-        "serviceType": [
-          "Web Development",
-          "Mobile App Development",
-          "Odoo ERP Implementation",
-          "Business Automation Solutions",
-          "Ecommerce Development",
-          "UI/UX Design",
-          "Digital Marketing Services",
-          "SEO Services"
-        ],
-        "areaServed": "Worldwide",
-        "description": "Devext offers web and app development, Odoo ERP, automation solutions, ecommerce development, UI/UX, digital marketing, and SEO services."
-      },
-      {
-        "@type": "Service",
-        "@id": "https://devext.io/#core-services",
-        "serviceType": [
-          "Web Development",
-          "App Development",
-          "Odoo ERP",
-          "Automation Systems",
-          "Ecommerce Development",
-          "UI/UX Design",
-          "Digital Marketing",
-          "SEO"
-        ],
-        "provider": {
-          "@id": "https://devext.io/#organization"
-        }
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://devext.io/#odoo",
-        "name": "Odoo ERP Solutions",
-        "applicationCategory": "BusinessApplication",
-        "applicationSubCategory": [
-          "ERP",
-          "CRM",
-          "Inventory",
-          "Finance",
-          "HR",
-          "Ecommerce",
-          "Marketing Automation"
-        ],
-        "provider": {
-          "@id": "https://devext.io/#organization"
-        },
-        "operatingSystem": "Web, Cloud",
-        "description": "Devext implements Odoo ERP modules including CRM, accounting, inventory, HR, ecommerce, and automation."
-      }
-    ]
+    "@type": "Organization",
+    "name": "Devext",
+    "description": "We provide advanced development and programming solutions, web applications, mobile applications, and comprehensive technical solutions",
+    "url": "https://devext.io",
+    "logo": "https://devext.io/images/navbar/Logo_Devext-removebg-preview 1.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+966-XX-XXX-XXXX",
+      "contactType": "customer service",
+      "availableLanguage": "English"
+    },
+    "sameAs": [
+      "https://www.instagram.com/devext",
+      "https://www.linkedin.com/company/devext",
+      "https://wa.me/966XXXXXXXXX"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "SA",
+      "addressLocality": "Riyadh"
+    },
+    "offers": {
+      "@type": "Offer",
+      "description": "Application and website development services",
+      "category": "Software Development"
+    }
   };
 
   // Cards data for testimonials
