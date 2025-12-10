@@ -11,7 +11,8 @@ const UseGetDate=async(url,params)=>{
 
 const UseGetDataWithToken=async(url,params)=>{
     const config={
-        headrs:{Authorization:`Bearer ${localStorage.getItem("token")}`}
+        headrs:{Authorization:`Bearer ${localStorage.getItem("token")}`},
+        params:params
     }
     const res=await BaseUrl.get(url,config)
     return res.data;

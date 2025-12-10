@@ -205,4 +205,28 @@ html, body {
       @apply text-3xl;
     }
   }
+
+  /* Custom yellow, rounded scrollbar with no arrows */
+  .scrollbar-yellow {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #FEF9D0 transparent; /* Firefox */
+  }
+  .scrollbar-yellow::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  .scrollbar-yellow::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-yellow::-webkit-scrollbar-thumb {
+    background-color: #FEF9D0; /* yellow tone */
+    border-radius: 9999px; /* fully rounded */
+    border: 2px solid transparent; /* creates rounded inset look */
+    background-clip: padding-box;
+  }
+  .scrollbar-yellow::-webkit-scrollbar-button {
+    display: none; /* hide arrows/buttons */
+    width: 0;
+    height: 0;
+  }
 }

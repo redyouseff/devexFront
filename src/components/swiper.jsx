@@ -23,7 +23,7 @@ function CircularSwiper() {
       if (!swiper) return;
       const slides = swiper.slides || [];
       slides.forEach((slide) => slide.classList.remove('one-right'));
-      const nextSlide = swiper.el && swiper.el.querySelector('.swiper-slide-next');
+      const nextSlide = swiper.el && swiper.el.querySelector('.swiper-slide-next');   
       if (nextSlide) nextSlide.classList.add('one-right');
     } catch (e_) {
       console.log(e_);

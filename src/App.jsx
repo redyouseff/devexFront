@@ -27,6 +27,9 @@ import CustomWebDevelopment from './pages/CustomWebDevelopment';
 import AffordableWebDesign from './pages/blogs/AffordableWebDesign';
 import AppDevelopment from './pages/AppDevelopment';
 import CustomCMSDevelopment from './pages/blogs/CustomCMSDevelopment';
+import { Login } from './pages/admin/Login';
+import { AllBlogs } from './pages/admin/AllBlogs';
+import { CreateBlog } from './pages/admin/CreateBlog';
 
 
 
@@ -42,6 +45,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             {/* <Route path="/home" element={<Home />} /> */}
+            <Route path='/login' element={<Login></Login>}></Route>
              <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/calculator" element={<Calculator />} />
@@ -67,6 +71,10 @@ function App() {
              <Route path="/CustomWebDesignServices" element={<CustomWebDesignServices />} />
              <Route path="/CustomWebDevelopment" element={<CustomWebDevelopment />} />
              <Route path="/AppDevelopment" element={<AppDevelopment />} />
+
+             <Route path='/login'  element={<Login />} />
+             <Route path='/admin/allblogs' element={<AllBlogs />} />
+             <Route path='/admin/createblog' element={<CreateBlog />} />
             
                        
           </Routes>
