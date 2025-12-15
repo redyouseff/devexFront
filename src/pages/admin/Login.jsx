@@ -19,7 +19,7 @@ export const Login =()=>{
    
     return(
         <>
-        <div className="relative min-h-[46rem] overflow-hidden">
+        <div className="relative min-h-[46rem] overflow-hidden"> 
         <img
                     src={background}
                     alt="background"
@@ -45,18 +45,17 @@ export const Login =()=>{
             self-stretch  
             max-w-2xl">
 
-    <input 
-        type="email" 
+    <input
+        type="email"
         {...register("email")}
         name="email"
         placeholder="Enter Your user Email"
-        className="bg-transparent text-white 
-               placeholder-[#FEF9D0] 
-               focus:outline-none 
-               font-inter 
-             
-               font-semibold 
-               capitalize"
+        className="bg-transparent text-white
+               placeholder-[#FEF9D0]
+               focus:outline-none
+               font-inter
+
+               font-semibold"
         autoComplete="email"
         aria-invalid={!!errors.email}
 
@@ -77,18 +76,17 @@ export const Login =()=>{
             max-w-2xl
              mb-10">
 
-    <input 
-        type="password" 
+    <input
+        type="password"
         {...register("password")}
         name="password"
         placeholder="Enter  password"
-        className="bg-transparent text-white 
-               placeholder-[#FEF9D0] 
-               focus:outline-none 
-               font-inter 
-           
-               font-semibold 
-               capitalize"
+        className="bg-transparent text-white
+               placeholder-[#FEF9D0]
+               focus:outline-none
+               font-inter
+
+               font-semibold"
         autoComplete="current-password"
         aria-invalid={!!errors.password}
     />
@@ -117,7 +115,7 @@ export const Login =()=>{
                
 
             </div>
-            <ToastContainer />
+            <ToastContainer />  
 
             
         </div>

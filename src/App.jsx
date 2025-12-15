@@ -30,6 +30,9 @@ import CustomCMSDevelopment from './pages/blogs/CustomCMSDevelopment';
 import { Login } from './pages/admin/Login';
 import { AllBlogs } from './pages/admin/AllBlogs';
 import { CreateBlog } from './pages/admin/CreateBlog';
+import { ProtectedRouteHook } from './Hook/auth/ProtectedRouteHook';
+import { ProductRoute } from './Hook/auth/ProductRoute';
+import { EditeBlog } from './pages/admin/EditeBlog';
 
 
 
@@ -38,6 +41,9 @@ import { CreateBlog } from './pages/admin/CreateBlog';
 
 
 function App() {
+
+  const [, , isAdmin, isLoading]=ProtectedRouteHook();
+ 
   return (
     <HelmetProvider>
       <Router>
@@ -73,8 +79,15 @@ function App() {
              <Route path="/AppDevelopment" element={<AppDevelopment />} />
 
              <Route path='/login'  element={<Login />} />
+
+            {/* Admin Routes */}
+             <Route element={<ProductRoute auth={isAdmin} loading={isLoading} />}>
              <Route path='/admin/allblogs' element={<AllBlogs />} />
              <Route path='/admin/createblog' element={<CreateBlog />} />
+             <Route path='/admin/editeblog/:id' element={<EditeBlog />} />
+             
+             </Route>
+             
             
                        
           </Routes>

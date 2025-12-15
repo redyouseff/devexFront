@@ -117,7 +117,7 @@ export const Aside = () => {
             </div>
           </nav>
         </div>
-        <div className=" flex flex-row items-center gap-3" onClick={handleLogout}>
+        <div className=" flex flex-row items-center gap-3 cursor-pointer" onClick={handleLogout}>
             <img src={image5} alt="logo" className=""  width={40} height={40} />
          
               <span className="text-[#FEF9D0] font-inter text-2xl font-normal capitalize">Logout</span>

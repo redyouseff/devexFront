@@ -1,12 +1,19 @@
 
+import { all } from "axios";
 import { Aside } from "../../components/admin/Aside"
 import { Card } from "../../components/admin/Card";
+import { GetAllBlogsHook } from "../../Hook/admin/GetAllBlogsHook";
+import { ToastContainer } from "react-toastify";
+import { Link } from "react-router-dom";
 const image1 ="https://res.cloudinary.com/daop3bufa/image/upload/v1765105085/search_vgtbcg.svg"
 const blogImage="https://res.cloudinary.com/daop3bufa/image/upload/v1759050848/39fe9b9d1d42d713a96f4061d8de02a0c59fabde_sm65le.jpg"
 
 
 
 export const AllBlogs = () => {
+    const [allblogs,loading,handleSearch]=GetAllBlogsHook();
+  
+  
 
     const blogs =new Array(10).fill({
         title:"Blog Title",
@@ -46,6 +53,7 @@ export const AllBlogs = () => {
              
                font-semibold w-full"
         autoComplete="off"
+        onChange={handleSearch}
       
 
     />
@@ -61,11 +69,27 @@ export const AllBlogs = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
-                {
+                {/* {
                     blogs.map((blog,index)=>(
                         <Card key={index} title={blog.title} description={blog.description} image={blog.image} />
                     ))
+                    
 
+                } */}
+
+                {
+                    loading==false?
+                    allblogs.map((blog,index)=>(
+                     
+                        <Link to={`/admin/editeblog/${blog._id}`} key={blog._id}>
+
+                              <Card key={blog._id} title={blog.title} description={blog.description} images={blog.images} id={blog._id}  />
+                        </Link>
+                    ))
+                    :
+                    <div className="flex justify-center items-center h-full">
+                        <div className="w-12 h-12 border-4 border-[#FEF9D0] border-t-transparent rounded-full animate-spin"></div>
+                    </div>
                 }
 
 
@@ -81,6 +105,7 @@ export const AllBlogs = () => {
             
         </div>
     </div>
+    <ToastContainer />
 
     </div>
    

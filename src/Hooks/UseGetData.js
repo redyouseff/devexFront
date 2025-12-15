@@ -1,20 +1,29 @@
 
 import BaseUrl from "../Api/BaseUrl"
 
-const UseGetDate=async(url,params)=>{
+const UseGetDate=async(url)=>{
 
-    const  res= await BaseUrl.get(url,params)
+    const config={
+        headers:{Authorization:`Bearer ${localStorage.getItem("token")}`},
+
+    }
+
+    const  res= await BaseUrl.get(url,config)
     return res.data;
 
 
 }
 
-const UseGetDataWithToken=async(url,params)=>{
+const UseGetDataWithToken=async(url)=>{
+    
+   
     const config={
-        headrs:{Authorization:`Bearer ${localStorage.getItem("token")}`},
-        params:params
+        headers:{Authorization:`Bearer ${localStorage.getItem("token")}`},
+
     }
+    
     const res=await BaseUrl.get(url,config)
+    
     return res.data;
 }
 

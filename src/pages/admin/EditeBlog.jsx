@@ -1,25 +1,141 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Aside } from "../../components/admin/Aside"
-import { CreateBlogHook } from "../../Hook/admin/CreateBloghook"
-import { ToastContainer } from "react-toastify"
+import { useParams } from "react-router-dom"
+import { GetOneBlogHook } from "../../Hook/admin/GetOneBlogHook"
+import { UpdateBlogHook } from "../../Hook/admin/UpdateBlogHook"
 const icon1 ="https://res.cloudinary.com/daop3bufa/image/upload/v1765105086/Vector2_reoz9w.svg"
 const uploadImage="https://res.cloudinary.com/daop3bufa/image/upload/v1765192698/upload_iax70e.svg"
+import { ToastContainer } from "react-toastify"
 
-export const CreateBlog =()=>{
-    // Use the hook for state management
-    const {
-        seoTitle, setSeoTitle,
-        seoCanonical, setSeoCanonical,
-        seoDescription, setSeoDescription,
-        seoKeywords, setSeoKeywords,
-        sectionOne, setSectionOne,
-        images, setImages,
-        sectionTwo, setSectionTwo,
-        sectionThree, setSectionThree,
-        sectionFour, setSectionFour,
-        sectionFive, setSectionFive,
-        handleSubmit
-    } = CreateBlogHook()
+
+
+export const EditeBlog=()=>{
+
+    const {id}=useParams();
+    const [handleUpdate,loadingUpdate]=UpdateBlogHook(id);
+
+    const [blogId, setBlogId] = useState(''); // eslint-disable-line no-unused-vars
+
+    const [loading,blog]=GetOneBlogHook(id);
+
+    // Populate form fields when blog data is loaded   
+    useEffect(() => {
+        if (blog && !loading) {
+            // Set blog _id
+            setBlogId(blog._id || '');
+
+            // Set blog title
+
+            // Set SEO information
+            setSeoTitle(blog.title || '');
+            setSeoCanonical(blog.canonical || '');
+            setSeoDescription(blog.description || '');
+            setSeoKeywords(blog.keywords || '');
+
+            setSectionOne({
+                title: blog.sectionOne?.title || '',
+                paragraph1: blog.sectionOne?.paragraph1 || '',
+                paragraph2: blog.sectionOne?.paragraph2 || '',
+                typeOfH: blog.sectionOne?.typeOfH || 'h1'
+            });
+            setSectionTwo({
+                title: blog.sectionTwo?.title || '',
+                paragraph1: blog.sectionTwo?.paragraph1 || '',
+                paragraphs: blog.sectionTwo?.paragraphs || [],
+                ul: blog.sectionTwo?.ul || [],
+                typeOfH: blog.sectionTwo?.typeOfH || 'h1'
+            });
+            setSectionThree({
+                title: blog.sectionThree?.title || '',
+                paragraph1: blog.sectionThree?.paragraph1 || '',
+                paragraphs: blog.sectionThree?.paragraphs || [],
+                ol: blog.sectionThree?.ol || [],
+                typeOfH: blog.sectionThree?.typeOfH || 'h1'
+            });
+            setSectionFour({
+                title: blog.sectionFour?.title || '', // Include title from API if exists
+                paragraph1: blog.sectionFour?.paragraph1 || '',
+                paragraphs: blog.sectionFour?.paragraphs || [],
+                ul: blog.sectionFour?.ul || [],
+                typeofH: blog.sectionFour?.typeofH || 'h1'
+            });
+            setSectionFive({
+                title: blog.sectionFive?.title || '',
+                paragraph1: blog.sectionFive?.paragraph1 || '',
+                paragraphs: blog.sectionFive?.paragraphs || [],
+                ul: blog.sectionFive?.ul || [],
+                typeofH: blog.sectionFive?.typeofH || 'h1'
+            });
+
+            // Set dynamic content counts
+            setNumParagraphs(blog.sectionTwo?.paragraphs?.length || 1);
+            setNumListItems(blog.sectionTwo?.ul?.length || 1);
+            setNumParagraphsSection3(blog.sectionThree?.paragraphs?.length || 1);
+            setNumListItemsSection3(blog.sectionThree?.ol?.length || 1);
+            setNumParagraphsSection4(blog.sectionFour?.paragraphs?.length || 1);
+            setNumListItemsSection4(blog.sectionFour?.ul?.length || 1);
+            setNumParagraphsSection5(blog.sectionFive?.paragraphs?.length || 1);
+            setNumListItemsSection5(blog.sectionFive?.ul?.length || 1);
+
+            // Set display types
+            setSectionTwoDisplayType(
+                (blog.sectionTwo?.paragraphs?.length > 0 && blog.sectionTwo?.ul?.length > 0) ? 'both' :
+                (blog.sectionTwo?.paragraphs?.length > 0) ? 'paragraphs' :
+                (blog.sectionTwo?.ul?.length > 0) ? 'list' : 'both'
+            );
+            setSectionThreeDisplayType(
+                (blog.sectionThree?.paragraphs?.length > 0 && blog.sectionThree?.ol?.length > 0) ? 'both' :
+                (blog.sectionThree?.paragraphs?.length > 0) ? 'paragraphs' :
+                (blog.sectionThree?.ol?.length > 0) ? 'list' : 'both'
+            );
+            setSectionFourDisplayType(
+                (blog.sectionFour?.paragraphs?.length > 0 && blog.sectionFour?.ul?.length > 0) ? 'both' :
+                (blog.sectionFour?.paragraphs?.length > 0) ? 'paragraphs' :
+                (blog.sectionFour?.ul?.length > 0) ? 'list' : 'both'
+            );
+            setSectionFiveDisplayType(
+                (blog.sectionFive?.paragraphs?.length > 0 && blog.sectionFive?.ul?.length > 0) ? 'both' :
+                (blog.sectionFive?.paragraphs?.length > 0) ? 'paragraphs' :
+                (blog.sectionFive?.ul?.length > 0) ? 'list' : 'both'
+            );
+
+            // Set image previews if images exist based on slot numbers
+            if (blog.images && blog.images.length > 0) {
+                blog.images.forEach((image) => {
+                    if (image.slot === 0) {
+                        setMainImagePreview(image.secure_url);
+                    } else if (image.slot === 1) {
+                        setSectionTwoLeftImagePreview(image.secure_url);
+                    } else if (image.slot === 2) {
+                        setSectionTwoRightImagePreview(image.secure_url);
+                    }
+                });
+            }
+        }
+    }, [blog, loading]);
+
+
+
+
+     
+    
+
+
+
+
+    // State management for edit form
+    const [seoTitle, setSeoTitle] = useState('')
+    const [seoCanonical, setSeoCanonical] = useState('')
+    const [seoDescription, setSeoDescription] = useState('')
+    const [seoKeywords, setSeoKeywords] = useState('')
+    const [sectionOne, setSectionOne] = useState({ title: '', paragraph1: '', paragraph2: '', typeOfH: 'h1' })
+    const [images, setImages] = useState([])
+    const [sectionTwo, setSectionTwo] = useState({ title: '', paragraph1: '', paragraphs: [], ul: [], typeOfH: 'h1' })
+    const [sectionThree, setSectionThree] = useState({ title: '', paragraph1: '', paragraphs: [], ol: [], typeOfH: 'h1' })
+    const [sectionFour, setSectionFour] = useState({ title: '', paragraph1: '', paragraphs: [], ul: [], typeofH: 'h1' })
+    const [sectionFive, setSectionFive] = useState({ title: '', paragraph1: '', paragraphs: [], ul: [], typeofH: 'h1' })
+
+  
 
     // UI state for form controls
     const [numParagraphs, setNumParagraphs] = useState(1)
@@ -39,6 +155,7 @@ export const CreateBlog =()=>{
     const [mainImagePreview, setMainImagePreview] = useState(null)
     const [sectionTwoLeftImagePreview, setSectionTwoLeftImagePreview] = useState(null)
     const [sectionTwoRightImagePreview, setSectionTwoRightImagePreview] = useState(null)
+
 
     // Helper functions to update dynamic content
     const updateSectionTwoParagraphs = (index, value) => {
@@ -106,17 +223,26 @@ export const CreateBlog =()=>{
             setSectionTwoRightImagePreview(previewUrl)
         }
 
-        // Store file directly in images array with metadata
-        const imageData = {
-            file: file,
-            type: imageType
+        // Determine the slot based on image type
+        let slot;
+        if (imageType === 'main') {
+            slot = 0;
+        } else if (imageType === 'sectionTwoLeft') {
+            slot = 1;
+        } else if (imageType === 'sectionTwoRight') {
+            slot = 2;
         }
 
-        if (imageType === 'main') {
-            setImages([imageData, ...images])
-        } else {
-            setImages([...images, imageData])
+        // Store file directly in images array with metadata including slot
+        const imageData = {
+            file: file,
+            type: imageType,
+            slot: slot
         }
+
+        // Remove existing image of same type if exists, then add new one
+        const filteredImages = images.filter(img => img.type !== imageType)
+        setImages([...filteredImages, imageData])
     }
 
     // Image delete handlers
@@ -141,6 +267,98 @@ export const CreateBlog =()=>{
             const fileInput = document.getElementById('sectionTwoRightImage')
             if (fileInput) fileInput.value = ''
         }
+    }
+
+    // Collect form data for submission
+    const collectFormData = () => {
+        // Create FormData to handle file uploads (always use FormData for consistency)
+        const formData = new FormData()
+
+        // Add basic blog data
+        formData.append('title', seoTitle)
+        formData.append('description', seoDescription)
+        formData.append('keywords', seoKeywords)
+        formData.append('canonical', seoCanonical)
+
+        // Add section data as objects (not JSON strings)
+        formData.append('sectionOne[typeOfH]', sectionOne.typeOfH)
+        formData.append('sectionOne[title]', sectionOne.title)
+        formData.append('sectionOne[paragraph1]', sectionOne.paragraph1)
+        formData.append('sectionOne[paragraph2]', sectionOne.paragraph2)
+
+        formData.append('sectionTwo[typeOfH]', sectionTwo.typeOfH)
+        formData.append('sectionTwo[title]', sectionTwo.title)
+        formData.append('sectionTwo[paragraph1]', sectionTwo.paragraph1)
+
+        // Add ul array items for sectionTwo
+        sectionTwo.ul.forEach((item, index) => {
+            formData.append(`sectionTwo[ul][${index}]`, item)
+        })
+
+        // Add paragraphs array items for sectionTwo
+        sectionTwo.paragraphs.forEach((item, index) => {
+            formData.append(`sectionTwo[paragraphs][${index}]`, item)
+        })
+
+        formData.append('sectionThree[typeOfH]', sectionThree.typeOfH)
+        formData.append('sectionThree[title]', sectionThree.title)
+        formData.append('sectionThree[paragraph1]', sectionThree.paragraph1)
+
+        // Add ol array items for sectionThree
+        sectionThree.ol.forEach((item, index) => {
+            formData.append(`sectionThree[ol][${index}]`, item)
+        })
+
+        // Add paragraphs array items for sectionThree
+        sectionThree.paragraphs.forEach((item, index) => {
+            formData.append(`sectionThree[paragraphs][${index}]`, item)
+        })
+
+        formData.append('sectionFour[typeofH]', sectionFour.typeofH)
+        formData.append('sectionFour[paragraph1]', sectionFour.paragraph1)
+
+        // Add ul array items for sectionFour
+        sectionFour.ul.forEach((item, index) => {
+            formData.append(`sectionFour[ul][${index}]`, item)
+        })
+
+        // Add paragraphs array items for sectionFour
+        sectionFour.paragraphs.forEach((item, index) => {
+            formData.append(`sectionFour[paragraphs][${index}]`, item)
+        })
+
+        formData.append('sectionFive[typeofH]', sectionFive.typeofH)
+        formData.append('sectionFive[title]', sectionFive.title)
+        formData.append('sectionFive[paragraph1]', sectionFive.paragraph1)
+
+        // Add ul array items for sectionFive
+        sectionFive.ul.forEach((item, index) => {
+            formData.append(`sectionFive[ul][${index}]`, item)
+        })
+
+        // Add paragraphs array items for sectionFive
+        sectionFive.paragraphs.forEach((item, index) => {
+            formData.append(`sectionFive[paragraphs][${index}]`, item)
+        })
+
+        // Add images as files with slots
+        images.forEach((image) => {
+            if (image.file) {
+                formData.append(`images`, image.file)
+                formData.append(`imageTypes`, image.type || 'main')
+                formData.append(`slots`, image.slot) // Use the actual slot value for each image
+            }
+        })
+
+        return formData;
+    }
+
+    // Handle form submission
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const blogData = collectFormData();
+        console.log(blogData,"blogData");
+        handleUpdate(blogData);
     }
 
     const handleNumParagraphsChange = (e) => {
@@ -183,6 +401,25 @@ export const CreateBlog =()=>{
         setNumListItemsSection5(value > 10 ? 10 : value < 1 ? 1 : value)
     }
 
+    // Show loading spinner while data is loading
+    if (loading) {
+        return (
+            <>
+            <div className="grid grid-cols-1 md:grid-cols-10 w-full h-full gap-2">
+                <div className="col-span-1 md:col-span-2 mb-5 ml-0 md:ml-3">
+                    <Aside />
+                </div>
+                <div className="col-span-1 md:col-span-8 p-4 sm:p-6 md:p-10 lg:p-16 m-2 rounded-2xl bg-[#2F5B44] shadow-[0_0_30px_6px_rgba(0,0,0,0.45)] h-auto md:h-[calc(100vh-1rem)] md:overflow-y-auto scrollbar-yellow flex items-center justify-center">
+                    <div className="flex flex-col items-center gap-4">
+                        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#FEF9D0]"></div>
+                        <p className="text-[#FEF9D0] text-lg font-semibold">Loading blog data...</p>
+                    </div>
+                </div>
+            </div>
+            </>
+        );
+    }
+
     return (
         <>
         <div className="grid grid-cols-1 md:grid-cols-10 w-full h-full gap-2">
@@ -190,14 +427,14 @@ export const CreateBlog =()=>{
                 <Aside />
             </div>
             <div className="col-span-1 md:col-span-8 p-4 sm:p-6 md:p-10 lg:p-16 m-2 rounded-2xl bg-[#2F5B44] shadow-[0_0_30px_6px_rgba(0,0,0,0.45)] h-auto md:h-[calc(100vh-1rem)] md:overflow-y-auto scrollbar-yellow">
-               
+
                     <div className="flex flex-row items-center justify-center gap-2">
-                        <img src={icon1} alt="image" width={30} height={30} /> 
-                        <h1 className="text-2xl font-bold text-[#FEF9D0]">Create Blog</h1>
+                        <img src={icon1} alt="image" width={30} height={30} />
+                        <h1 className="text-2xl font-bold text-[#FEF9D0]">Edit Blog</h1>
 
                 </div>
 
-                <form className="mt-20" onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="mt-20">
                       {/* sectionOne */}
                       <section>
                         <div className="grid grid-cols-1 md:grid-cols-10 gap-10   mt-10">
@@ -240,7 +477,7 @@ export const CreateBlog =()=>{
                         </div>
 
                         <div className="grid grid-cols-1 mt-10">
-     
+ 
                         </div>
 
                       </section>
@@ -275,7 +512,7 @@ export const CreateBlog =()=>{
                           </div>
                         </div>
                       </section>
-                      
+
                       {/* sectionThree - Main Image */}
                       <section className="mt-10">
                         <div className="grid grid-cols-1">
@@ -370,9 +607,6 @@ export const CreateBlog =()=>{
                                 </div>
 
                             </div>
-
-
-                            
 
 
                         </div>
@@ -560,7 +794,6 @@ export const CreateBlog =()=>{
 
 
 
-
 <div className="grid grid-cols-1 mt-10">
   <div>
     <label htmlFor="sectionTwoRightImage" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">right Image</label>
@@ -604,12 +837,7 @@ export const CreateBlog =()=>{
 </div>
 
 
-
 </div>
-
-
-                   
-
 
 
 
@@ -796,9 +1024,6 @@ export const CreateBlog =()=>{
                         )}
 
 
-
-
-                      
 
 
                       </section>
@@ -988,7 +1213,6 @@ export const CreateBlog =()=>{
 
 
 
-
                       </section>
 
 
@@ -1173,13 +1397,14 @@ export const CreateBlog =()=>{
                             </div>
                         )}
 
-                        
-                        
+
+
+
                       </section>
 
 
                       {/* seo information */}
-                      
+
                       <section>
                         <p className="text-[#FEF9D0] font-inter text-[20px] font-semibold text-center mt-10 rounded-md  bg-[#2F5B44] border-2 border-[#FEF9D0]/20 border-dashed p-2"  >
                             seo information
@@ -1199,7 +1424,7 @@ export const CreateBlog =()=>{
                             />
                           </div>
                           <div>
-                            <label htmlFor="seoCanonical" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Canonical URL</label>
+                            <label htmlFor="seoCanonical" className="text-[#FEF9D0] font-inter text-[20px]">Canonical URL</label>
                             <input
                               type="text"
                               id="seoCanonical"
@@ -1247,21 +1472,23 @@ export const CreateBlog =()=>{
                       <div className="flex justify-center mt-16">
                         <button
                           type="submit"
-                          className="px-8 py-4 bg-[#FEF9D0] text-[#2F5B44] font-bold text-lg rounded-lg hover:bg-[#fef9d0]/90 transition-all duration-200 shadow-lg hover:shadow-xl"
+                          disabled={loadingUpdate}
+                          className={`px-8 py-4 font-bold text-lg rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl ${
+                            loadingUpdate
+                              ? 'bg-[#fef9d0]/50 text-[#2F5B44]/50 cursor-not-allowed'
+                              : 'bg-[#FEF9D0] text-[#2F5B44] hover:bg-[#fef9d0]/90'
+                          }`}
                         >
-                          Create Blog
+                          {loadingUpdate ? 'Updating...' : 'Update Blog'}
                         </button>
                       </div>
 
-                     
-                  
 
-                
 
 
                 </form>
-            
-                
+
+
             </div>
             <ToastContainer />
         </div>

@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { createBlog } from "../../redux/Actions/BlogsActions"
+import notify from "../useNotification"
 
 export const CreateBlogHook = () => {
+
     // SEO fields
     const [seoTitle, setSeoTitle] = useState('')
     const [seoCanonical, setSeoCanonical] = useState('')
@@ -17,7 +19,7 @@ export const CreateBlogHook = () => {
         typeOfH: 'h2',
         title: '',
         paragraph1: '',
-        paragraph2: ''
+        paragraph2: ''  
     })
 
     // Images
@@ -58,17 +60,26 @@ export const CreateBlogHook = () => {
         paragraphs: []
     })
 
-    // Main blog fields
-    const [blogTitle, setBlogTitle] = useState('')
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+
+        // Validate required SEO fields
+        const requiredFields = [seoTitle, seoDescription, seoKeywords, seoCanonical]
+        const fieldNames = ['SEO Title', 'SEO Description', 'SEO Keywords','SEO Canonical']
+
+        for (let i = 0; i < requiredFields.length; i++) {
+            if (!requiredFields[i].trim()) {
+                notify(`يجب ملء ${fieldNames[i]}`, "error")
+                return
+            }
+        }
 
         // Create FormData to handle file uploads
         const formData = new FormData()
 
         // Add basic blog data
-        formData.append('title', blogTitle)
+        formData.append('title', seoTitle)
         formData.append('description', seoDescription)
         formData.append('keywords', seoKeywords)
         formData.append('canonical', seoCanonical)
@@ -139,8 +150,9 @@ export const CreateBlogHook = () => {
             if (image.file) {
                 formData.append(`images`, image.file)
                 formData.append(`imageTypes`, image.type || 'main')
+                formData.append(`slots`, index) // Add slot position for each image
             }
-        })
+        }) 
 
         setLoading(true);
         dispatch(createBlog(formData));
@@ -149,11 +161,23 @@ export const CreateBlogHook = () => {
     }
 
     useEffect(()=>{
-        if(res){
+        if(res.status=="success" && res.data){
+          
+            notify("Blog created successfully","success");
+            setTimeout(() => {
+                window.location.href="/admin/allblogs"
+            }, 2000);
+
+        }
+        else if(res?.data?.message=="user no longer exist"){
+            notify("user no longer exist","error");
+            setTimeout(() => {
+                window.location.href="/login"
+            }, 2000);
             setLoading(false);
-            if(res.data){
-                console.log(res,"res");
-            }
+        }
+        else if(res.status=="error"){
+            notify("Blog creation failed","error");
         }
     },[res]);
 
@@ -172,8 +196,6 @@ export const CreateBlogHook = () => {
         sectionFour, setSectionFour,
         sectionFive, setSectionFive,
 
-        // Main blog title
-        blogTitle, setBlogTitle,
 
         // Loading state
         loading,

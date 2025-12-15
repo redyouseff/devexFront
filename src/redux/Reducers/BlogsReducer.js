@@ -1,28 +1,53 @@
 
-import { CREATE_BLOG, GET_ALL_BLOGS } from "../type"
+import { CREATE_BLOG, DELETE_BLOG, GET_ALL_BLOGS, GET_BLOG_BY_ID, UPDATE_BLOG } from "../type"
 
 
-const intail={
-    blogs:[],
+const initial={
+    allblogs:[],
     loading:true,
-    createBlog:[]
+    deleteBlog:[],
+    createBlog:[],
+    getBlogById:[],
+
 }
 
-const BlogsReducer=(state=intail,actain)=>{
+const BlogsReducer=(state=initial,action)=>{
 
-    switch(actain.type){
+
+    switch(action.type){
         case GET_ALL_BLOGS:
-                        
+
             return{
+                ...state,
                 loading:false,
-                blogs:actain.payload
+                allblogs:action.payload
 
             }
             case CREATE_BLOG:
                 return{
+                    ...state,
                     loading:false,
-                    createBlog:actain.payload
+                    createBlog:action.payload
+
                 }
+                case DELETE_BLOG:
+                    return{
+                        ...state,
+                        loading:false,
+                        deleteBlog:action.payload
+                    }
+                    case GET_BLOG_BY_ID:
+                        return{
+                            ...state,
+                            loading:false,
+                            getBlogById:action.payload
+                        }
+                        case UPDATE_BLOG:
+                            return{
+                                ...state,
+                                loading:false,
+                                updateBlog:action.payload
+                            }
 
             default:
 
