@@ -34,7 +34,7 @@ export const GetAllBlogsHook =()=>{
 
     useEffect(()=>{
 
-       if(res.status==500){
+       if(res?.status==500){
         if(res.data.error.message=="jwt expired" || res.data.error.message=="jwt malformed"){
             notify("Session expired, please login again","error");
             setTimeout(() => {
@@ -49,8 +49,8 @@ export const GetAllBlogsHook =()=>{
             setLoading(false);
         }
        }
-       else if(res.pagination){
-        setAllBlogs(res.data);
+       else if(res?.pagination){
+        setAllBlogs(res?.data);
         setLoading(false);
     }
      

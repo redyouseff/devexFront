@@ -66,6 +66,27 @@ export const EditeBlog=()=>{
                 ul: blog.sectionFive?.ul || [],
                 typeofH: blog.sectionFive?.typeofH || 'h1'
             });
+            setSectionSix({
+                title: blog.sectionSix?.title || '',
+                paragraph1: blog.sectionSix?.paragraph1 || '',
+                paragraphs: blog.sectionSix?.paragraphs || [],
+                ul: blog.sectionSix?.ul || [],
+                typeofH: blog.sectionSix?.typeofH || 'h1'
+            });
+            setSectionSeven({
+                title: blog.sectionSeven?.title || '',
+                paragraph1: blog.sectionSeven?.paragraph1 || '',
+                paragraphs: blog.sectionSeven?.paragraphs || [],
+                ul: blog.sectionSeven?.ul || [],
+                typeofH: blog.sectionSeven?.typeofH || 'h1'
+            });
+            setSectionEight({
+                title: blog.sectionEight?.title || '',
+                paragraph1: blog.sectionEight?.paragraph1 || '',
+                paragraphs: blog.sectionEight?.paragraphs || [],
+                ul: blog.sectionEight?.ul || [],
+                typeofH: blog.sectionEight?.typeofH || 'h1'
+            });
 
             // Set dynamic content counts
             setNumParagraphs(blog.sectionTwo?.paragraphs?.length || 1);
@@ -76,6 +97,12 @@ export const EditeBlog=()=>{
             setNumListItemsSection4(blog.sectionFour?.ul?.length || 1);
             setNumParagraphsSection5(blog.sectionFive?.paragraphs?.length || 1);
             setNumListItemsSection5(blog.sectionFive?.ul?.length || 1);
+            setNumParagraphsSection6(blog.sectionSix?.paragraphs?.length || 1);
+            setNumListItemsSection6(blog.sectionSix?.ul?.length || 1);
+            setNumParagraphsSection7(blog.sectionSeven?.paragraphs?.length || 1);
+            setNumListItemsSection7(blog.sectionSeven?.ul?.length || 1);
+            setNumParagraphsSection8(blog.sectionEight?.paragraphs?.length || 1);
+            setNumListItemsSection8(blog.sectionEight?.ul?.length || 1);
 
             // Set display types
             setSectionTwoDisplayType(
@@ -98,6 +125,21 @@ export const EditeBlog=()=>{
                 (blog.sectionFive?.paragraphs?.length > 0) ? 'paragraphs' :
                 (blog.sectionFive?.ul?.length > 0) ? 'list' : 'both'
             );
+            setSectionSixDisplayType(
+                (blog.sectionSix?.paragraphs?.length > 0 && blog.sectionSix?.ul?.length > 0) ? 'both' :
+                (blog.sectionSix?.paragraphs?.length > 0) ? 'paragraphs' :
+                (blog.sectionSix?.ul?.length > 0) ? 'list' : 'both'
+            );
+            setSectionSevenDisplayType(
+                (blog.sectionSeven?.paragraphs?.length > 0 && blog.sectionSeven?.ul?.length > 0) ? 'both' :
+                (blog.sectionSeven?.paragraphs?.length > 0) ? 'paragraphs' :
+                (blog.sectionSeven?.ul?.length > 0) ? 'list' : 'both'
+            );
+            setSectionEightDisplayType(
+                (blog.sectionEight?.paragraphs?.length > 0 && blog.sectionEight?.ul?.length > 0) ? 'both' :
+                (blog.sectionEight?.paragraphs?.length > 0) ? 'paragraphs' :
+                (blog.sectionEight?.ul?.length > 0) ? 'list' : 'both'
+            );
 
             // Set image previews if images exist based on slot numbers
             if (blog.images && blog.images.length > 0) {
@@ -111,6 +153,22 @@ export const EditeBlog=()=>{
                     }
                 });
             }
+
+            // Set alt texts for images
+            setAltImageOne(blog.altImageOne || '');
+            setAltImageTwo(blog.altImageTwo || '');
+            setAltImageThree(blog.altImageThree || '');
+            // Format date for input type="date" (YYYY-MM-DD)
+            if (blog.data) {
+                const date = new Date(blog.data);
+                
+                const formattedDate = date.toISOString().split('T')[0];
+                
+                setData(formattedDate);
+            } else {
+                setData('');
+            }
+            
         }
     }, [blog, loading]);
 
@@ -134,6 +192,10 @@ export const EditeBlog=()=>{
     const [sectionThree, setSectionThree] = useState({ title: '', paragraph1: '', paragraphs: [], ol: [], typeOfH: 'h1' })
     const [sectionFour, setSectionFour] = useState({ title: '', paragraph1: '', paragraphs: [], ul: [], typeofH: 'h1' })
     const [sectionFive, setSectionFive] = useState({ title: '', paragraph1: '', paragraphs: [], ul: [], typeofH: 'h1' })
+    const [sectionSix, setSectionSix] = useState({ title: '', paragraph1: '', paragraphs: [], ul: [], typeofH: 'h1' })
+    const [sectionSeven, setSectionSeven] = useState({ title: '', paragraph1: '', paragraphs: [], ul: [], typeofH: 'h1' })
+    const [sectionEight, setSectionEight] = useState({ title: '', paragraph1: '', paragraphs: [], ul: [], typeofH: 'h1' })
+    const [data, setData] = useState('')
 
   
 
@@ -142,6 +204,9 @@ export const EditeBlog=()=>{
     const [numParagraphsSection3, setNumParagraphsSection3] = useState(1)
     const [numParagraphsSection4, setNumParagraphsSection4] = useState(1)
     const [numParagraphsSection5, setNumParagraphsSection5] = useState(1)
+    const [numParagraphsSection6, setNumParagraphsSection6] = useState(1)
+    const [numParagraphsSection7, setNumParagraphsSection7] = useState(1)
+    const [numParagraphsSection8, setNumParagraphsSection8] = useState(1)
     const [sectionTwoDisplayType, setSectionTwoDisplayType] = useState('both') // 'paragraphs', 'list', or 'both'
     const [numListItems, setNumListItems] = useState(1)
     const [sectionThreeDisplayType, setSectionThreeDisplayType] = useState('both') // 'paragraphs', 'list', or 'both'
@@ -150,11 +215,22 @@ export const EditeBlog=()=>{
     const [numListItemsSection4, setNumListItemsSection4] = useState(1)
     const [sectionFiveDisplayType, setSectionFiveDisplayType] = useState('both') // 'paragraphs', 'list', or 'both'
     const [numListItemsSection5, setNumListItemsSection5] = useState(1)
+    const [sectionSixDisplayType, setSectionSixDisplayType] = useState('both') // 'paragraphs', 'list', or 'both'
+    const [numListItemsSection6, setNumListItemsSection6] = useState(1)
+    const [sectionSevenDisplayType, setSectionSevenDisplayType] = useState('both') // 'paragraphs', 'list', or 'both'
+    const [numListItemsSection7, setNumListItemsSection7] = useState(1)
+    const [sectionEightDisplayType, setSectionEightDisplayType] = useState('both') // 'paragraphs', 'list', or 'both'
+    const [numListItemsSection8, setNumListItemsSection8] = useState(1)
 
     // Image preview states
     const [mainImagePreview, setMainImagePreview] = useState(null)
     const [sectionTwoLeftImagePreview, setSectionTwoLeftImagePreview] = useState(null)
     const [sectionTwoRightImagePreview, setSectionTwoRightImagePreview] = useState(null)
+
+    // Alt text states for images
+    const [altImageOne, setAltImageOne] = useState('')
+    const [altImageTwo, setAltImageTwo] = useState('')
+    const [altImageThree, setAltImageThree] = useState('')
 
 
     // Helper functions to update dynamic content
@@ -204,6 +280,42 @@ export const EditeBlog=()=>{
         const updatedUl = [...sectionFive.ul]
         updatedUl[index] = value
         setSectionFive({...sectionFive, ul: updatedUl})
+    }
+
+    const updateSectionSixParagraphs = (index, value) => {
+        const updatedParagraphs = [...sectionSix.paragraphs]
+        updatedParagraphs[index] = value
+        setSectionSix({...sectionSix, paragraphs: updatedParagraphs})
+    }
+
+    const updateSectionSixListItems = (index, value) => {
+        const updatedUl = [...sectionSix.ul]
+        updatedUl[index] = value
+        setSectionSix({...sectionSix, ul: updatedUl})
+    }
+
+    const updateSectionSevenParagraphs = (index, value) => {
+        const updatedParagraphs = [...sectionSeven.paragraphs]
+        updatedParagraphs[index] = value
+        setSectionSeven({...sectionSeven, paragraphs: updatedParagraphs})
+    }
+
+    const updateSectionSevenListItems = (index, value) => {
+        const updatedUl = [...sectionSeven.ul]
+        updatedUl[index] = value
+        setSectionSeven({...sectionSeven, ul: updatedUl})
+    }
+
+    const updateSectionEightParagraphs = (index, value) => {
+        const updatedParagraphs = [...sectionEight.paragraphs]
+        updatedParagraphs[index] = value
+        setSectionEight({...sectionEight, paragraphs: updatedParagraphs})
+    }
+
+    const updateSectionEightListItems = (index, value) => {
+        const updatedUl = [...sectionEight.ul]
+        updatedUl[index] = value
+        setSectionEight({...sectionEight, ul: updatedUl})
     }
 
     // Image upload handler
@@ -341,6 +453,48 @@ export const EditeBlog=()=>{
             formData.append(`sectionFive[paragraphs][${index}]`, item)
         })
 
+        formData.append('sectionSix[typeofH]', sectionSix.typeofH)
+        formData.append('sectionSix[title]', sectionSix.title)
+        formData.append('sectionSix[paragraph1]', sectionSix.paragraph1)
+
+        // Add ul array items for sectionSix
+        sectionSix.ul.forEach((item, index) => {
+            formData.append(`sectionSix[ul][${index}]`, item)
+        })
+
+        // Add paragraphs array items for sectionSix
+        sectionSix.paragraphs.forEach((item, index) => {
+            formData.append(`sectionSix[paragraphs][${index}]`, item)
+        })
+
+        formData.append('sectionSeven[typeofH]', sectionSeven.typeofH)
+        formData.append('sectionSeven[title]', sectionSeven.title)
+        formData.append('sectionSeven[paragraph1]', sectionSeven.paragraph1)
+
+        // Add ul array items for sectionSeven
+        sectionSeven.ul.forEach((item, index) => {
+            formData.append(`sectionSeven[ul][${index}]`, item)
+        })
+
+        // Add paragraphs array items for sectionSeven
+        sectionSeven.paragraphs.forEach((item, index) => {
+            formData.append(`sectionSeven[paragraphs][${index}]`, item)
+        })
+
+        formData.append('sectionEight[typeofH]', sectionEight.typeofH)
+        formData.append('sectionEight[title]', sectionEight.title)
+        formData.append('sectionEight[paragraph1]', sectionEight.paragraph1)
+
+        // Add ul array items for sectionEight
+        sectionEight.ul.forEach((item, index) => {
+            formData.append(`sectionEight[ul][${index}]`, item)
+        })
+
+        // Add paragraphs array items for sectionEight
+        sectionEight.paragraphs.forEach((item, index) => {
+            formData.append(`sectionEight[paragraphs][${index}]`, item)
+        })
+
         // Add images as files with slots
         images.forEach((image) => {
             if (image.file) {
@@ -349,6 +503,12 @@ export const EditeBlog=()=>{
                 formData.append(`slots`, image.slot) // Use the actual slot value for each image
             }
         })
+
+        // Add alt texts for images
+        formData.append('altImageOne', altImageOne)
+        formData.append('altImageTwo', altImageTwo)
+        formData.append('altImageThree', altImageThree)
+        formData.append('data', data)
 
         return formData;
     }
@@ -399,6 +559,36 @@ export const EditeBlog=()=>{
     const handleNumListItemsSection5Change = (e) => {
         const value = parseInt(e.target.value) || 1
         setNumListItemsSection5(value > 10 ? 10 : value < 1 ? 1 : value)
+    }
+
+    const handleNumParagraphsSection6Change = (e) => {
+        const value = parseInt(e.target.value) || 1
+        setNumParagraphsSection6(value > 10 ? 10 : value < 1 ? 1 : value)
+    }
+
+    const handleNumListItemsSection6Change = (e) => {
+        const value = parseInt(e.target.value) || 1
+        setNumListItemsSection6(value > 10 ? 10 : value < 1 ? 1 : value)
+    }
+
+    const handleNumParagraphsSection7Change = (e) => {
+        const value = parseInt(e.target.value) || 1
+        setNumParagraphsSection7(value > 10 ? 10 : value < 1 ? 1 : value)
+    }
+
+    const handleNumListItemsSection7Change = (e) => {
+        const value = parseInt(e.target.value) || 1
+        setNumListItemsSection7(value > 10 ? 10 : value < 1 ? 1 : value)
+    }
+
+    const handleNumParagraphsSection8Change = (e) => {
+        const value = parseInt(e.target.value) || 1
+        setNumParagraphsSection8(value > 10 ? 10 : value < 1 ? 1 : value)
+    }
+
+    const handleNumListItemsSection8Change = (e) => {
+        const value = parseInt(e.target.value) || 1
+        setNumListItemsSection8(value > 10 ? 10 : value < 1 ? 1 : value)
     }
 
     // Show loading spinner while data is loading
@@ -475,6 +665,22 @@ export const EditeBlog=()=>{
                                 </div>
                             </div>
                         </div>
+                        <diV className ="mt-10">
+                            
+                            <label htmlFor="sectionOneParagraph1" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Date OF Blog</label>
+                            <input
+                            type="Date"
+                            id="DateOfBlog"
+                            name="DateOfBlog"
+                            placeholder="Enter the  Date of the blog"
+                            value={data}
+                            onChange={(e) => (setData(e.target.value))}
+                            onClick={(e) => e.target.showPicker && e.target.showPicker()}
+                            className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                             />
+                           
+                           
+                        </diV>
 
                         <div className="grid grid-cols-1 mt-10">
  
@@ -553,6 +759,20 @@ export const EditeBlog=()=>{
                                   </button>
                                 </div>
                               )}
+                            </div>
+
+                            {/* Alt Text for Main Image */}
+                            <div className="mt-4">
+                              <label htmlFor="altImageOne" className="text-[#FEF9D0] font-inter text-[16px] font-semibold">Alt Text for Main Image</label>
+                              <input
+                                type="text"
+                                id="altImageOne"
+                                name="altImageOne"
+                                placeholder="Enter alt text for main image..."
+                                value={altImageOne}
+                                onChange={(e) => setAltImageOne(e.target.value)}
+                                className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                              />
                             </div>
                           </div>
                         </div>
@@ -790,6 +1010,20 @@ export const EditeBlog=()=>{
       )}
     </div>
   </div>
+
+  {/* Alt Text for Left Image */}
+  <div className="mt-4">
+    <label htmlFor="altImageTwo" className="text-[#FEF9D0] font-inter text-[16px] font-semibold">Alt Text for Left Image</label>
+    <input
+      type="text"
+      id="altImageTwo"
+      name="altImageTwo"
+      placeholder="Enter alt text for left image..."
+      value={altImageTwo}
+      onChange={(e) => setAltImageTwo(e.target.value)}
+      className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+    />
+  </div>
 </div>
 
 
@@ -832,6 +1066,20 @@ export const EditeBlog=()=>{
           </button>
         </div>
       )}
+
+      {/* Alt Text for Right Image */}
+      <div className="mt-4">
+        <label htmlFor="altImageThree" className="text-[#FEF9D0] font-inter text-[16px] font-semibold">Alt Text for Right Image</label>
+        <input
+          type="text"
+          id="altImageThree"
+          name="altImageThree"
+          placeholder="Enter alt text for right image..."
+          value={altImageThree}
+          onChange={(e) => setAltImageThree(e.target.value)}
+          className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -1398,6 +1646,561 @@ export const EditeBlog=()=>{
                         )}
 
 
+
+
+                      </section>
+
+
+                      {/* section six */}
+                      <section>
+
+                        <p className="text-[#FEF9D0] font-inter text-[20px] font-semibold text-center mt-10 rounded-md  bg-[#2F5B44] border-2 border-[#FEF9D0]/20 border-dashed p-2">
+                          section six
+                        </p>
+
+                        <div className="grid grid-cols-1 md:grid-cols-10 gap-10 mt-10">
+                            <div className="col-span-1 md:col-span-6">
+                                <label htmlFor="title6" className="text-[#FEF9D0] font-inter text-[20px] font-semibold capitalize">Title</label>
+                                <input
+                                    type="text"
+                                    id="title6"
+                                    name="title6"
+                                    placeholder="Enter Title"
+                                    value={sectionSix.title}
+                                    onChange={(e) => setSectionSix({...sectionSix, title: e.target.value})}
+                                    className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                                />
+                            </div>
+                            <div className="col-span-1 md:col-span-4">
+                                <label htmlFor="headingLevel6" className="block text-[#FEF9D0] font-inter text-[20px] font-semibold ">Heading Level</label>
+                                <div className="relative">
+                                    <select
+                                        id="headingLevel6"
+                                        name="headingLevel6"
+                                        value={sectionSix.typeofH}
+                                        onChange={(e) => setSectionSix({...sectionSix, typeofH: e.target.value})}
+                                        className="w-full p-2 mt-1 bg-[#fef9d0]/10 rounded-lg text-[#FEF9D0] outline-none focus:ring-2 focus:ring-[#FEF9D0]/30 border border-[#FEF9D0]/20 hover:bg-[#fef9d0]/15 transition-all duration-200 appearance-none cursor-pointer"
+                                    >
+                                        <option value="h1" className="bg-[#2F5B44] text-[#FEF9D0]">h1</option>
+                                        <option value="h2" className="bg-[#2F5B44] text-[#FEF9D0]">h2 </option>
+                                        <option value="h3" className="bg-[#2F5B44] text-[#FEF9D0]">h3 </option>
+                                        <option value="h4" className="bg-[#2F5B44] text-[#FEF9D0]">h4</option>
+                                        <option value="h5" className="bg-[#2F5B44] text-[#FEF9D0]">h5</option>
+                                        <option value="h6" className="bg-[#2F5B44] text-[#FEF9D0]">h6</option>
+                                    </select>
+                                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                        <svg className="w-5 h-5 text-[#FEF9D0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                          <label htmlFor="shortParagraph6" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Short Paragraph</label>
+                          <textarea
+                            id="shortParagraph6"
+                            name="shortParagraph6"
+                            rows="5"
+                            placeholder="Write a brief introduction..."
+                            value={sectionSix.paragraph1}
+                            onChange={(e) => setSectionSix({...sectionSix, paragraph1: e.target.value})}
+                            className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                          />
+                        </div>
+
+                        <div className="mt-10">
+                            <label className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Display Type</label>
+                            <div className="flex gap-6 mt-3">
+                                <label className="flex items-center cursor-pointer">
+                                    <input
+                                        type="radio"
+                                        name="sectionSixDisplayType"
+                                        value="paragraphs"
+                                        checked={sectionSixDisplayType === 'paragraphs'}
+                                        onChange={(e) => setSectionSixDisplayType(e.target.value)}
+                                        className="mr-2 text-[#FEF9D0] focus:ring-[#FEF9D0]/20"
+                                    />
+                                    <span className="text-[#FEF9D0] font-inter text-[16px]">Paragraphs</span>
+                                </label>
+                                <label className="flex items-center cursor-pointer">
+                                    <input
+                                        type="radio"
+                                        name="sectionSixDisplayType"
+                                        value="list"
+                                        checked={sectionSixDisplayType === 'list'}
+                                        onChange={(e) => setSectionSixDisplayType(e.target.value)}
+                                        className="mr-2 text-[#FEF9D0] focus:ring-[#FEF9D0]/20"
+                                    />
+                                    <span className="text-[#FEF9D0] font-inter text-[16px]">List Items</span>
+                                </label>
+                                <label className="flex items-center cursor-pointer">
+                                    <input
+                                        type="radio"
+                                        name="sectionSixDisplayType"
+                                        value="both"
+                                        checked={sectionSixDisplayType === 'both'}
+                                        onChange={(e) => setSectionSixDisplayType(e.target.value)}
+                                        className="mr-2 text-[#FEF9D0] focus:ring-[#FEF9D0]/20"
+                                    />
+                                    <span className="text-[#FEF9D0] font-inter text-[16px]">Both</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        {(sectionSixDisplayType === 'paragraphs' || sectionSixDisplayType === 'both') && (
+                            <div className="mt-10">
+                                <label htmlFor="numParagraphsSection6" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Number of Paragraphs</label>
+                            <input
+                                type="number"
+                                id="numParagraphsSection6"
+                                name="numParagraphsSection6"
+                                min="1"
+                                max="10"
+                                value={numParagraphsSection6}
+                                onChange={handleNumParagraphsSection6Change}
+                                placeholder="Enter number of paragraphs"
+                                className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                            />
+                            </div>
+                        )}
+
+                        {(sectionSixDisplayType === 'list' || sectionSixDisplayType === 'both') && (
+                            <div className="mt-10">
+                                <label htmlFor="numListItemsSection6" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Number of List Items</label>
+                                <input
+                                    type="number"
+                                    id="numListItemsSection6"
+                                    name="numListItemsSection6"
+                                    min="1"
+                                    max="10"
+                                    value={numListItemsSection6}
+                                    onChange={handleNumListItemsSection6Change}
+                                    placeholder="Enter number of list items"
+                                    className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                                />
+                            </div>
+                        )}
+
+                        {/* Dynamic Content Inputs for Section 6 */}
+                        {(sectionSixDisplayType === 'paragraphs' || sectionSixDisplayType === 'both') && (
+                            <div className="mt-10">
+                                <label className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Paragraphs</label>
+                                <div className="space-y-4 mt-4">
+                                    {Array.from({ length: numParagraphsSection6 }, (_, index) => (
+                                        <div key={index}>
+                                            <label htmlFor={`paragraph6-${index + 1}`} className="text-[#FEF9D0] font-inter text-[16px] font-medium">
+                                                Paragraph {index + 1}
+                                            </label>
+                                            <textarea
+                                                id={`paragraph6-${index + 1}`}
+                                                name={`paragraph6-${index + 1}`}
+                                                rows="4"
+                                                placeholder={`Write paragraph ${index + 1}...`}
+                                                value={sectionSix.paragraphs[index] || ''}
+                                                onChange={(e) => updateSectionSixParagraphs(index, e.target.value)}
+                                                className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {(sectionSixDisplayType === 'list' || sectionSixDisplayType === 'both') && (
+                            <div className="mt-10">
+                                <label className="text-[#FEF9D0] font-inter text-[20px] font-semibold">List Items</label>
+                                <div className="space-y-4 mt-4">
+                                    {Array.from({ length: numListItemsSection6 }, (_, index) => (
+                                        <div key={index}>
+                                            <label htmlFor={`listItem6-${index + 1}`} className="text-[#FEF9D0] font-inter text-[16px] font-medium">
+                                                List Item {index + 1}
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id={`listItem6-${index + 1}`}
+                                                name={`listItem6-${index + 1}`}
+                                                placeholder={`Enter list item ${index + 1}...`}
+                                                value={sectionSix.ul[index] || ''}
+                                                onChange={(e) => updateSectionSixListItems(index, e.target.value)}
+                                                className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+
+                      </section>
+
+
+                      {/* section seven */}
+                      <section>
+
+                        <p className="text-[#FEF9D0] font-inter text-[20px] font-semibold text-center mt-10 rounded-md  bg-[#2F5B44] border-2 border-[#FEF9D0]/20 border-dashed p-2">
+                          section seven
+                        </p>
+
+                        <div className="grid grid-cols-1 md:grid-cols-10 gap-10 mt-10">
+                            <div className="col-span-1 md:col-span-6">
+                                <label htmlFor="title7" className="text-[#FEF9D0] font-inter text-[20px] font-semibold capitalize">Title</label>
+                                <input
+                                    type="text"
+                                    id="title7"
+                                    name="title7"
+                                    placeholder="Enter Title"
+                                    value={sectionSeven.title}
+                                    onChange={(e) => setSectionSeven({...sectionSeven, title: e.target.value})}
+                                    className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                                />
+                            </div>
+                            <div className="col-span-1 md:col-span-4">
+                                <label htmlFor="headingLevel7" className="block text-[#FEF9D0] font-inter text-[20px] font-semibold ">Heading Level</label>
+                                <div className="relative">
+                                    <select
+                                        id="headingLevel7"
+                                        name="headingLevel7"
+                                        value={sectionSeven.typeofH}
+                                        onChange={(e) => setSectionSeven({...sectionSeven, typeofH: e.target.value})}
+                                        className="w-full p-2 mt-1 bg-[#fef9d0]/10 rounded-lg text-[#FEF9D0] outline-none focus:ring-2 focus:ring-[#FEF9D0]/30 border border-[#FEF9D0]/20 hover:bg-[#fef9d0]/15 transition-all duration-200 appearance-none cursor-pointer"
+                                    >
+                                        <option value="h1" className="bg-[#2F5B44] text-[#FEF9D0]">h1</option>
+                                        <option value="h2" className="bg-[#2F5B44] text-[#FEF9D0]">h2 </option>
+                                        <option value="h3" className="bg-[#2F5B44] text-[#FEF9D0]">h3 </option>
+                                        <option value="h4" className="bg-[#2F5B44] text-[#FEF9D0]">h4</option>
+                                        <option value="h5" className="bg-[#2F5B44] text-[#FEF9D0]">h5</option>
+                                        <option value="h6" className="bg-[#2F5B44] text-[#FEF9D0]">h6</option>
+                                    </select>
+                                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                        <svg className="w-5 h-5 text-[#FEF9D0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                          <label htmlFor="shortParagraph7" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Short Paragraph</label>
+                          <textarea
+                            id="shortParagraph7"
+                            name="shortParagraph7"
+                            rows="5"
+                            placeholder="Write a brief introduction..."
+                            value={sectionSeven.paragraph1}
+                            onChange={(e) => setSectionSeven({...sectionSeven, paragraph1: e.target.value})}
+                            className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                          />
+                        </div>
+
+                        <div className="mt-10">
+                            <label className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Display Type</label>
+                            <div className="flex gap-6 mt-3">
+                                <label className="flex items-center cursor-pointer">
+                                    <input
+                                        type="radio"
+                                        name="sectionSevenDisplayType"
+                                        value="paragraphs"
+                                        checked={sectionSevenDisplayType === 'paragraphs'}
+                                        onChange={(e) => setSectionSevenDisplayType(e.target.value)}
+                                        className="mr-2 text-[#FEF9D0] focus:ring-[#FEF9D0]/20"
+                                    />
+                                    <span className="text-[#FEF9D0] font-inter text-[16px]">Paragraphs</span>
+                                </label>
+                                <label className="flex items-center cursor-pointer">
+                                    <input
+                                        type="radio"
+                                        name="sectionSevenDisplayType"
+                                        value="list"
+                                        checked={sectionSevenDisplayType === 'list'}
+                                        onChange={(e) => setSectionSevenDisplayType(e.target.value)}
+                                        className="mr-2 text-[#FEF9D0] focus:ring-[#FEF9D0]/20"
+                                    />
+                                    <span className="text-[#FEF9D0] font-inter text-[16px]">List Items</span>
+                                </label>
+                                <label className="flex items-center cursor-pointer">
+                                    <input
+                                        type="radio"
+                                        name="sectionSevenDisplayType"
+                                        value="both"
+                                        checked={sectionSevenDisplayType === 'both'}
+                                        onChange={(e) => setSectionSevenDisplayType(e.target.value)}
+                                        className="mr-2 text-[#FEF9D0] focus:ring-[#FEF9D0]/20"
+                                    />
+                                    <span className="text-[#FEF9D0] font-inter text-[16px]">Both</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        {(sectionSevenDisplayType === 'paragraphs' || sectionSevenDisplayType === 'both') && (
+                            <div className="mt-10">
+                                <label htmlFor="numParagraphsSection7" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Number of Paragraphs</label>
+                            <input
+                                type="number"
+                                id="numParagraphsSection7"
+                                name="numParagraphsSection7"
+                                min="1"
+                                max="10"
+                                value={numParagraphsSection7}
+                                onChange={handleNumParagraphsSection7Change}
+                                placeholder="Enter number of paragraphs"
+                                className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                            />
+                            </div>
+                        )}
+
+                        {(sectionSevenDisplayType === 'list' || sectionSevenDisplayType === 'both') && (
+                            <div className="mt-10">
+                                <label htmlFor="numListItemsSection7" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Number of List Items</label>
+                                <input
+                                    type="number"
+                                    id="numListItemsSection7"
+                                    name="numListItemsSection7"
+                                    min="1"
+                                    max="10"
+                                    value={numListItemsSection7}
+                                    onChange={handleNumListItemsSection7Change}
+                                    placeholder="Enter number of list items"
+                                    className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                                />
+                            </div>
+                        )}
+
+                        {/* Dynamic Content Inputs for Section 7 */}
+                        {(sectionSevenDisplayType === 'paragraphs' || sectionSevenDisplayType === 'both') && (
+                            <div className="mt-10">
+                                <label className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Paragraphs</label>
+                                <div className="space-y-4 mt-4">
+                                    {Array.from({ length: numParagraphsSection7 }, (_, index) => (
+                                        <div key={index}>
+                                            <label htmlFor={`paragraph7-${index + 1}`} className="text-[#FEF9D0] font-inter text-[16px] font-medium">
+                                                Paragraph {index + 1}
+                                            </label>
+                                            <textarea
+                                                id={`paragraph7-${index + 1}`}
+                                                name={`paragraph7-${index + 1}`}
+                                                rows="4"
+                                                placeholder={`Write paragraph ${index + 1}...`}
+                                                value={sectionSeven.paragraphs[index] || ''}
+                                                onChange={(e) => updateSectionSevenParagraphs(index, e.target.value)}
+                                                className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {(sectionSevenDisplayType === 'list' || sectionSevenDisplayType === 'both') && (
+                            <div className="mt-10">
+                                <label className="text-[#FEF9D0] font-inter text-[20px] font-semibold">List Items</label>
+                                <div className="space-y-4 mt-4">
+                                    {Array.from({ length: numListItemsSection7 }, (_, index) => (
+                                        <div key={index}>
+                                            <label htmlFor={`listItem7-${index + 1}`} className="text-[#FEF9D0] font-inter text-[16px] font-medium">
+                                                List Item {index + 1}
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id={`listItem7-${index + 1}`}
+                                                name={`listItem7-${index + 1}`}
+                                                placeholder={`Enter list item ${index + 1}...`}
+                                                value={sectionSeven.ul[index] || ''}
+                                                onChange={(e) => updateSectionSevenListItems(index, e.target.value)}
+                                                className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+
+                      </section>
+
+
+                      {/* section eight */}
+                      <section>
+
+                        <p className="text-[#FEF9D0] font-inter text-[20px] font-semibold text-center mt-10 rounded-md  bg-[#2F5B44] border-2 border-[#FEF9D0]/20 border-dashed p-2">
+                          section eight
+                        </p>
+
+                        <div className="grid grid-cols-1 md:grid-cols-10 gap-10 mt-10">
+                            <div className="col-span-1 md:col-span-6">
+                                <label htmlFor="title8" className="text-[#FEF9D0] font-inter text-[20px] font-semibold capitalize">Title</label>
+                                <input
+                                    type="text"
+                                    id="title8"
+                                    name="title8"
+                                    placeholder="Enter Title"
+                                    value={sectionEight.title}
+                                    onChange={(e) => setSectionEight({...sectionEight, title: e.target.value})}
+                                    className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                                />
+                            </div>
+                            <div className="col-span-1 md:col-span-4">
+                                <label htmlFor="headingLevel8" className="block text-[#FEF9D0] font-inter text-[20px] font-semibold ">Heading Level</label>
+                                <div className="relative">
+                                    <select
+                                        id="headingLevel8"
+                                        name="headingLevel8"
+                                        value={sectionEight.typeofH}
+                                        onChange={(e) => setSectionEight({...sectionEight, typeofH: e.target.value})}
+                                        className="w-full p-2 mt-1 bg-[#fef9d0]/10 rounded-lg text-[#FEF9D0] outline-none focus:ring-2 focus:ring-[#FEF9D0]/30 border border-[#FEF9D0]/20 hover:bg-[#fef9d0]/15 transition-all duration-200 appearance-none cursor-pointer"
+                                    >
+                                        <option value="h1" className="bg-[#2F5B44] text-[#FEF9D0]">h1</option>
+                                        <option value="h2" className="bg-[#2F5B44] text-[#FEF9D0]">h2 </option>
+                                        <option value="h3" className="bg-[#2F5B44] text-[#FEF9D0]">h3 </option>
+                                        <option value="h4" className="bg-[#2F5B44] text-[#FEF9D0]">h4</option>
+                                        <option value="h5" className="bg-[#2F5B44] text-[#FEF9D0]">h5</option>
+                                        <option value="h6" className="bg-[#2F5B44] text-[#FEF9D0]">h6</option>
+                                    </select>
+                                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                        <svg className="w-5 h-5 text-[#FEF9D0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                          <label htmlFor="shortParagraph8" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Short Paragraph</label>
+                          <textarea
+                            id="shortParagraph8"
+                            name="shortParagraph8"
+                            rows="5"
+                            placeholder="Write a brief introduction..."
+                            value={sectionEight.paragraph1}
+                            onChange={(e) => setSectionEight({...sectionEight, paragraph1: e.target.value})}
+                            className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                          />
+                        </div>
+
+                        <div className="mt-10">
+                            <label className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Display Type</label>
+                            <div className="flex gap-6 mt-3">
+                                <label className="flex items-center cursor-pointer">
+                                    <input
+                                        type="radio"
+                                        name="sectionEightDisplayType"
+                                        value="paragraphs"
+                                        checked={sectionEightDisplayType === 'paragraphs'}
+                                        onChange={(e) => setSectionEightDisplayType(e.target.value)}
+                                        className="mr-2 text-[#FEF9D0] focus:ring-[#FEF9D0]/20"
+                                    />
+                                    <span className="text-[#FEF9D0] font-inter text-[16px]">Paragraphs</span>
+                                </label>
+                                <label className="flex items-center cursor-pointer">
+                                    <input
+                                        type="radio"
+                                        name="sectionEightDisplayType"
+                                        value="list"
+                                        checked={sectionEightDisplayType === 'list'}
+                                        onChange={(e) => setSectionEightDisplayType(e.target.value)}
+                                        className="mr-2 text-[#FEF9D0] focus:ring-[#FEF9D0]/20"
+                                    />
+                                    <span className="text-[#FEF9D0] font-inter text-[16px]">List Items</span>
+                                </label>
+                                <label className="flex items-center cursor-pointer">
+                                    <input
+                                        type="radio"
+                                        name="sectionEightDisplayType"
+                                        value="both"
+                                        checked={sectionEightDisplayType === 'both'}
+                                        onChange={(e) => setSectionEightDisplayType(e.target.value)}
+                                        className="mr-2 text-[#FEF9D0] focus:ring-[#FEF9D0]/20"
+                                    />
+                                    <span className="text-[#FEF9D0] font-inter text-[16px]">Both</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        {(sectionEightDisplayType === 'paragraphs' || sectionEightDisplayType === 'both') && (
+                            <div className="mt-10">
+                                <label htmlFor="numParagraphsSection8" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Number of Paragraphs</label>
+                            <input
+                                type="number"
+                                id="numParagraphsSection8"
+                                name="numParagraphsSection8"
+                                min="1"
+                                max="10"
+                                value={numParagraphsSection8}
+                                onChange={handleNumParagraphsSection8Change}
+                                placeholder="Enter number of paragraphs"
+                                className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                            />
+                            </div>
+                        )}
+
+                        {(sectionEightDisplayType === 'list' || sectionEightDisplayType === 'both') && (
+                            <div className="mt-10">
+                                <label htmlFor="numListItemsSection8" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Number of List Items</label>
+                                <input
+                                    type="number"
+                                    id="numListItemsSection8"
+                                    name="numListItemsSection8"
+                                    min="1"
+                                    max="10"
+                                    value={numListItemsSection8}
+                                    onChange={handleNumListItemsSection8Change}
+                                    placeholder="Enter number of list items"
+                                    className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                                />
+                            </div>
+                        )}
+
+                        {/* Dynamic Content Inputs for Section 8 */}
+                        {(sectionEightDisplayType === 'paragraphs' || sectionEightDisplayType === 'both') && (
+                            <div className="mt-10">
+                                <label className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Paragraphs</label>
+                                <div className="space-y-4 mt-4">
+                                    {Array.from({ length: numParagraphsSection8 }, (_, index) => (
+                                        <div key={index}>
+                                            <label htmlFor={`paragraph8-${index + 1}`} className="text-[#FEF9D0] font-inter text-[16px] font-medium">
+                                                Paragraph {index + 1}
+                                            </label>
+                                            <textarea
+                                                id={`paragraph8-${index + 1}`}
+                                                name={`paragraph8-${index + 1}`}
+                                                rows="4"
+                                                placeholder={`Write paragraph ${index + 1}...`}
+                                                value={sectionEight.paragraphs[index] || ''}
+                                                onChange={(e) => updateSectionEightParagraphs(index, e.target.value)}
+                                                className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {(sectionEightDisplayType === 'list' || sectionEightDisplayType === 'both') && (
+                            <div className="mt-10">
+                                <label className="text-[#FEF9D0] font-inter text-[20px] font-semibold">List Items</label>
+                                <div className="space-y-4 mt-4">
+                                    {Array.from({ length: numListItemsSection8 }, (_, index) => (
+                                        <div key={index}>
+                                            <label htmlFor={`listItem8-${index + 1}`} className="text-[#FEF9D0] font-inter text-[16px] font-medium">
+                                                List Item {index + 1}
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id={`listItem8-${index + 1}`}
+                                                name={`listItem8-${index + 1}`}
+                                                placeholder={`Enter list item ${index + 1}...`}
+                                                value={sectionEight.ul[index] || ''}
+                                                onChange={(e) => updateSectionEightListItems(index, e.target.value)}
+                                                className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
 
 
                       </section>

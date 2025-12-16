@@ -10,7 +10,8 @@ export const getAllBlogs=(keyword)=>async(dispatch)=>{
     let word=keyword?keyword:"";
     
     try{
-        const response =await UseGetDate(`/api/blogs?limit=15&&keyword=${word}`)
+        const response =await UseGetDate(`/api/blogs?limit=50&&keyword=${word}`)  
+        
         
         
         dispatch({

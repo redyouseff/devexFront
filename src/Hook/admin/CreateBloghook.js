@@ -25,6 +25,11 @@ export const CreateBlogHook = () => {
     // Images
     const [images, setImages] = useState([])
 
+    // Alt texts for images
+    const [altImageOne, setAltImageOne] = useState('')
+    const [altImageTwo, setAltImageTwo] = useState('')
+    const [altImageThree, setAltImageThree] = useState('')
+
     // Section Two
     const [sectionTwo, setSectionTwo] = useState({
         typeOfH: 'h2',
@@ -59,6 +64,34 @@ export const CreateBlogHook = () => {
         ul: [],
         paragraphs: []
     })
+
+    // Section Six
+    const [sectionSix, setSectionSix] = useState({
+        typeofH: 'h2', // Note: schema uses typeofH (lowercase f)
+        title: '',
+        paragraph1: '',
+        ul: [],
+        paragraphs: []
+    })
+
+    // Section Seven
+    const [sectionSeven, setSectionSeven] = useState({
+        typeofH: 'h2', // Note: schema uses typeofH (lowercase f)
+        title: '',
+        paragraph1: '',
+        ul: [],
+        paragraphs: []
+    })
+
+    // Section Eight
+    const [sectionEight, setSectionEight] = useState({
+        typeofH: 'h2', // Note: schema uses typeofH (lowercase f)
+        title: '',
+        paragraph1: '',
+        ul: [],
+        paragraphs: []
+    })
+    const [data,setData]=useState('')
 
 
     const handleSubmit = async (e) => {
@@ -145,6 +178,48 @@ export const CreateBlogHook = () => {
             formData.append(`sectionFive[paragraphs][${index}]`, item)
         })
 
+        formData.append('sectionSix[typeofH]', sectionSix.typeofH)
+        formData.append('sectionSix[title]', sectionSix.title)
+        formData.append('sectionSix[paragraph1]', sectionSix.paragraph1)
+
+        // Add ul array items for sectionSix
+        sectionSix.ul.forEach((item, index) => {
+            formData.append(`sectionSix[ul][${index}]`, item)
+        })
+
+        // Add paragraphs array items for sectionSix
+        sectionSix.paragraphs.forEach((item, index) => {
+            formData.append(`sectionSix[paragraphs][${index}]`, item)
+        })
+
+        formData.append('sectionSeven[typeofH]', sectionSeven.typeofH)
+        formData.append('sectionSeven[title]', sectionSeven.title)
+        formData.append('sectionSeven[paragraph1]', sectionSeven.paragraph1)
+
+        // Add ul array items for sectionSeven
+        sectionSeven.ul.forEach((item, index) => {
+            formData.append(`sectionSeven[ul][${index}]`, item)
+        })
+
+        // Add paragraphs array items for sectionSeven
+        sectionSeven.paragraphs.forEach((item, index) => {
+            formData.append(`sectionSeven[paragraphs][${index}]`, item)
+        })
+
+        formData.append('sectionEight[typeofH]', sectionEight.typeofH)
+        formData.append('sectionEight[title]', sectionEight.title)
+        formData.append('sectionEight[paragraph1]', sectionEight.paragraph1)
+
+        // Add ul array items for sectionEight
+        sectionEight.ul.forEach((item, index) => {
+            formData.append(`sectionEight[ul][${index}]`, item)
+        })
+
+        // Add paragraphs array items for sectionEight
+        sectionEight.paragraphs.forEach((item, index) => {
+            formData.append(`sectionEight[paragraphs][${index}]`, item)
+        })
+
         // Add images as files
         images.forEach((image, index) => {
             if (image.file) {
@@ -152,7 +227,13 @@ export const CreateBlogHook = () => {
                 formData.append(`imageTypes`, image.type || 'main')
                 formData.append(`slots`, index) // Add slot position for each image
             }
-        }) 
+        })
+
+        // Add alt texts for images
+        formData.append('altImageOne', altImageOne)
+        formData.append('altImageTwo', altImageTwo)
+        formData.append('altImageThree', altImageThree) 
+        formData.append('data', data)
 
         setLoading(true);
         dispatch(createBlog(formData));
@@ -195,6 +276,15 @@ export const CreateBlogHook = () => {
         sectionThree, setSectionThree,
         sectionFour, setSectionFour,
         sectionFive, setSectionFive,
+        sectionSix, setSectionSix,
+        sectionSeven, setSectionSeven,
+        sectionEight, setSectionEight,
+
+        // Alt text states
+        altImageOne, setAltImageOne,
+        altImageTwo, setAltImageTwo,
+        altImageThree, setAltImageThree,
+        data, setData,
 
 
         // Loading state
