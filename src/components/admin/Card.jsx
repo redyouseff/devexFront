@@ -18,13 +18,13 @@ export const Card = ({title,description,images,id}) => {
 
     return(
         <>
-                 <div className="rounded-2xl bg-[#FEF9D0]/10 p-4">
+                 <div className="rounded-2xl bg-[#FEF9D0]/10 p-4 h-96 flex flex-col">
                 <img src={images[0]?.secure_url || blogImage} alt="blog image" className=" w-full rounded-2xl h-48 "   />
 
 
 
-                <h3 className="text-xl font-bold text-[#FEF9D0] mb-4 text-center">{title || "Explore the Latest Digital Trends"}</h3>
-                <p className="text-[#FEF9D0] opacity-80 text-sm mb-6 leading-relaxed text-center">{description || "Lorem Ipsum is simply dummy text of the printing and typesetting  dummy text ever since the 1500s, when an unknown prin"}</p>
+                <h3 className="text-xl font-bold text-[#FEF9D0] mb-4 text-center line-clamp-2 overflow-hidden">{title || "Explore the Latest Digital Trends"}</h3>
+                <p className="text-[#FEF9D0] opacity-80 text-sm mb-6 leading-relaxed text-center line-clamp-3 overflow-hidden flex-grow">{description || "Lorem Ipsum is simply dummy text of the printing and typesetting  dummy text ever since the 1500s, when an unknown prin"}</p>
                 <div className="flex flex-row items-center justify-end gap-3">
                     <Link to={`/admin/editeblog/${id}`}>
                     <img src={edite} alt="edit" className="w-4 h-4" />

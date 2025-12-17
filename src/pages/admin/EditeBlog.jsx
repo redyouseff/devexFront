@@ -10,6 +10,7 @@ import { ToastContainer } from "react-toastify"
 
 
 export const EditeBlog=()=>{
+    
 
     const {id}=useParams();
     const [handleUpdate,loadingUpdate]=UpdateBlogHook(id);
@@ -158,6 +159,7 @@ export const EditeBlog=()=>{
             setAltImageOne(blog.altImageOne || '');
             setAltImageTwo(blog.altImageTwo || '');
             setAltImageThree(blog.altImageThree || '');
+            setPosted(blog.posted ?? true);
             // Format date for input type="date" (YYYY-MM-DD)
             if (blog.data) {
                 const date = new Date(blog.data);
@@ -231,6 +233,7 @@ export const EditeBlog=()=>{
     const [altImageOne, setAltImageOne] = useState('')
     const [altImageTwo, setAltImageTwo] = useState('')
     const [altImageThree, setAltImageThree] = useState('')
+    const [posted, setPosted] = useState(true)
 
 
     // Helper functions to update dynamic content
@@ -509,8 +512,18 @@ export const EditeBlog=()=>{
         formData.append('altImageTwo', altImageTwo)
         formData.append('altImageThree', altImageThree)
         formData.append('data', data)
+        formData.append('posted', posted)
 
         return formData;
+    }
+
+    const handlePosted=(e)=>{
+        if(e.target.value === "posted"){
+            setPosted(true)
+        }
+        else{
+            setPosted(false)
+        }
     }
 
     // Handle form submission
@@ -2205,6 +2218,22 @@ export const EditeBlog=()=>{
 
                       </section>
 
+                      <section> 
+
+                        <p className="text-[#FEF9D0] font-inter text-[20px] font-semibold text-center mt-10 rounded-md  bg-[#2F5B44] border-2 border-[#FEF9D0]/20 border-dashed p-2">
+                            posted information
+                        </p>
+
+                        <div className="flex gap-4 mt-10" >
+                            <input type="radio" name="posted" value="posted" id="posted" checked={posted === true} onChange={(e) => handlePosted(e)} />
+                            <label htmlFor="posted" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Posted</label>
+                            <input type="radio" name="posted" value="unposted" id="unposted" checked={posted === false} onChange={(e) => handlePosted(e)} />
+                            <label htmlFor="unposted" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Unposted</label>
+                        </div>
+
+
+                      </section>
+
 
                       {/* seo information */}
 
@@ -2286,8 +2315,7 @@ export const EditeBlog=()=>{
                         </button>
                       </div>
 
-
-
+    
 
                 </form>
 

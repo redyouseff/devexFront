@@ -13,6 +13,7 @@ export const CreateBlogHook = () => {
     const dispatch=useDispatch();
     const res=useSelector((state)=>state.AllBlogs.createBlog);
     const [loading,setLoading]=useState(false);
+    const [posted, setPosted] = useState(true)
 
     // Section One
     const [sectionOne, setSectionOne] = useState({
@@ -233,6 +234,7 @@ export const CreateBlogHook = () => {
         formData.append('altImageOne', altImageOne)
         formData.append('altImageTwo', altImageTwo)
         formData.append('altImageThree', altImageThree) 
+        formData.append('posted', posted)
         formData.append('data', data)
 
         setLoading(true);
@@ -261,6 +263,15 @@ export const CreateBlogHook = () => {
             notify("Blog creation failed","error");
         }
     },[res]);
+    const handlePosted = (e) => {
+        
+        if(e.target.value === "posted"){
+            setPosted(true)
+        }
+        else{
+            setPosted(false)
+        }
+    }
 
     return {
         // SEO states
@@ -285,7 +296,8 @@ export const CreateBlogHook = () => {
         altImageTwo, setAltImageTwo,
         altImageThree, setAltImageThree,
         data, setData,
-
+        posted, setPosted,
+        handlePosted,
 
         // Loading state
         loading,

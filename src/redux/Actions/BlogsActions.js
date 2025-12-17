@@ -6,11 +6,12 @@ import { CREATE_BLOG, DELETE_BLOG, EDITE_BLOG, GET_ALL_BLOGS, GET_BLOG_BY_ID, UP
 
 
 
-export const getAllBlogs=(keyword)=>async(dispatch)=>{
-    let word=keyword?keyword:"";
+export const getAllBlogs=(keyword="",posted)=>async(dispatch)=>{
+
+      
     
     try{
-        const response =await UseGetDate(`/api/blogs?limit=50&&keyword=${word}`)  
+        const response =await UseGetDate(`/api/blogs?limit=50&keyword=${keyword}&posted=${posted}`)  
         
         
         

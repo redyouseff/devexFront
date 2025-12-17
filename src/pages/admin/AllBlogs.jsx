@@ -11,7 +11,8 @@ const blogImage="https://res.cloudinary.com/daop3bufa/image/upload/v1759050848/3
 
 
 export const AllBlogs = () => {
-    const [allblogs,loading,handleSearch]=GetAllBlogsHook();
+
+    const [allblogs,loading,handleSearch,handlePosted,post,unpost,all]=GetAllBlogsHook();
   
   
 
@@ -67,7 +68,33 @@ export const AllBlogs = () => {
 
         <div className="mt-10">
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="flex justify-start items-center gap-10" >
+                <div>
+                    <button className={`${post ?"  bg-[#FEF9D0]/50 text-[#2F5B44] px-4 py-2 rounded-md":"bg-[#FEF9D0] text-[#2F5B44] px-4 py-2 rounded-md"}`}
+                    onClick={()=>handlePosted("posted")}
+
+                    >posted
+                    
+                    
+                    </button>
+                </div>
+                <div>
+                    <button className={`${unpost ?"  bg-[#FEF9D0]/50 text-[#2F5B44] px-4 py-2 rounded-md":"bg-[#FEF9D0] text-[#2F5B44] px-4 py-2 rounded-md"}`}
+                    onClick={()=>handlePosted("unposted")}
+                    
+                    >unposted</button>
+                </div>
+
+                <div>
+                    <button className={`${all ?"  bg-[#FEF9D0]/50 text-[#2F5B44] px-4 py-2 rounded-md":"bg-[#FEF9D0] text-[#2F5B44] px-4 py-2 rounded-md"}`}
+                    onClick={()=>handlePosted("all")}
+                    
+                    >all blogs</button>
+                </div>
+
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
 
                 {/* {
                     blogs.map((blog,index)=>(

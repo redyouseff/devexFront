@@ -25,7 +25,9 @@ export const CreateBlog =()=>{
         altImageTwo, setAltImageTwo,
         altImageThree, setAltImageThree,
         data, setData,
-        handleSubmit
+        handleSubmit,
+        handlePosted,
+        
     } = CreateBlogHook()
 
     // UI state for form controls
@@ -50,6 +52,8 @@ export const CreateBlog =()=>{
     const [numListItemsSection7, setNumListItemsSection7] = useState(1)
     const [sectionEightDisplayType, setSectionEightDisplayType] = useState('both') // 'paragraphs', 'list', or 'both'
     const [numListItemsSection8, setNumListItemsSection8] = useState(1)
+  
+    
 
     // Image preview states
     const [mainImagePreview, setMainImagePreview] = useState(null)
@@ -264,6 +268,7 @@ export const CreateBlog =()=>{
         const value = parseInt(e.target.value) || 1
         setNumListItemsSection8(value > 10 ? 10 : value < 1 ? 1 : value)
     }
+   
 
     return (
         <>
@@ -1869,6 +1874,22 @@ export const CreateBlog =()=>{
                             </div>
                         )}
 
+
+                      </section>
+
+                            {/* posted information */}
+                      <section>
+                        <p className="text-[#FEF9D0] font-inter text-[20px] font-semibold text-center mt-10 rounded-md  bg-[#2F5B44] border-2 border-[#FEF9D0]/20 border-dashed p-2">
+                            posted information
+                        </p>
+
+                        <div className="flex gap-4 mt-10" >
+                            <label htmlFor="posted" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Posted</label>
+                            <input type="radio" name="posted" value="posted" onChange={(e) => handlePosted(e)} />
+                            <label htmlFor="posted" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Posted</label>
+                            <input type="radio" name="posted" value="unposted" onChange={(e) => handlePosted(e)} />
+                            
+                        </div>
 
                       </section>
 
