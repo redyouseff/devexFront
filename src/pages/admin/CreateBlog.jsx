@@ -1931,7 +1931,7 @@ export const CreateBlog =()=>{
                         <div className="flex gap-4 mt-10" >
                             <label htmlFor="posted" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Posted</label>
                             <input type="radio" name="posted" value="posted" onChange={(e) => handlePosted(e)} />
-                            <label htmlFor="posted" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Posted</label>
+                            <label htmlFor="posted" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">unPosted</label>
                             <input type="radio" name="posted" value="unposted" onChange={(e) => handlePosted(e)} />
                             
                         </div>

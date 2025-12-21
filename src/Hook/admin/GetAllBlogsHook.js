@@ -11,9 +11,9 @@ export const GetAllBlogsHook = () => {
     const [loading, setLoading] = useState(false);
     const [keyword, setKeyword] = useState("");
     const [posted, setPosted] = useState(true);
-    const [post, setPost] = useState(false);
+    const [post, setPost] = useState(true);
     const [unpost, setUnpost] = useState(false);
-    const [all, setAll] = useState(true);
+    const [all, setAll] = useState(false);
     const dispatch = useDispatch();
 
     const res = useSelector((state) => state.AllBlogs.allblogs);
