@@ -148,8 +148,8 @@ const smoothScrollStyles = `
     };
 
 
-    const [allblogs, loading, handleSearch, handlePosted, post, unpost, all]=GetAllBlogsHook();
-    console.log(allblogs);
+    const [allblogs, loading] = GetAllBlogsHook();
+   
 
   
 
@@ -225,7 +225,7 @@ const smoothScrollStyles = `
           </div>
 
           <MotionDiv
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch"
             variants={fadeRight}
             initial="hidden"
             whileInView="visible"
@@ -238,14 +238,37 @@ const smoothScrollStyles = `
                     </div>
                 ) : (
                     allblogs.map((blog) => (   
-                        <div key={blog._id} className="bg-[#2F5B44] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div
+                            key={blog._id}
+                            className="bg-[#2F5B44] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
+                        >
                             <div className="rounded-xl mb-6 h-48 overflow-hidden">
                                 <img src={blog.images[0]?.secure_url||defaultImage} alt={blog.title} className="w-full h-full object-cover" />
                             </div>
-                            <h3 className="text-xl font-bold text-[#FEF9D0] mb-4 text-center">{blog.title}</h3>
-                            <p className="text-[#FEF9D0] opacity-80 text-sm mb-6 leading-relaxed text-center">{blog.description}</p>
-                            <Link to={blog.canonical}>
-                                <button className="relative w-40% text-center mx-auto border border-[#FEF9D0] text-[#FEF9D0] py-3 px-6 rounded-full font-medium transition-colors flex items-center justify-center">
+                            <h3
+                                className="text-xl font-bold text-[#FEF9D0] mb-4 text-center min-h-[3.25rem]"
+                                style={{
+                                    display: '-webkit-box',
+                                    WebkitLineClamp: 2,
+                                    WebkitBoxOrient: 'vertical',
+                                    overflow: 'hidden',
+                                }}
+                            >
+                                {blog.title}
+                            </h3>
+                            <p
+                                className="text-[#FEF9D0] opacity-80 text-sm mb-6 leading-relaxed text-center min-h-[4.5rem]"
+                                style={{
+                                    display: '-webkit-box',
+                                    WebkitLineClamp: 3,
+                                    WebkitBoxOrient: 'vertical',
+                                    overflow: 'hidden',
+                                }}
+                            >
+                                {blog.description}
+                            </p>
+                            <Link to={blog.canonical} className="mt-auto flex justify-center">
+                                <button className="relative w-[40%] min-w-[160px] text-center mx-auto border border-[#FEF9D0] text-[#FEF9D0] py-3 px-6 rounded-full font-medium transition-colors flex items-center justify-center">
                                     Read More
                                     <span className="relative w-4 h-4 ml-2 inline-block">
                                         <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759052693/Vector_uzjrho.svg" alt="up arrow " />
