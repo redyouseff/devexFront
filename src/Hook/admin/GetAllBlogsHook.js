@@ -10,7 +10,7 @@ export const GetAllBlogsHook = () => {
     const [allblogs, setAllBlogs] = useState([]);
     const [loading, setLoading] = useState(false);
     const [keyword, setKeyword] = useState("");
-    const [posted, setPosted] = useState("");
+    const [posted, setPosted] = useState(true);
     const [post, setPost] = useState(false);
     const [unpost, setUnpost] = useState(false);
     const [all, setAll] = useState(true);

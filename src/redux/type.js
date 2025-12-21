@@ -7,6 +7,7 @@ export const EDITE_BLOG="EDITE_BLOG"
 export const GET_BLOG_BY_ID="GET_BLOG_BY_ID"
 export const DELETE_BLOG="DELETE_BLOG"
 export const UPDATE_BLOG="UPDATE_BLOG"
+export const GET_BLOG_BY_CANONICAL="GET_BLOG_BY_CANONICAL"
 
 
 

@@ -13,7 +13,20 @@ export const CreateBlogHook = () => {
     const dispatch=useDispatch();
     const res=useSelector((state)=>state.AllBlogs.createBlog);
     const [loading,setLoading]=useState(false);
-    const [posted, setPosted] = useState(true)
+    const [posted, setPosted] = useState(true);
+    const [linkOne, setLinkOne] = useState('');
+    const [linkTwo, setLinkTwo] = useState('');
+    const [linkThree, setLinkThree] = useState('');
+
+    const handleLinkOne = (e) => {
+        setLinkOne(e.target.value);
+    }
+    const handleLinkTwo = (e) => {
+        setLinkTwo(e.target.value);
+    }
+    const handleLinkThree = (e) => {
+        setLinkThree(e.target.value);
+    }
 
     // Section One
     const [sectionOne, setSectionOne] = useState({
@@ -51,6 +64,7 @@ export const CreateBlogHook = () => {
 
     // Section Four
     const [sectionFour, setSectionFour] = useState({
+        title: '',
         typeofH: 'h2', // Note: schema uses typeofH (lowercase f)
         paragraph1: '',
         ul: [],
@@ -235,8 +249,10 @@ export const CreateBlogHook = () => {
         formData.append('altImageTwo', altImageTwo)
         formData.append('altImageThree', altImageThree) 
         formData.append('posted', posted)
-        formData.append('data', data)
-
+        formData.append('data', data);
+        formData.append('linkOne', linkOne)
+        formData.append('linkTwo', linkTwo)
+        formData.append('linkThree', linkThree)
         setLoading(true);
         dispatch(createBlog(formData));
 
@@ -298,7 +314,12 @@ export const CreateBlogHook = () => {
         data, setData,
         posted, setPosted,
         handlePosted,
-
+        handleLinkOne,
+        handleLinkTwo,
+        handleLinkThree,
+        linkOne, setLinkOne,
+        linkTwo, setLinkTwo,
+        linkThree, setLinkThree,
         // Loading state
         loading,
 

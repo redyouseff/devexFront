@@ -159,6 +159,9 @@ export const EditeBlog=()=>{
             setAltImageOne(blog.altImageOne || '');
             setAltImageTwo(blog.altImageTwo || '');
             setAltImageThree(blog.altImageThree || '');
+            setLinkOne(blog.linkOne || '');
+            setLinkTwo(blog.linkTwo || '');
+            setLinkThree(blog.linkThree || '');
             setPosted(blog.posted ?? true);
             // Format date for input type="date" (YYYY-MM-DD)
             if (blog.data) {
@@ -197,9 +200,20 @@ export const EditeBlog=()=>{
     const [sectionSix, setSectionSix] = useState({ title: '', paragraph1: '', paragraphs: [], ul: [], typeofH: 'h1' })
     const [sectionSeven, setSectionSeven] = useState({ title: '', paragraph1: '', paragraphs: [], ul: [], typeofH: 'h1' })
     const [sectionEight, setSectionEight] = useState({ title: '', paragraph1: '', paragraphs: [], ul: [], typeofH: 'h1' })
+    const [linkOne, setLinkOne] = useState('')
+    const [linkTwo, setLinkTwo] = useState('')
+    const [linkThree, setLinkThree] = useState('')
     const [data, setData] = useState('')
 
-  
+    const handleLinkOne = (e) => {
+        setLinkOne(e.target.value);
+    }
+    const handleLinkTwo = (e) => {
+        setLinkTwo(e.target.value);
+    }
+    const handleLinkThree = (e) => {
+        setLinkThree(e.target.value);
+    }
 
     // UI state for form controls
     const [numParagraphs, setNumParagraphs] = useState(1)
@@ -430,6 +444,7 @@ export const EditeBlog=()=>{
         })
 
         formData.append('sectionFour[typeofH]', sectionFour.typeofH)
+        formData.append(`sectionFour[title]`,sectionFour.title)
         formData.append('sectionFour[paragraph1]', sectionFour.paragraph1)
 
         // Add ul array items for sectionFour
@@ -512,6 +527,9 @@ export const EditeBlog=()=>{
         formData.append('altImageTwo', altImageTwo)
         formData.append('altImageThree', altImageThree)
         formData.append('data', data)
+        formData.append('linkOne', linkOne)
+        formData.append('linkTwo', linkTwo)
+        formData.append('linkThree', linkThree)
         formData.append('posted', posted)
 
         return formData;
@@ -678,8 +696,8 @@ export const EditeBlog=()=>{
                                 </div>
                             </div>
                         </div>
-                        <diV className ="mt-10">
-                            
+                        <div className ="mt-10">
+
                             <label htmlFor="sectionOneParagraph1" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Date OF Blog</label>
                             <input
                             type="Date"
@@ -689,11 +707,12 @@ export const EditeBlog=()=>{
                             value={data}
                             onChange={(e) => (setData(e.target.value))}
                             onClick={(e) => e.target.showPicker && e.target.showPicker()}
-                            className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                            className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/20"
                              />
-                           
-                           
-                        </diV>
+
+
+
+                        </div>
 
                         <div className="grid grid-cols-1 mt-10">
  
@@ -787,6 +806,19 @@ export const EditeBlog=()=>{
                                 className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
                               />
                             </div>
+                          </div>
+                          <div className="mt-10">
+                            <label htmlFor="linkOne" className="text-[#FEF9D0] font-inter text-[20px] font-semibold"> link One </label>
+                            <input
+                              type="text"
+                              id="linkOne"
+                              name="linkOne"
+                              value={linkOne}
+                              placeholder="Enter linkOne"
+                              onChange={(e) => handleLinkOne(e)} 
+                              className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                            /> 
+
                           </div>
                         </div>
                       </section>
@@ -981,6 +1013,21 @@ export const EditeBlog=()=>{
                         )}
 
 
+                        <div className="mt-10">
+                            <label htmlFor="linkTwo" className="text-[#FEF9D0] font-inter text-[20px] font-semibold"> link Two </label>
+                            <input
+                              type="text"
+                              id="linkTwo"
+                              name="linkTwo"
+                              value={linkTwo}
+                              placeholder="Enter linkTwo"
+                              onChange={(e) => handleLinkTwo(e)} 
+                              className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                            />
+                            
+                        </div>
+
+
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
 
 <div className="grid grid-cols-1 mt-10">
@@ -1041,6 +1088,9 @@ export const EditeBlog=()=>{
 
 
 
+
+
+
 <div className="grid grid-cols-1 mt-10">
   <div>
     <label htmlFor="sectionTwoRightImage" className="text-[#FEF9D0] font-inter text-[20px] font-semibold">right Image</label>
@@ -1079,6 +1129,7 @@ export const EditeBlog=()=>{
           </button>
         </div>
       )}
+      
 
       {/* Alt Text for Right Image */}
       <div className="mt-4">
@@ -1163,6 +1214,21 @@ export const EditeBlog=()=>{
                         </div>
 
                         <div className="mt-10">
+                        <label htmlFor="linkTwo" className="text-[#FEF9D0] font-inter text-[20px] font-semibold"> link three </label>
+                            <input
+                              type="text"
+                              id="linkThree"
+                              name="linkThree"
+                              value={linkThree}
+                              placeholder="Enter linkThree"
+                              onChange={(e) => handleLinkThree(e)} 
+                              className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                            />
+                            
+
+                        </div>     
+
+                        <div className="mt-10">    
                             <label className="text-[#FEF9D0] font-inter text-[20px] font-semibold">Display Type</label>
                             <div className="flex gap-6 mt-3">
                                 <label className="flex items-center cursor-pointer">

@@ -26,6 +26,12 @@ export const CreateBlog =()=>{
         altImageThree, setAltImageThree,
         data, setData,
         handleSubmit,
+        handleLinkOne,
+        handleLinkTwo,
+        handleLinkThree,
+        linkOne, setLinkOne,
+        linkTwo, setLinkTwo,
+        linkThree, setLinkThree,
         handlePosted,
         
     } = CreateBlogHook()
@@ -435,6 +441,18 @@ export const CreateBlog =()=>{
                               />
                             </div>
                           </div>
+                          <div className="mt-10">
+                            <label htmlFor="sectionThreeTitle" className="text-[#FEF9D0] font-inter text-[20px] font-semibold"> link One </label>
+                            <input
+                              type="text"
+                              id="linkOne"
+                              name="linkOne"
+                              value={linkOne}
+                              placeholder="Enter linkOne"
+                              onChange={(e) => handleLinkOne(e)} 
+                              className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                            />  
+                          </div>
                         </div>
                       </section>
 
@@ -630,6 +648,20 @@ export const CreateBlog =()=>{
                             </div>
                         )}
 
+                        <div className="mt-10">
+                            <label htmlFor="linkTwo" className="text-[#FEF9D0] font-inter text-[20px] font-semibold"> link Two </label>
+                            <input
+                              type="text"
+                              id="linkTwo"
+                              name="linkTwo"
+                              value={linkTwo}
+                              placeholder="Enter linkTwo"
+                              onChange={(e) => handleLinkTwo(e)} 
+                              className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                            />  
+                            
+                        </div>
+
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
 
@@ -816,6 +848,19 @@ export const CreateBlog =()=>{
                             onChange={(e) => setSectionThree({...sectionThree, paragraph1: e.target.value})}
                             className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
                           />
+                        </div>
+
+                        <div className="mt-10">
+                            <label htmlFor="linkThree" className="text-[#FEF9D0] font-inter text-[20px] font-semibold"> link Three </label>
+                            <input 
+                              type="text"
+                              id="linkThree"
+                              name="linkThree"
+                              value={linkThree}
+                              placeholder="Enter linkThree"
+                              onChange={(e) => handleLinkThree(e)} 
+                              className="w-full p-3 bg-[#fef9d0]/10 rounded-md text-[#FEF9D0] placeholder:text-[#FEF9D0]/60 outline-none focus:ring-2 focus:ring-[#FEF9D0]/20"
+                            />
                         </div>
 
                         <div className="mt-10">

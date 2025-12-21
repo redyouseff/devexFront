@@ -2,7 +2,7 @@ import UseDeleteData from "../../Hooks/UseDeleteData"
 import { UseGetDataWithToken, UseGetDate } from "../../Hooks/UseGetData"
 import { UseInsertDataWithImage } from "../../Hooks/UseInsertData"
 import { UseUpdataDataWithImage, useupdataDataWithToken } from "../../Hooks/UseUpdataData"
-import { CREATE_BLOG, DELETE_BLOG, EDITE_BLOG, GET_ALL_BLOGS, GET_BLOG_BY_ID, UPDATE_BLOG } from "../type"
+import { CREATE_BLOG, DELETE_BLOG, EDITE_BLOG, GET_ALL_BLOGS, GET_BLOG_BY_CANONICAL, GET_BLOG_BY_ID, UPDATE_BLOG } from "../type"
 
 
 
@@ -127,5 +127,26 @@ export const updateBlog=(id,data)=>async(dispatch)=>{
             payload:e.response,
             loading:false
         })
+    }
+}
+
+ export const getBlogByCanonical=(canonical)=>async(dispatch)=>{
+
+    try{
+        const response =await UseGetDataWithToken(`/api/blogs/DigitalTrends/${canonical}`)
+        dispatch({
+            type:GET_BLOG_BY_CANONICAL,
+            payload:response,
+            loading:true
+        })
+
+    }
+    catch(e){
+        dispatch({
+            type:GET_BLOG_BY_CANONICAL,
+            payload:e.response,
+            loading:false
+        })
+
     }
 }

@@ -1,5 +1,5 @@
 
-import { CREATE_BLOG, DELETE_BLOG, GET_ALL_BLOGS, GET_BLOG_BY_ID, UPDATE_BLOG } from "../type"
+import { CREATE_BLOG, DELETE_BLOG, GET_ALL_BLOGS, GET_BLOG_BY_CANONICAL, GET_BLOG_BY_ID, UPDATE_BLOG } from "../type"
 
 
 const initial={
@@ -48,6 +48,12 @@ const BlogsReducer=(state=initial,action)=>{
                                 loading:false,
                                 updateBlog:action.payload
                             }
+                            case GET_BLOG_BY_CANONICAL:
+                                return{
+                                    ...state,
+                                    loading:false,
+                                    getBlogByCanonical:action.payload
+                                }
 
             default:
 

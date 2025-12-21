@@ -187,7 +187,7 @@ body {
         </div>
 
         {/* Hero image with author pill */}
-        <div className="mt-4 rounded-xl overflow-hidden relative">
+        <div className="mt-4 rounded-xl overflow-hidden relative"> 
           <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050848/39fe9b9d1d42d713a96f4061d8de02a0c59fabde_sm65le.jpg" alt="Blog cover" className="w-full h-auto object-cover" />
           <span className="ml-[2rem] mb-[2rem] absolute bottom-3 left-3 inline-flex items-center gap-2 text-white text-lg">
             Written By
@@ -203,7 +203,7 @@ body {
          The word "affordable" can sometimes raise concerns about quality, but this is a common misconception. In the context of web design, affordability is achieved through efficiency, not compromise. A top-tier affordable web design company in Dubai delivers exceptional value by focusing on what truly matters for a small business.
          </p>
           <br></br>
-          <p className='mt-3'>Here’s how they do it:</p>
+          <p className='mt-3'>Here’s how they do it:</p>  
           <ul className="list-disc list-inside  ">
             <li className='mb-4'>Streamlined Processes: By perfecting their development process, they reduce project time and overhead costs, passing those savings on to you.</li>
             <li className='mb-4'>Focus on Core Functionality: Instead of overwhelming you with features you don't need, an affordable web design company Dubai concentrates on the essential elements that drive results: great design, fast loading speeds, and clear calls-to-action.</li>
