@@ -1,32 +1,17 @@
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import LandingPage from './pages/LandingPage';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Calculator from './pages/Calculator';
 import Contact from './pages/Contact';
-import Blogs from './pages/blogs';
-import Profile from './pages/Profile';
 import Footer from './components/Footer';
-import SpeceficBlogs from './pages/SpeceficBlogs';
 import TestCircleSwiper from './components/testCircleSwiper';
 import EcommerceDesign from './pages/EcommerceDesign';
 import CustomWebDesignServices from './pages/CustomWebDesignServices';
-import ImageSlider from './components/EffectCard/EffectCard';
-import ImageSlider2 from './components/EffectCard/test';
-import RedesignservicesintheUAE from './pages/blogs/RedesignservicesintheUAE';
-import EcommerceWebsiteDevelopmentUAE from './pages/blogs/EcommerceWebsiteDevelopmentUAE';
-import ProfessionalwebsitedesignUAE from './pages/blogs/professionalwebsitedesignUAE';
-import WebdesigncompanyDubai from './pages/blogs/webdesigncompanyDubai';
-import SeoServicesInDubai from './pages/blogs/SeoServicesInDubai';
-import UIUXdesigninDubai from './pages/blogs/UIUXdesigninDubai';
-import MobileAppDevelopmentUae from './pages/blogs/MobileAppDevelopmentUae';
 import CustomWebDevelopment from './pages/CustomWebDevelopment';
-import AffordableWebDesign from './pages/blogs/AffordableWebDesign';
 import AppDevelopment from './pages/AppDevelopment';
-import CustomCMSDevelopment from './pages/blogs/CustomCMSDevelopment';
 import DigitalTrends from './pages/DigitalTrends';
 import { Login } from './pages/admin/Login';
 import { AllBlogs } from './pages/admin/AllBlogs';
@@ -35,12 +20,16 @@ import { ProtectedRouteHook } from './Hook/auth/ProtectedRouteHook';
 import { ProductRoute } from './Hook/auth/ProductRoute';
 import { EditeBlog } from './pages/admin/EditeBlog';
 import { Blog } from './pages/blogs/Blog';
+import { NotFound } from './pages/NotFound';
 
-
-
-
-
-
+function MainLayout() {
+  return (
+    <>
+      <Outlet />
+      <Footer />
+    </>
+  );
+}
 
 function App() {
 
@@ -51,51 +40,42 @@ function App() {
       <Router>
         <div className="App">
           <Routes>
-            <Route path="/" element={<Home />} />
-            {/* <Route path="/home" element={<Home />} /> */}
-            <Route path='/login' element={<Login></Login>}></Route>
-             <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/calculator" element={<Calculator />} />
-             <Route path="/contact" element={<Contact />} />
-             {/* <Route path="/DigitalTrends" element={<Blogs />} /> */}
-             <Route path="/DigitalTrends/:canonical" element={<Blog />} />
-             <Route path="/DigitalTrends/" element={<DigitalTrends />} />  
-             
-             {/* <Route path="/blogs/:id" element={<SpeceficBlogs />} /> */}
-             {/* <Route path="/DigitalTrends/RedesignservicesintheUAE" element={<RedesignservicesintheUAE />} />
-             <Route path="/DigitalTrends/EcommerceWebsiteDevelopmentUAE" element={<EcommerceWebsiteDevelopmentUAE />} />
-             <Route path="/DigitalTrends/ProfessionalwebsitedesignUAE" element={<ProfessionalwebsitedesignUAE />} />
-             <Route path="/DigitalTrends/WebdesigncompanyDubai"  element={<WebdesigncompanyDubai />} />
-             <Route path="/DigitalTrends/SeoServicesInDubai"  element={<SeoServicesInDubai   />} />    
-             <Route path="/DigitalTrends/UIUXdesigninDubai" element={<UIUXdesigninDubai />} />
-             <Route path="/DigitalTrends/MobileAppDevelopmentUae" element={<MobileAppDevelopmentUae />} />
-             <Route path="/DigitalTrends/AffordableWebDesign" element={<AffordableWebDesign />} />
-             <Route path="/DigitalTrends/CustomCMSDevelopment" element={<CustomCMSDevelopment />} /> */}
-     
+            <Route element={<MainLayout />}>
+              <Route path="/" element={<Home />} />
+              <Route path='/login' element={<Login></Login>}></Route>
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/calculator" element={<Calculator />} />
+              <Route path="/contact" element={<Contact />} />
             
-             
-             <Route path="/ecommerce-design" element={<EcommerceDesign />} />
-             <Route path="/swiper" element={<swiper />} /> 
-             <Route path="/TestCircleSwiper" element={<TestCircleSwiper />} />
-             <Route path="/CustomWebDesignServices" element={<CustomWebDesignServices />} />
-             <Route path="/CustomWebDevelopment" element={<CustomWebDevelopment />} />
-             <Route path="/AppDevelopment" element={<AppDevelopment />} />
+              <Route path="/DigitalTrends/:canonical" element={<Blog />} />
+              <Route path="/DigitalTrends/" element={<DigitalTrends />} />
 
-             <Route path='/login'  element={<Login />} />
 
-            {/* Admin Routes */}
-             <Route element={<ProductRoute auth={isAdmin} loading={isLoading} />}>
-             <Route path='/admin/allblogs' element={<AllBlogs />} />
-             <Route path='/admin/createblog' element={<CreateBlog />} />
-             <Route path='/admin/editeblog/:id' element={<EditeBlog />} />
-             
-             </Route>
+              <Route path="/ecommerce-design" element={<EcommerceDesign />} />
+              <Route path="/swiper" element={<swiper />} />
+              <Route path="/TestCircleSwiper" element={<TestCircleSwiper />} />
+              <Route path="/CustomWebDesignServices" element={<CustomWebDesignServices />} />
+              <Route path="/CustomWebDevelopment" element={<CustomWebDevelopment />} />
+              <Route path="/AppDevelopment" element={<AppDevelopment />} />
+
+              <Route path='/login' element={<Login />} />
+
+              {/* Admin Routes */}
+              <Route element={<ProductRoute auth={isAdmin} loading={isLoading} />}>
+                <Route path='/admin/allblogs' element={<AllBlogs />} />
+                <Route path='/admin/createblog' element={<CreateBlog />} />
+                <Route path='/admin/editeblog/:id' element={<EditeBlog />} />
+              </Route>
+            </Route>
+
+            <Route path='*' element={<NotFound />} />
+
+            
              
             
                        
           </Routes>
-          <Footer />
         </div>
       </Router>
     </HelmetProvider>

@@ -218,7 +218,7 @@ body {
 
                     </div>
                     <div className="mt-4 rounded-xl overflow-hidden relative">
-                      <img src={blog?.images[0]?.secure_url  || "https://res.cloudinary.com/daop3bufa/image/upload/v1759050848/39fe9b9d1d42d713a96f4061d8de02a0c59fabde_sm65le.jpg"} alt={blog?.altImageOne} className="w-full h-[600px] " />
+                      <img src={blog?.images[0]?.secure_url  || "https://res.cloudinary.com/daop3bufa/image/upload/v1759050848/39fe9b9d1d42d713a96f4061d8de02a0c59fabde_sm65le.jpg"} alt={blog?.altImageOne} className="w-full h-[600px] object-cover " />
                       <span className="ml-[2rem] mb-[2rem] absolute bottom-3 left-3 inline-flex items-center gap-2 text-white text-lg">
                         Written By
                         <img src="https://res.cloudinary.com/daop3bufa/image/upload/v1759050825/Ellipse_9_kvhzov.svg" alt="DEVEXT logo" className="w-12 h-12" />
@@ -227,7 +227,7 @@ body {
                     </div>
                     <div>
                       <a href={blog?.linkOne} target="_blank" rel="noopener noreferrer" >
-                      <p className="mt-4">{blog?.linkOne}</p>
+                      <p className="mt-4 underline decoration-1 underline-offset-4">{blog?.linkOne}</p>
 
                       </a>
                       
@@ -259,7 +259,7 @@ body {
                     </ol>
 
                     <a href={blog?.linkTwo} target="_blank" rel="noopener noreferrer">
-                    <p>{blog?.linkTwo}</p>
+                    <p className="mt-4 underline decoration-1 underline-offset-4">{blog?.linkTwo}</p>
                     
 
 
@@ -287,7 +287,7 @@ body {
                     <HeadingTagThree className="text-3xl sm:text-2xl font-semibold text-[#2F5B44] max-w-3xl break-words">{blog?.sectionThree?.title}</HeadingTagThree>
                     <p>{blog?.sectionThree?.paragraph1}</p>
                     <a href={blog?.linkThree} target="_blank" rel="noopener noreferrer">
-                    <p className="mt-4">{blog?.linkThree}</p>
+                    <p className="mt-4 underline decoration-1 underline-offset-4">{blog?.linkThree}</p>
                       
                     </a>
                       
@@ -413,20 +413,13 @@ body {
                    </section>
 
 
-                
-                
-
-
-
+    
                    </main>
 
 
 
 
                  </div>  
-             
-
-
 
                 </>
 
