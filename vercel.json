@@ -1,8 +1,18 @@
 {
-  "rewrites": [
+  "routes": [
+    { "handle": "filesystem" },
+
+    { "src": "^/$", "dest": "/index.html" },
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+      "src": "^/(about|services|calculator|contact|ecommerce-design|swiper|TestCircleSwiper|CustomWebDesignServices|CustomWebDevelopment|AppDevelopment|DigitalTrends|login)/?$",
+      "dest": "/index.html"
+    },
+
+    { "src": "^/DigitalTrends/[^/]+/?$", "dest": "/index.html" },
+
+    { "src": "^/admin/(allblogs|createblog)/?$", "dest": "/index.html" },
+    { "src": "^/admin/editeblog/[^/]+/?$", "dest": "/index.html" },
+
+    { "src": ".*", "status": 404, "dest": "/index.html" }
   ]
 }

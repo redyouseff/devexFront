@@ -42,7 +42,6 @@ function App() {
           <Routes>
             <Route element={<MainLayout />}>
               <Route path="/" element={<Home />} />
-              <Route path='/login' element={<Login></Login>}></Route>
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/calculator" element={<Calculator />} />
@@ -53,7 +52,7 @@ function App() {
 
 
               <Route path="/ecommerce-design" element={<EcommerceDesign />} />
-              <Route path="/swiper" element={<swiper />} />
+              {/* <Route path="/swiper" element={<swiper />} /> */}
               <Route path="/TestCircleSwiper" element={<TestCircleSwiper />} />
               <Route path="/CustomWebDesignServices" element={<CustomWebDesignServices />} />
               <Route path="/CustomWebDevelopment" element={<CustomWebDevelopment />} />

@@ -293,17 +293,17 @@ function Contact() {
 {/* Map Section - Full Width */}
 <section className="w-full">
   <div className="w-full h-[200px] sm:h-[500px] lg:h-[550px]">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3411.861334607816!2d29.946724699999997!3d31.224570900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5c4ebc1c8c0d3%3A0xd30636b17acadbba!2s398%20Abou%20Quer%2C%20Abu%20an%20Nawatir%2C%20Sidi%20Gaber%2C%20Alexandria%20Governorate%205433140!5e0!3m2!1sen!2seg!4v1756125153750!5m2!1sen!2seg"
-      width="100%"
-      height="100%"
-      style={{ border: 0 }}
-      allowFullScreen=""
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-      title="DEVEXT Location - 398 Abou Quer, Alexandria"
-      className="w-full h-full"
-    ></iframe>
+  <iframe
+  src="https://www.google.com/maps?q=Burj+Khalifa+Dubai&output=embed"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  title="Dubai City Center Location"
+  className="w-full h-full"
+></iframe>
   </div>
 </section>
 

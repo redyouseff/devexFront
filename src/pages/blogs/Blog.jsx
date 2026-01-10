@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import SEO from "../../components/SEO";
 import { BlogHook } from "../../Hook/blogs/BlogHook";
 import Navbar2 from "../../components/Navbar2";
+import { ToastContainer } from "react-toastify";
 
  
 
@@ -441,6 +442,8 @@ body {
               )
             )
         }
+
+        <ToastContainer></ToastContainer>
         
         
         </>

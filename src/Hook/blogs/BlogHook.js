@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux"; 
 import { getBlogByCanonical } from "../../redux/Actions/BlogsActions";
+import notify from "../useNotification";
 
 
 
@@ -22,12 +23,26 @@ import { getBlogByCanonical } from "../../redux/Actions/BlogsActions";
 
   useEffect(()=>{
 
-    if(res?.status=="success"){
+    if(res?.status){
+      if(res?.status=="success"){
         setLoading(false);
         setBlog(res.data);
        
        
     }
+    else{
+      notify("Blog not found","error");
+      setTimeout(() => {
+        window.location.href="/NotFound"
+      }, 2000);
+    }
+    
+    }
+    
+
+    
+
+    
   },[res])   
   
 

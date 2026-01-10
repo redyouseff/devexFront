@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SEO from "../components/SEO";
 
 const logo =
@@ -6,13 +6,14 @@ const logo =
 
 export const NotFound = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <div className="min-h-screen bg-custom-cream relative overflow-hidden">
       <SEO
         title="404 - Page Not Found"
         description="The page you’re looking for doesn’t exist or may have been moved."
-        canonical="/404"
+        canonical={location?.pathname || "/404"}
         noindex
         nofollow
       />
