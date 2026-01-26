@@ -6,6 +6,7 @@ import SEO from "../../components/SEO";
 import { BlogHook } from "../../Hook/blogs/BlogHook";
 import Navbar2 from "../../components/Navbar2";
 import { ToastContainer } from "react-toastify";
+import { signalPageReady } from "../../utils/reactSnapHelper";
 
  
 
@@ -66,6 +67,16 @@ export const Blog=()=>{
         window.scrollTo(0,0)
       }
       ,[])
+
+    // Signal to react-snap that page content is ready for prerendering
+    useEffect(() => {
+      if (blog?.title && !loading) {
+        // Small delay to ensure DOM is fully rendered
+        setTimeout(() => {
+          signalPageReady();
+        }, 100);
+      }
+    }, [blog, loading])
 
 
        // Smooth scroll styles

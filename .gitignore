@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# React-snap generated files
+prerender-routes.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

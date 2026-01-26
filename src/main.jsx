@@ -1,24 +1,30 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import './index.css'
 
 import App from './App.jsx'
 import store from './redux/store.js'
 import { Provider } from "react-redux";
 
-// Force LTR direction globallys
+// Force LTR direction globally
 document.documentElement.setAttribute('dir', 'ltr')
 document.documentElement.setAttribute('lang', 'en')
 
+const rootElement = document.getElementById('root');
 
-createRoot(document.getElementById('root')).render(
+const AppWrapper = (
   <StrictMode>
     <Provider store={store}>
-          <App />  
-
+      <App />
     </Provider>
+  </StrictMode>
+);
 
- 
- 
-  </StrictMode>,
-)
+// Check if page was pre-rendered by react-snap
+if (rootElement.hasChildNodes()) {
+  // Hydrate pre-rendered content
+  hydrateRoot(rootElement, AppWrapper);
+} else {
+  // Normal client-side rendering
+  createRoot(rootElement).render(AppWrapper);
+}

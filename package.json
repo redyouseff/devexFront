@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "prebuild:prerender": "node scripts/generateBlogRoutes.cjs",
+    "build:prerender": "npm run prebuild:prerender && vite build && node scripts/prerender.cjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -40,7 +42,26 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
     "postcss": "^8.5.6",
+    "puppeteer": "^23.11.1",
     "tailwindcss": "^3.4.1",
     "vite": "^7.0.4"
+  },
+  "reactSnap": {
+    "include": [
+      "/",
+      "/about",
+      "/services",
+      "/calculator",
+      "/contact",
+      "/DigitalTrends",
+      "/ecommerce-design",
+      "/CustomWebDesignServices",
+      "/CustomWebDevelopment",
+      "/AppDevelopment",
+      "/DigitalTrends/ShopifyDevelopment",
+      "/DigitalTrends/webdesigncompanyDubai",
+      "/DigitalTrends/DigitalMarketingAgencyinUAE",
+      "/DigitalTrends/socialmediamarketingcompanyinabudhabi"
+    ]
   }
 }
