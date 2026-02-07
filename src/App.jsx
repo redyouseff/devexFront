@@ -21,6 +21,7 @@ import { ProductRoute } from './Hook/auth/ProductRoute';
 import { EditeBlog } from './pages/admin/EditeBlog';
 import { Blog } from './pages/blogs/Blog';
 import { NotFound } from './pages/NotFound';
+import { LandingPage } from './pages/campaign/LandingPage';
 
 function MainLayout() {
   return (
@@ -67,6 +68,12 @@ function App() {
                 <Route path='/admin/editeblog/:id' element={<EditeBlog />} />
               </Route>
             </Route>
+
+
+            {/* campaign */}
+           
+            <Route path="/ksa" element={<LandingPage />} />
+
 
             <Route path='*' element={<NotFound />} />
 

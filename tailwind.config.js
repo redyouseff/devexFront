@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
+        changa: ['Changa', 'sans-serif'],
       },
       colors: {
         'custom-green': '#2F5B44',
