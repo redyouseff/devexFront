@@ -324,8 +324,8 @@ export const LandingPage =()=>{
 
             <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center" dir="rtl">
                 
-                {/* باقة البداية - Starter Package */}
-                <div className="rounded-3xl bg-[#2F5B44] border-2 border-[#2F5B44] overflow-hidden shadow-lg flex flex-col">
+                {/* باقة المؤسسات - Enterprise Package */}
+                <div className="rounded-3xl bg-[#2F5B44] border-2 border-[#2F5B44] overflow-hidden shadow-lg flex flex-col order-3 md:order-1">
                     {/* Ribbon */}
                     <div className="relative">
                         <div className="bg-[#2F5B44] mt-10 text-center font-semibold uppercase text-custom-cream text-3xl font-changa">
@@ -398,7 +398,7 @@ export const LandingPage =()=>{
                 </div>
 
                 {/* الباقة الاحترافية - Professional Package (Recommended) */}
-                <div className="rounded-3xl bg-[#2F5B44]/70 border-2 border-[#2F5B44]/70  shadow-lg flex flex-col relative">
+                <div className="rounded-3xl bg-[#2F5B44]/70 border-2 border-[#2F5B44]/70  shadow-lg flex flex-col relative order-2 md:order-2">
                 <img src={offer} className="absolute top-[-6%] left-0 w-24 h-24" />
                     {/* Ribbon */}
                     <div className="relative">
@@ -471,7 +471,7 @@ export const LandingPage =()=>{
                 </div>
 
                 {/* باقة البداية - Starter Package */}
-                <div className="rounded-3xl bg-[#2F5B44] border-2 border-[#2F5B44] overflow-hidden shadow-lg flex flex-col">
+                <div className="rounded-3xl bg-[#2F5B44] border-2 border-[#2F5B44] overflow-hidden shadow-lg flex flex-col order-1 md:order-3">
                     {/* Ribbon */}
                     <div className="relative">
                         <div className="bg-[#2F5B44] mt-10 text-center font-semibold uppercase text-custom-cream text-3xl font-changa">
