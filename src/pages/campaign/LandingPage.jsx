@@ -124,9 +124,9 @@ export const LandingPage =()=>{
             <div className="col-span-12 md:col-span-6 order-1 md:order-2">
                 <h1 className="text-center md:text-right font-semibold uppercase text-[#2F5B44] text-2xl sm:text-3xl lg:text-4xl font-changa mb-2 md:mb-4">ERP حوّل أعمالك في السعودية بنظام</h1>
                 <h1 className="text-center md:text-right font-semibold uppercase text-[#2F5B44] text-2xl sm:text-3xl lg:text-4xl font-changa">ذكي ينمو معك</h1>
-                <p className="text-center md:text-right font-medium uppercase text-[#2F5B44] text-base lg:text-lg font-Changa mt-4 md:mt-7">Odoo ERP ننفّذ ونخصّص</p>
-                <p className="text-center md:text-right font-medium uppercase text-[#2F5B44] text-base lg:text-lg font-Changa">(UX/UI) لربط المبيعات والمحاسبة والمخزون والعمليات في منصة واحدة، مع تطوير موقع أو تطبيق احترافي وتجربة مستخدم</p>
-                <p className="text-center md:text-right font-medium uppercase text-[#2F5B44] text-base lg:text-lg font-Changa">رفع الكفاءة وتسرّع النمو — من التخطيط إلى الإطلاق والدعم المستمر.</p>
+                <p className="text-right font-medium uppercase text-[#2F5B44] text-base lg:text-lg font-changa mt-4 md:mt-7">Odoo ERP ننفّذ ونخصّص</p>
+                <p className="text-right font-medium uppercase text-[#2F5B44] text-base lg:text-lg font-changa">(UX/UI) لربط المبيعات والمحاسبة والمخزون والعمليات في منصة واحدة، مع تطوير موقع أو تطبيق احترافي وتجربة مستخدم</p>
+                <p className="text-right font-medium uppercase text-[#2F5B44] text-base lg:text-lg font-changa"> . رفع الكفاءة وتسرّع النمو — من التخطيط إلى الإطلاق والدعم المستمر</p>
 
 
                 <a href="https://wa.me/201200064762" target="_blank" rel="noopener noreferrer" className="mx-auto md:ml-auto md:mr-0 rounded-full border-2 border-[#2F5B44] px-6 md:px-10 py-3 md:py-4 flex items-center justify-center gap-2 mt-6 md:mt-10">
@@ -156,7 +156,7 @@ export const LandingPage =()=>{
 
            {/* section two  */}
 
-           <div className="mt-[5rem] md:mt-[10rem] grid grid-cols-12 gap-6 md:gap-10 container mx-auto max-w-7xl mb-10 h-full px-4 md:px-6 lg:px-8">
+           <div className="mt-[3rem] md:mt-[8rem] grid grid-cols-12 gap-6 md:gap-10 container mx-auto max-w-7xl mb-10 h-full px-4 md:px-6 lg:px-8">
            <div className="col-span-12 lg:col-span-5 order-2 lg:order-1">
                 {/* Consultation Form */}
                 <div className="rounded-2xl h-full bg-[#2F5B44] overflow-hidden shadow-lg">
@@ -278,7 +278,7 @@ export const LandingPage =()=>{
                 <h1 className="text-center font-semibold uppercase text-[#2F5B44] text-2xl sm:text-3xl lg:text-4xl font-changa mb-5">شركات سعودية تثق بنا لتنفيذ أنظمتها الرقمية</h1>
                 <p className="text-center font-medium uppercase text-[#2F5B44] text-base lg:text-lg font-changa mt-4 md:mt-7">Devext انضم إلى قائمة عملائنا في المملكة الذين اختاروا</p>
                 <p className="text-center font-medium uppercase text-[#2F5B44] text-base lg:text-lg font-changa"><span className="lowercase">Odoo</span> ERP لتنفيذ وتخصيص</p>
-                <p className="text-center font-medium uppercase text-[#2F5B44] text-base lg:text-lg font-changa">وحلول رقمية متكاملة ساعدتهم على تنظيم أعمالهم، تحسين الأداء، والتوسّع بثقة داخل السوق السعودي.</p>
+                <p className="text-center font-medium uppercase text-[#2F5B44] text-base lg:text-lg font-changa"> وحلول رقمية متكاملة ساعدتهم على تنظيم أعمالهم، تحسين الأداء، والتوسّع بثقة داخل السوق السعودي</p>
                 <div className="mt-6 md:mt-10 grid grid-cols-12 gap-4 md:gap-6">
                     <div className="col-span-6 sm:col-span-4 flex items-center justify-center">
                         <img src={icon1} className="w-32 md:w-48 h-14 md:h-20 object-contain" />
@@ -317,10 +317,10 @@ export const LandingPage =()=>{
            </div>
 
 
-           <div className="mt-[5rem] md:mt-[10rem] container mx-auto max-w-7xl mb-10 px-4 md:px-6 lg:px-8">
+           <div className="mt-[3rem] md:mt-[5rem] container mx-auto max-w-7xl mb-5 px-4 md:px-6 lg:px-8">
             <h1 className="text-center font-semibold uppercase text-[#2F5B44] text-2xl sm:text-3xl lg:text-4xl font-changa mb-5">باقات مرنة تناسب حجم عملك ومرحلة نموك!</h1>
             <p className="text-center font-medium uppercase text-[#2F5B44] text-base lg:text-lg font-changa"><span className="lowercase">Odoo</span> ERP اختر الباقة التي تناسب احتياجات شركتك الحالية، سواء كنت في مرحلة البداية أو التوسّع. جميع باقاتنا مبنية على</p>
-            <p className="text-center font-medium uppercase text-[#2F5B44] text-base lg:text-lg font-changa">وقابلة للتطوير، مع تنفيذ احترافي ودعم مستمر يضمن لك أفضل عائد من استثمارك.</p>
+            <p className="text-center font-medium uppercase text-[#2F5B44] text-base lg:text-lg font-changa">وقابلة للتطوير، مع تنفيذ احترافي ودعم مستمر يضمن لك أفضل عائد من استثمارك</p>
 
             <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center" dir="rtl">
                 
@@ -495,7 +495,7 @@ export const LandingPage =()=>{
                         <h4 className="text-[#2F5B44] text-right font-medium uppercase text-custom-green text-lg font-changa  mt-10 mb-7">  :تشمل الباقة   </h4>
                         <ul className="space-y-2 text-right text-[#2F5B44] text-right font-normal uppercase text-custom-green text-base font-changa">
                             <li className="flex items-start gap-2 justify-end">
-                                <span>تحليل أساسي لاحتياجات العمل</span>
+                                <span>تحليل أساسي لاحتياجات العمل</span> 
                                 <span className="text-[#2F5B44]">•</span>
                             </li>
                             <li className="flex items-start gap-2 justify-end">
@@ -553,7 +553,7 @@ export const LandingPage =()=>{
 
 
 
-           <div className="mt-[3rem] md:mt-[8rem] container mx-auto max-w-7xl mb-10 px-4 md:px-6 lg:px-8">
+           <div className="mt-[3rem] md:mt-[5rem] container mx-auto max-w-7xl mb-10 px-4 md:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10">
                 <div className="rounded-3xl bg-[#2F5B44]/70 p-6 md:p-10 flex w-full md:w-72 px-6 pt-8 md:pt-12 pb-10 md:pb-16 justify-center items-center gap-4">
                 <div className="flex flex-col gap-3">
@@ -597,8 +597,13 @@ export const LandingPage =()=>{
 
 
            {/* last section  */}
-           <div className="grid grid-cols-12 gap-4 md:gap-6 mt-[5rem] md:mt-[15rem] relative px-4 md:px-0">
-            <div className="col-span-12 md:col-span-6 order-2 md:order-1 bg-[#FEF9D0] p-4 md:p-10 " >    
+            <div className="grid grid-cols-12 gap-4 md:gap-6 mt-[3rem] md:mt-[8rem] px-4 md:px-0 relative pb-[6rem] sm:pb-[8rem] md:pb-0">
+           
+                    <img src={laptop} className="absolute w-[60%] sm:w-[50%] md:w-[40%] lg:w-auto -bottom-[4rem] sm:-bottom-[5rem] md:-bottom-[8rem] left-[5%] sm:left-[8%] md:left-[10%] z-10" />
+                        
+
+                 
+            <div className="col-span-12 md:col-span-6 order-2 md:order-1 bg-[#FEF9D0] p-4 md:p-10 pb-[4rem] sm:pb-[5rem] md:pb-10" >    
             <ul className="mt-6 md:mt-20 space-y-6 md:space-y-10 text-right font-medium uppercase text-[#2F5B44] text-base md:text-xl font-changa">
                             <li className="flex items-start gap-2 justify-end">
                                 <span className="text-right font-medium uppercase text-custom-green text-base md:text-xl font-changa">    منصة واحدة تدير كل أعمالك بذكاء : اربط المبيعات، المحاسبة، المخزون والعمليات اليومية في نظام متكامل وسهل الاستخدام</span>
@@ -622,11 +627,7 @@ export const LandingPage =()=>{
                             
                         </ul> 
 
-                    <div className="mt-6 md:mt-10 align-right">
-                    <img src={laptop} className="relative " />
-                        
-
-                    </div>
+                    
 
             </div>
             <div className="col-span-12 md:col-span-6 order-1 md:order-2 bg-[#2F5B44] p-4 md:p-10 rounded-2xl md:rounded-none md:rounded-l-3xl ">
@@ -666,7 +667,7 @@ export const LandingPage =()=>{
            </div>
 
 
-           <div className="mt-10 md:mt-20">
+           <div className="mt-[2rem] sm:mt-[3rem] md:mt-20">
            <img src={flag} className="w-full object-cover" />
             
 

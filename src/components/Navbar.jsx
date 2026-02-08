@@ -132,7 +132,7 @@ function Navbar() {
         <div className="flex items-center md:ml-32">
           <Link to="/" className="flex items-center -ml-2">
             <img 
-              src="https://res.cloudinary.com/daop3bufa/image/upload/v1759051145/Logo_Devext-removebg-preview_1_xk94pb.png" 
+              src="https://res.cloudinary.com/daop3bufa/image/upload/v1770561935/newLogo_ndvl8l.svg" 
               alt="DEVEXT Logo" 
               className="h-14 w-auto hover:opacity-80 transition-opacity duration-200"
             />

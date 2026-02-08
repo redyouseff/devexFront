@@ -395,7 +395,7 @@ function Home() {
 
           {/* Content */}
         <MotionDiv
-          className="container mx-auto max-w-7xl relative z-20 px-4 sm:px-6  mt-[7rem]  "
+          className="max-w-screen-2xl mx-auto relative z-20 px-4 md:px-6 md:ml-32 mt-[7rem]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
