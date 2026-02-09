@@ -499,7 +499,7 @@ export const LandingPage =()=>{
                    ].map((pkg, index) => (
                        <motion.div 
                            key={index}
-                           className={`rounded-3xl ${pkg.isHighlighted ? 'bg-[#2F5B44]/70 border-[#2F5B44]/70' : 'bg-[#2F5B44] border-[#2F5B44]'} border-2 overflow-hidden shadow-lg flex flex-col ${pkg.isHighlighted ? 'relative' : ''} ${pkg.order}`}
+                           className={`rounded-3xl ${pkg.isHighlighted ? 'bg-[#2F5B44]/70 border-[#2F5B44]/70' : 'bg-[#2F5B44] border-[#2F5B44]'} border-2 ${pkg.isHighlighted ? 'overflow-visible' : 'overflow-hidden'} shadow-lg flex flex-col ${pkg.isHighlighted ? 'relative' : ''} ${pkg.order}`}
                            variants={staggerItem}
                            whileHover={{ 
                                y: -10, 
@@ -510,7 +510,7 @@ export const LandingPage =()=>{
                            {pkg.isHighlighted && (
                                <motion.img 
                                    src={offer} 
-                                   className="absolute top-[-6%] left-0 w-24 h-24"
+                                   className="absolute top-[-6%] left-0 w-24 h-24 z-50"
                                    animate={{ rotate: [0, 5, -5, 0] }}
                                    transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
                                />
