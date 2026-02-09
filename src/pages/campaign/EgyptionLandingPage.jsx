@@ -3,19 +3,19 @@ import { useState, useRef } from "react"
 import { motion, useInView } from "framer-motion"
 
 const logo ="https://res.cloudinary.com/daop3bufa/image/upload/v1770542464/logo_eksebu.svg"
-const image="https://res.cloudinary.com/daop3bufa/image/upload/v1770542668/image1_ap3jn0.svg"
+const image="https://res.cloudinary.com/daop3bufa/image/upload/v1770629886/egyFlag_ilkajs.png"
 const image2="https://res.cloudinary.com/daop3bufa/image/upload/v1770542424/image2_xawbgm.png"
 const whatsIcon="https://res.cloudinary.com/daop3bufa/image/upload/v1770542383/whatsIcon_cfyn4k.svg"
 const yellowWhatsIcon="https://res.cloudinary.com/daop3bufa/image/upload/v1770542382/yellowWhatsIcon_jkeucw.svg"
 const offer ="https://res.cloudinary.com/daop3bufa/image/upload/v1770481638/offer_qztntp.svg"
 
-const icon1 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770542288/icon1_i2s5n8.svg"
-const icon2 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770542291/icon2_njwvyj.svg"
-const icon3 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770542346/icon3_dpnc1m.svg"
-const icon4 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770542310/icon4_raqae7.svg"
-const icon5 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770542358/icon5_r8i3tr.svg"
-const icon6 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770542346/icon6_ehgxa8.svg"
-const icon7 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770542344/icon7_japduy.svg"
+const icon1 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770630647/logo5_jyyq0f.svg"
+const icon2 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770630641/logo2_ivhawu.svg"
+const icon3 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770630632/logo3_nfwiey.svg"
+const icon4 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770630607/logo4_rjzzpt.svg"
+const icon5 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770630647/logo5_jyyq0f.svg"
+const icon6 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770630648/logo6_qxxtrj.svg"
+const icon7 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770630657/logo7_fvtdxg.svg"
 const icon8 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770542336/icon8_kirjpk.svg"
 const icon9 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770542347/icon9_t18l6m.png"
 const icon10 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770542288/icon10_vv0mpf.png"
@@ -23,7 +23,7 @@ const icon11 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770542289/ico
 const arrowIcon="https://res.cloudinary.com/daop3bufa/image/upload/v1770542287/arrowIcon_s1c9mx.svg"
 const li="https://res.cloudinary.com/daop3bufa/image/upload/v1770481621/li_tr30cu.svg"
 const laptop="https://res.cloudinary.com/daop3bufa/image/upload/v1770542477/laptop_nkh9jl.png"
-const flag="https://res.cloudinary.com/daop3bufa/image/upload/v1770542343/flag_bkfe59.png"
+const flag="https://res.cloudinary.com/daop3bufa/image/upload/v1770629915/egyFlag2_skriff.png"
 
 const vector1 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770542357/Vector_tw2hkg.svg"
 const vector2 ="https://res.cloudinary.com/daop3bufa/image/upload/v1770542361/Vector2_rakemt.svg"
@@ -97,7 +97,7 @@ const AnimatedSection = ({ children, className, variants = fadeInUp, delay = 0 }
     )
 }
 
-export const LandingPage =()=>{
+export const EgyptionLandingPage=()=>{
     const [formData, setFormData] = useState({
         name: '',
         company: '',
@@ -217,7 +217,7 @@ export const LandingPage =()=>{
                        variants={staggerItem}
                        className="text-center md:text-right font-semibold uppercase text-[#2F5B44] text-2xl sm:text-3xl lg:text-4xl font-changa mb-2 md:mb-4"
                    >
-                       ERP حوّل أعمالك في السعودية بنظام
+                       ERP حوّل أعمالك في مصر بنظام
                    </motion.h1>
                    <motion.h1 
                        variants={staggerItem}
@@ -373,7 +373,7 @@ export const LandingPage =()=>{
                        viewport={{ once: true }}
                        transition={{ duration: 0.6 }}
                    >
-                       شركات سعودية تثق بنا لتنفيذ أنظمتها الرقمية
+                       شركات مصرية تثق بنا لتنفيذ أنظمتها الرقمية
                    </motion.h1>
                    <motion.div
                        initial={{ opacity: 0 }}

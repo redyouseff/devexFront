@@ -22,6 +22,7 @@ import { EditeBlog } from './pages/admin/EditeBlog';
 import { Blog } from './pages/blogs/Blog';
 import { NotFound } from './pages/NotFound';
 import { LandingPage } from './pages/campaign/LandingPage';
+import { EgyptionLandingPage } from './pages/campaign/EgyptionLandingPage';
 
 function MainLayout() {
   return (
@@ -73,6 +74,8 @@ function App() {
             {/* campaign */}
            
             <Route path="/ksa" element={<LandingPage />} />
+            <Route path="/egy" element={<EgyptionLandingPage />} />
+
 
 
             <Route path='*' element={<NotFound />} />
