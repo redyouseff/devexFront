@@ -23,6 +23,9 @@ import { Blog } from './pages/blogs/Blog';
 import { NotFound } from './pages/NotFound';
 import { LandingPage } from './pages/campaign/LandingPage';
 import { EgyptionLandingPage } from './pages/campaign/EgyptionLandingPage';
+import { OdooPartnerShip } from './pages/OdooPartnerShip';
+import Accessibility from './pages/accessibility';
+import PrivacyPolicy from './pages/PolicyPage';
 
 function MainLayout() {
   return (
@@ -48,18 +51,19 @@ function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/calculator" element={<Calculator />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/privacy" element={<PrivacyPolicy />} />
+
             
               <Route path="/DigitalTrends/:canonical" element={<Blog />} />
               <Route path="/DigitalTrends/" element={<DigitalTrends />} />
-
-
               <Route path="/ecommerce-design" element={<EcommerceDesign />} />
               {/* <Route path="/swiper" element={<swiper />} /> */}
               <Route path="/TestCircleSwiper" element={<TestCircleSwiper />} />
               <Route path="/CustomWebDesignServices" element={<CustomWebDesignServices />} />
               <Route path="/CustomWebDevelopment" element={<CustomWebDevelopment />} />
               <Route path="/AppDevelopment" element={<AppDevelopment />} />
-
+              <Route path="/OdooPartnerShip" element={<OdooPartnerShip />} />
               <Route path='/login' element={<Login />} />
 
               {/* Admin Routes */}

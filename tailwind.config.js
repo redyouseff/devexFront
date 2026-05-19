@@ -9,6 +9,8 @@ export default {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
         changa: ['Changa', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        kalam: ['Kalam', 'cursive'],
       },
       colors: {
         'custom-green': '#2F5B44',

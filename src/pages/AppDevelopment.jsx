@@ -29,7 +29,6 @@ import { Link } from "react-router-dom";
 
 
 
-
 const  AppDevelopment =()=>{
 
     const fadeLeft = {
@@ -44,12 +43,58 @@ const  AppDevelopment =()=>{
 
     
 
+    const cardsData = [
+        {
+            num: "1",
+            img: image4,
+            title: "Android",
+            desc: "Building Android apps using Gradle building tool and Android Studio, for different devices and screen sizes.",
+            titleClass: "uppercase text-[20px] sm:text-[24px] md:text-[28px] lg:text-[36px] leading-normal text-center"
+        },
+        {
+            num: "2",
+            img: image5,
+            title: "iOS",
+            desc: "Building iOS apps using Swift programming language, for both iPhone and iPad.",
+            titleClass: "uppercase text-[20px] sm:text-[24px] md:text-[28px] lg:text-[36px] leading-normal text-center"
+        },
+        {
+            num: "3",
+            img: image6,
+            title: "DevOps",
+            desc: "Continuous integration for the project life cycle, starting from development and ending with automatic store submission.",
+            titleClass: "uppercase text-[20px] sm:text-[24px] md:text-[28px] lg:text-[36px] leading-normal text-center"
+        },
+        {
+            num: "4",
+            img: image7,
+            title: "User-Friendly Designs",
+            desc: "By following the latest platform-specific guidelines and design trends, we create professional apps that are visually appealing .",
+            titleClass: "uppercase text-[20px] sm:text-[24px] md:text-[26px] lg:text-[28px] leading-normal text-center lg:whitespace-nowrap"
+        },
+        {
+            num: "5",
+            img: image8,
+            title: "Quality",
+            desc: "Our mobile apps undergo multiple stages of testing, including functional, compatibility, security, and UI testing.",
+            titleClass: "uppercase text-[20px] sm:text-[24px] md:text-[28px] lg:text-[36px] leading-normal text-center"
+        },
+        {
+            num: "6",
+            img: image9,
+            title: "Testing on Different Devices",
+            desc: "We ensure top-quality apps by testing them across various devices ",
+            titleClass: "uppercase text-[20px] sm:text-[24px] md:text-[26px] lg:text-[28px] leading-normal "
+        }
+    ];
+
     return (
         <>
         <Navbar />
         <div className="bg-[#FEF9D0] overflow-x-hidden">
 
-            
+ 
+      
 
         <section
                 className="relative w-full min-h-[60vh] md:min-h-[80vh] lg:min-h-[80vh] sm:min-h-[42.1875rem] xl:min-h-[42.1875rem] bg-[#2F5B44] flex items-center justify-center text-[#FEF9D0] overflow-hidden"
@@ -94,185 +139,31 @@ const  AppDevelopment =()=>{
 
                     <div className=" container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-3 gap-5 pb-[4rem]">
 
-                     <MotionDiv 
-                        className="flex flex-col items-start space-y-4 md:space-y-5 w-full px-4 py-6 sm:px-6 sm:py-8 md:px-[4rem] md:py-[5rem] rounded-2xl border-2 border-[#2F5B44]"
-                        variants={fadeRight}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: false, amount: 0.2 }}
-                     >
-
-                        <div className="flex justify-between items-center w-full px-4 mt-4">
-                                <div>
-                                    <img src={image4} alt="image1" className="w-20 h-20" />
-                                   
+                     {cardsData.map((card, index) => (
+                            <MotionDiv 
+                                key={index}
+                                className="flex flex-col items-start space-y-4  w-full px-5 py-7     rounded-2xl border-2 border-[#2F5B44]"
+                                variants={fadeRight}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: false, amount: 0.2 }}
+                            >
+                                <div className="flex justify-between items-center w-full px-4   sm:px-0">
+                                    <div>
+                                        <img src={card.img} alt={`icon ${card.num}`} className="w-16  " />
+                                    </div>
+                                    <div className="ml-auto flex flex-col justify-center items-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#2F5B44B2]">
+                                        <p className="text-[#FEF9D0] text-center font-inter text-base md:text-2xl font-normal leading-none">{card.num}</p>
+                                    </div>
                                 </div>
-                                <div className=" ml-auto flex  flex-col justify-center items-center gap-2 w-10 h-10 p-2 rounded-full bg-[#2F5B44B2] md:w-[49.93px] md:h-[49.93px] md:p-[16.64px]">
-                                      <p className="text-[#FEF9D0] text-center font-inter text-[14px] md:text-[33.29px] not-italic font-normal leading-normal" >1 </p>
-                                </div>
-
-                                
-                              
-
-                            </div>
-                            <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[20px] sm:text-[24px] md:text-[28px] lg:text-[36px] leading-normal text-center">Android</p>
-
-                            <p className=" px-4 text-[#2F5B44] font-inter font-normal uppercase text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] ">Building Android apps using Gradle building tool and Android Studio, for different devices and screen sizes.</p>
-
-                           
-                        </MotionDiv>
-
-
-
-
-<MotionDiv 
-className="flex flex-col items-start space-y-4 md:space-y-5 w-full px-4 py-6 sm:px-6 sm:py-8 md:px-[4rem] md:py-[5rem] rounded-2xl border-2 border-[#2F5B44]"
-variants={fadeRight}
-initial="hidden"
-whileInView="visible"
-viewport={{ once: false, amount: 0.2 }}
->
-<div className="flex justify-between items-center w-full px-4 mt-4">
-        <div>
-            <img src={image5} alt="image1" className="w-20 h-20" />
-           
-        </div>
-        <div className=" ml-auto flex  flex-col justify-center items-center gap-2 w-10 h-10 p-2 rounded-full bg-[#2F5B44B2] md:w-[49.93px] md:h-[49.93px] md:p-[16.64px]">
-              <p className="text-[#FEF9D0] text-center font-inter text-[14px] md:text-[33.29px] not-italic font-normal leading-normal" >2 </p>
-        </div>
-
-        
-      
-
-    </div>
-    <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[20px] sm:text-[24px] md:text-[28px] lg:text-[36px] leading-normal text-center">iOS</p>
-
-    <p className=" px-4 text-[#2F5B44] font-inter font-normal uppercase text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] ">Building iOS apps using Swift programming language, for both iPhone and iPad.</p>
-
-   
-</MotionDiv>
-
-
-
-<MotionDiv 
-className="flex flex-col  items-start space-y-4 md:space-y-5 w-full px-4 py-6 sm:px-6 sm:py-8 md:px-[4rem] md:py-[5rem] rounded-2xl border-2 border-[#2F5B44]"
-variants={fadeRight}
-initial="hidden"
-whileInView="visible"
-viewport={{ once: false, amount: 0.2 }}
->
-<div className="flex justify-between items-center w-full px-4 mt-4">
-        <div>
-            <img src={image6} alt="image1" className="w-20 h-20" />
-           
-        </div>
-        <div className=" ml-auto flex  flex-col justify-center items-center gap-2 w-10 h-10 p-2 rounded-full bg-[#2F5B44B2] md:w-[49.93px] md:h-[49.93px] md:p-[16.64px]">
-              <p className="text-[#FEF9D0] text-center font-inter text-[14px] md:text-[33.29px] not-italic font-normal leading-normal" >3 </p>
-        </div>
-
-        
-      
-
-    </div>
-    <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[20px] sm:text-[24px] md:text-[28px] lg:text-[36px] leading-normal text-center">DevOps</p>
-
-    <p className=" px-4 text-[#2F5B44] font-inter  uppercase text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] ">Continuous integration for the project life cycle, starting from development and ending with automatic store submission.</p>
-
-   
-</MotionDiv>
-
-
-
-
-<MotionDiv 
-className="flex flex-col items-start space-y-4 md:space-y-5 w-full px-4 py-6 sm:px-6 sm:py-8 md:px-[4rem] md:py-[5rem] rounded-2xl border-2 border-[#2F5B44]"
-variants={fadeRight}
-initial="hidden"
-whileInView="visible"
-viewport={{ once: false, amount: 0.2 }}
->
-<div className="flex justify-between items-center w-full px-4 mt-4">
-        <div>
-            <img src={image7} alt="image1" className="w-20 h-20" />
-           
-        </div>
-        <div className=" ml-auto flex  flex-col justify-center items-center gap-2 w-10 h-10 p-2 rounded-full bg-[#2F5B44B2] md:w-[49.93px] md:h-[49.93px] md:p-[16.64px]">
-              <p className="text-[#FEF9D0] text-center font-inter text-[14px] md:text-[33.29px] not-italic font-normal leading-normal" >4 </p>
-        </div>
-
-        
-      
-
-    </div>
-    <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[20px] sm:text-[24px] md:text-[26px] lg:text-[28px] leading-normal text-center lg:whitespace-nowrap">User-Friendly Designs</p>
-
-<p className=" px-4 text-[#2F5B44] font-inter  uppercase text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] ">By following the latest platform-specific guidelines and design trends, we create professional apps that are visually appealing .</p>
-
-   
-</MotionDiv>
-
-
-
-
-<MotionDiv 
-className="flex flex-col items-start space-y-4 md:space-y-5 w-full px-4 py-6 sm:px-6 sm:py-8 md:px-[4rem] md:py-[5rem] rounded-2xl border-2 border-[#2F5B44]"
-variants={fadeRight}
-initial="hidden"
-whileInView="visible"
-viewport={{ once: false, amount: 0.2 }}
->
-<div className="flex justify-between items-center w-full px-4 mt-4">
-        <div>
-            <img src={image8} alt="image1" className="w-20 h-20" />
-           
-        </div>
-        <div className=" ml-auto flex  flex-col justify-center items-center gap-2 w-10 h-10 p-2 rounded-full bg-[#2F5B44B2] md:w-[49.93px] md:h-[49.93px] md:p-[16.64px]">
-              <p className="text-[#FEF9D0] text-center font-inter text-[14px] md:text-[33.29px] not-italic font-normal leading-normal" >5 </p>
-        </div>
-
-        
-      
-
-    </div>
-    <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[20px] sm:text-[24px] md:text-[28px] lg:text-[36px] leading-normal text-center">Quality</p>
-
-    <p className=" px-4 text-[#2F5B44] font-inter font-normal uppercase text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] ">Our mobile apps undergo multiple stages of testing, including functional, compatibility, security, and UI testing.</p>
-
-   
-</MotionDiv>
-
-
-
-
-<MotionDiv 
-className="flex flex-col items-start space-y-4 md:space-y-5 w-full px-4 py-6 sm:px-6 sm:py-8 md:px-[4rem] md:py-[5rem] rounded-2xl border-2 border-[#2F5B44]"
-variants={fadeRight}
-initial="hidden"
-whileInView="visible"
-viewport={{ once: false, amount: 0.2 }}
->
-<div className="flex justify-between items-center w-full px-4 mt-4">
-        <div>
-            <img src={image9} alt="image1" className="w-20 h-20" />
-           
-        </div>
-        <div className=" ml-auto flex  flex-col justify-center items-center gap-2 w-10 h-10 p-2 rounded-full bg-[#2F5B44B2] md:w-[49.93px] md:h-[49.93px] md:p-[16.64px]">
-              <p className="text-[#FEF9D0] text-center font-inter text-[14px] md:text-[33.29px] not-italic font-normal leading-normal" >6 </p>
-        </div>
-
-        
-      
-
-    </div>
-    <p className="px-4  text-[#2F5B44] font-inter font-normal uppercase text-[20px] sm:text-[24px] md:text-[26px] lg:text-[28px] leading-normal ">Testing on Different Devices</p>
-
-    <p className=" px-4 text-[#2F5B44] font-inter  uppercase text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] min-w-full ">We ensure top-quality apps by testing them across various devices </p>
-
-   
-</MotionDiv>
-
-                 
-                      
+                                <p className={`px-4 sm:px-0 text-[#2F5B44] font-inter font-normal ${card.titleClass}`}>
+                                    {card.title}
+                                </p>
+                                <p className="px-4 sm:px-0 text-[#2F5B44] font-inter font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed">
+                                    {card.desc}
+                                </p>
+                            </MotionDiv>
+                        ))}
                     </div>
 
                 </div>
