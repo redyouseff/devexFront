@@ -55,6 +55,12 @@ const Footer = () => {
                   <Link to="/services" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
                     DIGITAL MARKETING
                   </Link>
+                  
+                </li>
+                <li>
+                  <Link to="/OdooPartnerShip" onClick={handleFooterLinkClick} className="text-[14px] hover:text-[#E9F2CD] transition-colors">
+                    ODOO ERP IMPLEMENTATION
+                  </Link>
                 </li>
               </ul>
             </div>
