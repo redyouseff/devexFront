@@ -29,7 +29,7 @@ export const OdooPartnerShip =()=>{
         },
         {
             title:"Inventory",
-            image:"/images/odoo/icon2.svg"
+            image:"https://res.cloudinary.com/daop3bufa/image/upload/v1779109857/icon2_b8p8ao.svg"
         },
         {
             title:"Email Marketing",
